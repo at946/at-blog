@@ -26,5 +26,5 @@ export const get = () =>
 			pubDate: new Date(item.data.date),
 		})),
 		// (optional) inject custom xml
-		customData: `<language>en-us</language>`,
+		customData: `<language>ja-jp</language>`,
 	});
