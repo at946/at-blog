@@ -14,8 +14,9 @@
       "checkJs": true,
       "baseUrl": ".",
       "paths": {
-        "$components": ["./src/components"],
-        "$": ["./src"]
+        "@/*": ["src/*"],
+        "@components/*": ["src/components/*"],
+        "@layouts/*": ["src/layouts/*"],
       },
       "types": ["astro/env"],
       "strictNullChecks": true
