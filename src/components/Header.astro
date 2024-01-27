@@ -1,68 +1,48 @@
 ---
-    import { SITE } from '$/config'
+    import { SITE } from '@/config'
     import SvgIcon from './SvgIcon.astro'
     import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
     import SearchBtn from './SearchBtn.svelte'
+    import HeaderNavItem from './HeaderNavItem.astro'
+    import { Icon } from 'astro-icon'
 
 ---
 
-<header class="header">
-    <div class="header__meta flex-1">
-        <h3 class="header__title dark:text-theme-dark-secondary">
+<header class="py-3">
+    <h3 class="text-4xl font-extrabold text-theme-secondary dark:text-theme-dark-secondary">
             <a href="/">{ SITE.name }</a>
         </h3>
-        <div class="header__meta-more flex">
-            <p class="header__desc">
-                { SITE.description }
-            </p>
-            <nav class="header__nav flex">
-                <ul class="header__ref-list">
-                    <li>
+        <div class="flex justify-end">
+            <nav>
+                <ul class="flex gap-3">
+                    <HeaderNavItem>
                         <SearchBtn client:visible />
-                    </li>
-                    <li>
+                    </HeaderNavItem>
+                    <HeaderNavItem>
                         <a href={`http://twitter.com/${ SITE.authorTwitter}`} title={`${ SITE.author }'s X account'`} target="_blank" rel="noopener noreferrer">
                             <SvgIcon>
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                <Icon name="mdi:twitter" />
                             </SvgIcon>
                         </a>
-                    </li>
-                    <li>
+                    </HeaderNavItem>
+                    <HeaderNavItem>
                         <a href={ SITE.githubUrl } title={`${ SITE.author }'s Github URL'`} target="_blank" rel="noopener noreferrer">
                             <SvgIcon>
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                <Icon name="mdi:github" />
                             </SvgIcon>
                         </a>
-                    </li>
-                    <li>
+                    </HeaderNavItem>
+                    <HeaderNavItem>
                         <a href="/rss.xml" title="RSS" target="_blank" rel="noopener noreeferrer">
                             <SvgIcon>
-                                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                                <circle cx="5" cy="19" r="1"></circle>
+                                <Icon name="mdi:rss" />
                             </SvgIcon>
                         </a>
-                    </li>
-                    <li>
+                    </HeaderNavItem>
+                    <HeaderNavItem>
                         <ModeSwitcherBtn client:visible />
-                    </li>
+                    </HeaderNavItem>
                 </ul>
             </nav>
-        </div>
-    </div>
+        </div> 
 </header>
-
-<style>
-    .header {
-        @apply flex gap-4 border-b py-3 /* border-gray-200 dark:border-gray-700 - check styles/global.css */
-    }
-    .header__title {
-        @apply text-4xl font-extrabold md:text-5xl text-theme-secondary dark:text-theme-dark-secondary
-    }
-    .header__desc {
-        @apply text-xl flex-1 dark:text-gray-200
-    }
-    .header__ref-list {
-        @apply flex gap-3 text-gray-400
-    }
-</style>
