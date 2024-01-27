@@ -5,7 +5,7 @@ import { getCollection, getEntryBySlug } from 'astro:content'
 import DefaultPageLayout from '$/layouts/default.astro'
 import PostPreviewList from '$/components/PostPreviewList.astro'
 import Prose from '$/components/Prose.astro'
-import { Content as AboutAstroInk } from './_astro-ink.md'
+import { Content as SelfIntroduction } from './_self_introduction.md'
 
 
 const title = 'Home'
@@ -22,7 +22,7 @@ const posts = await getCollection('blog')
         </div>
         <div class="hero__says">
             <Prose>
-                <AboutAstroInk/>
+                <SelfIntroduction/>
             </Prose>
         </div>
     </div>
