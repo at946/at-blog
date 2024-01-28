@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import { getMonthName } from '$/utils'
+import { getMonthName } from '@/utils'
 
 interface Props {
     post: CollectionEntry<'blog'>,
@@ -22,7 +22,7 @@ console.log(post)
             <a href={`/blog/${slug}`} title={post.title}>{post.title}</a>
         </h4>
         <div class="inline-flex gap-2 flex-wrap">
-            { post.tags.length > 0 && post.tags.map(tag => <a class="text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
+            { post.tags !== undefined && post.tags.length > 0 && post.tags.map(tag => <a class="text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
         </div>
     </div>
 </div>
