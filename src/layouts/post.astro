@@ -50,9 +50,11 @@ const AUTHOR_AVATAR = content.authorImage ? content.authorImage : SITE?.authorIm
                 <img class="img__outer" src={content.image} alt={content.title} /><br/>
                 : ""
         }
+        <div class="mb-20">
         <Prose>
             <slot />
         </Prose>
+        </div>
     </MainLayout>
 </html>
 <style>
