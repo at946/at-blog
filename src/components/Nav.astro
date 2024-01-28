@@ -1,22 +1,16 @@
 ---
-import { toTitleCase } from '$/utils'
-import { NAV_ITEMS } from '$/config'
+import { toTitleCase } from '@/utils'
+import { NAV_ITEMS } from '@/config'
 ---
-<nav class="nav py-3 text-center">
-    <ul class="nav-list dark:text-theme-dark-secondary" transition:animate="fade">
+<nav class="py-3 text-center mb-8">
+    <ul class="inline-flex list-none gap-8 text-xl font-semibold text-theme-secondary dark:text-theme-dark-secondary flex-wrap" transition:animate="fade">
          {
             Object.keys(NAV_ITEMS).map(navItemKey => <li>
                 <a class:list={[
                     `pb-1 border-b-2 hover:border-gray-400 hover:dark:border-gray-700 `,
-                    Astro.url.pathname !== NAV_ITEMS[navItemKey].path ? 'border-gray-100 dark:border-gray-800': '',
-                    Astro.url.pathname === NAV_ITEMS[navItemKey].path ? 'border-theme-primary' : ''
+                    Astro.url.pathname === NAV_ITEMS[navItemKey].path ? 'border-theme-primary' : 'border-gray-100 dark:border-gray-800'
                 ]} href={NAV_ITEMS[navItemKey].path} title={NAV_ITEMS[navItemKey].title}>{toTitleCase(NAV_ITEMS[navItemKey].title)}</a>
             </li>)
         }
     </ul>
 </nav>
-<style>
-    .nav-list {
-        @apply inline-flex list-none gap-8 text-xl font-semibold text-theme-secondary dark:text-theme-dark-secondary py-2 flex-wrap mb-8
-    }
-</style>

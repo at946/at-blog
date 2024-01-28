@@ -17,10 +17,6 @@ export const NAV_ITEMS: NavItems = {
 		path: "/media",
 		title: "media",
 	},
-	// about: {
-	// 	path: "/about",
-	// 	title: "about",
-	// },
 };
 
 export const SITE = {
