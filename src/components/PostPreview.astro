@@ -8,6 +8,7 @@ interface Props {
 }
 
 const { post: { data: post, slug }, asCard = false } = Astro.props
+console.log(post)
 ---
 <div class={`post-preview ${asCard && 'post-preview--card'}`}>
     <div class="post-preview__date-box">
@@ -20,9 +21,9 @@ const { post: { data: post, slug }, asCard = false } = Astro.props
         <h4 class="post-preview__title dark:text-theme-dark-primary">
             <a href={`/blog/${slug}`} title={post.title}>{post.title}</a>
         </h4>
-        <p class="post-preview__desc">
-            {post.description}
-        </p>
+        <div class="inline-flex gap-2 flex-wrap">
+            { post.tags.length > 0 && post.tags.map(tag => <a class="text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
+        </div>
     </div>
 </div>
 <style>
