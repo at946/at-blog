@@ -13,10 +13,6 @@ export const NAV_ITEMS: NavItems = {
 		path: "/tags",
 		title: "tags",
 	},
-	media: {
-		path: "/media",
-		title: "media",
-	},
 };
 
 export const SITE = {

@@ -1,8 +1,8 @@
 ---
 export const prerender = true
 
-import DefaultPageLayout from '$/layouts/default.astro'
-import MediaPreviewList from '$/components/MediaPreviewList.astro'
+import DefaultPageLayout from '@layouts/default.astro'
+import MediaPreviewList from '@components/MediaPreviewList.astro'
 import { SITE } from '../config'
 import { DEFAULT_MEDIA_URL } from '../utils/media'
 import { toFeedToJsonUrl, toMediaFormatFromFeed2JsonUrl } from '../utils/media-yt-feed'
@@ -11,8 +11,8 @@ import { toFeedToJsonUrl, toMediaFormatFromFeed2JsonUrl } from '../utils/media-y
 
 /* The usual stuff...*/
 
-let title = 'Videos & Screencasts';
-let description = 'All the great videos on Astro we could find for ya!'
+let title = 'Presentations, Articles';
+let description = '過去の登壇・発表や記事について。'
 
 const response = await fetch(
     // an YT channelId is present?
