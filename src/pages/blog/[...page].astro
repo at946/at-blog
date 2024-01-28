@@ -11,7 +11,7 @@ let title = 'Blog'
 let description = 'All the articles posted so far...'
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection('blog');
+  const allPosts = await getCollection('blog', ({ data }) => data.published);
   const sortedPosts = allPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 
     return paginate(sortedPosts, {

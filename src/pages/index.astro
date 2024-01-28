@@ -11,7 +11,7 @@ import { Content as SelfIntroduction } from './_self_introduction.md'
 const title = 'Home'
 const description = 'こんにちは、asatoです。スクラムマスターやってます。ここは僕がゆっくりまったりゆとりを持って、スクラムやチーム開発に関する知見・経験・考えを共有する場所です。誰かの支援につながれば嬉しいです。'
 
-const posts = await getCollection('blog')
+const posts = await getCollection('blog', ({ data }) => data.published )
 posts.sort((x, y) => new Date(y.data.date).getTime() - new Date(x.data.date).getTime() )
 
 ---
