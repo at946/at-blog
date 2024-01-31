@@ -1,0 +1,136 @@
+---
+title: Memo - North Star Metric（NSM）
+tags:
+  - プロダクトマネジメント
+date: '2022-01-13'
+published: true
+---
+
+ちまたで話題のNorth Star Metricについて色々と調べる機会があったので、まとめておきます。
+
+## North Star Metric（NSM）とはなにか
+
+NSMは、プロダクトマネジメントの文脈でしばしば登場するやつです。
+**プロダクトがビジネス・価値の両面を同時に測る単一の指標**的な意味合いかな。あまり画一的な定義はなされていなそうでした。
+
+『[プロダクトマネジメントのすべて](https://amzn.to/3HZN6h7)』では以下の紹介がありました。
+
+> プロダクトのコアとなる価値がユーザーに届いているかを知る、単一の指標
+
+> 事業が長期的に成長しているかどうかを図る、経営・プロダクト両面で重要な指標
+
+また、「[What is a North Star Metric?. Drive Your Company’s Sustainable Growth…](https://blog.growthhackers.com/what-is-a-north-star-metric-b31a8512923f)」のブログを引用している記事によく出会ったのですが、そちらでは以下のように書かれています。
+
+> The North Star Metric is the single metric that best captures the core value that your product delivers to customers.
+>
+> North Star Metricはあなたのプロダクトが顧客に提供しているコアの価値を最も表している単一の指標です
+
+Amplitudeの「[North Star Playbook](https://amplitude.com/north-star)」が、定義から実践まですごくまとまっていまして、そちらでは以下のようにかかれています。
+
+> The heart of the North Star Framework is the North Star Metric, a single critical rate, count, or ratio that represents your product strategy.
+>
+> North Star MetricはNorth Star Frameworkの中心であり、あなたのプロダクトの戦略を表す単一の重要な割合や回数、比率です。
+
+> (The North Star Metric) is a leading indicator that defines the relationship between the customer problems that the product team is trying to solve and sustainable, long-term business results.
+>
+> North Star Metricは、プロダクトチームが解決しようとしている顧客の課題と、持続可能で長期的なビジネスの成果の間の関係を定義する先行指標です。
+
+「**ビジネス（戦略）と価値（プロダクト）**」や「**単一**」、「**長期的**」などがキーワードになっていそうですね。
+
+## なんでNSMが必要なのか
+
+NSMの目的は、**プロダクトやビジネスが成長しているかを測ること、そして成長するための戦略を決める根拠にすること**です。
+同じような目的で生まれた概念は他にも「MVV（Mission/Vision/Values）」とか「KGI/KPI」とか色々あると思うのですが、なぜNSMが注目を浴びるようになってきているのでしょうか。
+
+これは、プロダクトがますますビジネスの核になっている中で、プロダクトの成功と成長により集中する必要があるなかで、先に上げたような概念がジャストフィットしなくなったからなんだなーと思いました。
+例えば、MVVであれば会社や社員の視点でめざす指針や行動の指針になりますが、プロダクトの視点では直接的でないことが多いです。
+また、KGI/KPIについてもビジネスの目標を明確にしてくれますが、KGIには「収益・利益」などが置かれることが多く、これもまたプロダクト視点では直接的ではなかったり、セールスやマーケティング、外部要因など別の要因にも注意が向けられ、プロダクトの成功と成長に集中することが難しいケースがあります。
+さらに、ミッションやKGIはプロダクトの変化に対して変化に時間がかかる遅行指標ですので、アジャイルなプロダクト開発の次の一手を決めるには適しません。
+
+ということで、よりプロダクトを直接的に評価できて、アジャイルな意思決定を行うために、NSMが注目されています。
+
+## 実際どんなものなのか
+
+ここまで概念的な話ばっかりしてしまいましたが、実際どういうものなのかイメージがつかないと思います。色々と例を出してくれている記事があったので、良さげなものをピックアップしてみます。
+
+- Airbnb：予約された宿泊日数
+- Netflix：月間視聴時間の中央値
+- Zoom：週あたりのホストされたミーティング数
+- Slack：Organization内のメッセージ数
+- Salesforce：アカウントあたりの作成レコード数
+- Shopify：店舗あたりの売上合計額
+- Uber：旅の数（乗車数）
+
+それぞれのプロダクトのコアバリューを表しており、それが収益にもリンクしている指標だということがわかりますね。
+参考にした記事はこちらに載せておきます。
+
+- [ノーススターメトリックの求め方｜Amplitude, Inc.](https://note.com/amplitude/n/n5dae993de2ac)
+- [Choosing Your North Star Metric | Future](https://future.com/north-star-metrics/)
+- [Collection of Some of the Best SaaS North Star Metrics | by Gokul Rangarajan | Medium](https://gokulrangarajan.medium.com/most-used-north-star-metrics-of-2019-20-4179f7d5ab99)
+
+これらの記事を見ると、収益やDAUなどNSMの悪手的に語られるものや複数の指標を追っている企業もいますね。願わくば上に上げた例のようなNSMが成功と成長を測りながらチームを力づけることができるので望ましいですが、それで決まらなかったり複雑になってしまっては元も子もなので、プロダクトの特性やチームの状態で決めていければいいのかなと思います。
+
+ちなみに「単一の指標」については、それにこだわりすぎて全体が見渡せなくなることもあるから気をつけろよって記事もありました。
+
+[Don't Let Your North Star Metric Deceive You — Reforge](https://www.reforge.com/blog/north-star-metric-growth)
+
+特にプラットフォーム系のプロダクト、エコシステムを形成しているような登場人物の多いプロダクトでは一つだけに注目すると全体が崩壊してしまうので注意が必要なようです。
+サバンナでライオンの頭数だけを見てるとヌーが絶滅してライオンも絶滅してしまうという例はわかりやすいですね。
+この場合は、3つとか5つの指標を「**指標の星座**」として定義するそうです。North Star Metricから来ていると思われますが、おしゃれですね。
+
+## どうやってNSMを見つけるのか
+
+特定のやり方としてとてもまとまっていたのが「[North Star Playbook - Amplitude](https://amplitude.com/north-star)」ですね。
+
+North Star Frameworkという独自のフレームワークの紹介ページになっています。North Star MetricはNorth Star Frameworkの中心ですので、NSMの見つけ方から、そこからアクションを検討するための先行指標（Input Metrics）の決め方までを紹介してくれています。
+
+![North Star Metric](./images/north-star-metric.webp)
+
+出典：[North Star Playbook - Amplitude](https://amplitude.com/north-star)
+
+詳しくは「[North Star Playbook - Amplitude](https://amplitude.com/north-star)」や「[Product Workshop - Finding Your North Star - handout](https://www.slideshare.net/amplitudemobile/product-workshop-finding-your-north-star-handout)」をみていただきたい。「自分たちが参加しているゲーム」を特定することでNSMの種類を特定しています。
+
+1. Attention型：Facebook、Netflix：滞在時間やコンテンツ消費がキー
+1. Transaction型：Airbnb、Amazon：取引の数がキー
+1. Productivity型：Salesforce、Slack：タスクの実行数、効率性がキー
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/GPMeFVwIAWWees" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/amplitudemobile/product-workshop-finding-your-north-star-handout" title="Product Workshop - Finding Your North Star - handout" target="_blank">Product Workshop - Finding Your North Star - handout</a> </strong> from <strong><a href="//www.slideshare.net/amplitudemobile" target="_blank">Amplitude</a></strong> </div>
+
+[Playbook](https://amplitude.com/north-star)では「良いNSMのチェックリスト」も公開されており、NSMを見直す良い基準になっていました。
+
+- 価値を表現している
+- ビジョンと戦略を表現している
+- 成功の先行指標である
+- 行動に移せる
+- 計測できる
+- 誰にとっても理解しやすい
+- 耳障りの良いだけのものになっていない
+
+他にも、「[Choosing Your North Star Metric | Future](https://future.a16z.com/north-star-metrics/)」には「ジョブ理論」でNSMを見つけることが紹介されていました。
+「顧客は何らかのジョブを片付けるためにサービスを雇用する」という考え方ですので、その「何らかのジョブ」が特定できているのであればその度合を測る指標こそプロダクトのビジネスと価値の成功と成長の指標になりますね。
+
+あとは、NSMが「ビジネス面」と「プロダクト面」を両立する指標であるという考え方から、「収益を上げるための先行指標」と「価値を提供できているかを測る指標」で共通する指標を探すのも良さそうです。
+
+## やってみた
+ということで小規模ではございますが、友人と二人で作っているプライベートなプロダクト「spaces.bz」でNSMを運用してみました。（現在はクローズ済み）
+
+このプロダクトの主要な機能は、開催中／開催前のTwitter Spacesを人気順、キーワード、フィルターなんかで検索できることです。
+
+このプロダクトの価値は、面白いTwitter Spacesに出会えることです。
+このプロダクトの収益モデルは、広告収入です。
+
+ということで、「**面白いTwitter Spacesに出会った数**」をNSMに置いてます。具体的には**サイトからTwitter Spacesにリンクするボタンをクリックされた数**を計測しています。
+
+実際NSMを置くとどんな変化があったか、めちゃくちゃ主観ですが、
+
+- 開発の優先順位がつけやすい、合意しやすい
+- 毎日指標を追い続けやすい（毎日1分以下で確認できる）
+- うまくいってるのか、簡単に判断できる＆共通認識できる
+
+とか感じます。あまり悪いことはないかなぁ。
+個人プロダクトで収益性をそんなに求めていなかったり、チームの人数も少ないのでって条件はあるかもしれませんが、**共通認識的な文脈だとよりチームが人数が多いほうが効果を発揮しそうだな**と思いました。
+
+## まとめ
+
+この記事では「**North Star Metric（NSM）**」について調べたことをまとめてみました。
+このメモが、どなたかの役に立ったら嬉しいです。
