@@ -15,7 +15,6 @@ export async function getStaticPaths() {
 }
 
 const { slug, path } = Astro.params
-console.log(path)
 const entry = await getEntryBySlug('blog', path!)
 
 const { id, collection, data } = entry

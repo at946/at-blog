@@ -2,8 +2,8 @@
 export const prerender = true
 
 import { getCollection } from 'astro:content'
-import DefaultPageLayout from '$/layouts/default.astro'
-import PostPreviewList from '$/components/PostPreviewList.astro'
+import DefaultPageLayout from '@layouts/default.astro'
+import PostPreviewList from '@components/PostPreviewList.astro'
 
 export async function getStaticPaths({ }) {
   const allPosts = await getCollection('blog', ({ data }) => data.published && !!data.tags )
@@ -13,13 +13,11 @@ export async function getStaticPaths({ }) {
   })
 
   return Array.from(allTags).map((tag) => {
-    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag))
-    return {
-      params: { tag },
-      props: {
-          pages: filteredPosts
-      }
-    };
+    const filteredPosts = allPosts.filter((post) => post.data.tags.includes(tag));
+    const res = { params: { tag }, props: { pages: filteredPosts }};
+    if (filteredPosts.length > 1) { res.props.pages = filteredPosts.sort((a, b) => new Date(b.data.date) - new Date(a.data.date)) }
+
+    return res;
   });
 }
 
