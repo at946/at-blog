@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.0.0",
+    "@astrojs/partytown": "^2.0.4",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/svelte": "^5.0.0",
@@ -33,7 +34,7 @@
     "globby": "^14.0.0",
     "gray-matter": "^4.0.3",
     "lunr": "^2.3.9",
-    "mdx": "^0.3.1",
+    "mdx": "^0.2.3",
     "remark-code-titles": "^0.1.2",
     "svelte": "^4.2.8",
     "tailwindcss": "^3.3.6",

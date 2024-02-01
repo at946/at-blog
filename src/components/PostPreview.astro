@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { post: { data: post, slug }, asCard = false } = Astro.props
-console.log(post)
 ---
 <div class={`post-preview ${asCard && 'post-preview--card'}`}>
     <div class="post-preview__date-box">

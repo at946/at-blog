@@ -11,6 +11,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import remarkCodeTitles from 'remark-code-titles'
 import decapCmsOauth from "astro-decap-cms-oauth";
+import partytown from '@astrojs/partytown';
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -39,7 +40,12 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
       applyBaseStyles: false,
     }), 
     sitemap(),
-    decapCmsOauth()
+    decapCmsOauth(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }),  
   ],
   vite: {
     plugins: [],
@@ -52,5 +58,5 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
       allowNodeBuiltins: true
     }
   },
-  adapter: vercel()
+  adapter: vercel(),
 });
