@@ -65,6 +65,7 @@ const { title = SITE.title, description, permalink, image } = Astro.props;
 </script>
 
 <!-- Google tag (gtag.js) -->
+{ import.meta.env.PROD &&
 <script
   type="text/partytown"
   src="https://www.googletagmanager.com/gtag/js?id=G-MWLJ42K3YD"></script>
@@ -76,3 +77,4 @@ const { title = SITE.title, description, permalink, image } = Astro.props;
   gtag('js', new Date());
   gtag('config', 'G-MWLJ42K3YD');
 </script>
+}
