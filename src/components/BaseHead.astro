@@ -63,3 +63,18 @@ const { title = SITE.title, description, permalink, image } = Astro.props;
     document.documentElement.classList.add("dark");
   }
 </script>
+
+<!-- Google tag (gtag.js) -->
+{ import.meta.env.PROD &&
+<script
+  type="text/partytown"
+  src="https://www.googletagmanager.com/gtag/js?id=G-MWLJ42K3YD"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-MWLJ42K3YD');
+</script>
+}
