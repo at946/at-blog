@@ -1,0 +1,221 @@
+---
+title: "Nuxt on Dockerにて、Jest + Puppeteer でE2Eテスト環境をセットアップする"
+tags: [Jest, Puppeteer, Nuxt.js, Docker, E2E]
+date: '2021-02-18'
+published: true
+---
+
+# はじめに
+テスト自動化したい...テスト駆動したい...E2Eで！！
+Nuxt.jsをDockerで開発するにあたって、E2Eテスト環境を用意するまでの軌跡です。
+テストフレームワークには[Jest](https://github.com/facebook/jest)、ブラウザ操作には[Puppeteer](https://github.com/puppeteer/puppeteer)を利用します。
+
+# 手順
+1. DockerでNuxtアプリをつくる
+2. Dockerコンテナ内でブラウザを起動できるようにする
+3. Jest+PuppeteerでE2Eテストできるようにする
+
+# DockerでNuxtアプリをつくる
+アプリの前提の意味で、こんな感じでNuxt on Dockerを作っています紹介です。
+
+```sh
+$ docker run -it -w /app -v `pwd`:/app node yarn create nuxt-app .
+...
+create-nuxt-app v3.5.2
+✨  Generating Nuxt.js project in .
+? Project name: app
+? Programming language: JavaScript
+? Package manager: Yarn
+? UI framework: None
+? Nuxt.js modules: -
+? Linting tools: -
+? Testing framework: None
+? Rendering mode: Universal (SSR / SSG)
+? Deployment target: Server (Node.js hosting)
+? Development tools: -
+n)
+? What is your GitHub username? -
+? Version control system: None
+```
+`yarn create nuxt-app`はターゲットのディレクトリ（今回はカレントディレクトリ）が空でないとエラーになるので要注意。初期設定は特に何も入れてません。
+
+これでローカルにNuxtアプリのファイルが生成されるので、このアプリを動かすための`Dockerfile`と`docker-compose.yml`をつくっていきます。
+
+```dockerfile:Dockerfile
+FROM node
+ENV HOME=/app \
+    HOST=0.0.0.0
+    
+WORKDIR ${HOME}
+
+COPY package.json ${HOME}
+COPY yarn.lock ${HOME}
+RUN yarn install
+
+COPY . ${HOME}
+EXPOSE 3000
+CMD ["yarn", "dev"]
+```
+
+```yaml:docker-compose.yml
+version: '3'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+```
+これをビルドして起動してみます。
+
+```
+$ docker-compose build
+$ docker-compose up
+```
+`http://localhost:3000`にアクセスできていればOKです。
+![](https://storage.googleapis.com/zenn-user-upload/gn68lefylsdc57ho9idkel0zyl5d)
+
+# Dockerコンテナ内でブラウザを起動できるようにする
+PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動させられるようにする必要があります。[puppeteerのトラブルシューティング](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker)にやり方が載っているので、それに合わせてDockerfileを更新します。
+
+```dockerfile:Dockerfile ins={7-14}
+FROM node
+ENV HOME=/app \
+    HOST=0.0.0.0
+
+WORKDIR ${HOME}
+
+RUN apt-get update \
+    && apt-get install -y wget gnupg \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
+      --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY package.json ${HOME}
+COPY yarn.lock ${HOME}
+RUN yarn install
+
+COPY . ${HOME}
+EXPOSE 3000
+CMD ["yarn", "dev"]
+```
+
+これでHeadless Chromeを使ってPuppeteerでブラウザ操作をする環境ができます。
+
+# Jest+PuppeteerでE2Eテストできるようにする
+最後にJest+Puppeteerの環境を整えていきます。
+JestでPuppeteerを利用する手順は[公式ドキュメント](https://jestjs.io/docs/ja/next/puppeteer)にも載っています。
+まず、Jest、Puppeteer、そしてその２つの設定をいい感じにやってくれる`jest-puppeteer`のライブラリをインストールします。`jest-puppeteer`のおかげで、`page`や`browser`などのPuppeteerのAPIが特に意識することなくGlobalに扱えたりします。
+
+```sh
+$ docker-compose run --rm app yarn add --dev jest puppeteer jest-puppeteer
+```
+
+`package.json`に追加されるのでコンテナを再ビルドしてコンテナイメージにも適用してきます。
+
+```sh
+$ docker-compose build
+```
+
+次にconfigファイルをつくります。まずはjestの設定から。
+
+```js:jest.config.js
+module.exports = {
+  verbose: true,
+  preset: 'jest-puppeteer'
+}
+```
+これで`jest-puppeteer`を活用できるようになります。次は`jest-puppeteer`の設定をします。
+
+```js:jest-puppeteer.config.js
+module.exports = {
+  launch: {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  },
+  server: {
+    command: 'yarn dev',
+    port: 3000,
+    launchTimeout: 50000
+  }
+}
+```
+Headless chromeの設定と、サーバー（アプリの起動）についての設定をします。
+
+最後に、`package.json`でテスト実行コマンドを定義します。
+
+```json:package.json ins={8,9} del={7}
+{
+  ...
+  "scripts": {
+    "dev": "nuxt",
+     "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "jest -i"
+  }
+  ...
+}
+```
+
+`-i`オプションは`--runInBand`オプションの省略形で、テストスイートを並列でテストしないオプションです。並列でテストしたときにそれぞれのテストスイートが影響しあってしまったのか、うまく行かないことがあったのでつけてます。
+他のオプションはJestの公式ドキュメント参照です。
+
+[Jest CLI Options · Jest](https://jestjs.io/docs/ja/cli)
+
+# テストしてみる
+では実際にテストが動作するか確認してみます。
+まずはテストファイルを格納するディレクトリを作成し、テストファイルをつくりましょう。
+Jestではデフォルトで`tests`ディレクトリ以下のファイルを読み込みます（[Jestの設定 · Jest](https://doc.ebichu.cc/jest/docs/ja/configuration.html#testmatch-array-string)）。
+
+```sh
+$ mkdir tests
+```
+
+```js:tests/test.spec.js
+describe('サンプルテストスイート', () => {
+  test('トップページでアプリ名が表示されていること', async () => {
+    await page.goto('http://localhost:3000')
+    await expect(await page.$eval('h1.title', el => el.innerText)).toBe("app")
+  })
+})
+```
+トップページにアクセスして、「app」の文字列が`h1.title`要素に表示されていることをチェックするテストです。
+では、実行。
+
+```sh
+$ docker-compose run app yarn test
+Creating test_app_run ... done
+yarn run v1.22.5
+$ jest -i tests/test.spec.js
+ PASS  tests/test.spec.js
+  サンプルテストスイート
+    ✓ トップページでアプリ名が表示されていること (344 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.371 s
+Ran all test suites matching /tests\/test.spec.js/i.
+Done in 19.83s.
+```
+パス！
+コマンドの後ろにファイルパスを付けてもOKですし、つけない場合は対象のファイルを全部実行します。
+
+テストの設定から動作確認まで、完了です！
+
+# 結論
+本記事では、Nuxt on DockerにおけるJest + PuppeteerのE2Eテスト環境のセットアップをしました。
+Dockerコンテナ内でHeadless Chromeを操作できるようにするところがやや引っかかるかなと思いますが、公式のトラブルシューティングに載っていますし、jest-puppeteerの利用についてもJestの公式サイトで言及されているので、ソースをたどればそんなに難しくないかもです。
+
+# 参考
+- [facebook/jest: Delightful JavaScript Testing.](https://github.com/facebook/jest)
+- [puppeteer/puppeteer: Headless Chrome Node.js API](https://github.com/puppeteer/puppeteer)
+- [smooth-code/jest-puppeteer: Run your tests using Jest & Puppeteer 🎪✨](https://github.com/smooth-code/jest-puppeteer)
+- [Jestの設定 · Jest](https://doc.ebichu.cc/jest/docs/ja/configuration.html)
