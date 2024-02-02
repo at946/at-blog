@@ -1,0 +1,350 @@
+---
+title: 自動E2Eテストお試し体験記（Playwright）
+tags:
+  - E2Eテスト
+  - 自動化
+  - Playwright
+date: '2023-04-01'
+published: false
+---
+
+後輩くんに「E2Eテストなんか怖い😣」と言われたので「ソンナコトナイヨー☀」を体験してもらうために書く。
+
+# Playwright
+https://playwright.dev/
+
+とりあえず、今回はこのPlaywrightってやつを使ってみよう。
+まずは「なんか怖い」を払拭するためだから理由とかは脇においておこう。
+でも軽快だし、クロスブラウザできるし、スクショやビデオも取れるし、いいぞ。
+
+# Playwrightをインストール
+Docker使ってくぞ。まずは準備だ。
+
+```Dockerfile:Dockerfile
+FROM node:19.4
+ENV WORKDIR=/playwright/
+
+WORKDIR $WORKDIR
+```
+
+```yaml:docker-compose.yml
+version: '3'
+
+services:
+  playwright:
+    build: .
+    volumes:
+      - .:/playwright
+```
+
+```bash
+$ docker compose build
+```
+
+インストールは公式ドキュメント見てこう。
+https://playwright.dev/docs/intro
+
+```bash
+$ docker compose run playwright yarn create playwright
+
+? Do you want to use TypeScript or JavaScript?
+> TypeScript
+
+? Where to put your end-to-end tests?
+> tests
+
+? Add a GitHub Actions workflow?
+> N
+
+? Install Playwright browsers (can be done manually via 'yarn playwright install')?
+> n
+
+? Install Playwright operating system dependencies (requires sudo / root - can be done manually via 'sudo yarn playwright install-deps')?
+> n
+```
+
+いろいろなディレクトリやファイルが生成されているな。
+
+```bash
+- node_modules/
+  - 省略
+- tests/
+  - example.spec.ts
+- tests-examples/
+  - demo-todo-app.spec.ts
+- .gitignore
+- docker-compose.yml
+- Dockerfile
+- package.json
+- playwright.config.ts
+- yarn.lock
+```
+こんな感じになってるはず。
+
+browsersとoperating system dependenciesはほしいので、`Dockerfile`に書いてこう。
+
+```diff:Dockerfile
+  FROM node:19.4
+  ENV WORKDIR=/playwright/
+
+  WORKDIR $WORKDIR
+
++ COPY package.json $WORKDIR
++ COPY yarn.lock $WORKDIR
++ 
++ RUN yarn install
++ RUN yarn playwright install && yarn playwright install-deps
++
++ CMD ["yarn", "playwright", "test"]
+```
+
+`Dockerfile`いじったのでもう一度ビルドしておく。
+
+```bash
+$ docker compose build
+```
+
+準備はこんなとこでOKかな。
+
+# テストを実行してみる
+最初から`tests/sample.spec.ts`ってサンプルテストコードがあるじゃないか。
+
+```ts:tests/example.spec.ts
+import { test, expect } from '@playwright/test';
+
+test('has title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});
+
+test('get started link', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Click the get started link.
+  await page.getByRole('link', { name: 'Get started' }).click();
+
+  // Expects the URL to contain intro.
+  await expect(page).toHaveURL(/.*intro/);
+});
+```
+`test()`ってのが2つある。これがテストケースだな。
+その後に`'has title'`、`'get started link'`ってテキストが付いてるけど、テストケース名だろう。
+コメントアウトで説明も書かれているけど、なんかコードからある程度わかりそうだな。
+
+## has title
+`page.goto()`で括弧内のURLにアクセスしてそう。
+`page.goto('https://playwright.dev/')`は https://playwright.dev/ にアクセスしてるんだろう。
+
+`expect(page).xxx`で何かを検証していそうだな。
+例えば`expect(page).toHaveTitle(/Playwright/)`は、ページのタイトルに「Playwright」が含まれていることを検証していそうだ。
+このページのタイトルは「Fast and reliable end-to-end testing for modern web apps | Playwright」みたいだからパスしそう。
+
+## get started link
+`page.goto('https://playwright.dev/')`は`has title`のテストと同じだ。
+
+`page.getByRole('link', { name: 'Get started' }).click()`は、「Get strted」ってテキストを持つリンクをクリックしているんだろう。ページトップにあるボタンだな。
+
+`expect(page).toHaveURL(/.*intro/)`でURLが`intro`で終わるか見てるな。
+実際遷移先のURLは`https://playwright.dev/docs/intro`だからこれもパスしそう。
+
+これを回してみよう。
+
+```bash
+$ docker compose up
+6 passed
+```
+パスした。
+ちなみに`tests/sample.spec.ts`には`test()`は2つしかないけど6つのテストがパスしてる。
+そしてコンソールを眺めてると`[chromium]`,`[firefox]`,`[webkit]`の文字が見えた。
+そう、すでにクロスブラウザでテストしてやがる。やりやがる。
+
+この辺は、`playwright.config.ts`を眺めるとなんとなくわかる。
+
+```ts:playwright.config.ts
+...
+export default defaultConfig({
+  testDir: './tests',
+  ...
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+
+
+    /* Test against mobile viewports. */
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },
+
+    /* Test against branded browsers. */
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    // },
+    // {
+    //   name: 'Google Chrome',
+    //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
+    // },
+  ],
+  ...
+})
+```
+DesktopのChrome、Firefox、Saferiでテストしたようだ。
+そしてコメントアウトにさらなる夢を感じる。
+
+# テストを書いてみる
+自分でもテストを追加してみたい。
+
+https://playwright.dev/docs/writing-tests
+
+公式ドキュメントが丁寧。
+
+https://playwright.dev/ にはページトップに「Playwright enables reliable end-to-end testing for modern web apps.」ってヒーロータイトルがある。これを検証してみよう。
+
+
+```ts:tests/example.spec.ts
+...
+
+test('has hero title', async ({ page }) => {
+  await page.goto('https://playwright.dev/')
+
+  await expect(page.getByRole('heading', { name: 'Playwright enables reliable end-to-end testing for modern web apps.' })).toBeVisible()
+})
+...
+```
+要素はLocatorsというもので指定するらしい（`page.getByRole('header', { name: xxx })`のとこ）。
+`toBeVisible()`で存在していること（見えていること）を検証している。
+詳しくは、公式ドキュメントを参照。
+
+https://playwright.dev/docs/locators#locate-by-role
+
+ちなみに`class`を使ったりして指定することもできる。
+
+```ts:tests/example.spec.ts
+...
+
+test('has hero title', async ({ page }) => {
+  await page.goto('https://playwright.dev/')
+
+  await expect(page.locator('.hero__title')).toHaveText('Playwright enables reliable end-to-end testing for modern web apps.')
+})
+...
+```
+
+```bash
+$ docker compose up
+9 passed
+```
+どちらの書き方にせよ、9つのテストがパスしたはず。
+
+おぉ...なんかこんな感じでなんだってできそうだな...
+
+Locatorに対する操作もいろいろ...
+
+https://playwright.dev/docs/api/class-locator
+
+Assertionも色々...
+
+https://playwright.dev/docs/api/class-pageassertions
+
+https://playwright.dev/docs/api/class-locatorassertions
+
+これ、なんでもできるんじゃないの...??
+
+# 失敗も見とく
+ちゃんと失敗するのかも見ておこう。
+
+```diff:tests/example.spec.ts
+  ...
+
+  test('has hero title', async ({ page }) => {
+    await page.goto('https://playwright.dev/')
+
+-   await expect(page.getByRole('heading', { name: 'Playwright enables reliable end-to-end testing for modern web apps.' })).toBeVisible()
++   await expect(page.getByRole('heading', { name: 'Playwright enables reliable end-to-end testing for modern web apps.' })).not.toBeVisible()
+  })
+...
+```
+`.toBeVisible()`の前に`.not`をつけた。これで「存在しない（見えない）」ことを検証することになる。
+でも実際はあるから失敗するはず。
+
+```bash
+$ docker compose up
+3 failed
+[chromium] › example.spec.ts:20:5 › has hero title
+[firefox] › example.spec.ts:20:5 › has hero title
+[webkit] › example.spec.ts:20:5 › has hero title
+6 passed
+```
+3つ失敗してる。期待通り。
+
+ちなみにplaywrightはテストのレポートも作ってくれる。
+`playwright-report/index.html`というファイルが生成されているので、ブラウザで開いて見てみよう。
+
+![テストレポート](./images/report.png)
+
+うわぁ。見やすい...
+
+![テストレポート詳細](./images/report_detail.png)
+
+詳細まで見れるんですか...
+
+# 失敗時のオプションを少し追加
+でも失敗時どうだったのか、このレポートからではわからない。
+と思ったらテストオプションがめっちゃ豊富。
+
+https://playwright.dev/docs/api/class-testoptions
+
+```diff:playwright.config.ts
+  import { defineConfig, devices } from '@playwright/test';
+  ...
+  export default defineConfig({
+    testDir: './tests',
+    ...
+    use: {
+      trace: 'on-first-retry',
++     screenshot: {
++       mode: 'only-on-failure',
++       fullPage: true,
++     },
++     video: 'retain-on-failure',
+    },
+    ...
+  });
+```
+
+失敗時にスクリーンショットとビデオを撮ることにしてみた。
+もう一度テストを失敗させて、レポートを見ると...
+
+![テストレポート詳細（スクリーンショット）](./images/report_screenshot.png)
+
+![テストレポート詳細（ビデオ）](./images/report_video.png)
+
+便利！！すぎ！！
+
+# 怖くないよね？
+ということで、怖くなかったよね？
+むしろめっちゃ味方。頼れるやつやE2E。Playwrightすげぇ。
+公式ドキュメント見るとページありすぎて「これは沼...今はやめておこう...」となるレベル。
+でもやりたいことはコレくらいの労力で達成できるのかも。
+それでちょっとずつ沼にハマれば、この公式ドキュメントの量は期待感しかない！
+
+ということで、一緒に沼にはまろう！
