@@ -1,0 +1,402 @@
+---
+title: "Google SpreadsheetとGoogle Slidesでお手軽動的OGP with Nuxt"
+tags: [Google Spreadsheet, Google Slides, Nuxt.js, GAS, OGP]
+date: '2021-10-14'
+published: false
+---
+
+いま話題のスペースに出会える spaces.bz（クローズ済み）では、デイリーランキングで動的OGPを実装しています。
+
+実はこれ、Google SpreadsheetとGoogle Slidesを使って、GASで毎日OGP画像を生成して表示させているんです。
+結構面白いアイデアかな、と思うのでシェアします！😊
+
+# 全体像
+まずこの記事で紹介する全体像を。
+
+1. 動的OGPのもとになるSlidesを作成
+1. 動的OGPのデータのもとになるSpreadsheetを作成
+1. GASを作成
+    - SpreadsheetのデータをもとにSlidesの文字列を置換
+    - Slidesを画像ファイルでエクスポートしてDriveに保存
+    - SpreadsheetにDriveに保存した画像ファイルのIDを追加
+    - Slidesを元の文字列に置換し直す
+1. SpreadsheetをWebApp（API）で公開
+1. Nuxtアプリで動的OGPを設定
+
+ちょっと長いですが、お付き合いいただけると嬉しいです🙏
+
+# 1. 動的OGPの元になるSlidesを準備
+まずはいい感じのOGPのデザインをGoogle Slidesで作ります。
+
+![slidesのイメージ](./images/1_slides_image.png)
+
+Coolです。ポイントとしてはOGPは1200mmx628mmのサイズがよいので、「ファイル > ページ設定」からスライドの縦横サイズを変更してます。
+
+このスライドに書いている「name」はこの後置換するためのキーワードになってます。
+
+# 2. 動的OGPのデータのもとになるSpreadsheetを準備
+「name」を置換していきたいので、そんな感じのSpreadsheetを用意します。
+spaces.bz の場合は、その日のランキング10位までをGASで集計して、そのデータを元に置換を行っています。
+今回は簡単な例なので、以下のようなシートを用意します。
+
+|id|name|ogpId|
+| --- | --- | --- |
+|1|Test A||
+|2|Test B||
+|3|Test C||
+
+`ogp_id`は今のところ空ですが列だけ用意しておきます。後でGASでOGP画像のファイルを生成したときに画像ファイルのIDをセットするカラムです。
+
+# 3. GASを作成
+この記事の佳境です！
+
+まずコードの全容をさらします。
+説明しやすいように書いていますが、内容を理解いただければ色々な書き方があるかなーと思います。
+
+```js:コード.js
+function main() {
+  const ss = SpreadsheetApp.openById('<SpreadsheetのID>')
+  const sheet = ss.getSheetByName('<Sheetの名前>')
+  const data = sheet.getDataRange().getValues()
+  const columnNames = data.shift()
+  const presentationId = '<SlidesのID>'
+  const folder = DriveApp.getFolderById('<FolderのID>')
+
+  data.forEach((row, index) => {
+    const name = row[1]
+    replaceText(presentationId, name)
+    const ogpId = downloadImage(presentationId, `${index}.png`, folder)
+    row[2] = ogpId
+    resetText(presentationId, name)
+  })
+
+  data.unshift(columnNames)
+  sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
+}
+
+function replaceText(presentationId, name) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  slide.replaceAllText('name', name)
+  presentation.saveAndClose()  
+}
+
+function downloadImage(presentationId, fileName, folder) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  const slideId = slide.getObjectId()
+  const url = `https://docs.google.com/presentation/d/${presentationId}/export/png?id=${presentationId}&pageId=${slideId}`
+  const options = {
+    headers: {
+      Authorization: `Bearer ${ScriptApp.getOAuthToken()}`
+    }
+  }
+
+  const response = UrlFetchApp.fetch(url, options)
+  const image = response.getAs(MimeType.PNG)
+  image.setName(fileName)
+  const file = folder.createFile(image)
+  return file.getId()
+}
+
+function resetText(presentationId, name) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  slide.replaceAllText(name, 'name')
+  presentation.saveAndClose()
+}
+```
+
+少し長いですが、少しずつ区切ってみていきます。
+
+## 3-1. 各種変数の設定
+```js
+const ss = SpreadsheetApp.openById('<SpreadsheetのID>')
+const sheet = ss.getSheetByName('<Sheetの名前>')
+const data = sheet.getDataRange().getValues()
+const columnNames = data.shift()
+const presentationId = '<SlidesのID>'
+const folder = DriveApp.getFolderById('<FolderのID>')
+```
+
+最初の`const`たちは変数の設定です。
+
+|変数|説明|
+| ----- | ----- |
+|`ss`|2で作成したSpreadsheet。`<SpreadsheetのID>`は`https://docs.google.com/spreadsheets/d/<この部分>/edit`|
+|`sheet`|2で作成したシート|
+|`data`|`sheet`のデータをArrayで取得したもの|
+|`columnNames`|`data`の1行目を取り出したもの|
+|`presentationId`|1で作成したSlidesのID。`https://docs.google.com/presentation/d/<この部分>/edit#slide=id.p`|
+|`folder`|作成したOGP画像を格納しておきたいGoogle Driveのフォルダ。`<FolderのID>`は`https://drive.google.com/drive/u/0/folders/<この部分>`。このフォルダは公開設定にしておきます（後述）|
+
+このとき、`data`と`columnNames`は以下のようになっています。
+
+```js
+data = [
+  ['1', 'Test A', ''],
+  ['2', 'Test B', ''],
+  ['3', 'Test C', '']
+]
+
+columnNames = ['id', 'name', 'ogpId']
+```
+
+## 3-2. 置換して画像保存して置換し直す
+
+```js
+  data.forEach((row, index) => {
+    const name = row[1]
+    replaceText(presentationId, name)
+    const ogpId = downloadImage(presentationId, `${index}.png`, folder)
+    row[2] = ogpId
+    resetText(presentationId, name)
+  })
+```
+
+ここが核です！なにか色々やっているようですが、ほとんどの行は別に作成した関数を呼び出しているのでそこも説明していきます。
+
+まず、全体は`data.forEach`で回しています。
+最初に`row[1]`で、`Test A`, `Test B`, `Test C`をループごとに`name`に格納しています。
+それに続いて、
+
+1. スライドのテキストを`name`に置換（`replaceText()`）
+2. スライドをイメージ保存（`downloadImage()`）
+3. 保存したファイルのIDを`data`に追加（`row[2] = ogpId`）
+4. スライドのテキストを置換し直す（`resetText()`）
+
+と処理を流しています。
+
+### 3-2-1. スライドのテキストを置換
+
+スライドのテキストの置換処理を行う`replaceText()`関数を定義しました。
+
+```js
+function replaceText(presentationId, name) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  slide.replaceAllText('name', name)
+  presentation.saveAndClose()  
+}
+```
+引数は`presentationId`と、置換後の文字列`name`です。
+まず、`SlidesApp.openById(presentationId)`で置換したいスライドがあるSlidesを開きます。
+そして、`getSlides()[0]`を使って、そのSlidesの1枚目のスライドを取得します。
+その`slide`に対して`replaceAllText()`を実行することで、`slide`の中の`'name'`の文字列を引数の`name`に置換しています。
+最後に`presentation.saveAndClose()`で置換を確定しています。`saveAndClose()`を行わないと、次のイメージ保存で置換前の状態で保存されてしまうので要チェックです。
+
+置換の処理はこれだけです。置換したい文字列が複数ある場合でも同じやり方で`slide.replaceAllText()`を追加すればできますし、複数のスライドに対してやりたい場合は`presentation`に対して`replaceAllText()`したり、`getSlides()`の結果を`forEach`で回してスライド1枚ずつに処理することで実現できますね。
+
+### 3-2-2. スライドを保存
+これで動的OGPのイメージの準備ができたので、これをイメージファイルに保存します。今回は`png`で。
+
+```js
+function downloadImage(presentationId, fileName, folder) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  const slideId = slide.getObjectId()
+  const url = `https://docs.google.com/presentation/d/${presentationId}/export/png?id=${presentationId}&pageId=${slideId}`
+  const options = {
+    headers: {
+      Authorization: `Bearer ${ScriptApp.getOAuthToken()}`
+    }
+  }
+
+  const response = UrlFetchApp.fetch(url, options)
+  const image = response.getAs(MimeType.PNG)
+  image.setName(fileName)
+  const file = folder.createFile(image)
+  return file.getId()
+}
+```
+何をするかというと、SlidesをダウンロードするURLにリクエストを投げて、レスポンスをpngファイルにして保存しようというやり方です。
+
+引数は、`presentationId`と`folder`、そしてファイル名として`fileName`を取ります。
+最初の`presentation`と`slide`の式は`replaceText()`と同じなので説明は省略します。
+`slideId`はそのスライドのIDのことで、`https://docs.google.com/presentation/d/<presentationId>/edit#slide=id.<'この部分'>`です。これは`slide.getObjectId()`で取得ができます。
+
+これらの変数を使ってリクエストURL`url`を作ります。
+リクエストには認証が必要なので、`ScriptApp.getOAuthToken()`を使ってBearer認証できるように`options`を作っておきます。
+
+この`url`と`options`を使って、`UrlFetchApp.fetch()`でリクエストを投げ、レスポンスを`response`に格納しています。
+`response`は`HTTPResponse`というClassになっているので、画像ファイルとして扱えるように`getAs(MimeType.PNG)`でpngファイルに変換し、`setName()`でファイル名を設定しました。
+それを、`folder.createFile()`で`folder`にファイルとして保存しているって流れです。
+最後に、保存したファイル`file`のIDを`getId()`で取得して、返り値にしています。
+
+### 3-2-3. 保存したファイルのIDをデータに追加
+```js
+const ogpId = downloadImage(presentationId, `${index}.png`, folder)
+row[2] = ogpId
+```
+先程説明したように`downloadImage()`は作成したpngファイルのIDをreturnしてます。
+それを`row[2]`、つまり`ogpId`のカラムに設定しています。
+詳しくは後ほど紹介しますが、これがNuxtアプリでGoogle Driveの画像ファイルをOGPに設定する肝だったりします。
+
+### 3-2-4. スライドのテキストを置換し直す
+ここまで終わったら次のループのためにスライドの文字列を元の`'name'`に戻しておきます。このために`resetText()`の関数を用意して呼び出しています。
+
+```js
+function resetText(presentationId, name) {
+  const presentation = SlidesApp.openById(presentationId)
+  const slide = presentation.getSlides()[0]
+  slide.replaceAllText(name, 'name')
+  presentation.saveAndClose()
+}
+```
+やっていることは`replaceText()`の逆なので説明は省略！
+
+## 3-3. スプレッドシートのogpIdを更新
+```js
+data.unshift(columnNames)
+sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
+```
+最後にSpreadsheetのogpIdカラムを更新しましょう。
+すでにここまでの処理で`data`の各Array要素の3つ目の要素に`ogpId`が格納されているので、Spreadsheetを上書きすればOKですね。
+
+ということで、`data.unshift(columnNames)`で`data`の1つ目の要素に列の名前を戻して、
+`sheet.getRange().setValues()`でデータを上書きしています。
+
+ここまでで画像を作成するステップが完了です。😊
+ここからはSpreadsheetをもとにNuxtアプリでOGP画像を動的に設定してみましょう！
+
+# 4. SpreadsheetをWebApp（API）で公開
+次は先程OGPのIDを追記したSpreadsheetをWebAppで公開していきます。
+このやり方は、以前に記事を書いたので詳細はそちらを見てください！
+
+[Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
+
+GASのコードは以下のようになります。先程の`コード.js`に追記していきましょう。
+
+```js:コード.js
+...
+function doGet() {
+  const users = getUsers()
+  return ContentService
+          .createTextOutput(JSON.stringify(users))
+          .setMimeType(ContentService.MimeType.JSON)
+}
+
+function getUsers() {
+  const ss = SpreadsheetApp.openById('<SpreadsheetのID>')
+  const sheet = ss.getSheetByName('<シート名>')
+  const table = sheet.getDataRange().getValues()
+  const keys = table.shift()
+
+  const users = table.map((row) => {
+    const object = {}
+    row.map((value, index) => {
+      object[String(keys[index])] = String(value)
+    })
+    return object
+  })
+
+  return users
+}
+```
+これを、デプロイしてWebApp公開しましょー。
+
+# 5. Nuxtアプリで動的OGPを設定
+まずは、Nuxtアプリで先程公開したWebAppにリクエストする下準備をします。今回は`axios`を使うことを前提として、`serverMiddleware`経由でWebAppを呼び出します。
+こちらも過去に記事を書いていますので、詳細についてはそちらを参照してください。
+
+https://zenn.dev/at946/articles/c02b5ebfa46786
+
+以下の更新、もしくは新規作成を行います。
+
+```diff js:nuxt.config.js
+  export default {
+    ...
++   axios: {
++     proxy: true,
++   },
++   serverMiddleware: [
++     '@api/'
++   ],
+    ...
+  }
+```
+
+```js:api/index.js
+const express = require('express')
+const axios = require('axios')
+const app = express()
+
+app.get('/', async (req, res) => {
+  const response = axios.get('<WebAppのURL>')
+  res.send(response.data)
+})
+
+module.exports = {
+  path: '/api/',
+  handler: app,
+}
+```
+
+これで下準備が完了です。あとは`pages`のファイルで`asyncData()`で情報取得して、`head()`で画像のパスを指定してあげるだけです。
+
+今回は`pages/index.vue`でクエリパラメーター`id`に応じてOGP画像を出し入れしましょう。パスパラメーターとかでもやり方は基本的に変わりないです。
+
+```vue:pages/index.vue
+...
+<script>
+export default {
+  async asyncData({ $axios, query }) {
+    const users = await $axios.$get('/api')
+    const user = query.id ? users.find((user) => user.id === query.id) : null
+    const ogpUrl = user ? `https://drive.google.com/uc?export=view&id=${user.ogpId}` : <共通のOGPイメージのパス>
+
+    return {
+      users: users,
+      ogpUrl: ogpUrl
+    }
+  },
+
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.ogpUrl
+        }
+      ]
+    }
+  }
+}
+</script>
+...
+```
+
+{/* 
+例えばこんな感じ。（`nuxt.config.js`で他のタグは設定されている前提です！）
+`asyncData`でクエリパラメーター`id`が存在する場合は、`users`から同じ`id`の`user`を探してます。
+見つかったら`ogpUrl`に`https://drive.google.com/uc?export=view&id=${user.ogpId}`を、存在しない場合は<共通のOGPイメージのパス>をセットし、`head()`で`og:image`の`property`として`ogpUrl`を設定しています。
+こうすることでクエリパラメーター`id`に応じて動的にOGPを設定することができます。
+
+さて、ここで出てきた`https://drive.google.com/uc?export=view&id=`です。
+Google Drive上で画像ファイルを見ようとするとプレビューモードで表示されると思います。この状態ではコードからすれば画像ファイルとして扱うことができません。
+実は`https://drive.google.com/uc?export=view&id=<表示したい画像ファイルのID>`であれば、プレビューモードではなく画像ファイルとして認識させることができます。
+また、これで表示できるのは閲覧権限をもつユーザーのみですので、OGP画像を保存しているフォルダはすべてのユーザーに閲覧権限で公開されている必要があります。
+
+[ngrok](https://ngrok.com/)で公開し、[Twitter Card Validator](https://cards-dev.twitter.com/validator)でOGPが正しく設定されているか確認してみましょう。
+
+## id=1のとき
+![id=1のとき](/images/2237aa1ed5c0a3/2_twitter_card_validator_1.png)
+
+## id=2のとき
+![id=2のとき](/images/2237aa1ed5c0a3/3_twitter_card_validator_2.png)
+
+動的にOGP画像が表示されてることを確認できました！
+
+# まとめ
+長くなってしまいましたが、これでSpreadsheetとSlidesを使ってOGP画像を生成しNuxtアプリで動的OGPを実現する一連の流れを紹介させていただきました。
+かなり色々なサイトを参考にさせていただいてここまでできたので、この場を借りてお礼を。m(_ _)m
+GAS、かなり色々なことができるので楽しいですね。
+
+# 参考
+- [Slides Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/slides?hl=en)
+- [Spreadsheet Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/spreadsheet)
+- [Drive Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/drive)
+- [[Google Apps Script]Googleスライドのプレゼンテーションを他形式に変換する | 初心者備忘録](https://www.ka-net.org/blog/?p=12905)
+- [Google ドライブでファイル名とリンクの一覧をお手軽に取得する方法 | DevelopersIO](https://dev.classmethod.jp/articles/gas-get-file-list-in-folder/)
+- [Google Drive に保存した画像を直接呼び出せるURLの取得 - Qiita](https://qiita.com/codeDiver/items/0394968fa318d9309d33) */}

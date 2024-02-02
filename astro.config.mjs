@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 import markdoc from "@astrojs/markdoc";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-import remarkCodeTitles from 'remark-code-titles'
+import remarkCodeTitles from 'remark-code-titles';
 import decapCmsOauth from "astro-decap-cms-oauth";
 import partytown from '@astrojs/partytown';
 import remarkMath from 'remark-math';
@@ -18,40 +18,39 @@ import rehypeKatex from 'rehype-katex';
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
+import expressiveCode from "astro-expressive-code";
+
 // https://astro.build/config
 export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
   output: 'server',
-  site: 'https://astro-ink.vercel.app', // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  site: 'https://astro-ink.vercel.app',
+  // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   server: {
     // port: 4321, // The port to run the dev server on.
   },
   markdown: {
     syntaxHighlight: 'shiki',
     shikiConfig: {
-      theme: 'css-variables',
+      theme: 'css-variables'
     },
-    remarkPlugins: [
-      remarkCodeTitles,
-      remarkMath,
-    ],
-    rehypePlugins: [
-      [rehypeKatex, {}]
-    ]
+    remarkPlugins: [remarkCodeTitles, remarkMath],
+    rehypePlugins: [[rehypeKatex, {}]]
   },
   integrations: [
+    expressiveCode(),
     mdx(), 
-    markdoc(),
+    markdoc(), 
     svelte(), 
     tailwind({
-      applyBaseStyles: false,
-    }), 
+      applyBaseStyles: false
+    }),
     sitemap(),
     decapCmsOauth(),
     partytown({
       config: {
-        forward: ["dataLayer.push"],
-      },
-    }),  
+        forward: ["dataLayer.push"]
+      }
+    }),
   ],
   vite: {
     plugins: [],
@@ -64,5 +63,5 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
       allowNodeBuiltins: true
     }
   },
-  adapter: vercel(),
+  adapter: vercel()
 });
