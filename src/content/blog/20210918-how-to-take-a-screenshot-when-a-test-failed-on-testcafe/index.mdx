@@ -1,0 +1,99 @@
+---
+title: "TestCafeでテストに失敗したときにスクリーンショットを撮りたい"
+tags: [TestCafe, E2E]
+date: '2021-09-18'
+published: true
+---
+
+TestCafeのエラーメッセージはとてもわかりやすいのですが、「そんなわけないよ！実際に画面見せろよ！」となることもありますよね。
+
+この記事では、TestCafeでテストに失敗したときに自動でスクリーンショットを保存できるようにします！
+
+# `-s takeOnFails=true`オプションをつけるだけ
+
+ま、以上なんですが...
+
+公式サイトだと、こちらに書かれております。
+
+https://testcafe.io/documentation/402639/reference/command-line-interface#takeonfails
+
+便利すぎやしませんか...TestCafeさん...
+
+TestCafeの起動時に
+
+```sh
+$ testcafe chrome:headless -s takeOnFails=true
+```
+
+のように記載すればOKです。
+
+# package.jsonに追記する
+
+僕たちはNuxtで開発をしており、テストは`yarn test`コマンドで起動するようにしています。
+
+```json:package.json
+{
+  "script": {
+    ...略...
+    "test": "testcafe chrome:headless",
+    ...略...
+  },
+}
+```
+
+と記載していました。ここを、
+
+```json:package.json ins={2} del={1}
+"test": "testcafe chrome:headless",
+"test": "testcafe chrome:headless -s takeOnFails=true",
+```
+
+と書き換えるのみです。
+
+# スクリーンショットはどこへ...？
+
+スクリーンショットはプロジェクトのルートディレクトリに`screenshots`ディレクトリが自動で作成され、その中にテストケースごとのディレクトリが作られて保存されます。
+テストケースのディレクトリには番号が振られているので、複数のテストが失敗したときでもどのテストがどのスクリーンショットなのかわかりやすいです。
+
+[`path`オプション](https://testcafe.io/documentation/402639/reference/command-line-interface#path)を使えば、ディレクトリの場所を変えることもできるみたいですが、特にルートディレクトリにディレクトリが作成されても困っていないので指定していません。
+
+ただ、screenshotはGitHubなどのGitサービスにあげる必要がないものなので、`.gitignore`でGitの対象から外してます。
+
+```text:.gitignore
+screenshots
+```
+
+また、新しいテストを始めるときに、古いテストのスクリーンショットが残っているとわけがわからなくなってしまうので、`package.json`で`testcafe`実行前に`screenshots`ディレクトリを削除するようにしています。
+
+```json:package.json ins={2} del={1}
+"test": "testcafe chrome:headless -s takeOnFails=true"
+"test": "rm -rf ./screenshots && testcafe chrome:headless -s takeOnFails=true"
+```
+
+これでステキな自動テストライフを過ごせます！🎁
+
+# 番外編：失敗時のスクリーンショットじゃわからない...
+
+ときもあります！なんかエラー画面が出てるだけで終わり...その直前の画面が見たい...
+そんなときはテストコード内で自分でスクリーンショットを撮ることもできます！
+
+```js
+test('take a screenshot', async t => {
+  await t
+    .typeText('#input', 'hello')
+    .takeScreenshot()
+    .click('#button')
+    .expect(...).eql(...)
+})
+```
+
+こんな感じで、`#button`をクリックしたあとにテストが失敗してるんだけど、スクリーンショットがエラー画面でなんだかわからない...というときは、`takeScreenshot()`を使ってあげれば`#button`をクリックする直前の画面をスクリーンショットできます！
+これも特に指定しなければ`./screenshots`ディレクトリの中のテストケースのディレクトリ内に、テスト失敗のスクリーンショットと分けて格納されます。
+`takeScreenshot()`もパスや全画面を対象にするかを選択できますので、気になる方は公式サイトを御覧ください。
+
+https://testcafe.io/documentation/402675/reference/test-api/testcontroller/takescreenshot
+
+# まとめ
+前回に引き続き、TestCafeについてお話しました！
+テスト時のスクリーンショットは、自作しなかったりしなくてはいけないテストフレームワークもあったりするので、TestCafeはかなり手軽だなーと思います。
+みなさんにステキなテストライフが訪れますように！🤞
