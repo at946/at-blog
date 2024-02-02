@@ -2,7 +2,7 @@
 title: "Google SpreadsheetとGoogle Slidesでお手軽動的OGP with Nuxt"
 tags: [Google Spreadsheet, Google Slides, Nuxt.js, GAS, OGP]
 date: '2021-10-14'
-published: false
+published: true
 ---
 
 いま話題のスペースに出会える spaces.bz（クローズ済み）では、デイリーランキングで動的OGPを実装しています。
@@ -299,21 +299,21 @@ function getUsers() {
 まずは、Nuxtアプリで先程公開したWebAppにリクエストする下準備をします。今回は`axios`を使うことを前提として、`serverMiddleware`経由でWebAppを呼び出します。
 こちらも過去に記事を書いていますので、詳細についてはそちらを参照してください。
 
-https://zenn.dev/at946/articles/c02b5ebfa46786
+[NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！](/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3)
 
 以下の更新、もしくは新規作成を行います。
 
-```diff js:nuxt.config.js
-  export default {
-    ...
-+   axios: {
-+     proxy: true,
-+   },
-+   serverMiddleware: [
-+     '@api/'
-+   ],
-    ...
-  }
+```js:nuxt.config.js ins={3-8}
+export default {
+  ...
+  axios: {
+    proxy: true,
+  },
+  serverMiddleware: [
+    '@api/'
+  ],
+  ...
+}
 ```
 
 ```js:api/index.js
@@ -367,10 +367,9 @@ export default {
 ...
 ```
 
-{/* 
 例えばこんな感じ。（`nuxt.config.js`で他のタグは設定されている前提です！）
 `asyncData`でクエリパラメーター`id`が存在する場合は、`users`から同じ`id`の`user`を探してます。
-見つかったら`ogpUrl`に`https://drive.google.com/uc?export=view&id=${user.ogpId}`を、存在しない場合は<共通のOGPイメージのパス>をセットし、`head()`で`og:image`の`property`として`ogpUrl`を設定しています。
+見つかったら`ogpUrl`に`https://drive.google.com/uc?export=view&id=${user.ogpId}`を、存在しない場合は\<共通のOGPイメージのパス\>をセットし、`head()`で`og:image`の`property`として`ogpUrl`を設定しています。
 こうすることでクエリパラメーター`id`に応じて動的にOGPを設定することができます。
 
 さて、ここで出てきた`https://drive.google.com/uc?export=view&id=`です。
@@ -381,10 +380,10 @@ Google Drive上で画像ファイルを見ようとするとプレビューモ�
 [ngrok](https://ngrok.com/)で公開し、[Twitter Card Validator](https://cards-dev.twitter.com/validator)でOGPが正しく設定されているか確認してみましょう。
 
 ## id=1のとき
-![id=1のとき](/images/2237aa1ed5c0a3/2_twitter_card_validator_1.png)
+![id=1のとき](./images/2_twitter_card_validator_1.png)
 
 ## id=2のとき
-![id=2のとき](/images/2237aa1ed5c0a3/3_twitter_card_validator_2.png)
+![id=2のとき](./images/3_twitter_card_validator_2.png)
 
 動的にOGP画像が表示されてることを確認できました！
 
@@ -399,4 +398,4 @@ GAS、かなり色々なことができるので楽しいですね。
 - [Drive Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/drive)
 - [[Google Apps Script]Googleスライドのプレゼンテーションを他形式に変換する | 初心者備忘録](https://www.ka-net.org/blog/?p=12905)
 - [Google ドライブでファイル名とリンクの一覧をお手軽に取得する方法 | DevelopersIO](https://dev.classmethod.jp/articles/gas-get-file-list-in-folder/)
-- [Google Drive に保存した画像を直接呼び出せるURLの取得 - Qiita](https://qiita.com/codeDiver/items/0394968fa318d9309d33) */}
+- [Google Drive に保存した画像を直接呼び出せるURLの取得 - Qiita](https://qiita.com/codeDiver/items/0394968fa318d9309d33)
