@@ -12,6 +12,8 @@ const __dirname = dirname(__filename);
 import remarkCodeTitles from 'remark-code-titles'
 import decapCmsOauth from "astro-decap-cms-oauth";
 import partytown from '@astrojs/partytown';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -29,7 +31,11 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
       theme: 'css-variables',
     },
     remarkPlugins: [
-      remarkCodeTitles
+      remarkCodeTitles,
+      remarkMath,
+    ],
+    rehypePlugins: [
+      [rehypeKatex, {}]
     ]
   },
   integrations: [

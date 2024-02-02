@@ -46,6 +46,10 @@ const { title = SITE.title, description, permalink, image } = Astro.props;
 {description && <meta property="twitter:description" content={description} />}
 {image && <meta property="twitter:image" content={image} />}
 
+<!-- KaTex -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+
 <script is:inline>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
