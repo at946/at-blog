@@ -2,7 +2,6 @@
     import { SITE } from '@/config'
     import SvgIcon from './SvgIcon.astro'
     import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
-    import SearchBtn from './SearchBtn.svelte'
     import HeaderNavItem from './HeaderNavItem.astro'
     import { Icon } from 'astro-icon'
 
@@ -15,9 +14,6 @@
         <div class="flex justify-end">
             <nav>
                 <ul class="flex gap-3">
-                    <HeaderNavItem>
-                        <SearchBtn client:visible />
-                    </HeaderNavItem>
                     <HeaderNavItem>
                         <a href={`http://twitter.com/${ SITE.authorTwitter}`} title={`${ SITE.author }'s X account'`} target="_blank" rel="noopener noreferrer">
                             <SvgIcon>
