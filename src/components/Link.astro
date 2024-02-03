@@ -1,0 +1,13 @@
+---
+interface Props {
+  href: string,
+  title?: string,
+  isTargetBlank?: boolean,
+}
+const { href, title, isTargetBlank = false } = Astro.props
+---
+
+{ isTargetBlank
+  ? <a href={href} title={title} target="_blank" rel="noopener noreferrer"><slot /></a>
+  : <a href={href} title={title}><slot /></a>
+}
