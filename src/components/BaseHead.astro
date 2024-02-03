@@ -68,7 +68,7 @@ integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1
   }
 </script>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Analytics -->
 { import.meta.env.PROD &&
 <script
   type="text/partytown"
@@ -81,4 +81,13 @@ integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1
   gtag('js', new Date());
   gtag('config', 'G-MWLJ42K3YD');
 </script>
+}
+
+<!-- Google Adsense -->
+{ import.meta.env.PROD &&
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8890406023301925"
+    crossorigin="anonymous">
+  </script>
 }
