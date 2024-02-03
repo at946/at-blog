@@ -3,14 +3,24 @@ import { toTitleCase } from '@/utils'
 import { NAV_ITEMS } from '@/config'
 ---
 <nav class="py-3 text-center mb-8">
-    <ul class="inline-flex list-none gap-8 text-xl font-semibold text-theme-secondary dark:text-theme-dark-secondary flex-wrap" transition:animate="fade">
-         {
-            Object.keys(NAV_ITEMS).map(navItemKey => <li>
-                <a class:list={[
-                    `pb-1 border-b-2 hover:border-gray-400 hover:dark:border-gray-700 `,
-                    Astro.url.pathname === NAV_ITEMS[navItemKey].path ? 'border-theme-primary' : 'border-gray-100 dark:border-gray-800'
-                ]} href={NAV_ITEMS[navItemKey].path} title={NAV_ITEMS[navItemKey].title}>{toTitleCase(NAV_ITEMS[navItemKey].title)}</a>
-            </li>)
-        }
-    </ul>
+  <ul class="inline-flex list-none gap-8 text-xl dark:text-theme-dark-secondary flex-wrap" transition:animate="fade">
+    {
+      Object.keys(NAV_ITEMS).map(navItemKey =>
+        <li>
+          {
+            Astro.url.pathname === NAV_ITEMS[navItemKey].path
+            ?
+              <span class="pb-1 border-b-2 font-bold text-theme-secondary dark:text-theme-dark-secondary border-theme-secondary dark:border-theme-dark-secondary">
+                {toTitleCase(NAV_ITEMS[navItemKey].title)}
+              </span>
+            : <a
+                class="pb-1 text-gray-600 dark:text-gray-200 font-bold"
+                href={NAV_ITEMS[navItemKey].path}
+              >
+                {toTitleCase(NAV_ITEMS[navItemKey].title)}
+              </a>
+          }
+      </li>)
+    }
+  </ul>
 </nav>
