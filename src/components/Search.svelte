@@ -21,7 +21,6 @@
 
             // indexable properties
             this.field('title')
-            this.field('description')
             this.field('tags')
 
             // Omit, if you don't want to search on `body`
@@ -63,8 +62,6 @@
             <div class="search__results--none">
                 {#if searchQuery.length}
                     No matching items found!
-                {:else}
-                    Search something and let me find it for you! :-)
                 {/if}
             </div>
         {/if}
