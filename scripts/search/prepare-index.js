@@ -7,10 +7,10 @@ import grayMatter from 'gray-matter'
     // prepare the dirs
     const srcDir = path.join(process.cwd(), 'src')
     const publicDir = path.join(process.cwd(), 'public')
-    const contentBlogDir = path.join(srcDir, 'content', 'blog')
-    const contentFilePattern = path.join(contentBlogDir, '*.md')
+    const contentBlogDir = path.join(srcDir, 'content', 'blog', '**')
+    const contentFilePattern = path.join(contentBlogDir, '*.mdx')
     const indexFile = path.join(publicDir, 'search-index.json')
-    const getSlugFromPathname = (pathname) => path.basename(pathname, path.extname(pathname))
+    const getSlugFromPathname = (pathname) => path.dirname(pathname)
 
     const contentFilePaths = await globby([ contentFilePattern ])
 
@@ -19,12 +19,11 @@ import grayMatter from 'gray-matter'
         const index = []
         let i = 0
         for await (let file of files){
-            const { data: { title, description, tags }, content } = grayMatter(file)
+            const { data: { title, tags }, content } = grayMatter(file)
             index.push({
-                slug: getSlugFromPathname(contentFilePaths[i]),
+                slug: getSlugFromPathname(contentFilePaths[i]).split('/').pop(),
                 category: 'blog',
                 title,
-                description,
                 tags,
                 body: content
             })
