@@ -1,122 +1,40 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { SITE, USE_POST_IMG_OVERLAY, USE_AUTHOR_CARD, USE_SUBSCRIPTION, USE_VIEW_STATS } from '$/config'
+import { SITE } from '$/config'
 import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
 
 
 interface Props {
-    meta?: {
-        id: string,
-        slug: string,
-        collection: string
-    },
     content: CollectionEntry<'blog'>['data'],
-    stats?: {
-        views: number
-    }
 }
-const { content, meta } = Astro.props
+const { content } = Astro.props
 
-const AUTHOR_NAME = content.author ? content.author : SITE?.author ? SITE?.author : "Author"
-const AUTHOR_TWITTER = content.authorTwitter ? content.authorTwitter : SITE?.authorTwitter ? SITE?.authorTwitter : ""
-const AUTHOR_AVATAR = content.authorImage ? content.authorImage : SITE?.authorImage ? SITE?.authorImage : ""
 ---
 <!doctype html>
 <html lang="ja">
-    <head>
-        <BaseHead {...content} title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title }/>
-    </head>
-    <MainLayout>
-        <div class="post__header">
-            <p class="post__date mb-3">
-                <!-- post creation/updation data -->
-                { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'short' }).format(new Date(content.date))}
-            </p>
-            <h1 class="post__title mb-4">{ content.title }</h1>
-            <div class="post__tags mb-2">
-                { content.tags !== undefined && content.tags.length > 0 && content.tags.map(tag => <a class="post__tag" href={`/tags/${tag}`} title={tag}>{tag}</a>) }
-            </div>
-        </div>
-        {
-            content.image ?
-            USE_POST_IMG_OVERLAY ?
-                <div class="img__outer">
-                    <img src={content.image} alt={content.title} />
-                    <div class="img_gradient"></div>
-                </div><br/>
-                :
-                <img class="img__outer" src={content.image} alt={content.title} /><br/>
-                : ""
-        }
-        <div class="mb-20">
-        <Prose>
-            <slot />
-        </Prose>
-        </div>
-    </MainLayout>
+  <head>
+    <BaseHead {...content} title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title }/>
+  </head>
+  <MainLayout>
+    <div class="text-center md:text-left mb-16">
+      <p class="text-gray-400 mb-2">
+        { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'short' }).format(new Date(content.date))}
+      </p>
+      <h1 class="text-5xl leading-snug font-extrabold text-theme-primary dark:text-theme-dark-primary mb-2">{ content.title }</h1>
+      <div class="inline-flex gap-3 flex-wrap">
+        { !!content.tags && content.tags.length > 0 && content.tags.map(tag =>
+          <a
+            class="text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary"
+            href={`/tags/${tag}`}
+            title={tag}
+          >
+            {tag}
+          </a>
+        )}
+      </div>
+    </div>
+    <Prose><slot /></Prose>
+  </MainLayout>
 </html>
-<style>
-    .post__header {
-        @apply py-4 mb-1 text-center md:text-left
-    }
-    .post__title {
-        @apply text-5xl font-extrabold text-theme-primary dark:text-theme-dark-primary
-    }
-    .post__desc {
-        @apply text-gray-500 dark:text-gray-100 flex justify-center text-left md:flex-none md:justify-start
-    }
-    .post__author {
-        @apply no-underline dark:text-white hover:text-theme-primary
-    }
-    .post__date,.post__stats {
-        @apply text-gray-400
-    }
-    .post__tags {
-        @apply inline-flex gap-2 flex-wrap
-    }
-    .post__tag {
-        @apply text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary
-    }
-
-    .avatar {
-        @apply w-12 h-12 rounded-full object-cover p-1 border-2 border-solid border-theme-dark-primary dark:border-theme-primary
-    }
-    .avatar--lg {
-        @apply w-32 h-32
-    }
-
-    .img__outer {
-        @apply relative rounded-lg shadow-xl overflow-hidden
-    }
-    .img_gradient {
-        @apply absolute z-10 w-full bottom-0 left-0 h-full bg-gradient-to-tr from-theme-primary dark:from-theme-dark-primary
-    }
-
-    .author-card {
-        @apply text-gray-500 dark:text-gray-100 flex flex-row gap-4 justify-start text-left
-    }
-    .author-card__meta {
-        @apply border-l pl-4
-    }
-    .author-card__author {
-        @apply text-2xl mb-1
-    }
-    .author-card__bio {
-        @apply text-gray-400
-    }
-
-    .subscription-form {
-        @apply w-4/6 mt-2 flex flex-row rounded-lg overflow-hidden shadow-lg
-    }
-    .subscription-form input {
-        @apply flex-grow border-0 text-theme-accent-gray-dark
-    }
-    .subscription-form button, .button {
-        @apply px-4 py-2 uppercase font-bold text-white bg-gradient-to-tr from-theme-primary to-theme-dark-secondary dark:from-theme-dark-secondary dark:to-theme-primary
-    }
-    .author-card__follow-btn {
-        @apply rounded-md shadow-md shadow-theme-dark-secondary dark:shadow-theme-primary hover:shadow-theme-secondary hover:dark:shadow-theme-secondary hover:shadow-lg transition-all
-    }
-</style>
