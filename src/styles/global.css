@@ -17,10 +17,6 @@
 @tailwind utilities;
 
 /* Ink specific styles */
-.ink-h {
-    @apply inline-block text-sm font-bold uppercase drop-shadow-lg py-4 tracking-wider opacity-40 dark:opacity-70
-}
-
 ::-webkit-scrollbar {
 	@apply w-3;
 }

@@ -22,7 +22,7 @@ const { content } = Astro.props
       <p class="text-gray-400 mb-2">
         { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'short' }).format(new Date(content.date))}
       </p>
-      <h1 class="text-5xl leading-snug font-extrabold text-theme-primary dark:text-theme-dark-primary mb-2">{ content.title }</h1>
+      <h1 class="text-5xl leading-snug font-extrabold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
       <div class="inline-flex gap-3 flex-wrap">
         { !!content.tags && content.tags.length > 0 && content.tags.map(tag =>
           <a
