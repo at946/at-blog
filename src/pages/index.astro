@@ -26,7 +26,7 @@ posts.sort((x, y) => new Date(y.data.date).getTime() - new Date(x.data.date).get
     <hr/>
     <div class="py-4">
         <PostPreviewList posts={posts.slice(0, 5)} heading="最近の投稿 / Recent Posts"/>
-        <div class="text-center md:text-right">
+        <div class="text-center md:text-right mt-16">
             <a class="uppercase font-bold hover:underline" href="/blog" title="すべてのブログ">All Posts &rarr;</a>
         </div>
     </div>
