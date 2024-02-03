@@ -45,7 +45,6 @@ module.exports = {
                         },
                         blockquote: {
                             color: colors.primary,
-                            fontSize: theme("fontSize.2xl"),
                             borderColor: colors.dark.primary,
                         },
                         'blockquote > p::before, p::after': {
@@ -70,7 +69,6 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
     ]
 };
