@@ -1,6 +1,5 @@
 import { component } from "@astrojs/markdoc/config";
 
-/** @type {import('@markdoc/markdoc').Schema} */
 export const callout = {
 	render: component("./src/components/mdoc/Callout.astro"),
 	children: ["paragraph", "tag", "list"],
