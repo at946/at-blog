@@ -1,0 +1,22 @@
+---
+import OuterLink from './OuterLink.astro'
+
+interface Props {
+  sourceName?: string
+  sourceLink?: string
+}
+
+const { sourceName, sourceLink } = Astro.props
+---
+<blockquote cite={sourceLink} class="prose-quoteless">
+  <slot/>
+  { sourceName &&
+  <p class="text-right mt-0">
+    { !!sourceLink
+      ? <OuterLink href={sourceLink} title={sourceName}>{sourceName}</OuterLink>
+      : sourceName
+    }
+    </p>
+  }
+
+</blockquote>

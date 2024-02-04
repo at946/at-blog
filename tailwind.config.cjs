@@ -25,13 +25,19 @@ module.exports = {
             typography: (theme) => ({
                 dark: {
                     css: {
-                        color: theme("colors.gray.200"),
+                        color: theme("colors.gray.100"),
                         blockquote: {
-                            color: colors.dark.primary,
-                            borderColor: colors.primary
+                            color: colors.dark.secondary,
+                            borderColor: colors.dark.secondary
                         },
-                        'blockquote > p::before, p::after': {
-                            color: colors.primary,
+                        h1: {
+                            color: colors.dark.primary,
+                        },
+                        h2: {
+                            color: colors.dark.primary,
+                        },
+                        h3: {
+                            color: colors.dark.secondary,
                         },
                     },
                 },
@@ -44,20 +50,20 @@ module.exports = {
                               },
                         },
                         blockquote: {
-                            color: colors.primary,
-                            borderColor: colors.dark.primary,
+                            color: colors.secondary,
+                            borderColor: colors.secondary,
                         },
-                        'blockquote > p::before, p::after': {
-                            color: colors.dark.primary,
-                        },
+                        'blockquote p:first-of-type::before': { content: 'none'},
+                        'blockquote p:first-of-type::after': { content: 'none'},
+                        'blockquote p': { marginBottom: 0 },
                         h1: {
-                            color: colors.dark.secondary,
+                            color: colors.primary,
                         },
                         h2: {
-                            color: colors.dark.secondary,
+                            color: colors.primary,
                         },
                         h3: {
-                            color: colors.dark.secondary,
+                            color: colors.secondary,
                         },
                     }
                 },
