@@ -4,7 +4,6 @@ import { tweetEmbed } from "./schema/tweet-embed.mdoc";
 import { tabs } from "./schema/tabs.mdoc";
 import { ytEmbed } from "./schema/yt-embed.mdoc";
 
-/** @type {import('@markdoc/markdoc').Config} */
 export const config = {
 	tags: {
 		callout,
