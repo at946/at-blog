@@ -3,19 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ink specific styles */
-::-webkit-scrollbar {
-	@apply w-3;
-}
-
-::-webkit-scrollbar-track {
-	@apply bg-theme-dark-primary dark:bg-theme-primary bg-opacity-20;
-}
-
-::-webkit-scrollbar-thumb {
-	@apply bg-theme-primary dark:bg-theme-dark-primary bg-opacity-20 dark:bg-opacity-100 shadow-2xl rounded-full;
-}
-
 /** Code block **/
 .remark-code-title {
 	@apply inline-block relative top-4 px-2 pt-1 pb-5 text-sm text-theme-primary dark:text-theme-dark-primary bg-gradient-to-br from-theme-primary/30 dark:from-theme-dark-primary/30 to-theme-dark-primary/30 dark:to-theme-primary/30 rounded-t-md shadow-sm;
