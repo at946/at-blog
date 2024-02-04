@@ -5,6 +5,7 @@ import { tweetEmbed } from "./schema/tweet-embed.mdoc";
 import { tabs } from "./schema/tabs.mdoc";
 import { ytEmbed } from "./schema/yt-embed.mdoc";
 import { speakerdeckEmbed } from "./schema/speakerdeck-embed.mdoc";
+import { quote } from "./schema/quote.mdoc";
 
 export const config = {
 	tags: {
@@ -15,5 +16,6 @@ export const config = {
 		yt: ytEmbed,
 		tabs,
 		speakerdeck: speakerdeckEmbed,
+		quote,
 	},
 };
