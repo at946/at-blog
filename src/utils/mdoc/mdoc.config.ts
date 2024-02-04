@@ -13,17 +13,4 @@ export const config = {
 		yt: ytEmbed,
 		tabs,
 	},
-	functions: {
-		getCountryEmoji: {
-			transform(parameters) {
-				const [country] = Object.values(parameters);
-				const countryToEmojiMap = {
-					japan: "🇯🇵",
-					spain: "🇪🇸",
-					france: "🇫🇷",
-				};
-				return countryToEmojiMap[country as string] ?? "🏳";
-			},
-		},
-	},
 };
