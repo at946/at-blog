@@ -4,3 +4,11 @@
 $ npm i
 $ npm run dev
 ```
+
+# Markdoc
+
+## Link
+
+```mdoc
+{% link %}
+```
