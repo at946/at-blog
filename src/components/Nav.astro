@@ -1,5 +1,4 @@
 ---
-import { toTitleCase } from '@/utils'
 import { NAV_ITEMS } from '@/config'
 ---
 <nav class="py-3 text-center mb-8">
@@ -10,14 +9,14 @@ import { NAV_ITEMS } from '@/config'
           {
             Astro.url.pathname === NAV_ITEMS[navItemKey].path
             ?
-              <span class="underline underline-offset-8 font-bold text-theme-secondary dark:text-theme-dark-secondary border-theme-secondary dark:border-theme-dark-secondary">
-                {toTitleCase(NAV_ITEMS[navItemKey].title)}
+              <span class="underline underline-offset-8 font-bold text-theme-secondary dark:text-theme-dark-secondary border-theme-secondary dark:border-theme-dark-secondary uppercase">
+                {NAV_ITEMS[navItemKey].title}
               </span>
             : <a
-                class="pb-1 text-gray-600 dark:text-gray-200 font-bold hover:underline underline-offset-8"
+                class="pb-1 text-gray-600 dark:text-gray-200 font-bold hover:underline underline-offset-8 uppercase"
                 href={NAV_ITEMS[navItemKey].path}
               >
-                {toTitleCase(NAV_ITEMS[navItemKey].title)}
+                {NAV_ITEMS[navItemKey].title}
               </a>
           }
       </li>)
