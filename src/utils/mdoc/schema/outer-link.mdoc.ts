@@ -1,8 +1,7 @@
 import { component } from "@astrojs/markdoc/config";
-import { SITE } from '@/config'
 
-export const link = {
-	render: component("./src/components/mdoc/Link.astro"),
+export const outerLink = {
+	render: component("./src/components/mdoc/OuterLink.astro"),
 	children: ["strong", "em", "s", "code", "text", "tag"],
 	attributes: {
 		href: {
@@ -10,9 +9,6 @@ export const link = {
 			required: true,
 		},
 		title: {
-			type: String,
-		},
-		target: {
 			type: String,
 		},
 	},
