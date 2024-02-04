@@ -23,7 +23,7 @@ import expressiveCode from "astro-expressive-code";
 // https://astro.build/config
 export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
   output: 'server',
-  site: 'https://astro-ink.vercel.app',
+  site: 'https://at-blog.vercel.app',
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   server: {
     // port: 4321, // The port to run the dev server on.
