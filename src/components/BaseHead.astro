@@ -11,7 +11,7 @@ export type Props = {
   image: string;
 };
 
-const { title = SITE.title, description, permalink, image } = Astro.props;
+const { title = SITE.title, description, permalink, image = SITE.image } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
