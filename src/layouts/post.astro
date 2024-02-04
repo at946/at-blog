@@ -19,14 +19,14 @@ const { content } = Astro.props
   </head>
   <MainLayout>
     <div class="text-center md:text-left mb-16">
-      <p class="text-gray-400 mb-2">
-        { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'short' }).format(new Date(content.date))}
+      <p class="mb-2 font-bold">
+        { new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(content.date))}
       </p>
-      <h1 class="text-5xl leading-snug font-extrabold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
+      <h1 class="text-4xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
       <div class="inline-flex gap-3 flex-wrap">
         { !!content.tags && content.tags.length > 0 && content.tags.map(tag =>
           <a
-            class="text-gray-400 hover:text-theme-primary dark:hover:text-theme-dark-primary"
+            class="hover:text-theme-primary hover:font-bold dark:hover:text-gray-100"
             href={`/tags/${tag}`}
             title={tag}
           >
