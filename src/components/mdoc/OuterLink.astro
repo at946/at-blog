@@ -6,6 +6,6 @@ interface Props {
 
 const { href, title } = Astro.props
 ---
-<a class="site-link" href={href} title={title} target="_blank" rel="noopener noreferrer">
+<a href={href} title={title} target="_blank" rel="noopener noreferrer">
     <slot/>
 </a>
