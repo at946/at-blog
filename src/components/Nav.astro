@@ -2,7 +2,7 @@
 import { NAV_ITEMS } from '@/config'
 ---
 <nav class="py-3 text-center mb-8">
-  <ul class="inline-flex list-none gap-8 text-xl dark:text-theme-dark-secondary flex-wrap" transition:animate="fade">
+  <ul class="inline-flex list-none gap-8 text-xl flex-wrap" transition:animate="fade">
     {
       Object.keys(NAV_ITEMS).map(navItemKey =>
         <li>
@@ -13,7 +13,7 @@ import { NAV_ITEMS } from '@/config'
                 {NAV_ITEMS[navItemKey].title}
               </span>
             : <a
-                class="pb-1 text-gray-600 dark:text-gray-200 font-bold hover:underline underline-offset-8 uppercase"
+                class="pb-1 font-bold hover:underline underline-offset-8 uppercase"
                 href={NAV_ITEMS[navItemKey].path}
               >
                 {NAV_ITEMS[navItemKey].title}
