@@ -11,9 +11,6 @@ export const link = {
 		},
 		title: {
 			type: String,
-		},
-		target: {
-			type: String,
-		},
+		}
 	},
 };

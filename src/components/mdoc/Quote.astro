@@ -1,5 +1,5 @@
 ---
-import OuterLink from './OuterLink.astro'
+import Link from './Link.astro'
 
 interface Props {
   sourceName?: string
@@ -13,7 +13,7 @@ const { sourceName, sourceLink } = Astro.props
   { sourceName &&
   <p class="text-right mt-0">
     { !!sourceLink
-      ? <OuterLink href={sourceLink} title={sourceName}>{sourceName}</OuterLink>
+      ? <Link href={sourceLink} title={sourceName}>{sourceName}</Link>
       : sourceName
     }
     </p>
