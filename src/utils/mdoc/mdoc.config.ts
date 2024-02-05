@@ -9,6 +9,9 @@ import { quote } from "./schema/quote.mdoc";
 import { image } from "./schema/image.mdoc";
 
 export const config = {
+	nodes: {
+		link,
+	},
 	tags: {
 		callout,
 		link,
