@@ -1,13 +1,17 @@
 import { component } from "@astrojs/markdoc/config";
 
-export const ytEmbed = {
-	render: component("./src/components/mdoc/YTVideoEmbed.astro"),
+export const docswellEmbed = {
+	render: component("./src/components/mdoc/DocswellEmbed.astro"),
 	attributes: {
-		url: {
+		src: {
 			type: String,
 			required: true,
 		},
 		title: {
+			type: String,
+			required: true,
+		},
+		href: {
 			type: String,
 			required: true,
 		},
