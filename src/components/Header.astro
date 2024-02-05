@@ -3,7 +3,7 @@
     import SvgIcon from './SvgIcon.astro'
     import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
     import HeaderNavItem from './HeaderNavItem.astro'
-    import BlankLink from './BlankLink.astro'
+    import Link from './mdoc/Link.astro'
     import { Icon } from 'astro-icon'
 
 ---
@@ -16,25 +16,25 @@
             <nav>
                 <ul class="flex gap-3">
                     <HeaderNavItem>
-                        <BlankLink href={`https://twitter.com/${SITE.authorTwitter}`} title={`${SITE.author}'s X account`}>
+                        <Link href={`https://twitter.com/${SITE.authorTwitter}`} title={`${SITE.author}'s X account`}>
                             <SvgIcon>
                                 <Icon name="mdi:twitter" />
                             </SvgIcon>
-                        </BlankLink>
+                        </Link>
                     </HeaderNavItem>
                     <HeaderNavItem>
-                        <BlankLink href={ SITE.githubUrl } title={`${ SITE.author }'s GitHub URL`}>
+                        <Link href={ SITE.githubUrl } title={`${ SITE.author }'s GitHub URL`}>
                             <SvgIcon>
                                 <Icon name="mdi:github" />
                             </SvgIcon>
-                        </BlankLink>
+                        </Link>
                     </HeaderNavItem>
                     <HeaderNavItem>
-                        <BlankLink href="/rss.xml" title="RSS">
+                        <Link href="/rss.xml" title="RSS">
                             <SvgIcon>
                                 <Icon name="mdi:rss" />
                             </SvgIcon>
-                        </BlankLink>
+                        </Link>
                     </HeaderNavItem>
                     <HeaderNavItem>
                         <ModeSwitcherBtn client:visible />
