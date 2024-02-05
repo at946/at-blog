@@ -1,0 +1,27 @@
+---
+import { Image as AstroImage } from 'astro:assets'
+import OuterLink from './OuterLink.astro'
+
+interface Props {
+  src: string
+  title: string
+  sourceName?: string
+  sourceLink?: string
+}
+
+const { src, title, sourceName, sourceLink } = Astro.props;
+
+const imgs = await Astro.glob('../../content/blog/**/*.{png,jpeg,jpg,gif,webp}')
+const searchingImage = imgs.find((img) => img.default.src.includes(new URL(src, `${Astro.url}/`).pathname))
+if (!searchingImage) throw new Error(`"${src}" does not exist in glob: "src/content/blog/**/*.{png,jpeg,jpg,gif,webp}"`)
+---
+
+<div class="text-center">
+  <AstroImage src={searchingImage.default} alt={title} class="mb-4" />
+  <p class="mt-0 mb-0">{title}</p>
+  { sourceName &&
+      sourceLink
+        ? <p class="mt-0"><OuterLink href={sourceLink} title={sourceName}>{sourceName}</OuterLink></p>
+        : <p class="mt-0">{sourceName}</p>
+  }
+</div>
