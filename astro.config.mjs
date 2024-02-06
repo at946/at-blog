@@ -18,7 +18,7 @@ import rehypeKatex from 'rehype-katex';
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
-import expressiveCode from "astro-expressive-code";
+import expressiveCode, { astroExpressiveCode } from "astro-expressive-code";
 
 // https://astro.build/config
 export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
@@ -37,7 +37,7 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
     rehypePlugins: [[rehypeKatex, {}]]
   },
   integrations: [
-    expressiveCode(),
+    astroExpressiveCode(),
     mdx(), 
     markdoc(), 
     svelte(), 

@@ -20,7 +20,7 @@ published: true
 # Playwrightをインストール
 Docker使ってくぞ。まずは準備だ。
 
-```Dockerfile:Dockerfile
+```dockerfile:Dockerfile
 FROM node:19.4
 ENV WORKDIR=/playwright/
 
@@ -65,7 +65,7 @@ $ docker compose run playwright yarn create playwright
 
 いろいろなディレクトリやファイルが生成されているな。
 
-```bash
+```text
 - node_modules/
   - 省略
 - tests/
