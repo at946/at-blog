@@ -1,0 +1,13 @@
+---
+import { Code } from 'astro-expressive-code/components'
+
+interface Props {
+	content: string
+	language: string
+}
+
+const { content, language } = Astro.props as Props;
+const [lang, title] = language.split(':')
+---
+
+<Code code={content.trim()} lang={lang} title={title} class="py-4" />

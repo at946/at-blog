@@ -1,5 +1,4 @@
 import { component } from "@astrojs/markdoc/config";
-import { SITE } from '@/config'
 
 export const link = {
 	render: component("./src/components/mdoc/Link.astro"),
