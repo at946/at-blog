@@ -11,7 +11,7 @@ published: true
 後輩くんに「E2Eテストなんか怖い😣」と言われたので「ソンナコトナイヨー☀」を体験してもらうために書く。
 
 # Playwright
-https://playwright.dev/
+[Fast and reliable end-to-end testing for modern web apps | Playwright](https://playwright.dev/)
 
 とりあえず、今回はこのPlaywrightってやつを使ってみよう。
 まずは「なんか怖い」を払拭するためだから理由とかは脇においておこう。
@@ -41,8 +41,8 @@ services:
 $ docker compose build
 ```
 
-インストールは公式ドキュメント見てこう。
-https://playwright.dev/docs/intro
+インストールは公式ドキュメント見てこう。  
+[Installation | Playwright](https://playwright.dev/docs/intro)
 
 ```bash
 $ docker compose run playwright yarn create playwright
@@ -83,7 +83,7 @@ $ docker compose run playwright yarn create playwright
 
 browsersとoperating system dependenciesはほしいので、`Dockerfile`に書いてこう。
 
-```diff:Dockerfile
+```dockerfile:Dockerfile ins={4-6}
   FROM node:19.4
   ENV WORKDIR=/playwright/
 
