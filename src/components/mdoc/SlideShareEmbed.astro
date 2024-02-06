@@ -1,0 +1,32 @@
+---
+import Link from './Link.astro'
+
+interface Props {
+  src: string
+  title: string
+  slideHref: string
+  width: number
+  height: number
+  author: string
+  authorHref: string
+}
+
+const { src, title, slideHref, width, height, author, authorHref } = Astro.props;
+---
+
+<iframe
+  src={src}
+  width={width}
+  height={height}
+  allowfullscreen
+  class="mx-auto shadow-md mb-5"
+></iframe>
+<div class="text-center">
+  <Link href={slideHref} title={title}>
+    <strong>{title}</strong>
+  </Link>
+  from
+  <Link href={authorHref} title={author}>
+    <strong>{author}</strong>
+  </Link>
+</div>
