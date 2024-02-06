@@ -30,6 +30,9 @@ module.exports = {
                             color: colors.dark.secondary,
                             borderColor: colors.dark.secondary
                         },
+                        code: {
+                            color: theme("colors.gray.100"),
+                        },
                         h1: {
                             color: colors.dark.primary,
                         },
@@ -56,6 +59,10 @@ module.exports = {
                         'blockquote p:first-of-type::before': { content: 'none'},
                         'blockquote p:first-of-type::after': { content: 'none'},
                         'blockquote p': { marginBottom: 0 },
+                        code: {
+                            letterSpacing: '0',
+                            color: theme("colors.gray.600"),
+                        },
                         h1: {
                             color: colors.primary,
                         },
