@@ -28,17 +28,8 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
   server: {
     // port: 4321, // The port to run the dev server on.
   },
-  markdown: {
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'css-variables'
-    },
-    remarkPlugins: [remarkCodeTitles, remarkMath],
-    rehypePlugins: [[rehypeKatex, {}]]
-  },
   integrations: [
     astroExpressiveCode(),
-    mdx(), 
     markdoc(), 
     svelte(), 
     tailwind({

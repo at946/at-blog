@@ -4,7 +4,7 @@ interface Props {
   slide?: number
 }
 
-const { id, slide } = Astro.props;
+const { id, slide = 1 } = Astro.props;
 ---
 
 <script
