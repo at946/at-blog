@@ -60,21 +60,21 @@ $ docker compose run app yarn add --dev testcafe
 
 今回はHeadless Chromeを使ってテストをしたいので、DockerコンテナでChromeを起動できる状態にしておく必要があります。
 
-```dockerfile:Dockerfile ins={4-8}
-...略...
-WORKDIR ${HOME}
+```dockerfile:Dockerfile
+  ...略...
+  WORKDIR ${HOME}
 
-RUN   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-      sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && \
-      apt-get update && \
-      apt-get install -y google-chrome-stable && \
-      apt-get install -yq fonts-noto-cjk
++ RUN   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
++       sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' && \
++       apt-get update && \
++       apt-get install -y google-chrome-stable && \
++       apt-get install -yq fonts-noto-cjk
 
-COPY  package.json ${HOME}
-COPY  yarn.lock ${HOME}
-RUN   yarn install
-COPY  . ${HOME}
-...略...
+  COPY  package.json ${HOME}
+  COPY  yarn.lock ${HOME}
+  RUN   yarn install
+  COPY  . ${HOME}
+  ...略...
 ```
 
 ChromeのStable版と、日本語のフォントを表示するために`fonts-noto-cjk`をインストールするように追記しました。
@@ -86,19 +86,19 @@ $ docker compose build
 
 # コマンドでTestCafeを起動できるようにする
 
-次はコンテナでTestCafeを起動するコマンドの準備をしていきます。コンテナで`yarn test`のコマンドを実行したときにTestCafeが動くようにしましょう。
+次はコンテナでTestCafeを起動するコマンドの準備をしていきます。コンテナで`yarn test` のコマンドを実行したときにTestCafeが動くようにしましょう。
 
 ```json:package.json ins={7,8} del={6}
-...略...
-"scripts": {
-  "dev": "nuxt",
-  "build": "nuxt build",
-  "start": "nuxt start",
-  "generate": "nuxt generate"
-  "generage": "nuxt generate",
-  "test": "testcafe chrome:headless"
-},
-...略...
+  ...略...
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+-   "generate": "nuxt generate"
++   "generage": "nuxt generate",
++   "test": "testcafe chrome:headless"
+  },
+  ...略...
 ```
 
 `testcafe`の後ろに`chrome:headless`を与えることでコンテナ内でHeadless Chromeを起動してテストしようとしてくれるんですね。

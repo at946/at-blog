@@ -90,7 +90,7 @@ const threads = GmailApp.search('in:Inbox is:Unread', 0, 100)
 今回は`'in:Inbox is:Unread'`を指定しているので、「受信ボックス」の中で「未読」のものを拾ってきます。
 また、`start`に`0`、`max`に`100`を指定しているので、最新のスレッドから100件までの中から`query`を検索してもらっています。
 
-https://developers.google.com/apps-script/reference/gmail/gmail-app#search(String,Integer,Integer)
+[Class GmailApp  |  Apps Script  |  Google for Developers | #search(String,Integer,Integer)](https://developers.google.com/apps-script/reference/gmail/gmail-app#search(String,Integer,Integer))
 
 ## thread.getMessages()
 
@@ -104,7 +104,7 @@ threads.forEach((thread) => {
 `GmailThread.getMessages()`でそのスレッド内のメッセージ（メール）の配列(`GmailMessage[]`)を取得してます。
 それを`forEach`で回すことで一つ一つのメッセージを扱えます。こいつがメール本体。主役の登場です。
 
-https://developers.google.com/apps-script/reference/gmail/gmail-thread#getMessages()
+[Class GmailThread  |  Apps Script  |  Google for Developers | #getMessages()](https://developers.google.com/apps-script/reference/gmail/gmail-thread#getMessages())
 
 ## message.isUnread()
 
@@ -114,7 +114,7 @@ if (!message.isUnread()) { return }
 `GmailMessage.inUnread()`はそのメッセージが未読なら`true`、既読なら`false`を返却します。
 このコードではそれの否定(`!`)でif文を書いているので、既読の場合`return`、つまり後続の処理をせずに`forEach`を継続させています。
 
-https://developers.google.com/apps-script/reference/gmail/gmail-message#isUnread()
+[Class GmailMessage  |  Apps Script  |  Google for Developers | #isUnread()](https://developers.google.com/apps-script/reference/gmail/gmail-message#isUnread())
 
 ## message.getXXX()
 
@@ -134,7 +134,7 @@ Slackに投稿するテキストメッセージを生成しているのがこの
 `GmailMessage.getXXX()`を使ってメッセージを作ってます。`getXXX()`はいろいろな種類があるので、投稿したいテキストメッセージに合わせてカスタマイズしてください！
 今回は、「受信日時(`getDate()`)」「送信者(`getFrom`)」「タイトル(`getSubject()`)」「プレーンテキストの本文(`getPlainBody()`)」を利用してみました。
 
-https://developers.google.com/apps-script/reference/gmail/gmail-message
+[Class GmailMessage  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/gmail/gmail-message)
 
 ## message.markRead()
 
@@ -144,7 +144,7 @@ message.markRead()
 最後に`message.markRead()`でメッセージを既読にしています。
 これで、次回以降は`!message.isUnread()`に弾かれて処理されなくなります。
 
-https://developers.google.com/apps-script/reference/gmail/gmail-message#markRead()
+[Class GmailMessage  |  Apps Script  |  Google for Developers | #markRead()](https://developers.google.com/apps-script/reference/gmail/gmail-message#markRead())
 
 # まとめ
 
@@ -155,7 +155,7 @@ https://developers.google.com/apps-script/reference/gmail/gmail-message#markRead
 GASでこういうことできるよ！という記事はいっぱいあるのですが、Googleで検索してもなかなか公式ドキュメントにたどり着けないんですよね。
 実はめちゃくちゃわかりやすいので公式ドキュメントを眺めてやりたいことを実現していきましょう！！👏
 
-例えばGmailなら
-https://developers.google.com/apps-script/reference/gmail/gmail-app
+例えばGmailなら  
+[Class GmailApp  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/reference/gmail/gmail-app)
 
 誰かのためになれば嬉しいです。一応丁寧に説明できたかなと。
