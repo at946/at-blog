@@ -7,10 +7,10 @@ published: true
 
 シリーズ最終章（予定）です！
 
-[前回の記事]<br />
+[前回の記事]  
 [Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
 
-[前々回の記事]<br />
+[前々回の記事]  
 [NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part2 - モバイルだって使いたい！](/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2)
 
 Part2では、PCは表示できるけどモバイルはできない、というPart1の課題をJSON→JSONPに更新することで解決しました。🎉
@@ -108,13 +108,13 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
 まずはBFFでGAS APIをコールするコードを書いていきましょう。
 ここでは[`express`](https://expressjs.com/)を利用します。
 
-```
+```sh
 $ yarn add express
 ```
 
 新しく`api`ディレクトリを作成し、その中にBFFのコードを書いていきましょう。
 
-```
+```sh
 $ mkdir api
 $ touch api/index.js
 ```
@@ -139,23 +139,23 @@ module.exports = {
 今まで`pages/index.vue`でやっていた`axios`の処理を転記した感じですね。
 これを`nuxt.config.js`に`serverMiddleware`として登録しましょう。（ついでにproxyも不要になったので消します）
 
-```js:nuxt.config.js ins={12-14} del={6-11}
-export default {
-  ...
-  axios: {
-    proxy: true
-  },
-  proxy: {
-    '/api': {
-      target: <ウェブアプリ(GAS API)のURL>,
-      pathRewrite: { '/api': '' }
-    }
-  },
-  serverMiddleware: [
-    '@/api/'
-  ],
-  ...
-}
+```js:nuxt.config.js
+  export default {
+    ...
+    axios: {
+      proxy: true
+    },
+-   proxy: {
+-     '/api': {
+-       target: <ウェブアプリ(GAS API)のURL>,
+-       pathRewrite: { '/api': '' }
+-     }
+-   },
++   serverMiddleware: [
++     '@/api/'
++   ],
+    ...
+  }
 ```
 
 これで`serverMiddleware`の準備は完了です。
@@ -188,7 +188,7 @@ export default {
 
 `axios-jsonp`も不要になったので、パッケージを削除しておきましょう。
 
-```
+```sh
 $ yarn remove axios-jsonp
 ```
 
@@ -196,18 +196,18 @@ $ yarn remove axios-jsonp
 
 # GAS APIをJSON返却に戻す
 
-```js:コード.js ins={7,9} del={3,6,8}
-function doGet(e) {
-  const users = getUsers()
-  const callback = e.parameter.callback
+```js:コード.js
+  function doGet(e) {
+    const users = getUsers()
+-   const callback = e.parameter.callback
 
-  return ContentService
-    .createTextOutput(`${callback}(${JSON.stringify(users)})`)
-    .createTextOutput(JSON.stringify(users))
-    .setMimeType(ContentService.MimeType.JAVASCRIPT)
-    .setMimeType(ContentService.MimeType.JSON)
-}
-...
+    return ContentService
+-     .createTextOutput(`${callback}(${JSON.stringify(users)})`)
+-     .setMimeType(ContentService.MimeType.JAVASCRIPT)
++     .createTextOutput(JSON.stringify(users))
++     .setMimeType(ContentService.MimeType.JSON)
+  }
+  ...
 ```
 ここまででBFFの準備ができました！🎉
 

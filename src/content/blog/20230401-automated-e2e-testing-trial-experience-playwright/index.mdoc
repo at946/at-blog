@@ -272,7 +272,7 @@ Assertionも色々...
 # 失敗も見とく
 ちゃんと失敗するのかも見ておこう。
 
-```diff:tests/example.spec.ts
+```ts:tests/example.spec.ts
   ...
 
   test('has hero title', async ({ page }) => {
@@ -313,7 +313,7 @@ $ docker compose up
 
 https://playwright.dev/docs/api/class-testoptions
 
-```diff:playwright.config.ts
+```ts:playwright.config.ts
   import { defineConfig, devices } from '@playwright/test';
   ...
   export default defineConfig({
