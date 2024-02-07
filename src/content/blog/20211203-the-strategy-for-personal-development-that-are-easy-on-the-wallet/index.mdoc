@@ -46,7 +46,7 @@ APIであれば提供元のデータを活用して面白いことがやりや�
 Twitter APIは無料でも利用可能ですが、単位時間あたりのリクエスト数やツイート取得数に制限があります。
 その制限の中でやりたいこととできそうなことのバランスをとりながらプロダクトを作ってきました。💪
 
-https://developer.twitter.com/en/docs/twitter-api/rate-limits
+[Rate limits | Docs | Twitter Developer Platform  ](https://developer.twitter.com/en/docs/twitter-api/rate-limits)
 
 # 戦略２：みんなが使っているサービスの拡張プロダクト
 
@@ -85,7 +85,7 @@ Google App Script（GAS）の存在も大きいです。spaces.bz の場合、�
 
 CI/CDはGitHub Actionsで十分だと思います。パブリックレポジトリであれば制限なく、プライベートリポジトリでも2000分/月のワークフローを実行できます（Linuxの場合）。
 
-https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits
+[GitHub Actions の課金について - GitHub Docs | 利用上限について](https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits)
 
 僕たちはPRを作成したときにLintやテストを回し、mergeされたとき（mainにpushがあったとき）にデータの更新をしています。
 割と高頻度に開発サイクルを回していますが、それでも2000分に達しないので、問題なく開発ができています。
