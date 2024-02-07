@@ -10,6 +10,6 @@ export const link = {
 		},
 		title: {
 			type: String,
-		}
+		},
 	},
 };

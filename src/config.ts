@@ -22,7 +22,7 @@ export const SITE = {
 	description: "こんにちは、asatoです。ゆっくりブログを書いています。",
 	url: "https://at-blog.vercel.app",
 	domain: "at-blog.vercel.app",
-	image: '/ogp.png',
+	image: "/ogp.png",
 	githubUrl: "https://github.com/at946",
 	listDrafts: true,
 	author: "asato",
