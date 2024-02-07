@@ -36,14 +36,6 @@ export default defineConfig( /** @type {import('astro').AstroUserConfig} */{
     remarkPlugins: [remarkCodeTitles, remarkMath],
     rehypePlugins: [[rehypeKatex, {}]]
   },
-  markdoc: {
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'css-variables'
-    },
-    remarkPlugins: [remarkCodeTitles, remarkMath],
-    rehypePlugins: [[rehypeKatex, {}]]
-  },
   integrations: [
     astroExpressiveCode(),
     mdx(), 
