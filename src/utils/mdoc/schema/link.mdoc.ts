@@ -1,7 +1,7 @@
 import { component } from "@astrojs/markdoc/config";
 
 export const link = {
-	render: component("./src/components/mdoc/Link.astro"),
+	render: component("/src/components/mdoc/Link.astro"),
 	children: ["strong", "em", "s", "code", "text", "tag"],
 	attributes: {
 		href: {
