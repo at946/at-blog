@@ -33,7 +33,7 @@ describe('テストスイート名', () => {
 例の場合、`await page.goto('http://localhost:3000')`で「`http://localhost:3000`にアクセスする」操作を、
 `await expect(page.url()).toBe('http://localhost:3000')`で「表示中のページのURLが`http://localhost:3000`である」検証を行っています。
 
-[describe(name, fn)](https://jestjs.io/docs/ja/next/api#describename-fn)
+[describe(name, fn)](https://jestjs.io/docs/ja/next/api#describename-fn)  
 [test(name, fn, timeout)](https://jestjs.io/docs/ja/next/api#testname-fn-timeout)
 
 ## expect(X).toBe(Y)
@@ -211,7 +211,7 @@ await page.evaluate(() => {
 })
 ```
 
-[page.evaluate(pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args)
+[page.evaluate(pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args)  
 [window.scrollTo](https://developer.mozilla.org/ja/docs/Web/API/Window/scrollTo)
 
 # 検証系
@@ -235,8 +235,8 @@ await expect(page.$('#hoge')).not.toBeNull()
 ```
 `page.$()`は要素が見つからない場合`null`を返します。なので「Nullであること」を検証する`.toBeNull()`に否定の`.not`をつけることで「Nullでないこと」を確認し、要素が存在することを検証できます。
 
-[page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)
-[.not](https://jestjs.io/docs/ja/next/expect#not)
+[page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)  
+[.not](https://jestjs.io/docs/ja/next/expect#not)  
 [.toBeNull()](https://jestjs.io/docs/ja/next/expect#tobenull)
 
 ## 要素が存在しないことを検証する
@@ -250,7 +250,7 @@ await expect(page.$('#hoge')).toBeNull()
 ```
 `page.$()`は要素が見つからない場合`null`を返すので、`toBeNull()`で検証します。
 
-[page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)
+[page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)  
 [.toBeNull()](https://jestjs.io/docs/ja/next/expect#tobenull)
 
 ## 要素の属性を検証する
@@ -282,7 +282,7 @@ await expect(text).toBe('こんにちは！')
 ```
 要素の属性の検証と似ていますが、`innerText`を用いて`el`の中のテキストを抜いてくる方法があります。
 
-[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)
+[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)  
 [HTMLElement.innerText](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/innerText)
 
 ## `input`の入力値を検証する
@@ -298,8 +298,8 @@ await page.type('#hoge', 'こんにちは')
 await expect(await page.$eval('#hoge', el => el.value)).toBe('こんにちは')
 ```
 
-[page.type(selector, text)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagetypeselector-text-options)
-[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)
+[page.type(selector, text)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagetypeselector-text-options)  
+[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)  
 [HTMLInputElement](https://developer.mozilla.org/ja/docs/Web/API/HTMLInputElement)
 
 ## `button`が非活性かを検証する
@@ -320,7 +320,7 @@ await expect(await page.$eval('#hoge', el => el.disabled)).toBe(false)
 ```
 で検証できます。
 
-[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)
+[page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)  
 [HTMLButtonElement](https://developer.mozilla.org/ja/docs/Web/API/HTMLInputElement)
 
 ## 複数の要素の属性を検証する
@@ -340,7 +340,7 @@ await expect(src[1]).toBe('./images/fuga.png')
 次に、`map`を使って配列の1要素ずつの`src`を取り出し、`srcs`に返却しています。
 `srcs`は`img`classの要素の`src`属性が順番に並んだ配列になっているので、`src[index]`で順番を指定して検証ができます。
 
-[page.$$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)
+[page.$$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)  
 [Array.prototype.map()](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ## `target="_blank"`の別タブで開くを検証する
@@ -360,9 +360,9 @@ await expect(newPage.url()).toBe('https://www.google.com/')
 少しダサいですが、リンククリック後、タブの準備が整うまで`page.waitForTimeout()`でスリープを入れています。
 その後、`browser.page()`で全てのタブを取得し、`pages[pages.length - 1]`で一番うしろのタブ、つまり今新しく開かれたタブを`newPage`に入れてます。
 
-[page.click(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageclickselector-options)
-[page.waitForTimeout(milliseconds)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitfortimeoutmilliseconds)
-[browser.pages()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#browserpages)
+[page.click(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageclickselector-options)  
+[page.waitForTimeout(milliseconds)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitfortimeoutmilliseconds)  
+[browser.pages()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#browserpages)  
 [page.url()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageurl)
 
 ## meta tagsを検証する
@@ -390,13 +390,13 @@ await expect(await page.$eval('meta[property="og:site_name"]', el => el.content)
 ```
 で検証が可能です。
 
-[page.$$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)
+[page.$$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)  
 [メタタグと SEO - NuxtJS](https://ja.nuxtjs.org/docs/2.x/features/meta-tags-seo/)
 
 # おわりに
 テストコードを書く機会があったので、よく使いそうだなというコードをユースケースドリブンでまとめてみました。
 色々なサイトを巡りましたが、最終的にはソースに落ち着く、ということで以下のページをとても参考にしました。
-- [puppeteer/api.md at main · puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md)
+- [puppeteer/api.md at main · puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md)  
 - [Expect · Jest](https://jestjs.io/docs/ja/next/expect)
 
 今後も新しいテストを書いたら追加していきたいなと思います。
