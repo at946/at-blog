@@ -14,7 +14,7 @@ module.exports = {
     safelist: ['dark'],
     theme: {
 		fontFamily: {
-			sans: ['Fira Code', ...fontFamily.sans],
+			sans: ['Murecho', ...fontFamily.sans],
 		},
 		extend: {
             colors: {
