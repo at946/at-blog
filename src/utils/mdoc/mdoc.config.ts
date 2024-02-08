@@ -8,6 +8,7 @@ import { slideshareEmbed } from "./schema/slideshare-embed.mdoc";
 import { fence } from "./schema/fence.mdoc";
 import { math } from "./schema/math.mdoc";
 import { inlineMath } from "./schema/inline-math.mdoc";
+import { imageWrapper } from "./schema/image-wrapper.mdoc";
 
 export const config = {
 	nodes: {
@@ -17,6 +18,7 @@ export const config = {
 	tags: {
 		quote,
 		image,
+		imageWrapper,
 		math,
 		inlineMath,
 		speakerdeck: speakerdeckEmbed,
