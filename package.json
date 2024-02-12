@@ -28,7 +28,7 @@
     "astro-icon": "^0.8.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "globby": "^14.0.0",
+    "globby": "^14.0.1",
     "gray-matter": "^4.0.3",
     "mdx": "^0.2.3",
     "remark-code-titles": "^0.1.2",
