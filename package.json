@@ -14,7 +14,7 @@
     "cz": "cz"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/mdx": "^2.1.1",
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.3",
