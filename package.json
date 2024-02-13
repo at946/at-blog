@@ -9,6 +9,7 @@
 		"check": "astro check",
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"lint": "biome lint src",
+		"lint:text": "textlint src",
 		"format": "biome format src --write",
 		"cz": "cz"
 	},
@@ -47,7 +48,12 @@
 		"ioredis": "^5.3.2",
 		"katex": "^0.16.9",
 		"rehype-katex": "^7.0.0",
-		"remark-math": "^6.0.0"
+		"remark-math": "^6.0.0",
+		"textlint": "^14.0.2",
+		"textlint-filter-rule-allowlist": "^4.0.0",
+		"textlint-rule-preset-ja-spacing": "^2.3.0",
+		"textlint-rule-preset-ja-technical-writing": "^10.0.1",
+		"textlint-rule-spellcheck-tech-word": "^5.0.0"
 	},
 	"config": {
 		"commitizen": {
