@@ -1,8 +1,8 @@
-import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
-import { SITE } from "../config";
+import rss from '@astrojs/rss';
+import { SITE } from '../config';
+import { getCollection } from 'astro:content';
 
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection('blog');
 const sortedPosts = Object.values(allPosts).sort(
 	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
 );
@@ -25,5 +25,5 @@ export const GET = () =>
 			pubDate: new Date(item.data.date),
 		})),
 		// (optional) inject custom xml
-		customData: `<language>ja-jp</language>`,
+		customData: '<language>ja-jp</language>',
 	});

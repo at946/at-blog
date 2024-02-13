@@ -1,7 +1,7 @@
-import { component } from "@astrojs/markdoc/config";
+import { component } from '@astrojs/markdoc/config';
 
 export const speakerdeckEmbed = {
-	render: component("./src/components/mdoc/SpeakerDeckEmbed.astro"),
+	render: component('./src/components/mdoc/SpeakerDeckEmbed.astro'),
 	attributes: {
 		id: {
 			type: String,

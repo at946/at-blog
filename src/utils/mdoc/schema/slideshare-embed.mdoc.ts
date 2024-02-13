@@ -1,7 +1,7 @@
-import { component } from "@astrojs/markdoc/config";
+import { component } from '@astrojs/markdoc/config';
 
 export const slideshareEmbed = {
-	render: component("./src/components/mdoc/SlideShareEmbed.astro"),
+	render: component('./src/components/mdoc/SlideShareEmbed.astro'),
 	attributes: {
 		src: {
 			type: String,
