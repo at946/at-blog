@@ -6,26 +6,12 @@
 	},
 	"filters": {
 		"allowlist": {
-			"allow": [
-				"スクラムマスター",
-				"スパイマスター",
-				"ブレイクアウトルーム",
-				"/<!-- ignore textlint -->[\\s\\S]*?<!-- /ignore textlint -->/m",
-				"/{%[\\s\\S]*?%}/",
-				"/{% imageWrapper %}[\\s\\S]*?{% /imageWrapper %}/",
-				"/{% quote .* %}[\\s\\S]*?{% /quote %}/",
-				"/> .*/",
-				"/。」/",
-				"/\\[.*\\](.*)/",
-				"x"
-			]
+			"allow": ["スクラムマスター"]
 		}
 	},
 	"rules": {
 		"preset-ja-spacing": true,
-		"preset-ja-technical-writing": {
-			"no-exclamation-question-mark": false
-		},
+		"preset-ja-technical-writing": true,
 		"spellcheck-tech-word": true
 	}
 }
