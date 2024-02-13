@@ -1,7 +1,7 @@
-import { component } from "@astrojs/markdoc/config";
+import { component } from '@astrojs/markdoc/config';
 
 export const docswellEmbed = {
-	render: component("./src/components/mdoc/DocswellEmbed.astro"),
+	render: component('./src/components/mdoc/DocswellEmbed.astro'),
 	attributes: {
 		src: {
 			type: String,

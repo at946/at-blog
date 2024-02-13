@@ -1,13 +1,12 @@
-import shiki from "@astrojs/markdoc/shiki";
-import { link } from "./schema/link.mdoc";
-import { quote } from "./schema/quote.mdoc";
-import { imageWrapper } from "./schema/image-wrapper.mdoc";
-import { speakerdeckEmbed } from "./schema/speakerdeck-embed.mdoc";
-import { docswellEmbed } from "./schema/docswell-embed.mdoc";
-import { slideshareEmbed } from "./schema/slideshare-embed.mdoc";
-import { fence } from "./schema/fence.mdoc";
-import { math } from "./schema/math.mdoc";
-import { inlineMath } from "./schema/inline-math.mdoc";
+import { docswellEmbed } from './schema/docswell-embed.mdoc';
+import { fence } from './schema/fence.mdoc';
+import { imageWrapper } from './schema/image-wrapper.mdoc';
+import { inlineMath } from './schema/inline-math.mdoc';
+import { link } from './schema/link.mdoc';
+import { math } from './schema/math.mdoc';
+import { quote } from './schema/quote.mdoc';
+import { slideshareEmbed } from './schema/slideshare-embed.mdoc';
+import { speakerdeckEmbed } from './schema/speakerdeck-embed.mdoc';
 
 export const config = {
 	nodes: {

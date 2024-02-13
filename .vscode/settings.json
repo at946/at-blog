@@ -1,5 +1,11 @@
 {
-    "files.associations": {
-        "*.mdoc": "markdown"
-    }
+	"files.associations": {
+		"*.mdoc": "markdown"
+	},
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "always",
+		"source.organizeImports.biome": "always"
+	}
 }

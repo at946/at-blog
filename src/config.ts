@@ -1,32 +1,32 @@
-import type { NavItems } from "./types";
+import type { NavItems } from './types';
 
 export const NAV_ITEMS: NavItems = {
 	home: {
-		path: "/",
-		title: "home",
+		path: '/',
+		title: 'home',
 	},
 	blog: {
-		path: "/blog",
-		title: "blog",
+		path: '/blog',
+		title: 'blog',
 	},
 	tags: {
-		path: "/tags",
-		title: "tags",
+		path: '/tags',
+		title: 'tags',
 	},
 };
 
 export const SITE = {
 	// Your site's detail?
-	name: "at blog",
-	title: "at blog",
-	description: "こんにちは、asatoです。ゆっくりブログを書いています。",
-	url: "https://at-blog.vercel.app",
-	domain: "at-blog.vercel.app",
-	image: "/ogp.png",
-	githubUrl: "https://github.com/at946",
+	name: 'at blog',
+	title: 'at blog',
+	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
+	url: 'https://at-blog.vercel.app',
+	domain: 'at-blog.vercel.app',
+	image: '/ogp.png',
+	githubUrl: 'https://github.com/at946',
 	listDrafts: true,
-	author: "asato",
-	authorTwitter: "at_946",
+	author: 'asato',
+	authorTwitter: 'at_946',
 };
 
 // Ink - Theme configuration
