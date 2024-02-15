@@ -10,14 +10,14 @@ published: true
 
 後輩くんに「E2Eテストなんか怖い😣」と言われたので「ソンナコトナイヨー☀」を体験してもらうために書く。
 
-# Playwright
+## Playwright
 [Fast and reliable end-to-end testing for modern web apps | Playwright](https://playwright.dev/)
 
 とりあえず、今回はこのPlaywrightってやつを使ってみよう。
 まずは「なんか怖い」を払拭するためだから理由とかは脇においておこう。
 でも軽快だし、クロスブラウザできるし、スクショやビデオも取れるし、いいぞ。
 
-# Playwrightをインストール
+## Playwrightをインストール
 Docker使ってくぞ。まずは準備だ。
 
 ```dockerfile:Dockerfile
@@ -65,19 +65,20 @@ $ docker compose run playwright yarn create playwright
 
 いろいろなディレクトリやファイルが生成されているな。
 
-```text
-- node_modules/
-  - 省略
-- tests/
-  - example.spec.ts
-- tests-examples/
-  - demo-todo-app.spec.ts
-- .gitignore
-- docker-compose.yml
-- Dockerfile
-- package.json
-- playwright.config.ts
-- yarn.lock
+```sh
+.
+├─ node_modules/
+|  └─ 省略
+├─ tests/
+|  └─ example.spec.ts
+├─ tests-examples/
+|  └─ demo-todo-app.spec.ts
+├─ .gitignore
+├─ docker-compose.yml
+├─ Dockerfile
+├─ package.json
+├─ playwright.config.ts
+└─ yarn.lock
 ```
 こんな感じになってるはず。
 
@@ -106,7 +107,7 @@ $ docker compose build
 
 準備はこんなとこでOKかな。
 
-# テストを実行してみる
+## テストを実行してみる
 最初から`tests/sample.spec.ts`ってサンプルテストコードがあるじゃないか。
 
 ```ts:tests/example.spec.ts
@@ -133,7 +134,7 @@ test('get started link', async ({ page }) => {
 その後に`'has title'`、`'get started link'`ってテキストが付いてるけど、テストケース名だろう。
 コメントアウトで説明も書かれているけど、なんかコードからある程度わかりそうだな。
 
-## has title
+### has title
 `page.goto()`で括弧内のURLにアクセスしてそう。
 `page.goto('https://playwright.dev/')`は https://playwright.dev/ にアクセスしてるんだろう。
 
@@ -141,7 +142,7 @@ test('get started link', async ({ page }) => {
 例えば`expect(page).toHaveTitle(/Playwright/)`は、ページのタイトルに「Playwright」が含まれていることを検証していそうだ。
 このページのタイトルは「Fast and reliable end-to-end testing for modern web apps | Playwright」みたいだからパスしそう。
 
-## get started link
+### get started link
 `page.goto('https://playwright.dev/')`は`has title`のテストと同じだ。
 
 `page.getByRole('link', { name: 'Get started' }).click()`は、「Get strted」ってテキストを持つリンクをクリックしているんだろう。ページトップにあるボタンだな。
@@ -210,14 +211,14 @@ export default defaultConfig({
 DesktopのChrome、Firefox、Saferiでテストしたようだ。
 そしてコメントアウトにさらなる夢を感じる。
 
-# テストを書いてみる
+## テストを書いてみる
 自分でもテストを追加してみたい。
 
 [Writing tests | Playwright](https://playwright.dev/docs/writing-tests)
 
 公式ドキュメントが丁寧。
 
-https://playwright.dev/ にはページトップに「Playwright enables reliable end-to-end testing for modern web apps.」ってヒーロータイトルがある。これを検証してみよう。
+[https://playwright.dev/](https://playwright.dev/) にはページトップに「Playwright enables reliable end-to-end testing for modern web apps.」ってヒーロータイトルがある。これを検証してみよう。
 
 
 ```ts:tests/example.spec.ts
@@ -236,7 +237,7 @@ test('has hero title', async ({ page }) => {
 
 [Locators | Playwright (Locale by role)](https://playwright.dev/docs/locators#locate-by-role)
 
-ちなみに`class`を使ったりして指定することもできる。
+ちなみに`class`を使ったりして指定もできる。
 
 ```ts:tests/example.spec.ts
 ...
@@ -255,13 +256,13 @@ $ docker compose up
 ```
 どちらの書き方にせよ、9つのテストがパスしたはず。
 
-おぉ...なんかこんな感じでなんだってできそうだな...
+おぉ...なんかこんな感じでなんだってできそうだな..。
 
-Locatorに対する操作もいろいろ...
+Locatorに対する操作もいろいろ..。
 
 [Locator | Playwright](https://playwright.dev/docs/api/class-locator)
 
-Assertionも色々...
+Assertionも色々..。
 
 [PageAssertions | Playwright](https://playwright.dev/docs/api/class-pageassertions)
 
@@ -269,7 +270,7 @@ Assertionも色々...
 
 これ、なんでもできるんじゃないの...??
 
-# 失敗も見とく
+## 失敗も見とく
 ちゃんと失敗するのかも見ておこう。
 
 ```ts:tests/example.spec.ts
@@ -301,17 +302,17 @@ $ docker compose up
 
 ![テストレポート](./images/report.png)
 
-うわぁ。見やすい...
+うわぁ。見やすい..。
 
 ![テストレポート詳細](./images/report_detail.png)
 
-詳細まで見れるんですか...
+詳細まで見られるんですか..。
 
-# 失敗時のオプションを少し追加
+## 失敗時のオプションを少し追加
 でも失敗時どうだったのか、このレポートからではわからない。
 と思ったらテストオプションがめっちゃ豊富。
 
-https://playwright.dev/docs/api/class-testoptions
+[https://playwright.dev/docs/api/class-testoptions](https://playwright.dev/docs/api/class-testoptions)
 
 ```ts:playwright.config.ts
   import { defineConfig, devices } from '@playwright/test';
@@ -332,19 +333,19 @@ https://playwright.dev/docs/api/class-testoptions
 ```
 
 失敗時にスクリーンショットとビデオを撮ることにしてみた。
-もう一度テストを失敗させて、レポートを見ると...
+もう一度テストを失敗させて、レポートを見ると..。
 
 ![テストレポート詳細（スクリーンショット）](./images/report_screenshot.png)
 
 ![テストレポート詳細（ビデオ）](./images/report_video.png)
 
-便利！！すぎ！！
+便利すぎ！
 
-# 怖くないよね？
+## 怖くないよね？
 ということで、怖くなかったよね？
 むしろめっちゃ味方。頼れるやつやE2E。Playwrightすげぇ。
-公式ドキュメント見るとページありすぎて「これは沼...今はやめておこう...」となるレベル。
-でもやりたいことはコレくらいの労力で達成できるのかも。
+公式ドキュメント見るとページありすぎて「沼...。今はやめておこう...。」となるレベル。
+でもやりたいことはコレくらいの労力で達成できますね。
 それでちょっとずつ沼にハマれば、この公式ドキュメントの量は期待感しかない！
 
-ということで、一緒に沼にはまろう！
+ということで、沼にはまろう！

@@ -5,16 +5,16 @@ date: '2021-09-16'
 published: true
 ---
 
-いま盛り上がっているTwitterスペース、気になるトピックを語っているTwitterスペースなどをかんたんに見つけられる spaces.bz（クローズ済み）というプロダクトを友人と運営しています。
+いま盛り上がっているTwitterスペース、気になるトピックを語っているTwitterスペースなどをかんたんに見つけられるspaces.bz（クローズ済み）というプロダクトを友人と運営しています。
 
 特に開発初期段階なので、機能追加も頻繁に行っており、勇気と自信をもってプロダクトションへのデプロイを繰り返すためには、やはりテストの自動化が必要です。
-spaces.bz はNuxt.js on Dockerで開発しており、今回は[TestCafe](https://testcafe.io/)でテスト自動化を導入しています。
+spaces.bzはNuxt.js on Dockerで開発しており、今回は[TestCafe](https://testcafe.io/)でテスト自動化を導入しています。
 TestCafeは、クロスブラウザに対応しており、テストコードも非常にわかりやすく書けるのが特徴です。
-今回は「Headless Chromeでテストがしたいなー」というのと、テストコードにあまり馴染みのない友人と一緒に開発しているので「わかりやすいテストコード」だと良いなーと思っており、TestCafeはまさにピッタリでした。
+今回は「Headless Chromeでテストがしたい」、テストコードに馴染みのない友人と一緒に開発のため「わかりやすいテストコード」が良いという2つの理由からTestCafeを利用しました。
 
-この記事では、Nuxt on Dockerの環境でTestCafeを導入し、かんたんなテストを実行するところまでをまとめていきます！💪
+この記事では、Nuxt on Dockerの環境でTestCafeを導入し、かんたんなテストを実行するところまでをまとめていきます💪。
 
-# 準備
+## 準備
 
 `Dockerfile`と`docker-compose.yml`は以下のようなものを想定しています。
 
@@ -46,17 +46,15 @@ services:
       - 3000:3000
 ```
 
-# TestCafeをインストールする
+## TestCafeをインストールする
 
-[TestCafeのパッケージ](https://yarnpkg.com/package/testcafe)をインストールします。今回は`yarn`を使っているので、
+[TestCafeのパッケージ](https://yarnpkg.com/package/testcafe)をインストールします。今回は`yarn`を使っているので、以下のコマンドを実行します。
 
 ```sh
 $ docker compose run app yarn add --dev testcafe
 ```
 
-です。☕
-
-# DockerfileでChromeをインストールする
+## DockerfileでChromeをインストールする
 
 今回はHeadless Chromeを使ってテストをしたいので、DockerコンテナでChromeを起動できる状態にしておく必要があります。
 
@@ -84,7 +82,7 @@ ChromeのStable版と、日本語のフォントを表示するために`fonts-n
 $ docker compose build
 ```
 
-# コマンドでTestCafeを起動できるようにする
+## コマンドでTestCafeを起動できるようにする
 
 次はコンテナでTestCafeを起動するコマンドの準備をしていきます。コンテナで`yarn test` のコマンドを実行したときにTestCafeが動くようにしましょう。
 
@@ -101,10 +99,10 @@ $ docker compose build
   ...略...
 ```
 
-`testcafe`の後ろに`chrome:headless`を与えることでコンテナ内でHeadless Chromeを起動してテストしようとしてくれるんですね。
+`testcafe`の後ろに`chrome:headless`を与えることでHeadless Chromeをコンテナ内で起動してテストしようとしてくれるんですね。
 詳しくは[このへん](https://testcafe.io/documentation/402639/reference/command-line-interface#browser-list)に書いてます。
 
-# テストコードを書く
+## テストコードを書く
 
 いよいよテストコードです。まずはテスト用のディレクトリとファイルを作っておきましょう。
 
@@ -113,7 +111,7 @@ $ mkdir tests
 $ touch tests/sample.test.js
 ```
 
-テストの内容は「トップページにアクセスして、`<h1>`タグで"Hello World!!"と表示されていること」を検証してみましょう。
+テストの内容は「トップページにアクセスして、`<h1>`タグで`Hello World!!`と表示されていること」を検証してみましょう。
 
 ```js:tests/sample.test.js
 import { Selector } from 'testcafe'
@@ -127,17 +125,17 @@ test('トップページに<h1>タグで"Hello World!!"と表示されている�
 })
 ```
 
-なんか読みやすそうじゃないですか？😃
+なんか読みやすそうです😃。
 `fixture`でテスト全体に関する設定とかを行っています。このテストファイルは`Sample`って名前で、`http://localhost:3000`にアクセスするところから始まるよって感じです。
 `test`でその後の操作や検証を書いていきます。`test`は1ファイルに複数書けます。
 今回は`.expect(A).eql(B)`を使って`A`と`B`が一緒であることを検証してみます。
-`A`の方は`Selector('h1').innerText`と書きました。最初に現れた`h1`タグの`innerText`を取得してます。こんな感じで使い慣れたjavascriptさんも使えるんですね。
+`A`の方は`Selector('h1').innerText`と書きました。最初に現れた`h1`タグの`innerText`を取得してます。こんな感じで使い慣れたJavaScriptも使えるんですね。
 `B`の方に`Hello World!!`の文字列を書けば、「最初に現れた`h1`タグの`innerText`が`Hello World!!`と一致すればテスト成功」となります。
 
-# ページを編集
+## ページを編集
 
 このままテストを実行しても失敗するので、ページも編集しておきます。
-TDDでやってみたい場合は、この時点で一度テストを実行してFailになることを確認してもOKです😆
+TDDでやってみたい場合は、この時点で一度テストを実行してFailになることを確認してもOKです😆。
 
 ```vue:pages/index.vue
 <template>
@@ -147,9 +145,9 @@ TDDでやってみたい場合は、この時点で一度テストを実行し�
 </template>
 ```
 
-# テストを実行する
+## テストを実行する
 
-ではテストを実行しましょう・ｖ・
+ではテストを実行しましょう。
 テストを実行する前にコンテナを起動させておきます。
 
 ```sh
@@ -173,10 +171,10 @@ $ testcafe chrome:headless tests/sample.test.js
 Done in 31.12s.
 ```
 
-PASS!!出力も非常にわかりやすいですね！
+PASSしました。出力も非常にわかりやすいですね。
 
-# まとめ
+## まとめ
 
 この記事では、Nuxt on DockerにTestCafeを導入して、かんたんな自動テストを書いてみました。
-自動テストがあれば、機能追加を頻繁に行なう環境でも勇気と自信を持ってデプロイできます！
+自動テストがあれば、機能追加を頻繁に行なう環境でも勇気と自信を持ってデプロイできます。
 そして、[TestCafe](https://testcafe.io/)はとても直感的なテストコードを書け、クロスブラウザにも対応しているすぐれものでした。
