@@ -41,6 +41,7 @@
 		"@astrojs/markdoc": "^0.9.0",
 		"@astrojs/vercel": "^7.3.1",
 		"@fontsource/murecho": "^5.0.17",
+		"@iconify-json/mdi": "^1.1.64",
 		"@libsql/client": "^0.4.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"astro-decap-cms-oauth": "^0.2.9",
