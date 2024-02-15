@@ -23,7 +23,7 @@
 		"@biomejs/biome": "1.5.3",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.10",
-		"@types/node": "^20.11.17",
+		"@types/node": "^20.11.19",
 		"astro": "^4.3.7",
 		"astro-icon": "^1.1.0",
 		"commitizen": "^4.3.0",
