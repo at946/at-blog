@@ -5,7 +5,7 @@ date: '2021-10-01'
 published: true
 ---
 
-シリーズ最終章（予定）です！
+シリーズ最終章です。
 
 [前回の記事]  
 [Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
@@ -13,21 +13,21 @@ published: true
 [前々回の記事]  
 [NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part2 - モバイルだって使いたい！](/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2)
 
-Part2では、PCは表示できるけどモバイルはできない、というPart1の課題をJSON→JSONPに更新することで解決しました。🎉
+Part2では、PCは表示できるけどモバイルはできない、というPart1の課題をJSON→JSONPに更新することで解決しました🎉。
 
-これでOKかと思いきや、spaces.bz の開発では次なる課題が！
+これでOKかと思いきや、spaces.bzの開発では次なる課題が現れました。
 
 - 動的OGPやりたいよね
 - Search Consoleでソフト404って出てるけどなんだろうね
 
 うむ。いまのデータは`created`で取得しているのですが、ロボットに情報を確認してもらうためには`asyncData`でデータを取得しないとですね。
 
-たとえば、spaces.bz のデイリーランキングページを見てください。
-このページでは動的OGPやソフト404対策としてアクセス時は`asyncData`を使ってスプレッドシートからデータを取得し、
-日付の変更の場合は`methods`の関数を使ってスプレッドシートからデータを取得しています。
+たとえば、spaces.bzのデイリーランキングページを見てください。
+このページでは動的OGPやソフト404対策としてアクセス時は`asyncData`を使ってスプレッドシートからデータを取得しています。
+また、日付の変更の場合は`methods`の関数を使ってスプレッドシートからデータを取得しています。
 
 Part2の内容を踏まえると、`asyncData`でも同じようにデータを取得しようとすれば実現できそうですよね。
-（ボタンを押したらデータを更新する感じにします。）
+（ボタンを押したらデータを更新する感じにします）
 
 ```vue:pages/index.vue ins={3,29-35} del={36-43}
 <template>
@@ -80,7 +80,7 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
     }
   }
 ```
-よっしゃ！これで行けるはず！
+よし、これで行けるはず。
 
 ![document is not found](./images/1_document_is_not_found.png)
 
@@ -88,23 +88,23 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
 
 ということで、今回は`asyncData`でもスプレッドシートをDB代わりに使おう大作戦です。
 
-# 何がだめなの？
+## 何がだめなの
 なにが起きてるかというと、`axios-jsonp`でエラーが発生しています。
 「document is not found」とか「window is not found」とか、このエラーはフロントエンドで動作する前提のパッケージがバックエンドで動作するときに起こります。
 つまり、`asyncData`はバックエンドでデータを取得するので、フロントエンドで動作する前提の`axios-jsonp`は利用できないのです。
 
-# じゃあどうする？
-こういうパッケージは`nuxt.config.js`で`ssr: false`すればいい、とか、`<no-ssr>`、`<client-only>`タグで囲めばいい、とか解決策があるのですが、今回はasyncDataで動作させたいので採用できません。
-かといって、何も考えずにJSONPをやめてしまえばまたモバイルで使えなくなる...
+## じゃあどうする
+こういうパッケージは`nuxt.config.js`で`ssr: false`する、`<no-ssr>`、`<client-only>`タグで囲む、などの解決策が提示されています。
+しかし、今回はasyncDataで動作させたいので採用できません。
+かといって、何も考えずにJSONPをやめてしまえばまたモバイルで使えなくなる...。
 
-ということで`serverMiddleware`を使ってみましょう！
-いままで「フロントエンド」→「GASのWebApp」と通信していた間にBFFライクにserverMiddlewareが入ります。
+ということで`serverMiddleware`を使ってみましょう。
+いままで「フロントエンド」→「GASのWebApp」と通信していた間にBFFのようにserverMiddlewareが入ります。
 これによって、フロントエンドとしては同じドメインのサーバーと通信しているようになるのでCORS対策もバッチリになります。
 
-あれ、じゃあモバイルで使えないってなったとき、`JSONP`じゃなくて`serverMiddleware`でもよかったってこと？
-そうですね。気づきませんでした...
+モバイルで使えないってなったとき、`JSONP`じゃなくて`serverMiddleware`でもよかったのですが当時は気づきませんでした。
 
-# NuxtアプリでserverMiddleware経由でGAS APIをコールする
+## NuxtアプリでserverMiddleware経由でGAS APIをコールする
 まずはBFFでGAS APIをコールするコードを書いていきましょう。
 ここでは[`express`](https://expressjs.com/)を利用します。
 
@@ -137,7 +137,7 @@ module.exports = {
 ```
 
 今まで`pages/index.vue`でやっていた`axios`の処理を転記した感じですね。
-これを`nuxt.config.js`に`serverMiddleware`として登録しましょう。（ついでにproxyも不要になったので消します）
+これを`nuxt.config.js`に`serverMiddleware`として登録しましょう（ついでにproxyも不要になったので消します）。
 
 ```js:nuxt.config.js
   export default {
@@ -194,7 +194,7 @@ $ yarn remove axios-jsonp
 
 見ての通り、`JSONP`ではなく`JSON`を期待してのコールですので、GASのコードを元(Part1)時点に戻していきます。
 
-# GAS APIをJSON返却に戻す
+## GAS APIをJSON返却に戻す
 
 ```js:コード.js
   function doGet(e) {
@@ -209,25 +209,25 @@ $ yarn remove axios-jsonp
   }
   ...
 ```
-ここまででBFFの準備ができました！🎉
+ここまででBFFの準備ができました🎉。
 
-# 動作確認
+## 動作確認
 最後に動作確認をしておきましょう。
-期待動作としては
+期待動作は以下の通りです。
 
-1. `http://localhost:3000/`にアクセス → ユーザーA/B/Cのデータが表示される！
+1. `http://localhost:3000/`にアクセス → ユーザーA/B/Cのデータが表示される
 2. SpreadsheetにユーザーDのデータを登録
-3. Nuxtの方で「更新」ボタンを押す → ユーザーDのデータも表示される！
+3. Nuxtの方で「更新」ボタンを押す → ユーザーDのデータも表示される
 
-です！ではやっていきましょう！
+ではやっていきましょう。
 
-### 1. `http://localhost:3000/`にアクセス
+#### 1. `http://localhost:3000/`にアクセス
 
 ![http://localhost:3000/にアクセスして、ユーザーA/B/Cのデータが表示されることを確認！](./images/2_test1.png)
 
-表示されてる！
+表示されてる。
 
-### 2. スプレッドシートにユーザーDを追加
+#### 2. スプレッドシートにユーザーDを追加
 
 |id|name|age|email|
 | --- | --- | --- | --- |
@@ -236,17 +236,17 @@ $ yarn remove axios-jsonp
 |3|Test C|40|test_c@sample.com|
 |4|Test D|50|test_d@sample.com|
 
-### 3. 更新ボタンを押下
+#### 3. 更新ボタンを押下
 ![http://localhost:3000/で更新ボタンを押して、ユーザーA/B/C/Dのデータが表示されることを確認！](./images/3_test2.png)
-ユーザーDの情報が新たに表示されてる！
+ユーザーDの情報が新たに表示されてる。
 
-テスト成功！🎊
+テスト成功🎊。
 
-# まとめ
+## まとめ
 
 今回は`serverMiddleware`を使って、スプレッドシートをDB代わりに使ってみました。
-ここまで色々と試行錯誤をしてきましたが、今回がやりたいことができて一番手っ取り早い方法なんじゃないかと思います。
+ここまで色々と試行錯誤をしてきましたが、今回の方法はやりたいことができる中で一番手っ取り早い方法でしょう。
 [Google Sheet API](https://developers.google.com/sheets/api)とかも試みてみましたが挫折しました...
 
-スプレッドシートだとデータも見やすいですし、GASで色々操作できたりもするので、作りたいプロダクトによっては一つの選択肢になってくるのかなと思います。
-この記事が、どなたかの役に立てば嬉しいです！
+スプレッドシートだとデータも見やすいですし、GASで色々操作できたりもするので、作りたいプロダクトによっては1つの選択肢になってきそうです。
+この記事が、どなたかの役に立てば嬉しいです。
