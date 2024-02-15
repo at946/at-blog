@@ -5,27 +5,27 @@ date: '2021-10-14'
 published: true
 ---
 
-いま話題のスペースに出会える spaces.bz（クローズ済み）では、デイリーランキングで動的OGPを実装しています。
+いま話題のスペースに出会えるspaces.bz（クローズ済み）では、デイリーランキングで動的OGPを実装しています。
 
 実はこれ、Google SpreadsheetとGoogle Slidesを使って、GASで毎日OGP画像を生成して表示させているんです。
-結構面白いアイデアかな、と思うのでシェアします！😊
+結構面白いアイデアなのでシェアします😊。
 
-# 全体像
-まずこの記事で紹介する全体像を。
+## 全体像
+まずこの記事で紹介する全体像を示します。
 
 1. 動的OGPのもとになるSlidesを作成
 1. 動的OGPのデータのもとになるSpreadsheetを作成
 1. GASを作成
     - SpreadsheetのデータをもとにSlidesの文字列を置換
     - Slidesを画像ファイルでエクスポートしてDriveに保存
-    - SpreadsheetにDriveに保存した画像ファイルのIDを追加
+    - Driveに保存した画像ファイルのIDをSpreadsheetに追加
     - Slidesを元の文字列に置換し直す
 1. SpreadsheetをWebApp（API）で公開
 1. Nuxtアプリで動的OGPを設定
 
-ちょっと長いですが、お付き合いいただけると嬉しいです🙏
+ちょっと長いですが、お付き合いいただけると嬉しいです🙏。
 
-# 1. 動的OGPの元になるSlidesを準備
+## 1. 動的OGPの元になるSlidesを準備
 まずはいい感じのOGPのデザインをGoogle Slidesで作ります。
 
 ![slidesのイメージ](./images/1_slides_image.png)
@@ -34,9 +34,9 @@ Coolです。ポイントとしてはOGPは1200mmx628mmのサイズがよいの�
 
 このスライドに書いている「name」はこの後置換するためのキーワードになってます。
 
-# 2. 動的OGPのデータのもとになるSpreadsheetを準備
+## 2. 動的OGPのデータのもとになるSpreadsheetを準備
 「name」を置換していきたいので、そんな感じのSpreadsheetを用意します。
-spaces.bz の場合は、その日のランキング10位までをGASで集計して、そのデータを元に置換を行っています。
+spaces.bzの場合は、その日のランキング10位までをGASで集計して、そのデータを元に置換しています。
 今回は簡単な例なので、以下のようなシートを用意します。
 
 |id|name|ogpId|
@@ -47,11 +47,11 @@ spaces.bz の場合は、その日のランキング10位までをGASで集計�
 
 `ogp_id`は今のところ空ですが列だけ用意しておきます。後でGASでOGP画像のファイルを生成したときに画像ファイルのIDをセットするカラムです。
 
-# 3. GASを作成
-この記事の佳境です！
+## 3. GASを作成
+この記事の佳境です。
 
 まずコードの全容をさらします。
-説明しやすいように書いていますが、内容を理解いただければ色々な書き方があるかなーと思います。
+説明しやすいように書いていますが、内容を理解いただければ色々な書き方があります。
 
 ```js:コード.js
 function main() {
@@ -109,7 +109,7 @@ function resetText(presentationId, name) {
 
 少し長いですが、少しずつ区切ってみていきます。
 
-## 3-1. 各種変数の設定
+### 3-1. 各種変数の設定
 ```js
 const ss = SpreadsheetApp.openById('<SpreadsheetのID>')
 const sheet = ss.getSheetByName('<Sheetの名前>')
@@ -142,7 +142,7 @@ data = [
 columnNames = ['id', 'name', 'ogpId']
 ```
 
-## 3-2. 置換して画像保存して置換し直す
+### 3-2. 置換して画像保存して置換し直す
 
 ```js
   data.forEach((row, index) => {
@@ -154,20 +154,18 @@ columnNames = ['id', 'name', 'ogpId']
   })
 ```
 
-ここが核です！なにか色々やっているようですが、ほとんどの行は別に作成した関数を呼び出しているのでそこも説明していきます。
+ここが核です。なにか色々やっているようですが、ほとんどの行は別に作成した関数を呼び出しているのでそこも説明していきます。
 
 まず、全体は`data.forEach`で回しています。
 最初に`row[1]`で、`Test A`, `Test B`, `Test C`をループごとに`name`に格納しています。
-それに続いて、
+それに続いて、以下の処理を行います。
 
 1. スライドのテキストを`name`に置換（`replaceText()`）
 2. スライドをイメージ保存（`downloadImage()`）
 3. 保存したファイルのIDを`data`に追加（`row[2] = ogpId`）
 4. スライドのテキストを置換し直す（`resetText()`）
 
-と処理を流しています。
-
-### 3-2-1. スライドのテキストを置換
+#### 3-2-1. スライドのテキストを置換
 
 スライドのテキストの置換処理を行う`replaceText()`関数を定義しました。
 
@@ -185,9 +183,11 @@ function replaceText(presentationId, name) {
 その`slide`に対して`replaceAllText()`を実行することで、`slide`の中の`'name'`の文字列を引数の`name`に置換しています。
 最後に`presentation.saveAndClose()`で置換を確定しています。`saveAndClose()`を行わないと、次のイメージ保存で置換前の状態で保存されてしまうので要チェックです。
 
-置換の処理はこれだけです。置換したい文字列が複数ある場合でも同じやり方で`slide.replaceAllText()`を追加すればできますし、複数のスライドに対してやりたい場合は`presentation`に対して`replaceAllText()`したり、`getSlides()`の結果を`forEach`で回してスライド1枚ずつに処理することで実現できますね。
+置換の処理はこれだけです。
+置換したい文字列が複数ある場合でも同じやり方で`slide.replaceAllText()`を追加すればできます。
+複数のスライドに対しては`presentation`に対して`replaceAllText()`したり、`getSlides()`の結果を`forEach`で回してスライド1枚ずつに処理することで実現できます。
 
-### 3-2-2. スライドを保存
+#### 3-2-2. スライドを保存
 これで動的OGPのイメージの準備ができたので、これをイメージファイルに保存します。今回は`png`で。
 
 ```js
@@ -213,17 +213,18 @@ function downloadImage(presentationId, fileName, folder) {
 
 引数は、`presentationId`と`folder`、そしてファイル名として`fileName`を取ります。
 最初の`presentation`と`slide`の式は`replaceText()`と同じなので説明は省略します。
-`slideId`はそのスライドのIDのことで、`https://docs.google.com/presentation/d/<presentationId>/edit#slide=id.<'この部分'>`です。これは`slide.getObjectId()`で取得ができます。
+`slideId`はそのスライドのIDで、`https://docs.google.com/presentation/d/<presentationId>/edit#slide=id.<'この部分'>`です。
+これは`slide.getObjectId()`で取得ができます。
 
 これらの変数を使ってリクエストURL`url`を作ります。
 リクエストには認証が必要なので、`ScriptApp.getOAuthToken()`を使ってBearer認証できるように`options`を作っておきます。
 
 この`url`と`options`を使って、`UrlFetchApp.fetch()`でリクエストを投げ、レスポンスを`response`に格納しています。
-`response`は`HTTPResponse`というClassになっているので、画像ファイルとして扱えるように`getAs(MimeType.PNG)`でpngファイルに変換し、`setName()`でファイル名を設定しました。
+`response`は`HTTPResponse`Classなので、画像ファイルとして扱うために`getAs(MimeType.PNG)`でpngファイルに変換し、`setName()`でファイル名を設定します。
 それを、`folder.createFile()`で`folder`にファイルとして保存しているって流れです。
 最後に、保存したファイル`file`のIDを`getId()`で取得して、返り値にしています。
 
-### 3-2-3. 保存したファイルのIDをデータに追加
+#### 3-2-3. 保存したファイルのIDをデータに追加
 ```js
 const ogpId = downloadImage(presentationId, `${index}.png`, folder)
 row[2] = ogpId
@@ -232,7 +233,7 @@ row[2] = ogpId
 それを`row[2]`、つまり`ogpId`のカラムに設定しています。
 詳しくは後ほど紹介しますが、これがNuxtアプリでGoogle Driveの画像ファイルをOGPに設定する肝だったりします。
 
-### 3-2-4. スライドのテキストを置換し直す
+#### 3-2-4. スライドのテキストを置換し直す
 ここまで終わったら次のループのためにスライドの文字列を元の`'name'`に戻しておきます。このために`resetText()`の関数を用意して呼び出しています。
 
 ```js
@@ -243,9 +244,9 @@ function resetText(presentationId, name) {
   presentation.saveAndClose()
 }
 ```
-やっていることは`replaceText()`の逆なので説明は省略！
+やっていることは`replaceText()`の逆なので説明は省略します。
 
-## 3-3. スプレッドシートのogpIdを更新
+### 3-3. スプレッドシートのogpIdを更新
 ```js
 data.unshift(columnNames)
 sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
@@ -257,11 +258,11 @@ sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
 `sheet.getRange().setValues()`でデータを上書きしています。
 
 ここまでで画像を作成するステップが完了です。😊
-ここからはSpreadsheetをもとにNuxtアプリでOGP画像を動的に設定してみましょう！
+ここからはSpreadsheetをもとにNuxtアプリでOGP画像を動的に設定してみましょう。
 
-# 4. SpreadsheetをWebApp（API）で公開
+## 4. SpreadsheetをWebApp（API）で公開
 次は先程OGPのIDを追記したSpreadsheetをWebAppで公開していきます。
-このやり方は、以前に記事を書いたので詳細はそちらを見てください！
+このやり方は、以前に記事を書いたので詳細はそちらを見てください。
 
 [Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
 
@@ -295,13 +296,13 @@ function getUsers() {
 ```
 これを、デプロイしてWebApp公開しましょー。
 
-# 5. Nuxtアプリで動的OGPを設定
+## 5. Nuxtアプリで動的OGPを設定
 まずは、Nuxtアプリで先程公開したWebAppにリクエストする下準備をします。今回は`axios`を使うことを前提として、`serverMiddleware`経由でWebAppを呼び出します。
 こちらも過去に記事を書いていますので、詳細についてはそちらを参照してください。
 
 [NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！](/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3)
 
-以下の更新、もしくは新規作成を行います。
+以下の更新、もしくは新規作成します。
 
 ```js:nuxt.config.js ins={3-8}
 export default {
@@ -332,7 +333,7 @@ module.exports = {
 }
 ```
 
-これで下準備が完了です。あとは`pages`のファイルで`asyncData()`で情報取得して、`head()`で画像のパスを指定してあげるだけです。
+これで下準備が完了です。あとは`pages`のファイルで`asyncData()`を使い情報取得して、`head()`で画像のパスを指定してあげるだけです。
 
 今回は`pages/index.vue`でクエリパラメーター`id`に応じてOGP画像を出し入れしましょう。パスパラメーターとかでもやり方は基本的に変わりないです。
 
@@ -367,32 +368,33 @@ export default {
 ...
 ```
 
-例えばこんな感じ。（`nuxt.config.js`で他のタグは設定されている前提です！）
+例えばこんな感じです（`nuxt.config.js`で他のタグは設定されている前提です）。
 `asyncData`でクエリパラメーター`id`が存在する場合は、`users`から同じ`id`の`user`を探してます。
-見つかったら`ogpUrl`に`https://drive.google.com/uc?export=view&id=${user.ogpId}`を、存在しない場合は\<共通のOGPイメージのパス\>をセットし、`head()`で`og:image`の`property`として`ogpUrl`を設定しています。
-こうすることでクエリパラメーター`id`に応じて動的にOGPを設定することができます。
+見つかったら`ogpUrl`に`https://drive.google.com/uc?export=view&id=${user.ogpId}`を設定します。
+存在しない場合は\<共通のOGPイメージのパス\>をセットし、`head()`で`og:image`の`property`として`ogpUrl`を設定しています。
+こうすることでクエリパラメーター`id`に応じて動的にOGPを設定できます。
 
 さて、ここで出てきた`https://drive.google.com/uc?export=view&id=`です。
-Google Drive上で画像ファイルを見ようとするとプレビューモードで表示されると思います。この状態ではコードからすれば画像ファイルとして扱うことができません。
+Google Drive上で画像ファイルを見ようとするとプレビューモードで表示されるでしょう。この状態ではコードからすれば画像ファイルとして扱うことができません。
 実は`https://drive.google.com/uc?export=view&id=<表示したい画像ファイルのID>`であれば、プレビューモードではなく画像ファイルとして認識させることができます。
 また、これで表示できるのは閲覧権限をもつユーザーのみですので、OGP画像を保存しているフォルダはすべてのユーザーに閲覧権限で公開されている必要があります。
 
 [ngrok](https://ngrok.com/)で公開し、[Twitter Card Validator](https://cards-dev.twitter.com/validator)でOGPが正しく設定されているか確認してみましょう。
 
-## id=1のとき
+### id=1のとき
 ![id=1のとき](./images/2_twitter_card_validator_1.png)
 
-## id=2のとき
+### id=2のとき
 ![id=2のとき](./images/3_twitter_card_validator_2.png)
 
-動的にOGP画像が表示されてることを確認できました！
+動的にOGP画像が表示されてることを確認できました。
 
-# まとめ
+## まとめ
 長くなってしまいましたが、これでSpreadsheetとSlidesを使ってOGP画像を生成しNuxtアプリで動的OGPを実現する一連の流れを紹介させていただきました。
 かなり色々なサイトを参考にさせていただいてここまでできたので、この場を借りてお礼を。m(_ _)m
 GAS、かなり色々なことができるので楽しいですね。
 
-# 参考
+## 参考
 - [Slides Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/slides?hl=en)
 - [Spreadsheet Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/spreadsheet)
 - [Drive Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/drive)
