@@ -12,7 +12,6 @@ import partytown from '@astrojs/partytown';
 import decapCmsOauth from 'astro-decap-cms-oauth';
 import icon from 'astro-icon';
 import rehypeKatex from 'rehype-katex';
-import remarkCodeTitles from 'remark-code-titles';
 import remarkMath from 'remark-math';
 
 // Full Astro Configuration API Documentation:
