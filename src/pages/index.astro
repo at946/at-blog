@@ -11,8 +11,8 @@ import { SITE } from '@/config'
 const title = 'Home'
 const description = SITE.description;
 
-const posts = await getCollection('blog', ({ data }) => data.published )
-posts.sort((x, y) => new Date(y.data.date).getTime() - new Date(x.data.date).getTime() )
+const posts = await getCollection('blog', ({ data }) => data.isPublished && new Date(data.publicationDate) <= new Date())
+posts.sort((x, y) => new Date(y.data.publicationDate).getTime() - new Date(x.data.publicationDate).getTime() )
 
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>

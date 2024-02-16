@@ -8,7 +8,7 @@ let title = 'All Tags'
 let description = 'ブログのタグを集めました。'
 
 
-const allPosts = await getCollection('blog', ({ data }) => data.published && !!data.tags );
+const allPosts = await getCollection('blog', ({ data }) => data.isPublished && new Date(data.publicationDate) <= new Date() && !!data.tags );
 const tags = [...new Set([].concat.apply([], allPosts.map(post => post.data.tags)))]
 ---
 

@@ -11,13 +11,13 @@ const { post: { data: post, slug } } = Astro.props
 <div class="flex gap-2">
     <div class="hidden sm:inline w-32">
         <div class="flex flex-col w-full text-center">
-            <span class="text-7xl font-semibold text-gray-500 dark:text-gray-200">{ new Date(post.date).getDate() }</span>
-            <span class="text-gray-500 dark:text-gray-200 text-lg font-medium">{ `${getMonthName(post.date)} ${new Date(post.date).getFullYear()}` }</span>
+            <span class="text-7xl font-semibold text-gray-500 dark:text-gray-200">{ new Date(post.publicationDate).getDate() }</span>
+            <span class="text-gray-500 dark:text-gray-200 text-lg font-medium">{ `${getMonthName(post.publicationDate)} ${new Date(post.publicationDate).getFullYear()}` }</span>
         </div>
     </div>
     <div class="flex-1">
         <p class="sm:hidden font-medium text-lg mb-2 text-center">
-            { new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(post.date))}
+            { new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(post.publicationDate))}
         </p>    
         <h4 class="text-2xl font-semibold leading-relaxed text-theme-primary dark:text-theme-dark-primary hover:underline underline-offset-4 mb-4 text-center sm:text-left" style="word-break: auto-phrase;">
             <a href={`/blog/${slug}`} title={post.title}>{post.title}</a>
