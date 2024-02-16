@@ -1,7 +1,6 @@
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import markdoc from '@astrojs/markdoc';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
