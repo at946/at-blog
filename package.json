@@ -39,8 +39,6 @@
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"astro-expressive-code": "^0.32.4",
 		"katex": "^0.16.9",
-		"rehype-katex": "^7.0.0",
-		"remark-math": "^6.0.0",
 		"textlint": "^14.0.2",
 		"textlint-filter-rule-allowlist": "^4.0.0",
 		"textlint-rule-preset-ja-spacing": "^2.3.0",
