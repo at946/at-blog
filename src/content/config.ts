@@ -6,7 +6,7 @@ const blogCollection = defineCollection({
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
 		tags: z.array(z.string()).optional(),
-		publicationDate: z.string().optional(),
+		publicationDate: z.string(),
 		isPublished: z.boolean(),
 	}),
 });

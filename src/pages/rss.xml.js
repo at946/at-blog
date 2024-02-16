@@ -4,7 +4,9 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
 const sortedPosts = Object.values(allPosts).sort(
-	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+	(a, b) =>
+		new Date(b.data.publicationDate).valueOf() -
+		new Date(a.data.publicationDate).valueOf(),
 );
 
 export const GET = () =>
@@ -22,7 +24,7 @@ export const GET = () =>
 		items: sortedPosts.map((item) => ({
 			title: item.data.title,
 			link: `blog/${item.slug}`,
-			pubDate: new Date(item.data.date),
+			pubDate: new Date(item.data.publicationDate),
 		})),
 		// (optional) inject custom xml
 		customData: '<language>ja-jp</language>',
