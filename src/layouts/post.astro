@@ -20,7 +20,7 @@ const { content } = Astro.props
   <MainLayout>
     <div class="text-center md:text-left mb-16">
       <p class="mb-2 font-bold">
-        { new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(content.date))}
+        { new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(content.publicationDate))}
       </p>
       <h1 class="text-4xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
       <div class="inline-flex gap-3 flex-wrap justify-center md:justify-start">
