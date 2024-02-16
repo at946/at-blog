@@ -9,7 +9,6 @@ import { defineConfig } from 'astro/config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import partytown from '@astrojs/partytown';
-import decapCmsOauth from 'astro-decap-cms-oauth';
 import icon from 'astro-icon';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
@@ -37,7 +36,6 @@ export default defineConfig(
 			}),
 			icon(),
 			sitemap(),
-			decapCmsOauth(),
 			partytown({
 				config: {
 					forward: ['dataLayer.push'],
