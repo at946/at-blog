@@ -10,8 +10,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
-import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
