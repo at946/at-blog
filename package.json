@@ -10,8 +10,7 @@
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"lint": "biome lint src",
 		"lint:text": "textlint src",
-		"format": "biome format src --write",
-		"cz": "cz"
+		"format": "biome format src --write"
 	},
 	"devDependencies": {
 		"@astrojs/partytown": "^2.0.4",
@@ -25,8 +24,6 @@
 		"@types/node": "^20.11.19",
 		"astro": "^4.3.7",
 		"astro-icon": "^1.1.0",
-		"commitizen": "^4.3.0",
-		"cz-conventional-changelog": "^3.3.0",
 		"globby": "^14.0.1",
 		"gray-matter": "^4.0.3",
 		"remark-code-titles": "^0.1.2",
@@ -53,10 +50,5 @@
 		"textlint-rule-preset-ja-spacing": "^2.3.0",
 		"textlint-rule-preset-ja-technical-writing": "^10.0.1",
 		"textlint-rule-spellcheck-tech-word": "^5.0.0"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
 	}
 }
