@@ -38,7 +38,6 @@
 		"@iconify-json/mdi": "^1.1.64",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"astro-expressive-code": "^0.32.4",
-		"ioredis": "^5.3.2",
 		"katex": "^0.16.9",
 		"rehype-katex": "^7.0.0",
 		"remark-math": "^6.0.0",
