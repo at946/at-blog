@@ -2,6 +2,7 @@ import { docswellEmbed } from './schema/docswell-embed.mdoc';
 import { fence } from './schema/fence.mdoc';
 import { imageWrapper } from './schema/image-wrapper.mdoc';
 import { inlineMath } from './schema/inline-math.mdoc';
+import { linkCard } from './schema/link-card.mdoc';
 import { link } from './schema/link.mdoc';
 import { math } from './schema/math.mdoc';
 import { quote } from './schema/quote.mdoc';
@@ -21,5 +22,6 @@ export const config = {
 		speakerdeck: speakerdeckEmbed,
 		docswell: docswellEmbed,
 		slideshare: slideshareEmbed,
+		linkCard,
 	},
 };
