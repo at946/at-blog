@@ -23,8 +23,8 @@ const ogImageAlt: string = parsedOgp.ogp['og:image:alt'] || `${ogTitle}のOG画�
 ---
 
 <Link href={String(ogUrl)} title={ogTitle}>
-  <div class="flex items-center border rounded not-prose my-4">
-    <img src={ogImage} alt={ogImageAlt} class="my-0 rounded-l h-24">
-    <p class="text-sm px-2">{ogTitle}</p>
+  <div class="flex items-center border rounded not-prose my-4 border-gray-300">
+    <p class="text-sm px-2 flex-1">{ogTitle}</p>
+    <img src={ogImage} alt={ogImageAlt} class="my-0 rounded-r h-24">
   </div>
 </Link>
