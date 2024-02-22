@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets'
-import { Debug } from 'astro:components'
 import ogpParser from 'ogp-parser'
 import Link from './Link.astro'
 
@@ -10,7 +9,7 @@ interface Props {
 
 const { url } = Astro.props
 
-const parsedOgp: Object = await ogpParser(url, {skipOembed: true})
+const parsedOgp: Object = await ogpParser(url)
                                 .then((data) => {
                                   return data
                                 }).catch((error) => {

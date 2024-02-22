@@ -5,23 +5,25 @@ import { inlineMath } from './schema/inline-math.mdoc';
 import { linkCard } from './schema/link-card.mdoc';
 import { link } from './schema/link.mdoc';
 import { math } from './schema/math.mdoc';
+import { oembed } from './schema/oembed.mdoc';
 import { quote } from './schema/quote.mdoc';
 import { slideshareEmbed } from './schema/slideshare-embed.mdoc';
 import { speakerdeckEmbed } from './schema/speakerdeck-embed.mdoc';
 
 export const config = {
 	nodes: {
-		link,
 		fence,
+		link,
 	},
 	tags: {
-		quote,
-		imageWrapper,
-		math,
-		inlineMath,
-		speakerdeck: speakerdeckEmbed,
 		docswell: docswellEmbed,
-		slideshare: slideshareEmbed,
+		imageWrapper,
+		inlineMath,
 		linkCard,
+		math,
+		oembed,
+		quote,
+		slideshare: slideshareEmbed,
+		speakerdeck: speakerdeckEmbed,
 	},
 };
