@@ -1,10 +1,31 @@
 ---
+import { Image } from 'astro:assets'
+import { Debug } from 'astro:components'
+import ogpParser from 'ogp-parser'
+import Link from './Link.astro'
+
 interface Props {
   url: string
 }
 
 const { url } = Astro.props
+
+const parsedOgp: Object = await ogpParser(url, {skipOembed: true})
+                                .then((data) => {
+                                  return data
+                                }).catch((error) => {
+                                  throw(error)
+                                })
+
+const ogTitle: string = parsedOgp.ogp['og:title'] || parsedOgp.title
+const ogUrl: string = parsedOgp.ogp['og:url'] || url
+const ogImage: string = parsedOgp.ogp['og:image']
+const ogImageAlt: string = parsedOgp.ogp['og:image:alt'] || `${ogTitle}のOG画像`
 ---
-<div>
-  { url }
-</div>
+
+<Link href={String(ogUrl)} title={ogTitle}>
+  <div class="flex items-center border rounded not-prose my-4">
+    <img src={ogImage} alt={ogImageAlt} class="my-0 rounded-l h-24">
+    <p class="text-sm px-2">{ogTitle}</p>
+  </div>
+</Link>
