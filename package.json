@@ -10,7 +10,8 @@
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"lint": "biome lint src",
 		"lint:text": "textlint src",
-		"format": "biome format src --write"
+		"format": "biome format src",
+		"format:fix": "biome format src --write"
 	},
 	"devDependencies": {
 		"@astrojs/partytown": "^2.0.4",
