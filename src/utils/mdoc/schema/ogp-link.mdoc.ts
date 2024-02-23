@@ -1,0 +1,15 @@
+import { component } from '@astrojs/markdoc/config';
+
+export const ogpLink = {
+	render: component('/src/components/mdoc/OgpLink.astro'),
+	attributes: {
+		url: {
+			type: String,
+			required: true,
+		},
+		type: {
+			type: 'link' | 'linkCard' | 'oembed',
+			required: true,
+		},
+	},
+};

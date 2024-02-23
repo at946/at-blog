@@ -2,16 +2,16 @@
 import { Image } from 'astro:assets';
 import { getImage } from 'astro:assets';
 import Link from './Link.astro';
+import OgpLink from './OgpLink.astro';
 
 interface Props {
   src: ImageMetadata | string,
   alt: string,
   caption?: string,
-  srcName?: string,
-  srcHref?: string,
+  srcUrl?: string,
 }
 
-const { src, alt, caption, srcName, srcHref } = Astro.props;
+const { src, alt, caption, srcUrl } = Astro.props;
 
 const image = await getImage({ src: src })
 ---
@@ -19,9 +19,9 @@ const image = await getImage({ src: src })
 <figure class="text-center">
   <img src={image.src} alt={alt}>
   <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
-  {srcName &&
-    srcHref
-      ? <Link href={srcHref}><span class="text-sm">{ srcName }</span></Link>
-      : <span class="text-sm">{ srcName }</span>
+  {srcUrl &&
+    <span class="text-sm">
+      <OgpLink url={srcUrl} type="link" />
+    </span>
   }
 </figure>
