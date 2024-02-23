@@ -2,14 +2,15 @@
 import { Image } from 'astro:assets'
 import ogpParser from 'ogp-parser'
 import Link from './Link.astro'
+import LinkCard from './LinkCard.astro'
 import Oembed from './Oembed.astro'
 
 interface Props {
   url: string,
-  type: 'link' | 'linkCard' | 'oembed',
+  type?: 'link' | 'linkCard' | 'oembed',
 }
 
-const { url, type } = Astro.props
+const { url, type = 'linkCard' } = Astro.props
 
 const parsedOgp: Object = await ogpParser(url)
                                 .then((data) => {
@@ -29,7 +30,7 @@ const html: string = parsedOgp.oembed?.html
   <Link href={String(ogUrl)} title={ogTitle}>{ogTitle}</Link>
 }
 { type === 'linkCard' &&
-  <LinkCard url={url} />
+  <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />
 }
 { type === 'oembed' &&
   <Oembed url={url} />

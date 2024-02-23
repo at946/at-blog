@@ -9,7 +9,7 @@ export const ogpLink = {
 		},
 		type: {
 			type: 'link' | 'linkCard' | 'oembed',
-			required: true,
+			required: false,
 		},
 	},
 };
