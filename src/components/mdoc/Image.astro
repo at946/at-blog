@@ -19,5 +19,9 @@ const image = await getImage({ src: src })
 <figure class="text-center">
   <img src={image.src} alt={alt}>
   <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
-  <Link href={srcHref}><span class="text-sm">{ srcName }</span></Link>
+  {srcName &&
+    srcHref
+      ? <Link href={srcHref}><span class="text-sm">{ srcName }</span></Link>
+      : <span class="text-sm">{ srcName }</span>
+  }
 </figure>
