@@ -24,6 +24,8 @@ const ogUrl: string = parsedOgp.ogp['og:url'] || url
 const ogImage: string = parsedOgp.ogp['og:image']
 const ogImageAlt: string = parsedOgp.ogp['og:image:alt']
 const html: string = parsedOgp.oembed?.html
+
+if (type === 'oembed' && !html) throw `No oembed html returns from ${url}`
 ---
 
 { type === 'link' &&
@@ -33,5 +35,5 @@ const html: string = parsedOgp.oembed?.html
   <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />
 }
 { type === 'oembed' &&
-  <Oembed url={url} />
+  <div set:html={html} class="flex justify-center" />
 }
