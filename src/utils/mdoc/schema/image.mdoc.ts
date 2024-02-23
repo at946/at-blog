@@ -9,11 +9,7 @@ export const image = {
 			type: String,
 			required: false,
 		},
-		srcName: {
-			type: String,
-			required: false,
-		},
-		srcHref: {
+		srcUrl: {
 			type: String,
 			required: false,
 		},

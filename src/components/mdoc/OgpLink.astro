@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets'
+import ogpParser from 'ogp-parser'
+import Link from './Link.astro'
+import Oembed from './Oembed.astro'
+
+interface Props {
+  url: string,
+  type: 'link' | 'linkCard' | 'oembed',
+}
+
+const { url, type } = Astro.props
+
+const parsedOgp: Object = await ogpParser(url)
+                                .then((data) => {
+                                  return data
+                                }).catch((error) => {
+                                  throw(error)
+                                })
+
+const ogTitle: string = parsedOgp.ogp['og:title'] || parsedOgp.title
+const ogUrl: string = parsedOgp.ogp['og:url'] || url
+const ogImage: string = parsedOgp.ogp['og:image']
+const ogImageAlt: string = parsedOgp.ogp['og:image:alt']
+const html: string = parsedOgp.oembed?.html
+---
+
+{ type === 'link' &&
+  <Link href={String(ogUrl)} title={ogTitle}>{ogTitle}</Link>
+}
+{ type === 'linkCard' &&
+  <LinkCard url={url} />
+}
+{ type === 'oembed' &&
+  <Oembed url={url} />
+}
