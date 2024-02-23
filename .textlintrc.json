@@ -12,7 +12,6 @@
 				"ブレイクアウトルーム",
 				"/<!-- ignore textlint -->[\\s\\S]*?<!-- /ignore textlint -->/m",
 				"/{%[\\s\\S]*?%}/",
-				"/{% imageWrapper %}[\\s\\S]*?{% /imageWrapper %}/",
 				"/{% quote .* %}[\\s\\S]*?{% /quote %}/",
 				"/> .*/",
 				"/。」/",
