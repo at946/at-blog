@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import Link from './Link.astro';
+
+interface Props {
+  src: ImageMetadata | string,
+  alt: string,
+  caption?: string,
+  srcName?: string,
+  srcHref?: string,
+}
+
+const { src, alt, caption, srcName, srcHref } = Astro.props;
+
+const image = await getImage({ src: src })
+---
+
+<figure class="text-center">
+  <img src={image.src} alt={alt}>
+  <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
+  <Link href={srcHref}><span class="text-sm">{ srcName }</span></Link>
+</figure>

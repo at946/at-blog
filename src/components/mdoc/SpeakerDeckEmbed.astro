@@ -7,11 +7,13 @@ interface Props {
 const { id, slide = 1 } = Astro.props;
 ---
 
-<script
-  defer
-  class="speakerdeck-embed"
-  data-slide={slide}
-  data-id={id}
-  data-ratio="1.7777777777777777"
-  src="//speakerdeck.com/assets/embed.js"
-></script>
+<div class="my-10">
+  <script
+    defer
+    class="speakerdeck-embed"
+    data-slide={slide}
+    data-id={id}
+    data-ratio="1.7777777777777777"
+    src="//speakerdeck.com/assets/embed.js"
+  ></script>
+</div>

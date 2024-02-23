@@ -9,7 +9,7 @@ interface Props {
 
 const { url } = Astro.props
 
-const parsedOgp: Object = await ogpParser(url)
+const parsedOgp: Object = await ogpParser(url, { skipOembed: true })
                                 .then((data) => {
                                   return data
                                 }).catch((error) => {
