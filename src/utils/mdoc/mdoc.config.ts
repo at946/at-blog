@@ -1,6 +1,7 @@
 import { docswellEmbed } from './schema/docswell-embed.mdoc';
 import { fence } from './schema/fence.mdoc';
 import { imageWrapper } from './schema/image-wrapper.mdoc';
+import { image } from './schema/image.mdoc';
 import { inlineMath } from './schema/inline-math.mdoc';
 import { linkCard } from './schema/link-card.mdoc';
 import { link } from './schema/link.mdoc';
@@ -18,6 +19,7 @@ export const config = {
 	tags: {
 		docswell: docswellEmbed,
 		imageWrapper,
+		image,
 		inlineMath,
 		linkCard,
 		math,
