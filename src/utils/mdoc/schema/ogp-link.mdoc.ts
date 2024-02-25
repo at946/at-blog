@@ -8,7 +8,7 @@ export const ogpLink = {
 			required: true,
 		},
 		type: {
-			type: 'link' | 'linkCard' | 'oembed',
+			type: String,
 			required: false,
 		},
 	},
