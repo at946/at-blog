@@ -43,7 +43,6 @@
 		"crypto-js": "^4.2.0",
 		"katex": "^0.16.9",
 		"ogp-parser": "^0.8.1",
-		"paapi5-nodejs-sdk": "^1.1.0",
 		"textlint": "^14.0.3",
 		"textlint-filter-rule-allowlist": "^4.0.0",
 		"textlint-rule-preset-ja-spacing": "^2.3.0",
