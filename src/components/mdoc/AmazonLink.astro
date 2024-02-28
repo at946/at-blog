@@ -1,0 +1,22 @@
+---
+import Link from './Link.astro'
+import LinkCard from './LinkCard.astro'
+import getItem, { IFAmazonItem } from '@/utils/paapi5/getItem';
+
+interface Props {
+  itemId: string,
+  type?: 'link' | 'linkCard',
+}
+
+const { itemId, type = 'linkCard' } = Astro.props
+
+const item: IFAmazonItem = await getItem(itemId)
+
+---
+
+{ type === 'link' &&
+  <Link href={item.href}>{item.name}</Link>
+}
+{ type === 'linkCard' &&
+  <LinkCard name={item.name} href={item.href} imageSrc={item.imageSrc} imageAlt={'商品画像'} isImageLeft={true} isImageLarge={true} />
+}

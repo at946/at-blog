@@ -1,5 +1,8 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"ignore": ["node_modules/**/*", "src/utils/paapi5/**/*"]
+	},
 	"organizeImports": {
 		"enabled": true
 	},
