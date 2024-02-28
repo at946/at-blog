@@ -19,5 +19,13 @@ export const linkCard = {
 			type: String,
 			required: false,
 		},
+		isImageLeft: {
+			type: Boolean,
+			required: false,
+		},
+		isImageLarge: {
+			type: Boolean,
+			required: false,
+		},
 	},
 };

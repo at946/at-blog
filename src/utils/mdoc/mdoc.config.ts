@@ -1,3 +1,4 @@
+import { amazonLink } from '@/utils/mdoc/schema/amazon-link.mdoc';
 import { docswellEmbed } from '@/utils/mdoc/schema/docswell-embed.mdoc';
 import { fence } from './schema/fence.mdoc';
 import { image } from './schema/image.mdoc';
@@ -16,6 +17,7 @@ export const config = {
 		link,
 	},
 	tags: {
+		amazonLink,
 		docswell: docswellEmbed,
 		image,
 		inlineMath,
