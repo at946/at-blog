@@ -6,9 +6,15 @@ export const quote = {
 	attributes: {
 		sourceName: {
 			type: String,
+			required: false,
 		},
 		sourceLink: {
 			type: String,
+			required: false,
+		},
+		amazonItemId: {
+			type: String,
+			required: false,
 		},
 	},
 };
