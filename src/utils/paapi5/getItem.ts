@@ -1,6 +1,6 @@
 import { createAuthorizationHeader, toAmzDate } from './auth/SignHelper';
 
-export interface IFAmazonItem {
+export interface IFItem {
 	name: string;
 	href: string;
 	imageSrc: string;
@@ -9,17 +9,18 @@ export interface IFAmazonItem {
 const getItem = async (itemId: string): IFAmazonItem => {
 	const accessKey: string = import.meta.env.PAAPI_ACCESS_KEY;
 	const secretKey: string = import.meta.env.PAAPI_SECRET_KEY;
+	const partnerTag: string = import.meta.env.PAAPI_PARTNER_TAG;
 	const host: string = 'webservices.amazon.co.jp';
 	const region: string = 'us-west-2';
 	const service: string = 'ProductAdvertisingAPI';
+	const path: string = '/paapi5/getitems';
 	const timestamp: Date = Date.now();
 	const httpMethod: string = 'POST';
-	const path: string = '/paapi5/getitems';
 	const url: string = `https://${host}${path}`;
 
 	const payload = {
 		ItemIds: [itemId],
-		PartnerTag: 'at946-22',
+		PartnerTag: partnerTag,
 		PartnerType: 'Associates',
 		Resources: ['Images.Primary.Large', 'ItemInfo.Title'],
 	};
@@ -54,13 +55,22 @@ const getItem = async (itemId: string): IFAmazonItem => {
 
 	const res = await fetch(url, options);
 	const resJson = await res.json();
-	const item = resJson.ItemsResult.Items[0];
-	const amazonItem: IFAmazonItem = {
-		name: item.ItemInfo.Title.DisplayValue,
-		href: item.DetailPageURL,
-		imageSrc: item.Images.Primary.Large.URL,
+
+	if (resJson.Errors) {
+		let errorMessage: string = '';
+		resJson.Errors.forEach((error) => {
+			errorMessage += `${error.Code} | ${error.Message}\n`;
+		});
+		throw errorMessage;
+	}
+
+	const rawItemJson = resJson.ItemsResult.Items[0];
+	const item: IFItem = {
+		name: rawItemJson.ItemInfo.Title.DisplayValue,
+		href: rawItemJson.DetailPageURL,
+		imageSrc: rawItemJson.Images.Primary.Large.URL,
 	};
-	return amazonItem;
+	return item;
 };
 
 export default getItem;
