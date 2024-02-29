@@ -1,6 +1,6 @@
 import { createAuthorizationHeader, toAmzDate } from './auth/SignHelper';
 
-export interface IFItem {
+export interface IFAmazonItem {
 	name: string;
 	href: string;
 	imageSrc: string;
@@ -22,7 +22,11 @@ const getItem = async (itemId: string): IFAmazonItem => {
 		ItemIds: [itemId],
 		PartnerTag: partnerTag,
 		PartnerType: 'Associates',
-		Resources: ['Images.Primary.Large', 'ItemInfo.Title'],
+		Resources: [
+			'Images.Primary.Large',
+			'ItemInfo.Title',
+			'ItemInfo.ByLineInfo',
+		],
 	};
 
 	const requestHeaders = {
@@ -65,11 +69,20 @@ const getItem = async (itemId: string): IFAmazonItem => {
 	}
 
 	const rawItemJson = resJson.ItemsResult.Items[0];
-	const item: IFItem = {
+	let contributors: string = '';
+	for (const contributer of rawItemJson.ItemInfo.ByLineInfo.Contributors) {
+		contributors += `${contributer.Name} (${contributer.Role}), `;
+	}
+	contributors = contributors.slice(0, -2);
+
+	const item: IFAmazonItem = {
 		name: rawItemJson.ItemInfo.Title.DisplayValue,
 		href: rawItemJson.DetailPageURL,
 		imageSrc: rawItemJson.Images.Primary.Large.URL,
+		contributors: contributors.slice(),
+		manufacturer: rawItemJson.ItemInfo.ByLineInfo.Manufacturer.DisplayValue,
 	};
+
 	return item;
 };
 

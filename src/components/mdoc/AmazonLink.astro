@@ -8,9 +8,9 @@ interface Props {
   type?: 'link' | 'linkCard',
 }
 
-const { itemId, type = 'linkCard' } = Astro.props
+const { itemId, type = 'linkCard' } = Astro.props;
 
-const item: IFAmazonItem = await getItem(itemId)
+const item: IFAmazonItem = await getItem(itemId);
 
 ---
 
@@ -18,5 +18,14 @@ const item: IFAmazonItem = await getItem(itemId)
   <Link href={item.href}>{item.name}</Link>
 }
 { type === 'linkCard' &&
-  <LinkCard name={item.name} href={item.href} imageSrc={item.imageSrc} imageAlt={'商品画像'} isImageLeft={true} isImageLarge={true} />
+  <Link href={item.href}>
+    <div class='flex items-center border rounded not-prose my-10 border-gray-300 p-3 gap-4'>
+      <img src={item.imageSrc} alt='商品画像' class='my-0 rounded h-48'>
+      <div class="text-sm flex-1">
+        <p class="mb-3 font-bold text-base">{ item.name }</p>
+        <p class="mb-2">{ item.contributors }</p>
+        <p>{ item.manufacturer }</p>
+      </p>
+    </div>
+  </Link>
 }
