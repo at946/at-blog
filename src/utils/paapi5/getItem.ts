@@ -61,11 +61,8 @@ const getItem = async (itemId: string): IFAmazonItem => {
 	const resJson = await res.json();
 
 	if (resJson.Errors) {
-		let errorMessage: string = '';
-		resJson.Errors.forEach((error) => {
-			errorMessage += `${error.Code} | ${error.Message}\n`;
-		});
-		throw errorMessage;
+		const error: { Code: string; Message: string } = resJson.Errors[0];
+		throw `${error.Code} | ${error.Message}`;
 	}
 
 	const rawItemJson = resJson.ItemsResult.Items[0];

@@ -1,22 +1,26 @@
 ---
 import Link from './Link.astro'
+import AmazonLink from './AmazonLink.astro'
 
 interface Props {
   sourceName?: string
   sourceLink?: string
+  amazonItemId?: string 
 }
 
-const { sourceName, sourceLink } = Astro.props
+const { sourceName, sourceLink, amazonItemId } = Astro.props
 ---
-<blockquote cite={sourceLink} class="prose-quoteless">
+<blockquote class=`prose-quoteless ${(sourceName || amazonItemId) && 'mb-0'}`>
   <slot/>
-  { sourceName &&
-  <p class="text-right mt-0">
-    { !!sourceLink
+</blockquote>
+{ (sourceName || amazonItemId) &&
+  <cite class="block text-right">
+    { sourceLink
       ? <Link href={sourceLink} title={sourceName}>{sourceName}</Link>
       : sourceName
     }
-    </p>
-  }
-
-</blockquote>
+    { amazonItemId &&
+      <AmazonLink itemId={amazonItemId} type="link" />
+    }
+  </cite>
+}
