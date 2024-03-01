@@ -4,11 +4,11 @@ export const quote = {
 	render: component('./src/components/mdoc/Quote.astro'),
 	children: ['strong', 'em', 's', 'code', 'text', 'tag'],
 	attributes: {
-		sourceName: {
+		citeName: {
 			type: String,
 			required: false,
 		},
-		sourceLink: {
+		citeUrl: {
 			type: String,
 			required: false,
 		},

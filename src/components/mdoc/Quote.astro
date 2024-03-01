@@ -1,26 +1,30 @@
 ---
-import Link from './Link.astro'
-import AmazonLink from './AmazonLink.astro'
+import Link from './Link.astro';
+import OgpLink from './OgpLink.astro';
+import AmazonLink from './AmazonLink.astro';
 
 interface Props {
-  sourceName?: string
-  sourceLink?: string
-  amazonItemId?: string 
-}
+  citeName?: string;
+  citeUrl?: string;
+  amazonItemId?: string;
+};
 
-const { sourceName, sourceLink, amazonItemId } = Astro.props
+const { citeName, citeUrl, amazonItemId } = Astro.props;
 ---
-<blockquote class=`prose-quoteless ${(sourceName || amazonItemId) && 'mb-0'}`>
+<blockquote class="prose-quoteless mb-0">
   <slot/>
 </blockquote>
-{ (sourceName || amazonItemId) &&
-  <cite class="block text-right">
-    { sourceLink
-      ? <Link href={sourceLink} title={sourceName}>{sourceName}</Link>
-      : sourceName
-    }
-    { amazonItemId &&
-      <AmazonLink itemId={amazonItemId} type="link" />
-    }
-  </cite>
-}
+<cite class="block text-right">
+  { (citeName && citeUrl) &&
+    <Link href={citeUrl}>{citeName}</Link>
+  }
+  { (citeName && !citeUrl) &&
+    citeName
+  }
+  { (!citeName && citeUrl) &&
+    <OgpLink url={citeUrl} type="link" />
+  }
+  { amazonItemId &&
+    <AmazonLink itemId={amazonItemId} type="link" />
+  }
+</cite>
