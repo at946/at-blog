@@ -6,10 +6,10 @@ import AmazonLink from './AmazonLink.astro';
 interface Props {
   citeName?: string;
   citeUrl?: string;
-  amazonItemId?: string;
+  amazonAsin?: string;
 };
 
-const { citeName, citeUrl, amazonItemId } = Astro.props;
+const { citeName, citeUrl, amazonAsin } = Astro.props;
 ---
 <blockquote class="prose-quoteless mb-0">
   <slot/>
@@ -24,7 +24,7 @@ const { citeName, citeUrl, amazonItemId } = Astro.props;
   { (!citeName && citeUrl) &&
     <OgpLink url={citeUrl} type="link" />
   }
-  { amazonItemId &&
-    <AmazonLink itemId={amazonItemId} type="link" />
+  { amazonAsin &&
+    <AmazonLink asin={amazonAsin} type="link" />
   }
 </cite>

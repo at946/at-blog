@@ -12,7 +12,7 @@ export const quote = {
 			type: String,
 			required: false,
 		},
-		amazonItemId: {
+		amazonAsin: {
 			type: String,
 			required: false,
 		},
