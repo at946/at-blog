@@ -19,6 +19,6 @@ const entry = await getEntryBySlug('blog', path!)
 const { data } = entry
 const { Content } = await entry.render()
 ---
-<PostLayout content={data} >
+<PostLayout content={data} slug={path!}>
     <Content />
 </PostLayout>

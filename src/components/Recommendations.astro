@@ -1,0 +1,42 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Link from './mdoc/Link.astro'
+
+interface Props {
+  slug: string;
+  tags: string[];
+};
+
+const { slug, tags } = Astro.props;
+const allPosts = await getCollection('blog');
+
+const posts = 
+  allPosts
+    .filter((post: CollectionEntry<'blog'>) => (
+      post.slug != slug
+      && post.data.tags?.filter((tag) => tags.includes(tag)).length > 0
+    ))
+    .map((post: CollectionEntry<'blog'>) => ({
+      ...post,
+      sameTagCount: post.data.tags.filter((tag) => tags.includes(tag)).length,
+    }))
+    .sort((a, b) => {
+      if (a.sameTagCount > b.sameTagCount) return -1;
+      if (a.sameTagCount < b.sameTagCount) return 1;
+
+      if (a.data.publicationDate > b.data.publicationDate) return -1;
+      if (a.data.publicationDate < b.data.publicationDate) return 1;
+
+      return 0;
+    })
+    .slice(0, 5)
+---
+
+<div class="font-bold text-xl mt-20">RECOMMENDATIONS</div>
+<ul class="list-disc pl-4">
+  { posts.map((post) => (
+    <li class="my-4">
+      <Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
+    </li>
+  ))}
+</ul>
