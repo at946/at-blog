@@ -4,12 +4,15 @@ import { SITE } from '$/config'
 import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
+import Recommendations from '../components/Recommendations.astro';
 
 
 interface Props {
     content: CollectionEntry<'blog'>['data'],
+    slug: string,
 }
-const { content } = Astro.props
+
+const { content, slug } = Astro.props
 
 ---
 <!doctype html>
@@ -36,5 +39,6 @@ const { content } = Astro.props
       </div>
     </div>
     <Prose><slot /></Prose>
+    <Recommendations slug={slug} tags={content.tags} />
   </MainLayout>
 </html>
