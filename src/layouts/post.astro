@@ -28,13 +28,7 @@ const { content, slug } = Astro.props
       <h1 class="text-4xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
       <div class="inline-flex gap-3 flex-wrap justify-center md:justify-start">
         { !!content.tags && content.tags.length > 0 && content.tags.map(tag =>
-          <a
-            class="hover:text-theme-primary hover:font-bold dark:hover:text-gray-100"
-            href={`/tags/${tag}`}
-            title={tag}
-          >
-            {tag}
-          </a>
+          <span>{tag}</span>
         )}
       </div>
     </div>
