@@ -20,7 +20,7 @@ const image = await getImage({ src: src })
 <figure class="text-center">
   <img src={image.src} alt={alt}>
   <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
-  {srcUrl &&
+  {srcUrl && (
     srcName ? (
       <span class="text-sm">
         <Link href={srcUrl}>{ srcName }</Link>
@@ -30,5 +30,5 @@ const image = await getImage({ src: src })
         <OgpLink url={srcUrl} type="link" />
       </span>
     )
-  }
+  )}
 </figure>
