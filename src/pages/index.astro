@@ -11,7 +11,7 @@ import { SITE } from '@/config'
 const title = 'Home'
 const description = SITE.description;
 
-const posts = await getCollection('blog', ({ data }) => data.isPublished && new Date(data.publicationDate) <= new Date())
+const posts = await getCollection('blog', ({ data }) => data.isPublished)
 posts.sort((x, y) => new Date(y.data.publicationDate).getTime() - new Date(x.data.publicationDate).getTime() )
 
 ---

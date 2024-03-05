@@ -27,7 +27,7 @@ const { post: { data: post, slug } } = Astro.props
         <div class="inline-flex gap-3 flex-wrap justify-center sm:justify-start">
           { post.tags.map(tag => (
             <a
-              class="hover:text-theme-primary hover:font-bold dark:hover:text-gray-100"
+              class="hover:text-theme-secondary hover:font-bold dark:hover:text-theme-dark-secondary"
               href={`/tags/${tag}`}
               title={tag}
             >
