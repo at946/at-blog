@@ -9,9 +9,10 @@ interface Props {
   alt: string,
   caption?: string,
   srcUrl?: string,
+  srcName?: string,
 }
 
-const { src, alt, caption, srcUrl } = Astro.props;
+const { src, alt, caption, srcUrl, srcName } = Astro.props;
 
 const image = await getImage({ src: src })
 ---
@@ -20,8 +21,14 @@ const image = await getImage({ src: src })
   <img src={image.src} alt={alt}>
   <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
   {srcUrl &&
-    <span class="text-sm">
-      <OgpLink url={srcUrl} type="link" />
-    </span>
+    srcName ? (
+      <span class="text-sm">
+        <Link href={srcUrl}>{ srcName }</Link>
+      </span>
+    ) : (
+      <span class="text-sm">
+        <OgpLink url={srcUrl} type="link" />
+      </span>
+    )
   }
 </figure>

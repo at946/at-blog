@@ -13,5 +13,9 @@ export const image = {
 			type: String,
 			required: false,
 		},
+		srcName: {
+			type: String,
+			required: false,
+		},
 	},
 };
