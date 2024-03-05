@@ -1,3 +1,4 @@
+import TAGS from '@/content/zod/tags';
 import { defineCollection, z } from 'astro:content';
 
 const blogCollection = defineCollection({
@@ -5,7 +6,7 @@ const blogCollection = defineCollection({
 		title: z
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
-		tags: z.array(z.string()).optional(),
+		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.string(),
 		isPublished: z.boolean(),
 	}),
