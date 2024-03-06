@@ -18,6 +18,7 @@ const TAGS = [
 	'Puppeteer',
 	'QA',
 	'Regional Scrum Gathering Tokyo',
+	'Scrum Fest Osaka',
 	'Scrum Fest Sendai',
 	'Scrum Fest',
 	'Slack',
