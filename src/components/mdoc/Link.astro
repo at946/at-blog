@@ -8,6 +8,6 @@ const { href, title } = Astro.props
 const target = href.startsWith('http') ? '_blank' : null
 const rel = target ? 'noopener noreferrer' : null
 ---
-<a class="text-theme-dark-primary hover:text-theme-primary" href={href} title={title} target={target} rel={rel}>
+<a href={href} title={title} target={target} rel={rel}>
     <slot/>
 </a>

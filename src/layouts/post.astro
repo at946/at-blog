@@ -5,6 +5,7 @@ import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
 import RelatedPosts from '$/components/RelatedPosts.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 
 
 interface Props {
@@ -38,7 +39,14 @@ const { content, slug } = Astro.props
         )}
       </div>
     </div>
-    <Prose><slot /></Prose>
-    <RelatedPosts slug={slug} tags={content.tags} />
+    <Prose>
+      <slot />
+      <div class="mt-16 not-prose">
+        <ShareButtons blogTitle={content.title} />
+      </div>
+      <div class="mt-16">
+        <RelatedPosts class="mt-50" slug={slug} tags={content.tags} />
+      </div>
+    </Prose>
   </MainLayout>
 </html>
