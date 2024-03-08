@@ -4,7 +4,7 @@ import { SITE } from '$/config'
 import MainLayout from '$/components/MainLayout.astro'
 import BaseHead from '$/components/BaseHead.astro'
 import Prose from '$/components/Prose.astro'
-import Recommendations from '../components/Recommendations.astro';
+import RelatedPosts from '$/components/RelatedPosts.astro';
 
 
 interface Props {
@@ -39,6 +39,6 @@ const { content, slug } = Astro.props
       </div>
     </div>
     <Prose><slot /></Prose>
-    <Recommendations slug={slug} tags={content.tags} />
+    <RelatedPosts slug={slug} tags={content.tags} />
   </MainLayout>
 </html>
