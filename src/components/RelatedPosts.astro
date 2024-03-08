@@ -32,10 +32,10 @@ const posts =
     .slice(0, 5)
 ---
 
-<div class="font-bold text-xl mt-20">Related posts</div>
-<ul class="list-disc pl-4">
+<h2>Related posts</h2>
+<ul>
   { posts.map((post) => (
-    <li class="my-4">
+    <li>
       <Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
     </li>
   ))}
