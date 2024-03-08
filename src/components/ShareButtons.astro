@@ -1,5 +1,4 @@
 ---
-import SvgIcon from './SvgIcon.astro'
 import Link from './mdoc/Link.astro'
 import { Icon } from 'astro-icon/components'
 
@@ -12,10 +11,13 @@ const { blogTitle }: Props = Astro.props;
 const xShareText: string = encodeURIComponent(`${blogTitle} #atblog\n${Astro.url}`)
 
 ---
-<div class="flex justify-center">
+<div class="flex justify-center gap-4">
   <Link href=`https://twitter.com/intent/post?text=${xShareText}` title="Xにシェア">
-    <SvgIcon class="border-5">
-      <Icon name="fa6-brands:x-twitter" class="text-2xl" />
-    </SvgIcon>
+    <Icon name="fa6-brands:x-twitter" class="text-3xl" />
+  </Link>
+  <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url)}` title="はてなブックマークに追加">
+    <div class="bg-white rounded-md" style="color: #01a5df;">
+    <Icon name="cib:hatena-bookmark" class="text-3xl" />
+  </div>
   </Link>
 </div>

@@ -1,45 +1,37 @@
 ---
-    import { SITE } from '@/config'
-    import SvgIcon from './SvgIcon.astro'
-    import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
-    import HeaderNavItem from './HeaderNavItem.astro'
-    import Link from './mdoc/Link.astro'
-    import { Icon } from 'astro-icon/components'
-
+import { SITE } from '@/config'
+import ModeSwitcherBtn from './ModeSwitcherBtn.svelte'
+import HeaderNavItem from './HeaderNavItem.astro'
+import Link from './mdoc/Link.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <header class="pt-7 pb-4">
-    <h3 class="text-4xl font-extrabold text-theme-secondary dark:text-theme-dark-secondary">
-            <a href="/">{ SITE.name }</a>
-        </h3>
-        <div class="flex justify-end">
-            <nav>
-                <ul class="flex gap-3">
-                    <HeaderNavItem>
-                        <Link href={`https://twitter.com/${SITE.authorTwitter}`} title={`${SITE.author}'s X account`}>
-                            <SvgIcon>
-                                <Icon name="fa6-brands:x-twitter" class="text-2xl" />
-                            </SvgIcon>
-                        </Link>
-                    </HeaderNavItem>
-                    <HeaderNavItem>
-                        <Link href={ SITE.githubUrl } title={`${ SITE.author }'s GitHub URL`}>
-                            <SvgIcon>
-                                <Icon name="mdi:github" class="text-2xl" />
-                            </SvgIcon>
-                        </Link>
-                    </HeaderNavItem>
-                    <HeaderNavItem>
-                        <Link href="/rss.xml" title="RSS">
-                            <SvgIcon>
-                                <Icon name="mdi:rss" class="text-2xl" />
-                            </SvgIcon>
-                        </Link>
-                    </HeaderNavItem>
-                    <HeaderNavItem>
-                        <ModeSwitcherBtn client:visible />
-                    </HeaderNavItem>
-                </ul>
-            </nav>
-        </div> 
+  <div class="text-4xl font-extrabold text-theme-secondary dark:text-theme-dark-secondary">
+    <a href="/">{ SITE.name }</a>
+  </div>
+  <div class="flex justify-end">
+    <nav>
+      <ul class="flex gap-3">
+        <HeaderNavItem>
+          <Link href={`https://twitter.com/${SITE.authorTwitter}`} title={`${SITE.author}のXのプロフィールページを見る`}>
+            <Icon name="fa6-brands:x-twitter" class="text-2xl" />
+          </Link>
+        </HeaderNavItem>
+        <HeaderNavItem>
+          <Link href={ SITE.githubUrl } title={`${ SITE.author }'s GitHub URL`}>
+            <Icon name="mdi:github" class="text-2xl" />
+          </Link>
+        </HeaderNavItem>
+        <HeaderNavItem>
+          <Link href="/rss.xml" title="RSS">
+            <Icon name="mdi:rss" class="text-2xl" />
+          </Link>
+        </HeaderNavItem>
+        <HeaderNavItem>
+          <ModeSwitcherBtn client:visible />
+        </HeaderNavItem>
+      </ul>
+    </nav>
+  </div> 
 </header>
