@@ -1,20 +1,18 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { SITE } from '$/config'
-import MainLayout from '$/components/MainLayout.astro'
-import BaseHead from '$/components/BaseHead.astro'
-import Prose from '$/components/Prose.astro'
+import { SITE } from '$/config';
+import MainLayout from '$/components/MainLayout.astro';
+import BaseHead from '$/components/BaseHead.astro';
+import Prose from '$/components/Prose.astro';
 import RelatedPosts from '$/components/RelatedPosts.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 
-
 interface Props {
-    content: CollectionEntry<'blog'>['data'],
-    slug: string,
+	content: CollectionEntry<'blog'>['data'];
+	slug: string;
 }
 
-const { content, slug } = Astro.props
-
+const { content, slug } = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">

@@ -1,9 +1,8 @@
 <script lang="ts">
-
-    import { draw } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
-    import ModeSwitcher from './ModeSwitcher.svelte'
-    import SvgIcon from './SvgIcon.svelte'
+import { quintOut } from 'svelte/easing';
+import { draw } from 'svelte/transition';
+import ModeSwitcher from './ModeSwitcher.svelte';
+import SvgIcon from './SvgIcon.svelte';
 </script>
 <ModeSwitcher let:theme>
     <SvgIcon>

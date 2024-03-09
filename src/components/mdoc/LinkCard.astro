@@ -1,14 +1,14 @@
 ---
-import Link from './Link.astro'
+import Link from './Link.astro';
 
 interface Props {
-  name: string,
-  href: string,
-  imageSrc?: string,
-  imageAlt?: string,
+	name: string;
+	href: string;
+	imageSrc?: string;
+	imageAlt?: string;
 }
 
-const { name, href, imageSrc, imageAlt } = Astro.props
+const { name, href, imageSrc, imageAlt } = Astro.props;
 ---
 
 <Link href={href}>

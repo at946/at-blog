@@ -1,17 +1,18 @@
 ---
-import Link from './Link.astro'
+import Link from './Link.astro';
 
 interface Props {
-  src: string
-  title: string
-  slideHref: string
-  width: number
-  height: number
-  author: string
-  authorHref: string
+	src: string;
+	title: string;
+	slideHref: string;
+	width: number;
+	height: number;
+	author: string;
+	authorHref: string;
 }
 
-const { src, title, slideHref, width, height, author, authorHref } = Astro.props;
+const { src, title, slideHref, width, height, author, authorHref } =
+	Astro.props;
 ---
 
 <iframe

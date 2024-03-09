@@ -1,19 +1,20 @@
 ---
-import Link from './Link.astro'
-import LinkCard from './LinkCard.astro'
-import items from '@/data/amazonItems.json'
-import { amazonItem } from '@/types'
+import items from '@/data/amazonItems.json';
+import type { amazonItem } from '@/types';
+import Link from './Link.astro';
+import LinkCard from './LinkCard.astro';
 
 interface Props {
-  asin: string,
-  type?: 'link' | 'linkCard',
+	asin: string;
+	type?: 'link' | 'linkCard';
 }
 
 const { asin, type = 'linkCard' } = Astro.props;
 
 const item: amazonItem = items.find((item) => item.asin === asin);
-if (!item) { throw `ASIN ${asin} is not found.` }
-
+if (!item) {
+	throw `ASIN ${asin} is not found.`;
+}
 ---
 
 { type === 'link' &&
