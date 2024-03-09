@@ -37,9 +37,6 @@ module.exports = {
 							color: colors.dark.primary,
 						},
 						h2: {
-							color: colors.dark.primary,
-						},
-						h3: {
 							color: colors.dark.secondary,
 						},
 					},
@@ -67,9 +64,6 @@ module.exports = {
 							color: colors.primary,
 						},
 						h2: {
-							color: colors.primary,
-						},
-						h3: {
 							color: colors.secondary,
 						},
 					},
