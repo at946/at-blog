@@ -12,7 +12,7 @@ const xShareText: string = encodeURIComponent(`${blogTitle} #atblog\n${Astro.url
 
 ---
 <div class="flex justify-center gap-4">
-  <Link href=`https://twitter.com/intent/post?text=${xShareText}` title="Xにシェア">
+  <Link href=`https://twitter.com/intent/tweet?text=${xShareText}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>
   <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url)}` title="はてなブックマークに追加">
