@@ -11,7 +11,8 @@
 		"lint": "biome lint src",
 		"lint:text": "textlint src",
 		"format": "biome format src",
-		"format:fix": "biome format src --write"
+		"format:fix": "biome format src --write",
+		"create:blog": "bash utils/commands/create-blog.sh"
 	},
 	"devDependencies": {
 		"@astrojs/partytown": "^2.0.4",
