@@ -1,19 +1,22 @@
 ---
-export const prerender = true
+export const prerender = true;
 
-import { getCollection } from 'astro:content'
-import DefaultPageLayout from '@layouts/default.astro'
-import PostPreviewList from '@components/PostPreviewList.astro'
-import Prose from '@components/Prose.astro'
-import { Content as SelfIntroduction } from './_self_introduction.md'
-import { SITE } from '@/config'
+import { getCollection } from 'astro:content';
+import { SITE } from '@/config';
+import PostPreviewList from '@components/PostPreviewList.astro';
+import Prose from '@components/Prose.astro';
+import DefaultPageLayout from '@layouts/default.astro';
+import { Content as SelfIntroduction } from './_self_introduction.md';
 
-const title = 'Home'
+const title = 'Home';
 const description = SITE.description;
 
-const posts = await getCollection('blog', ({ data }) => data.isPublished)
-posts.sort((x, y) => new Date(y.data.publicationDate).getTime() - new Date(x.data.publicationDate).getTime() )
-
+const posts = await getCollection('blog', ({ data }) => data.isPublished);
+posts.sort(
+	(x, y) =>
+		new Date(y.data.publicationDate).getTime() -
+		new Date(x.data.publicationDate).getTime(),
+);
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
     <div class="flex flex-col md:flex-row gap-8 w-full transition-all pb-4 md:pb-12 justify-center items-center">

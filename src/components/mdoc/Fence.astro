@@ -1,26 +1,26 @@
 ---
-import { Code } from 'astro-expressive-code/components'
+import { Code } from 'astro-expressive-code/components';
 
 interface Props {
-	content: string
-	language: string
+	content: string;
+	language: string;
 }
 
 const { content, language } = Astro.props as Props;
-const [lang, title] = !!language ? language.split(':') : [null, undefined]
+const [lang, title] = language ? language.split(':') : [null, undefined];
 
-const contentArray: string[] = content.split('\n')
-const ins: number[] = []
-const del: number[] = []
+const contentArray: string[] = content.split('\n');
+const ins: number[] = [];
+const del: number[] = [];
 contentArray.forEach((row, index) => {
 	if (row.startsWith('+ ')) {
 		ins.push(index + 1);
-		contentArray[index] = row.replace('+ ', '  ')
+		contentArray[index] = row.replace('+ ', '  ');
 	} else if (row.startsWith('- ')) {
-		del.push(index + 1)
-		contentArray[index] = row.replace('- ', '  ')
+		del.push(index + 1);
+		contentArray[index] = row.replace('- ', '  ');
 	}
-})
+});
 ---
 
 <Code code={contentArray.join('\n')} lang={`${lang}`} title={title} ins={`{${ins.join(',')}}`} del={`{${del.join(',')}}`} class="py-4" />

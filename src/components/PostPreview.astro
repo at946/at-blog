@@ -1,12 +1,14 @@
 ---
-import type { CollectionEntry } from 'astro:content'
-import { getMonthName } from '@/utils'
+import type { CollectionEntry } from 'astro:content';
+import { getMonthName } from '@/utils';
 
 interface Props {
-  post: CollectionEntry<'blog'>,
+	post: CollectionEntry<'blog'>;
 }
 
-const { post: { data: post, slug } } = Astro.props
+const {
+	post: { data: post, slug },
+} = Astro.props;
 ---
 <div class="flex gap-2">
   <div class="hidden sm:inline w-32">

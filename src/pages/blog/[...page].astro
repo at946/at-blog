@@ -1,28 +1,29 @@
 ---
-export const prerender = true
+export const prerender = true;
 
-import { getCollection } from 'astro:content'
-import DefaultPageLayout from '$/layouts/default.astro'
-import PostPreviewList from '$/components/PostPreviewList.astro'
-import Paginator from '$/components/Paginator.astro'
-import { PAGE_SIZE } from '$/config'
+import { getCollection } from 'astro:content';
+import Paginator from '$/components/Paginator.astro';
+import PostPreviewList from '$/components/PostPreviewList.astro';
+import { PAGE_SIZE } from '$/config';
+import DefaultPageLayout from '$/layouts/default.astro';
 
-let title = 'Blog'
-let description = 'ブログ置き場'
+const title = 'Blog';
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection('blog', ({ data }) => data.isPublished);
-  const sortedPosts = allPosts.sort((a, b) => new Date(b.data.publicationDate) - new Date(a.data.publicationDate));
+	const allPosts = await getCollection('blog', ({ data }) => data.isPublished);
+	const sortedPosts = allPosts.sort(
+		(a, b) =>
+			new Date(b.data.publicationDate) - new Date(a.data.publicationDate),
+	);
 
-    return paginate(sortedPosts, {
-      pageSize: PAGE_SIZE
-    })
+	return paginate(sortedPosts, {
+		pageSize: PAGE_SIZE,
+	});
 }
 
-const { page } = Astro.props
-
+const { page } = Astro.props;
 ---
-<DefaultPageLayout content={{ title, description }}>
+<DefaultPageLayout content={{ title }}>
   <div class="mb-10">
     <PostPreviewList posts={page.data} heading={`${page.start + 1}-${page.end + 1} / ${page.total} posts`} />
   </div>    

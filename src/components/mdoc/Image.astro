@@ -5,16 +5,16 @@ import Link from './Link.astro';
 import OgpLink from './OgpLink.astro';
 
 interface Props {
-  src: ImageMetadata | string,
-  alt: string,
-  caption?: string,
-  srcUrl?: string,
-  srcName?: string,
+	src: ImageMetadata | string;
+	alt: string;
+	caption?: string;
+	srcUrl?: string;
+	srcName?: string;
 }
 
 const { src, alt, caption, srcUrl, srcName } = Astro.props;
 
-const image = await getImage({ src: src })
+const image = await getImage({ src: src });
 ---
 
 <figure class="text-center">

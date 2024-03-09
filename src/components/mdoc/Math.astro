@@ -2,11 +2,11 @@
 import katex from 'katex';
 
 interface Props {
-    formula: string
+	formula: string;
 }
 
 const { formula } = Astro.props;
-const html = katex.renderToString(formula, {throwOnError: false})
+const html = katex.renderToString(formula, { throwOnError: false });
 ---
 
 <div class="text-center">
