@@ -11,7 +11,7 @@ cat >$file <<EOL
 ---
 title: $title
 tags:
-publicationDate: "$(date "+%Y-%m-%d")"
+publicationDate: $(date "+%Y-%m-%d")
 isPublished: false
 ---
 
