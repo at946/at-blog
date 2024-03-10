@@ -1,8 +1,9 @@
 ---
 export const prerender = true;
 
-import { getCollection, getEntryBySlug } from 'astro:content';
+import { getCollection, getEntry, getEntryBySlug } from 'astro:content';
 import PostLayout from '@layouts/post.astro';
+import estimateReadingTime from '@utils/estimateReadingTime';
 
 export async function getStaticPaths() {
 	const allPosts = await getCollection('blog');
@@ -14,11 +15,12 @@ export async function getStaticPaths() {
 }
 
 const { path } = Astro.params;
-const entry = await getEntryBySlug('blog', path);
+const entry = await getEntry('blog', path);
 
-const { data } = entry;
+const { data, body } = entry;
+const readingTime: number = estimateReadingTime(body.length);
 const { Content } = await entry.render();
 ---
-<PostLayout content={data} slug={path!}>
+<PostLayout content={data} slug={path} readingTime={readingTime}>
     <Content />
 </PostLayout>
