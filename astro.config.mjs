@@ -1,5 +1,5 @@
-import path, { dirname } from 'path';
-import { fileURLToPath } from 'url';
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import markdoc from '@astrojs/markdoc';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
@@ -9,12 +9,11 @@ import { defineConfig } from 'astro/config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import partytown from '@astrojs/partytown';
+import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
-
-import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
 
 // https://astro.build/config
 export default defineConfig(

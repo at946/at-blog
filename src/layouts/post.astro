@@ -1,18 +1,20 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { SITE } from '$/config';
-import MainLayout from '$/components/MainLayout.astro';
 import BaseHead from '$/components/BaseHead.astro';
+import MainLayout from '$/components/MainLayout.astro';
 import Prose from '$/components/Prose.astro';
 import RelatedPosts from '$/components/RelatedPosts.astro';
-import ShareButtons from '../components/ShareButtons.astro';
+import ShareButtons from '$/components/ShareButtons.astro';
+import { SITE } from '$/config';
+import estimateReadingTime from '$/utils/estimateReadingTime';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
 	slug: string;
+	readingTime: number;
 }
 
-const { content, slug } = Astro.props;
+const { content, slug, readingTime } = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">
@@ -22,13 +24,13 @@ const { content, slug } = Astro.props;
   <MainLayout>
     <div class="text-center md:text-left mb-16">
       <p class="mb-2 font-bold">
-        { new Intl.DateTimeFormat('en-US', { dateStyle: 'long' }).format(new Date(content.publicationDate))}
+        { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(new Date(content.publicationDate))}
       </p>
       <h1 class="text-4xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
-      <div class="inline-flex gap-3 flex-wrap justify-center md:justify-start">
-        { !!content.tags && content.tags.length > 0 && content.tags.map(tag =>
+      <div class="inline-flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
+        { content.tags && content.tags.length > 0 && content.tags.map(tag =>
           <a
-            class="hover:text-theme-secondary hover:font-bold dark:hover:text-theme-dark-secondary"
+            class="hover:text-theme-secondary border rounded-full px-2 py-1 hover:border-theme-secondary border-gray-500 dark:border-white hover:dark:border-theme-secondary"
             href={`/tags/${tag}`}
             title={tag}
           >
@@ -36,6 +38,7 @@ const { content, slug } = Astro.props;
           </a>
         )}
       </div>
+      <p class="text-base">読了時間の目安: { readingTime }分</p>
     </div>
     <Prose>
       <slot />
