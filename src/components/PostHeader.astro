@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+	publicationDate: string;
+	tags: string[];
+	readingTime: number;
+	class: string;
+}
+
+const { title, publicationDate, tags, readingTime } = Astro.props;
+---
+<div class:list={["text-center md:text-left", Astro.props.class]}>
+  <p class="mb-2 font-bold">
+    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(new Date(publicationDate))}
+  </p>
+  <h1 class="text-3xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-4" style="word-break: auto-phrase;">
+    { title }
+  </h1>
+  <div class="inline-flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
+    { tags && tags.length > 0 && tags.map(tag =>
+      <a
+        class="hover:text-theme-secondary border rounded-full px-2 py-1 hover:border-theme-secondary border-gray-500 dark:border-white hover:dark:border-theme-secondary"
+        href={`/tags/${tag}`}
+        title={tag}
+      >
+        {tag}
+      </a>
+    )}
+  </div>
+  <p class="text-base">読了時間の目安: { readingTime }分</p>
+</div>

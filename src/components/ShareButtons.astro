@@ -1,6 +1,6 @@
 ---
-import Link from './mdoc/Link.astro';
 import { Icon } from 'astro-icon/components';
+import Link from './mdoc/Link.astro';
 
 interface Props {
 	blogTitle: string;
@@ -12,7 +12,7 @@ const xShareText: string = encodeURIComponent(
 	`${blogTitle} #atblog\n${Astro.url}`,
 );
 ---
-<div class="flex justify-center gap-4">
+<div class:list={["flex justify-center gap-4", Astro.props.class]}>
   <Link href=`https://twitter.com/intent/tweet?text=${xShareText}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>

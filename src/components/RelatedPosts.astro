@@ -5,6 +5,7 @@ import Link from './mdoc/Link.astro';
 interface Props {
 	slug: string;
 	tags: string[];
+	class: string;
 }
 
 const { slug, tags } = Astro.props;
@@ -32,11 +33,13 @@ const posts = allPosts
 	.slice(0, 5);
 ---
 
-<h2>Related posts</h2>
-<ul>
-  { posts.map((post) => (
-    <li>
-      <Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
-    </li>
-  ))}
-</ul>
+<div class={Astro.props.class}>
+	<h2>Related posts</h2>
+	<ul>
+		{ posts.map((post) => (
+			<li>
+				<Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
+			</li>
+		))}
+	</ul>
+</div>
