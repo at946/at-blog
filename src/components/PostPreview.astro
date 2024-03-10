@@ -1,43 +1,41 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getMonthName } from '@/utils';
+import estimateReadingTime from '../utils/estimateReadingTime';
+import PostHeader from './PostHeader.astro';
+import Link from './mdoc/Link.astro';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
 }
 
+const { post } = Astro.props;
 const {
-	post: { data: post, slug },
-} = Astro.props;
+	title,
+	publicationDate,
+	tags,
+}: { title: string; pulicationDate: string; tags: string[] } = post.data;
+const slug: string = post.slug;
+const readingTime: number = estimateReadingTime(post.body.length);
 ---
-<div class="flex gap-2">
-  <div class="hidden sm:inline w-32">
-    <div class="flex flex-col w-full text-center">
-      <span class="text-7xl font-semibold text-gray-500 dark:text-gray-200">{ new Date(post.publicationDate).getDate() }</span>
-      <span class="text-gray-500 dark:text-gray-200 text-lg font-medium">{ `${getMonthName(post.publicationDate)} ${new Date(post.publicationDate).getFullYear()}` }</span>
-    </div>
+
+<div class:list={["text-center md:text-left", Astro.props.class]}>
+  <p class="mb-2 font-bold">
+    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(new Date(publicationDate))}
+  </p>
+  <h2 class="text-2xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-4" style="word-break: auto-phrase;">
+    <Link class="hover:underline" href={`/blog/${slug}`} title={title}>{title}</Link>
+  </h2>
+  <div class="inline-flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
+    { tags && tags.length > 0 && tags.map(tag =>
+      <a
+        class="hover:text-theme-secondary border rounded-full px-2 py-1 hover:border-theme-secondary border-gray-500 dark:border-white hover:dark:border-theme-secondary"
+        href={`/tags/${tag}`}
+        title={tag}
+      >
+        {tag}
+      </a>
+    )}
   </div>
-  <div class="flex-1">
-    <p class="sm:hidden font-medium text-lg mb-2 text-center">
-      { new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(post.publicationDate))}
-    </p>    
-    <h4 class="text-2xl font-semibold leading-relaxed text-theme-primary dark:text-theme-dark-primary hover:underline underline-offset-4 mb-4 text-center sm:text-left" style="word-break: auto-phrase;">
-      <a href={`/blog/${slug}`} title={post.title}>{post.title}</a>
-    </h4>
-    { !!post.tags && post.tags.length > 0 &&
-      <div class="text-center sm:text-left">
-        <div class="inline-flex gap-3 flex-wrap justify-center sm:justify-start">
-          { post.tags.map(tag => (
-            <a
-              class="hover:text-theme-secondary hover:font-bold dark:hover:text-theme-dark-secondary"
-              href={`/tags/${tag}`}
-              title={tag}
-            >
-              {tag}
-            </a>
-          ))}
-        </div>
-      </div>
-    }
-  </div>
+  <p class="text-base">読了時間の目安: { readingTime }分</p>
 </div>

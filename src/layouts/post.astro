@@ -3,10 +3,11 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '$/components/BaseHead.astro';
 import MainLayout from '$/components/MainLayout.astro';
 import Prose from '$/components/Prose.astro';
-import RelatedPosts from '$/components/RelatedPosts.astro';
-import ShareButtons from '$/components/ShareButtons.astro';
 import { SITE } from '$/config';
 import estimateReadingTime from '$/utils/estimateReadingTime';
+import PostHeader from '../components/PostHeader.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
@@ -22,32 +23,11 @@ const { content, slug, readingTime } = Astro.props;
     <BaseHead {...content} title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title }/>
   </head>
   <MainLayout>
-    <div class="text-center md:text-left mb-16">
-      <p class="mb-2 font-bold">
-        { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(new Date(content.publicationDate))}
-      </p>
-      <h1 class="text-4xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-2" style="word-break: auto-phrase;">{ content.title }</h1>
-      <div class="inline-flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
-        { content.tags && content.tags.length > 0 && content.tags.map(tag =>
-          <a
-            class="hover:text-theme-secondary border rounded-full px-2 py-1 hover:border-theme-secondary border-gray-500 dark:border-white hover:dark:border-theme-secondary"
-            href={`/tags/${tag}`}
-            title={tag}
-          >
-            {tag}
-          </a>
-        )}
-      </div>
-      <p class="text-base">読了時間の目安: { readingTime }分</p>
-    </div>
+    <PostHeader title={content.title} publicationDate={content.publicationDate} tags={content.tags} readingTime={readingTime} />
     <Prose>
       <slot />
-      <div class="mt-16 not-prose">
-        <ShareButtons blogTitle={content.title} />
-      </div>
-      <div class="mt-16">
-        <RelatedPosts class="mt-50" slug={slug} tags={content.tags} />
-      </div>
+      <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />
+      <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
     </Prose>
   </MainLayout>
 </html>
