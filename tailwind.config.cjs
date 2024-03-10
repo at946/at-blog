@@ -1,8 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
 const config = require('./tailwind.theme.config.cjs');
-/**
- * Find the applicable theme color palette, or use the default one
- */
 const themeConfig =
 	process.env.THEME_KEY && config[process.env.THEME_KEY]
 		? config[process.env.THEME_KEY]
@@ -13,9 +9,6 @@ module.exports = {
 	content: ['./public/**/*.html', './src/**/*.{astro,js,ts}'],
 	safelist: ['dark'],
 	theme: {
-		fontFamily: {
-			sans: ['Murecho', ...fontFamily.sans],
-		},
 		extend: {
 			colors: {
 				theme: {
