@@ -39,6 +39,7 @@
 		"@iconify-json/cib": "^1.1.8",
 		"@iconify-json/fa6-brands": "^1.1.18",
 		"@iconify-json/mdi": "^1.1.64",
+		"@iconify-json/ri": "^1.1.20",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/crypto-js": "^4.2.2",
 		"astro-expressive-code": "^0.33.2",

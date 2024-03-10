@@ -8,17 +8,20 @@ interface Props {
 
 const { blogTitle }: Props = Astro.props;
 
-const xShareText: string = encodeURIComponent(
+const shareText: string = encodeURIComponent(
 	`${blogTitle} #atblog\n${Astro.url}`,
 );
 ---
 <div class:list={["flex justify-center gap-4", Astro.props.class]}>
-  <Link href=`https://twitter.com/intent/tweet?text=${xShareText}` title="Xにシェア">
+  <Link href=`https://twitter.com/intent/tweet?text=${shareText}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>
   <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url)}` title="はてなブックマークに追加">
     <div class="bg-white rounded-md" style="color: #01a5df;">
     <Icon name="cib:hatena-bookmark" class="text-3xl" />
   </div>
+  </Link>
+  <Link href=`https://bsky.app/intent/compose?text=${shareText}` title="Blueskyにシェア">
+    <Icon name="ri:bluesky-fill" class="text-3xl" style="color: #4F9BD9" />
   </Link>
 </div>
