@@ -10,8 +10,10 @@ isPublished: true
 
 後輩くんに「E2Eテストなんか怖い😣」と言われたので「ソンナコトナイヨー☀」を体験してもらうために書く。
 
+{% toc /%}
+
 ## Playwright
-[Fast and reliable end-to-end testing for modern web apps | Playwright](https://playwright.dev/)
+{% ogpLink url="https://playwright.dev/" /%}
 
 とりあえず、今回はこのPlaywrightってやつを使ってみよう。
 まずは「なんか怖い」を払拭するためだから理由とかは脇においておこう。
@@ -41,8 +43,8 @@ services:
 $ docker compose build
 ```
 
-インストールは公式ドキュメント見てこう。  
-[Installation | Playwright](https://playwright.dev/docs/intro)
+インストールは公式ドキュメント見てこう。
+{% ogpLink url="https://playwright.dev/docs/intro" /%}
 
 ```bash
 $ docker compose run playwright yarn create playwright
@@ -214,7 +216,7 @@ DesktopのChrome、Firefox、Saferiでテストしたようだ。
 ## テストを書いてみる
 自分でもテストを追加してみたい。
 
-[Writing tests | Playwright](https://playwright.dev/docs/writing-tests)
+{% ogpLink url="https://playwright.dev/docs/writing-tests" /%}
 
 公式ドキュメントが丁寧。
 
@@ -235,7 +237,7 @@ test('has hero title', async ({ page }) => {
 `toBeVisible()`で存在していること（見えていること）を検証している。
 詳しくは、公式ドキュメントを参照。
 
-[Locators | Playwright (Locale by role)](https://playwright.dev/docs/locators#locate-by-role)
+{% ogpLink url="https://playwright.dev/docs/locators#locate-by-role" /%}
 
 ちなみに`class`を使ったりして指定もできる。
 
@@ -260,13 +262,12 @@ $ docker compose up
 
 Locatorに対する操作もいろいろ..。
 
-[Locator | Playwright](https://playwright.dev/docs/api/class-locator)
+{% ogpLink url="https://playwright.dev/docs/api/class-locator" /%}
 
 Assertionも色々..。
 
-[PageAssertions | Playwright](https://playwright.dev/docs/api/class-pageassertions)
-
-[LocatorAssertions | Playwright](https://playwright.dev/docs/api/class-locatorassertions)
+{% ogpLink url="https://playwright.dev/docs/api/class-pageassertions" /%}
+{% ogpLink url="https://playwright.dev/docs/api/class-locatorassertions" /%}
 
 これ、なんでもできるんじゃないの...??
 
@@ -312,7 +313,7 @@ $ docker compose up
 でも失敗時どうだったのか、このレポートからではわからない。
 と思ったらテストオプションがめっちゃ豊富。
 
-[https://playwright.dev/docs/api/class-testoptions](https://playwright.dev/docs/api/class-testoptions)
+{% ogpLink url="https://playwright.dev/docs/api/class-testoptions" /%}
 
 ```ts:playwright.config.ts
   import { defineConfig, devices } from '@playwright/test';
