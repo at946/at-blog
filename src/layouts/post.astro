@@ -23,7 +23,8 @@ const { content, slug, readingTime } = Astro.props;
     <BaseHead {...content} title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title }/>
   </head>
   <MainLayout>
-    <PostHeader title={content.title} publicationDate={content.publicationDate} tags={content.tags} readingTime={readingTime} />
+    <PostHeader title={content.title} publicationDate={content.publicationDate} tags={content.tags} readingTime={readingTime} class="mb-4" />
+    <hr class="mb-16 border-gray-300" />
     <Prose>
       <slot />
       <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />

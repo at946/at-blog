@@ -1,5 +1,6 @@
 import { amazonLink } from '@/utils/mdoc/schema/amazon-link.mdoc';
 import { docswellEmbed } from '@/utils/mdoc/schema/docswell-embed.mdoc';
+import { tableOfContents } from '@/utils/mdoc/schema/table-of-contents.mdoc';
 import { fence } from './schema/fence.mdoc';
 import { image } from './schema/image.mdoc';
 import { inlineMath } from './schema/inline-math.mdoc';
@@ -19,6 +20,7 @@ export const config = {
 	tags: {
 		amazonLink,
 		docswell: docswellEmbed,
+		toc: tableOfContents,
 		image,
 		inlineMath,
 		linkCard,
