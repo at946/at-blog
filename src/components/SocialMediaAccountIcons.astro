@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components';
+import Link from './mdoc/Link.astro';
+
+interface Props {
+	class: string;
+}
+---
+<div class:list={["flex gap-2", Astro.props.class]}>
+  <Link href='https://twitter.com/at_946' title='asatoのXプロフィールページ' class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+    <Icon name="fa6-brands:x-twitter" class="my-0 text-2xl" />
+  </Link>
+  <Link href='https://bsky.app/profile/at946.bsky.social' title="'asatoのBlueskyプロフィールページ" class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+    <Icon name="ri:bluesky-fill" class="my-0 text-2xl" />
+  </Link>
+  <Link href='https://github.com/at946' title='asatoのGitHubプロフィールページ' class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+    <Icon name="mdi:github" class="my-0 text-2xl" />
+  </Link>
+</div>

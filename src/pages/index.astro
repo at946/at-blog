@@ -4,9 +4,9 @@ export const prerender = true;
 import { getCollection } from 'astro:content';
 import { SITE } from '@/config';
 import Prose from '@components/Prose.astro';
-import DefaultPageLayout from '@layouts/default.astro';
 import PostPreviewList from '../components/PostPreviewList.astro';
 import ProfileCard from '../components/ProfileCard.astro';
+import DefaultPageLayout from '../layouts/default.astro';
 import { Content as SelfIntroduction } from './_self_introduction.md';
 
 const title = 'Home';
@@ -20,8 +20,8 @@ posts.sort(
 );
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
-    <ProfileCard />
-    <hr/>
+    <ProfileCard class="mb-8" />
+    <hr />
     <div class="py-4">
         <PostPreviewList posts={posts.slice(0, 5)} heading="Recent Posts"/>
         <div class="text-center md:text-right mt-16">
