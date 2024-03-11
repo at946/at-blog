@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+import Prose from './Prose.astro';
+import Link from './mdoc/Link.astro';
+---
+<div class="flex flex-col md:flex-row gap-2 md:gap-8 w-full transition-all pb-4 md:pb-12 justify-center items-center">
+  <img src="/images/pigeon.jpg" title="My icon" class="rounded-full h-48 w-48" />
+  <Prose>
+  <ul class="gap-4">
+    <li>Name🙎: asato</li>
+    <li>Works💼: スクラムマスター</li>
+    <li>Like💖: 家族、温泉、旅行、謎解き</li>
+    <li>Dislike💔: はじめまして、あんこ、うなぎ</li>
+    <li class="flex gap-2">
+      <Link href='https://twitter.com/at_946' title='asatoのXプロフィールページ' class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+        <Icon name="fa6-brands:x-twitter" class="my-0 text-2xl" />
+      </Link>
+      <Link href='https://bsky.app/profile/at946.bsky.social' title="'asatoのBlueskyプロフィールページ" class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+        <Icon name="ri:bluesky-fill" class="my-0 text-2xl" />
+      </Link>
+      <Link href='https://github.com/at946' title='asatoのGitHubプロフィールページ' class="my-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+        <Icon name="mdi:github" class="my-0 text-2xl" />
+      </Link>
+    </li>
+  </ul>
+  </Prose>
+</div>

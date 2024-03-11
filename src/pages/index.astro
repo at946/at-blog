@@ -3,9 +3,10 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import { SITE } from '@/config';
-import PostPreviewList from '@components/PostPreviewList.astro';
 import Prose from '@components/Prose.astro';
 import DefaultPageLayout from '@layouts/default.astro';
+import PostPreviewList from '../components/PostPreviewList.astro';
+import ProfileCard from '../components/ProfileCard.astro';
 import { Content as SelfIntroduction } from './_self_introduction.md';
 
 const title = 'Home';
@@ -19,17 +20,10 @@ posts.sort(
 );
 ---
 <DefaultPageLayout content={{ title, description }} showPageHeader={false}>
-    <div class="flex flex-col md:flex-row gap-8 w-full transition-all pb-4 md:pb-12 justify-center items-center">
-        <img src="/images/pigeon.jpg" title="My icon" class="rounded-full h-48 w-48" />
-        <div class="flex text-center md:text-left">
-            <Prose>
-                <SelfIntroduction/>
-            </Prose>
-        </div>
-    </div>
+    <ProfileCard />
     <hr/>
     <div class="py-4">
-        <PostPreviewList posts={posts.slice(0, 5)} heading="最近の投稿 / Recent Posts"/>
+        <PostPreviewList posts={posts.slice(0, 5)} heading="Recent Posts"/>
         <div class="text-center md:text-right mt-16">
             <a class="uppercase font-bold hover:underline" href="/blog" title="すべてのブログ">All Posts &rarr;</a>
         </div>
