@@ -31,6 +31,6 @@ const { content, slug, readingTime } = Astro.props;
       <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />
       <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
     </Prose>
-    <ProfileCard />
+    <ProfileCard class="border-2 rounded-xl mt-10 p-4" />
   </MainLayout>
 </html>
