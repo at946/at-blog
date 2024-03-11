@@ -1,12 +1,17 @@
 ---
 export const prerender = true;
 
-import { getCollection, getEntry, getEntryBySlug } from 'astro:content';
-import PostLayout from '@layouts/post.astro';
-import estimateReadingTime from '@utils/estimateReadingTime';
+import {
+	type CollectionEntry,
+	getCollection,
+	getEntry,
+	getEntryBySlug,
+} from 'astro:content';
+import PostLayout from '../../layouts/post.astro';
+import estimateReadingTime from '../../utils/estimateReadingTime';
 
 export async function getStaticPaths() {
-	const allPosts = await getCollection('blog');
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 	return allPosts.map((post) => ({
 		params: {
 			path: post.slug,
