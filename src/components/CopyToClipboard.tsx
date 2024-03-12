@@ -1,5 +1,5 @@
+import clsx from 'clsx';
 import { useState } from 'react';
-import { Tooltip } from 'react-tooltip';
 
 interface Props {
 	copyText: string;
@@ -18,18 +18,26 @@ const CopyToClipboard = ({ copyText, children }: Props) => {
 	};
 
 	return (
-		<span>
-			<button
-				type='button'
-				onClick={copyToClipboard}
-				title='クリップボードにコピー'
-				data-tooltip-id='copy-to-clipboard-tooltip'
-				data-tooltip-content='Copied'
-			>
-				{children}
-			</button>
-			<Tooltip id='copy-to-clipboard-tooltip' isOpen={tooltipIsOpen} />
-		</span>
+		<div>
+			<div className='relative flex justify-center'>
+				<button
+					type='button'
+					title='クリップボードにコピー'
+					onClick={copyToClipboard}
+				>
+					{children}
+				</button>
+				<span
+					aria-hidden={!tooltipIsOpen}
+					className={clsx(
+						'absolute -top-10 rounded bg-green-600 p-2 text-xs text-white transition-all',
+						tooltipIsOpen ? 'scale-100' : 'scale-0',
+					)}
+				>
+					<span>Copied</span>
+				</span>
+			</div>
+		</div>
 	);
 };
 
