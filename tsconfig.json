@@ -20,7 +20,9 @@
 			"@utils/*": ["src/utils/*"]
 		},
 		"types": ["astro/env"],
-		"strictNullChecks": true
+		"strictNullChecks": true,
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
 	},
 	"include": [
 		"src/**/*.d.ts",
