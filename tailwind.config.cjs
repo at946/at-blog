@@ -6,7 +6,7 @@ const themeConfig =
 const { colors } = themeConfig;
 module.exports = {
 	darkMode: 'class',
-	content: ['./public/**/*.html', './src/**/*.{astro,js,ts}'],
+	content: ['./public/**/*.html', './src/**/*.{astro,js,ts,jsx,tsx}'],
 	safelist: ['dark'],
 	theme: {
 		extend: {
