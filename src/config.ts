@@ -12,8 +12,8 @@ export const NAV_ITEMS: NavItems = {
 };
 
 export const SITE = {
-	name: 'at blog',
-	title: 'at blog',
+	name: 'at-blog',
+	title: 'at-blog',
 	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
 	url: 'https://at-blog.vercel.app',
 	domain: 'at-blog.vercel.app',
