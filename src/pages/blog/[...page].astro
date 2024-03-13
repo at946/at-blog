@@ -23,7 +23,7 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 ---
-<DefaultPageLayout content={{ title }}>
+<DefaultPageLayout pageTitle={title}>
   <div class="mb-10">
     <PostPreviewList posts={page.data} heading={`${page.start + 1}-${page.end + 1} / ${page.total} posts`} />
   </div>    
