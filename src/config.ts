@@ -12,7 +12,6 @@ export const NAV_ITEMS: NavItems = {
 };
 
 export const SITE = {
-	// Your site's detail?
 	name: 'at blog',
 	title: 'at blog',
 	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
@@ -25,5 +24,4 @@ export const SITE = {
 	authorTwitter: 'at_946',
 };
 
-// Ink - Theme configuration
 export const PAGE_SIZE = 10;
