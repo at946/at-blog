@@ -28,6 +28,8 @@
 		"src/**/*.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
+		"src/**/*.tsx",
+		"src/**/*.astro",
 		"src/pages/rss.xml.js"
 	]
 }
