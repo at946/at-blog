@@ -3,11 +3,9 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import { SITE } from '@/config';
-import Prose from '@components/Prose.astro';
 import PostPreviewList from '../components/PostPreviewList.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import DefaultPageLayout from '../layouts/default.astro';
-import { Content as SelfIntroduction } from './_self_introduction.md';
 
 const posts = await getCollection('blog', ({ data }) => data.isPublished);
 posts.sort(
