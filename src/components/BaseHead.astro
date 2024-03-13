@@ -6,9 +6,14 @@ import '../styles/global.css';
 export type Props = {
 	pageTitle: string;
 	description: string;
+	extraTwitterData: object;
 };
 
-const { pageTitle, description = SITE.description } = Astro.props;
+const {
+	pageTitle,
+	description = SITE.description,
+	extraTwitterData,
+} = Astro.props;
 
 const title: string = pageTitle ? `${pageTitle} | ${SITE.title}` : SITE.title;
 const url: string = SITE.url;
@@ -21,14 +26,6 @@ const image: string = `${SITE.url}${SITE.image}`;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-
-<!-- Open Graph Tags (Facebook) -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content={title} />
-<meta property="og:url" content={url} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={image} />
-
 <ViewTransitions />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -41,12 +38,23 @@ const image: string = `${SITE.url}${SITE.image}`;
 <meta name="msapplication-config" content="/browserconfig.xml" />
 <meta name="theme-color" content="#ffffff" />
 
+<!-- Open Graph Tags (Facebook) -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:url" content={url} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+
 <!-- Twitter -->
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:url" content={url} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={image} />
+{ extraTwitterData && Object.entries(extraTwitterData).map((data, index) => (
+  <meta name={`twitter:label${index+1}`} value={data[0]} />
+  <meta name={`twitter:data${index+1}`} value={data[1]} />
+)) }
 
 <!-- KaTex -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
