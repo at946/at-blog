@@ -4,18 +4,15 @@ import { SITE } from '@/config';
 import '../styles/global.css';
 
 export type Props = {
-	title: string;
+	pageTitle: string;
 	description: string;
-	permalink: string;
-	image: string;
 };
 
-const {
-	title = SITE.title,
-	description,
-	permalink,
-	image = `${SITE.url}${SITE.image}`,
-} = Astro.props;
+const { pageTitle, description = SITE.description } = Astro.props;
+
+const title: string = pageTitle ? `${pageTitle} | ${SITE.title}` : SITE.title;
+const url: string = SITE.url;
+const image: string = `${SITE.url}${SITE.image}`;
 ---
 
 <meta charset="UTF-8" />
@@ -23,7 +20,7 @@ const {
 
 <title>{title}</title>
 <meta name="title" content={title} />
-{description && <meta name="description" content={description} />}
+<meta name="description" content={description} />
 <ViewTransitions />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -39,16 +36,16 @@ const {
 <!-- Open Graph Tags (Facebook) -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
-{permalink && <meta property="og:url" content={permalink} />}
-{description && <meta property="og:description" content={description} />}
-{image && <meta property="og:image" content={image} />}
+<meta property="og:url" content={url} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:title" content={title} />
-{permalink && <meta property="twitter:url" content={permalink} />}
-{description && <meta property="twitter:description" content={description} />}
-{image && <meta property="twitter:image" content={image} />}
+<meta property="twitter:url" content={url} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
 
 <!-- KaTex -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"

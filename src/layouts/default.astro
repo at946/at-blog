@@ -3,16 +3,22 @@ import { SITE } from '@/config';
 import BaseHead from '@components/BaseHead.astro';
 import MainLayout from '@components/MainLayout.astro';
 
-const { content, showPageHeader = true } = Astro.props;
+interface Props {
+	pageTitle: string;
+	description: string;
+	showPageHeader: boolean;
+}
+
+const { pageTitle, description, showPageHeader = true }: Props = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">
     <head>
-        <BaseHead title={ content.title ? `${ SITE.title } | ${content.title}` : SITE.title } description={ content.description || SITE.description }/>
+        <BaseHead pageTitle={pageTitle} description={description}/>
     </head>
     <MainLayout>
         {showPageHeader &&
-            <h1 class="text-4xl font-extrabold text-theme-primary dark:text-theme-dark-primary mb-16 text-center md:text-left">{content.title}</h1>
+            <h1 class="text-4xl font-extrabold text-theme-primary dark:text-theme-dark-primary mb-16 text-center md:text-left">{pageTitle}</h1>
         }
         <slot />
     </MainLayout>
