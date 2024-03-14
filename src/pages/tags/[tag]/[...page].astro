@@ -1,0 +1,34 @@
+---
+export const prerender = true;
+
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import PostPreviewList from '@/components/PostPreviewList.astro';
+import { PAGE_SIZE } from '@/config';
+import TAGS from '@/content/zod/tags';
+import DefaultPageLayout from '@/layouts/default.astro';
+
+export async function getStaticPaths({ paginate }) {
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection(
+		'blog',
+		({ data }) => data.isPublished,
+	);
+
+	return TAGS.flatMap((tag) => {
+		const posts = allPosts
+			.filter((post) => post.data.tags?.includes(tag))
+			.sort(
+				(a, b) =>
+					b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
+			);
+		return paginate(posts, { params: { tag }, pageSize: PAGE_SIZE });
+	});
+}
+
+const { page } = Astro.props;
+const { tag } = Astro.params;
+---
+
+<DefaultPageLayout pageTitle=`Blog - ${tag}`>
+    <PostPreviewList posts={page.data} />
+</DefaultPageLayout>
