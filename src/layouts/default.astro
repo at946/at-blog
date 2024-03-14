@@ -4,9 +4,9 @@ import BaseHead from '@components/BaseHead.astro';
 import MainLayout from '@components/MainLayout.astro';
 
 interface Props {
-	pageTitle: string;
-	description: string;
-	showPageHeader: boolean;
+	pageTitle?: string;
+	description?: string;
+	showPageHeader?: boolean;
 }
 
 const { pageTitle, description, showPageHeader = true }: Props = Astro.props;
