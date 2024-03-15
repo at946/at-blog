@@ -7,7 +7,15 @@ interface ToCItem {
 	text: string;
 }
 
-const entry: CollectionEntry = await getEntry('blog', Astro.params.path);
+if (!Astro.params.path) throw 'Astro.params.path is undefined.';
+
+const entry: CollectionEntry<'blog'> | undefined = await getEntry(
+	'blog',
+	Astro.params.path,
+);
+
+if (!entry) throw 'entry is undefined.';
+
 const { headings } = await entry.render();
 const tocItems: ToCItem[] = headings
 	.filter((heading) => heading.depth < 3)
@@ -17,6 +25,8 @@ const tocItems: ToCItem[] = headings
 <h2>Table of Contents</h2>
 <ul>
 { tocItems.map((tocItem) => (
-  <li class="my-0">{ <Link href={`#${tocItem.slug}`}>{tocItem.text}</Link> }</li>
+  <li class="my-0">
+		<Link href={`#${tocItem.slug}`}>{tocItem.text}</Link>
+	</li>
 ))}
 </ul>

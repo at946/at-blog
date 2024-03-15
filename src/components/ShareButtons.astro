@@ -5,6 +5,7 @@ import Link from './mdoc/Link.astro';
 
 interface Props {
 	blogTitle: string;
+	class: string;
 }
 
 const { blogTitle }: Props = Astro.props;
@@ -18,7 +19,7 @@ const copyText: string = `${blogTitle}\n${Astro.url}`;
   <Link href=`https://twitter.com/intent/tweet?text=${shareText}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>
-  <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url)}` title="はてなブックマークに追加">
+  <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url.toString())}` title="はてなブックマークに追加">
     <div class="bg-white rounded-md" style="color: #01a5df;">
     <Icon name="cib:hatena-bookmark" class="text-3xl" />
   </div>
