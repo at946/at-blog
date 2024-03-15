@@ -1,12 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { getMonthName } from '@/utils';
 import estimateReadingTime from '../utils/estimateReadingTime';
-import PostHeader from './PostHeader.astro';
 import Link from './mdoc/Link.astro';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
+	class?: string;
 }
 
 const { post } = Astro.props;
@@ -14,7 +13,7 @@ const {
 	title,
 	publicationDate,
 	tags,
-}: { title: string; pulicationDate: string; tags: string[] } = post.data;
+}: { title: string; publicationDate: Date; tags?: string[] } = post.data;
 const slug: string = post.slug;
 const readingTime: number = estimateReadingTime(post.body.length);
 ---

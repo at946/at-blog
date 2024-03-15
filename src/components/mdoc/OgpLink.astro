@@ -1,9 +1,8 @@
 ---
-import { Image } from 'astro:assets';
 import ogpParser, { type OgpParserResult } from 'ogp-parser';
+import type { OembedData } from 'ogp-parser/dist/core/fetchOembed';
 import Link from './Link.astro';
 import LinkCard from './LinkCard.astro';
-import Oembed from './Oembed.astro';
 
 interface Props {
 	url: string;
@@ -19,14 +18,20 @@ const parsedOgp: OgpParserResult = await ogpParser(url)
 	.catch((error) => {
 		throw error;
 	});
+const ogp: Record<string, string[]> = parsedOgp.ogp;
+const oembed: OembedData | undefined = parsedOgp.oembed;
 
-const ogTitle: string = parsedOgp.ogp['og:title'] || parsedOgp.title;
-const ogUrl: string = parsedOgp.ogp['og:url'] || url;
-const ogImage: string = parsedOgp.ogp['og:image'];
-const ogImageAlt: string = parsedOgp.ogp['og:image:alt'];
-const html: string = parsedOgp.oembed?.html;
+const ogTitle: string =
+	typeof ogp['og:title'] === 'string' ? ogp['og:title'] : parsedOgp.title;
+const ogUrl: string = typeof ogp['og:url'] === 'string' ? ogp['og:url'] : url;
+const ogImage: string =
+	typeof ogp['og:image'] === 'string' ? ogp['og:image'] : '';
+const ogImageAlt: string =
+	typeof ogp['og:image:alt'] === 'string' ? ogp['og:image:alt'] : '';
+const html: string | undefined =
+	oembed?.type === 'rich' ? oembed.html : undefined;
 
-if (type === 'oembed' && !html) throw `No oembed html returns from ${url}`;
+if (type === 'oembed' && !html) throw `No oembed html from ${url}`;
 ---
 
 { type === 'link' &&

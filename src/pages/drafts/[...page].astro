@@ -2,29 +2,34 @@
 export const prerender = true;
 
 import { getCollection } from 'astro:content';
-import Paginator from '$/components/Paginator.astro';
-import PostPreviewList from '$/components/PostPreviewList.astro';
-import { PAGE_SIZE } from '$/config';
-import DefaultPageLayout from '$/layouts/default.astro';
+import type { CollectionEntry } from 'astro:content';
+import Paginator from '@/components/Paginator.astro';
+import PostPreviewList from '@/components/PostPreviewList.astro';
+import { PAGE_SIZE } from '@/config';
+import DefaultPageLayout from '@/layouts/default.astro';
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
-const title = 'Drafts';
-const description = 'All the articles posted so far...';
+const pageTitle: string = 'Drafts';
 
-export async function getStaticPaths({ paginate }) {
-	const allPosts = await getCollection('blog', ({ data }) => !data.isPublished);
-	const sortedPosts = allPosts.sort(
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection(
+		'blog',
+		({ data }) => !data.isPublished,
+	);
+	const sortedPosts: CollectionEntry<'blog'>[] = allPosts.sort(
 		(a, b) =>
-			new Date(b.data.publicationDate) - new Date(a.data.publicationDate),
+			b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
 	);
 
 	return paginate(sortedPosts, {
 		pageSize: PAGE_SIZE,
 	});
-}
+}) satisfies GetStaticPaths;
 
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props;
 ---
-<DefaultPageLayout content={{ title, description }}>
+<DefaultPageLayout pageTitle={pageTitle}>
     <PostPreviewList posts={page.data} />
     <Paginator page={page} />
 </DefaultPageLayout>

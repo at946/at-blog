@@ -3,6 +3,7 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import Paginator from '@/components/Paginator.astro';
 import PostPreviewList from '@/components/PostPreviewList.astro';
 import { PAGE_SIZE } from '@/config';
 import TAGS from '@/content/zod/tags';
@@ -15,7 +16,7 @@ export async function getStaticPaths({ paginate }) {
 	);
 
 	return TAGS.flatMap((tag) => {
-		const posts = allPosts
+		const posts: CollectionEntry<'blog'>[] = allPosts
 			.filter((post) => post.data.tags?.includes(tag))
 			.sort(
 				(a, b) =>
@@ -31,4 +32,5 @@ const { tag } = Astro.params;
 
 <DefaultPageLayout pageTitle=`Blog - ${tag}`>
     <PostPreviewList posts={page.data} />
+    <Paginator page={page} />
 </DefaultPageLayout>
