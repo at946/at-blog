@@ -1,14 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { SITE } from '@/config';
-import BaseHead from '@components/BaseHead.astro';
-import MainLayout from '@components/MainLayout.astro';
-import PostHeader from '@components/PostHeader.astro';
-import ProfileCard from '@components/ProfileCard.astro';
-import Prose from '@components/Prose.astro';
-import RelatedPosts from '@components/RelatedPosts.astro';
-import ShareButtons from '@components/ShareButtons.astro';
-import estimateReadingTime from '@utils/estimateReadingTime';
+import BaseHead from '@/components/BaseHead.astro';
+import MainLayout from '@/components/MainLayout.astro';
+import PostHeader from '@/components/PostHeader.astro';
+import ProfileCard from '@/components/ProfileCard.astro';
+import Prose from '@/components/Prose.astro';
+import RelatedPosts from '@/components/RelatedPosts.astro';
+import ShareButtons from '@/components/ShareButtons.astro';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
@@ -22,7 +20,7 @@ const { content, description, slug, readingTime } = Astro.props;
 <!doctype html>
 <html lang="ja">
   <head>
-    <BaseHead pageTitle={content.title} description={description} extraTwitterData={{'読了時間の目安': `${readingTime}分`}} />
+    <BaseHead pageTitle={content.title} description={description} />
   </head>
   <MainLayout>
     <PostHeader title={content.title} publicationDate={content.publicationDate} tags={content.tags} readingTime={readingTime} class="mb-4" />
@@ -30,7 +28,9 @@ const { content, description, slug, readingTime } = Astro.props;
     <Prose>
       <slot />
       <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />
-      <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
+      { content.tags && (
+        <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
+      )}
     </Prose>
     <ProfileCard class="border-2 rounded-xl mt-10 p-4" />
   </MainLayout>

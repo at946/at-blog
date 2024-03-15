@@ -5,7 +5,7 @@ import Link from './mdoc/Link.astro';
 interface Props {
 	slug: string;
 	tags: string[];
-	class: string;
+	class?: string;
 }
 
 const { slug, tags } = Astro.props;
@@ -15,11 +15,13 @@ const posts = allPosts
 	.filter(
 		(post: CollectionEntry<'blog'>) =>
 			post.slug !== slug &&
-			post.data.tags?.filter((tag) => tags.includes(tag)).length > 0,
+			post.data.tags &&
+			post.data.tags.filter((tag) => tags.includes(tag)).length > 0,
 	)
 	.map((post: CollectionEntry<'blog'>) => ({
 		...post,
-		sameTagCount: post.data.tags.filter((tag) => tags.includes(tag)).length,
+		sameTagCount:
+			post.data.tags?.filter((tag) => tags.includes(tag)).length || 0,
 	}))
 	.sort((a, b) => {
 		if (a.sameTagCount > b.sameTagCount) return -1;
