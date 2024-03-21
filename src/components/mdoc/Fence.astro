@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { content, language } = Astro.props as Props;
-const [lang, title] = language ? language.split(':') : [null, undefined];
+const [lang, title] = language ? language.split(':') : [undefined, undefined];
 ---
 
 { lang === 'mermaid' ? (

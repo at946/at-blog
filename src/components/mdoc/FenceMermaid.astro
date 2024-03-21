@@ -8,6 +8,7 @@ const { content } = Astro.props as Props;
 
 <pre class="mermaid flex justify-center">{content}</pre>
 <script type="module" is:inline>
+	// @ts-ignore
 	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 	const config = { startOnLoad: true, theme: 'dark' }
 	mermaid.initialize(config)
