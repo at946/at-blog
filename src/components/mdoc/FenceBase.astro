@@ -1,0 +1,27 @@
+---
+import { Code } from 'astro-expressive-code/components';
+
+interface Props {
+	content: string;
+	language: string;
+	title: string;
+}
+
+const { content, language, title } = Astro.props as Props;
+
+const contentRows: string[] = content.split('\n');
+const ins: number[] = [];
+const del: number[] = [];
+contentRows.forEach((row, index) => {
+	if (row.startsWith('+ ')) {
+		ins.push(index + 1);
+		contentRows[index] = row.replace('+ ', '  ');
+	} else if (row.startsWith('- ')) {
+		del.push(index + 1);
+		contentRows[index] = row.replace('- ', '  ');
+	}
+});
+const displayedContent: string = contentRows.join('\n');
+---
+
+<Code code={displayedContent} lang={language} title={title} ins={`{${ins.join(',')}}`} del={`{${del.join(',')}}`} class="py-4" />
