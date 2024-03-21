@@ -36,11 +36,6 @@ const html: string | undefined =
 	oembed?.type === 'rich' ? oembed.html : undefined;
 
 if (type === 'oembed' && !html) throw `No oembed html from ${url}`;
-console.log(ogp);
-console.log('---');
-console.log(typeof ogp['og:image']);
-console.log('---');
-console.log(ogImage);
 ---
 
 { type === 'link' &&
