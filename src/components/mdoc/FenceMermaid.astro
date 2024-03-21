@@ -1,0 +1,14 @@
+---
+interface Props {
+	content: string;
+}
+
+const { content } = Astro.props as Props;
+---
+
+<pre class="mermaid">{content}</pre>
+<script type="module" is:inline>
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+	const config = { startOnLoad: true, theme: 'dark' }
+	mermaid.initialize(config)
+</script>

@@ -1,5 +1,6 @@
 ---
-import { Code } from 'astro-expressive-code/components';
+import FenceBase from './FenceBase.astro';
+import FenceMermaid from './FenceMermaid.astro';
 
 interface Props {
 	content: string;
@@ -8,19 +9,10 @@ interface Props {
 
 const { content, language } = Astro.props as Props;
 const [lang, title] = language ? language.split(':') : [null, undefined];
-
-const contentArray: string[] = content.split('\n');
-const ins: number[] = [];
-const del: number[] = [];
-contentArray.forEach((row, index) => {
-	if (row.startsWith('+ ')) {
-		ins.push(index + 1);
-		contentArray[index] = row.replace('+ ', '  ');
-	} else if (row.startsWith('- ')) {
-		del.push(index + 1);
-		contentArray[index] = row.replace('- ', '  ');
-	}
-});
 ---
 
-<Code code={contentArray.join('\n')} lang={`${lang}`} title={title} ins={`{${ins.join(',')}}`} del={`{${del.join(',')}}`} class="py-4" />
+{ lang === 'mermaid' ? (
+	<FenceMermaid content={content} />
+) : (
+	<FenceBase content={content} language={lang} title={title} />
+) }
