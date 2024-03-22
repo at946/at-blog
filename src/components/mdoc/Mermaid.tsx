@@ -1,11 +1,11 @@
-import mermaid, { type Mermaid as IFMermaid } from 'mermaid';
+import mermaid, { type MermaidConfig } from 'mermaid';
 import { useEffect } from 'react';
 
 interface Props {
 	content: string;
 }
 
-const config: IFMermaid = {
+const config: MermaidConfig = {
 	startOnLoad: true,
 	theme: 'dark',
 };
