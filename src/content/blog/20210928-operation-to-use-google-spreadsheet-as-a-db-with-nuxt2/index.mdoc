@@ -9,7 +9,7 @@ isPublished: true
 ---
 
 ［前回の記事］
-[Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
+{% ogpLink url="https://at-blog.vercel.app/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt" /%}
 
 前回の記事で、見事NuxtでスプレッドシートをDBの代わりとして使えるようになりました🎉🎉🎉。
 
@@ -32,9 +32,9 @@ axiosでエラーハンドリングしてみると、モバイルでは「**Erro
 
 ということで、`jsonp`を利用してCORSを回避する方法が情報としては多かったです。
 
-- [Google Apps Script - gasでつくったAPIをAXIOSで読み込めない。｜teratail](https://teratail.com/questions/171692)
-- [javascript - Cross-domain requests stopped working due to no `Access-Control-Allow-Origin` header present in the response - Stack Overflow](https://stackoverflow.com/questions/29525860/cross-domain-requests-stopped-working-due-to-no-access-control-allow-origin-he)
-- [モバイル環境でNetwork Errorでハマった。「EC2にDocker Caddy Laravel, S3にVuejsの構成」 - Qiita](https://qiita.com/miyamotok0105/items/961d7877f8d13a9cd93c)
+- {% ogpLink url="https://teratail.com/questions/171692" type="link" /%}
+- {% ogpLink url="https://stackoverflow.com/questions/29525860/cross-domain-requests-stopped-working-due-to-no-access-control-allow-origin-he" type="link" /%}
+- {% ogpLink url="https://qiita.com/miyamotok0105/items/961d7877f8d13a9cd93c" type="link" /%}
 
 今回はJSONPで情報を取得できるようにしてみます。
 
@@ -43,8 +43,13 @@ axiosでエラーハンドリングしてみると、モバイルでは「**Erro
 - GASのレスポンスをJSONPバージョンに更新
 
 ## Nuxtの更新
-まずはNuxt側の更新をしていきます。最初に`axios`の中で`jsonp`を使えるようにしてくれる[`axios-jsonp`](https://www.npmjs.com/package/axios-jsonp)を導入します。
-ちなみに`axios`自体は`jsonp`をサポートしていないようです（[axios/COOKBOOK.md at master · axios/axios](https://github.com/axios/axios/blob/master/COOKBOOK.md#jsonp)）。
+まずはNuxt側の更新をしていきます。最初に`axios`の中で`jsonp`を使えるようにしてくれる`axios-jsonp`を導入します。
+
+{% ogpLink url="https://www.npmjs.com/package/axios-jsonp" /%}
+
+ちなみに`axios`自体は`jsonp`をサポートしていないようです。
+
+{% ogpLink url="https://github.com/axios/axios/blob/master/COOKBOOK.md#jsonp" /%}
 
 ```bash
 $ yarn add axios-jsonp
@@ -52,27 +57,27 @@ $ yarn add axios-jsonp
 
 axiosのオプションに`adapter`として指定します。
 
-```vue:pages/index.vue ins={3,4,17} del={16}
-...
-<script>
-  const jsonpAdapter = require('axios-jsonp')
-
-  export default {
-    data() {
-      return {
-        users: []
-      }
-    },
-    created() {
-      this.getUsers()
-    },
-    methods: {
-      async getUsers() {
-        this.users = await this.$axios.$get('/api')
-        this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
+```diff:vue:pages/index.vue ins={3,4,17} del={16}
+  ...
+  <script>
++   const jsonpAdapter = require('axios-jsonp')
++ 
+    export default {
+      data() {
+        return {
+          users: []
+        }
+      },
+      created() {
+        this.getUsers()
+      },
+      methods: {
+        async getUsers() {
+-         this.users = await this.$axios.$get('/api')
++         this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
+        }
       }
     }
-  }
   </script>
 ```
 
@@ -84,7 +89,7 @@ Nuxt側の準備はこれで以上です👏。
 
 JSONPが何者かっていうと、JSONをCallback関数の引数として返すものです。
 
-- [第11回　JSONP入門：これでできる！ クロスブラウザJavaScript入門｜gihyo.jp … 技術評論社](https://gihyo.jp/dev/serial/01/crossbrowser-javascript/0011)
+{% ogpLink url="https://gihyo.jp/dev/serial/01/crossbrowser-javascript/0011" /%}
 
 通信のイメージは以下のとおりです。
 
@@ -96,18 +101,18 @@ JSONPが何者かっていうと、JSONをCallback関数の引数として返す
 
 なのでGAS側もその挙動に合わせてコーディングし直します。更新する箇所は`コード.js`の`doGet`関数の部分だけです。
 
-```js:コード.js ins={2,4,8,10} del={1,7,9}
-function doGet() {
-function doGet(e) {
-  const users = getUsers()
-  const callback = e.parameter.callback
+```diff:js:コード.js ins={2,4,8,10} del={1,7,9}
+- function doGet() {
++ function doGet(e) {
+    const users = getUsers()
++   const callback = e.parameter.callback
 
-  return ContentService
-    .createTextOutput(JSON.stringify(users))
-    .createTextOutput(`${callback}(${JSON.stringify(users)})`)
-    .setMimeType(ContentService.MimeType.JSON)
-    .setMimeType(ContentService.MimeType.JAVASCRIPT)
-}
+    return ContentService
+-     .createTextOutput(JSON.stringify(users))
++     .createTextOutput(`${callback}(${JSON.stringify(users)})`)
+-     .setMimeType(ContentService.MimeType.JSON)
++     .setMimeType(ContentService.MimeType.JAVASCRIPT)
+  }
 ```
 
 以上です。ちょっと説明。
@@ -118,7 +123,7 @@ function doGet(e) {
 
 `doGet`関数は引数`e`を利用可能です。`event`ですね。ここからURLのクエリパラメーターを取得できたりします。
 
-[Web Apps  |  Apps Script  |  Google for Developers | #request_parameters](https://developers.google.com/apps-script/guides/web?hl=en#request_parameters)
+{% ogpLink url="https://developers.google.com/apps-script/guides/web?hl=en#request_parameters" /%}
 
 `axios-jsonp`はクエリパラメーター`callback`でcallback関数を指定してくれるので、それを取得してレスポンスで返却するために`e`を追加します。
 
@@ -160,4 +165,4 @@ spaces.bzでもこの方式でサービス提供していたのですが、い�
 
 ## 続編
 
-[NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！](/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3)
+{% ogpLink url="https://at-blog.vercel.app/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3" /%}

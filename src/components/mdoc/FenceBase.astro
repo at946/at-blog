@@ -5,23 +5,30 @@ interface Props {
 	content: string;
 	language?: string;
 	title?: string;
+	hasDiff?: boolean;
 }
 
-const { content, language, title } = Astro.props as Props;
+const { content, language, title, hasDiff } = Astro.props as Props;
 
 const contentRows: string[] = content.split('\n');
 const ins: number[] = [];
 const del: number[] = [];
-contentRows.forEach((row, index) => {
-	if (row.startsWith('+ ')) {
-		ins.push(index + 1);
-		contentRows[index] = row.replace('+ ', '  ');
-	} else if (row.startsWith('- ')) {
-		del.push(index + 1);
-		contentRows[index] = row.replace('- ', '  ');
-	}
-});
+
+if (hasDiff) {
+	contentRows.forEach((row, index) => {
+		if (row.startsWith('+ ')) {
+			ins.push(index + 1);
+			contentRows[index] = row.replace('+ ', '');
+		} else if (row.startsWith('- ')) {
+			del.push(index + 1);
+			contentRows[index] = row.replace('- ', '');
+		} else {
+			contentRows[index] = row.replace('  ', '');
+		}
+	});
+}
+
 const displayedContent: string = contentRows.join('\n');
 ---
 
-<Code code={displayedContent} lang={language} title={title} ins={`{${ins.join(',')}}`} del={`{${del.join(',')}}`} class="py-4" />
+<Code code={displayedContent} lang={language} title={title} ins={ins} del={del} class="py-4" />

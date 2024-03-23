@@ -63,7 +63,7 @@ function getUsers() {
 このコードの最初の肝は`doGet`関数を用いていることです。
 この後Webアプリで公開すると話しましたが、`doGet`関数はWebアプリで公開したURLにGETリクエストが来たときに動く関数です。
 
-[Web Apps  |  Apps Script  |  Google for Developers](https://developers.google.com/apps-script/guides/web)
+{% ogpLink url="https://developers.google.com/apps-script/guides/web" /%}
 
 今回のコードでは`doGet`関数が動き出したら`getUsers`関数を呼び出してスプレッドシートの中身をJSONに整形し返却します。
 
@@ -163,7 +163,7 @@ users = [
 
 ## Webアプリを公開する
 
-[Web Apps  |  Apps Script  |  Google for Developers | #test_a_web_app_deployment](https://developers.google.com/apps-script/guides/web#test_a_web_app_deployment)
+{% ogpLink url="https://developers.google.com/apps-script/guides/web#test_a_web_app_deployment" /%}
 
 WebサイトはGASのエディターの上部にある「デプロイ」ボタンから行います。
 
@@ -219,7 +219,7 @@ $ curl -L <URL>
 
 まず、APIを叩くために[`@nuxtjs/axios`](https://axios.nuxtjs.org/)を導入してきます。
 
-[Introduction - Axios Module](https://axios.nuxtjs.org/)
+{% ogpLink url="https://axios.nuxtjs.org/" /%}
 
 ```sh
 $ yarn add @nuxtjs/axios
@@ -227,7 +227,7 @@ $ yarn add @nuxtjs/axios
 
 `nuxt.config.js`でモジュール登録もしてきましょう。
 
-```js:nuxt.config.js
+```diff:js:nuxt.config.js
   export default {
     ...
     modules: [
@@ -240,7 +240,7 @@ $ yarn add @nuxtjs/axios
 axiosはCORS対策もしっかりしてくれているので、このままでは先程作ったウェブアプリのAPIを叩けません。
 そこで、proxyします。
 
-```js:nuxt.config.js
+```diff:js:nuxt.config.js
   export default {
     ...
     modules: [
@@ -333,4 +333,4 @@ export default {
 
 続編を公開しました。
 
-[NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part2 - モバイルだって使いたい！](/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2)
+{% ogpLink url="https://at-blog.vercel.app/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2" /%}

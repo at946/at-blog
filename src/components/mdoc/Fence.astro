@@ -7,12 +7,21 @@ interface Props {
 	language: string;
 }
 
+// language = js -> language = js, diff = false, title = none
+// language = js:a.js -> language = js, diff = false, title = a.js
+// language = diff:js -> language = js, diff = true, title = none
+// language = diff:js:a.js -> language = js, diff = true, title = a.js
+// language = mermaid -> Mermaid
+
 const { content, language } = Astro.props as Props;
-const [lang, title] = language ? language.split(':') : [undefined, undefined];
+const [arg1, arg2, arg3] = language ? language.split(':') : [];
+const hasDiff = arg1 === 'diff';
+const lang = hasDiff ? arg2 : arg1;
+const title = hasDiff ? arg3 : arg2;
 ---
 
 { lang === 'mermaid' ? (
 	<FenceMermaid content={content} />
 ) : (
-	<FenceBase content={content} language={lang} title={title} />
+	<FenceBase content={content} language={lang} title={title} hasDiff={hasDiff} />
 ) }

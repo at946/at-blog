@@ -63,7 +63,7 @@ $ docker compose run app yarn add --dev testcafe
 
 今回はHeadless Chromeを使ってテストをしたいので、DockerコンテナでChromeを起動できる状態にしておく必要があります。
 
-```dockerfile:Dockerfile
+```diff:dockerfile:Dockerfile
   ...略...
   WORKDIR ${HOME}
 
@@ -91,7 +91,7 @@ $ docker compose build
 
 次はコンテナでTestCafeを起動するコマンドの準備をしていきます。コンテナで`yarn test` のコマンドを実行したときにTestCafeが動くようにしましょう。
 
-```json:package.json ins={7,8} del={6}
+```diff:json:package.json
   ...略...
   "scripts": {
     "dev": "nuxt",

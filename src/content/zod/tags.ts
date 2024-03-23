@@ -1,5 +1,6 @@
 const TAGS = [
 	'Agile Japan',
+	'Astro',
 	'Definition of Done',
 	'Docker',
 	'E2Eテスト',
@@ -10,6 +11,8 @@ const TAGS = [
 	'Google Slides',
 	'Jest',
 	'Just talk',
+	'Markdoc',
+	'Mermaid',
 	'North Star Metric',
 	'Nuxt',
 	'Open Graph Protocol',
@@ -17,6 +20,7 @@ const TAGS = [
 	'Playwright',
 	'Puppeteer',
 	'QA',
+	'React',
 	'Regional Scrum Gathering Tokyo',
 	'Scrum Fest Osaka',
 	'Scrum Fest Sendai',

@@ -18,7 +18,7 @@ TestCafeのエラーメッセージはとてもわかりやすいのですが、
 
 公式サイトだと、こちらに書かれております。
 
-[takeOnFails | Command Line Interface | API](https://testcafe.io/documentation/402639/reference/command-line-interface#takeonfails)
+{% ogpLink url="https://testcafe.io/documentation/402639/reference/command-line-interface#takeonfails" /%}
 
 便利すぎやしませんか...TestCafeさん...。
 
@@ -44,9 +44,9 @@ $ testcafe chrome:headless -s takeOnFails=true
 
 と記載していました。ここを、以下のように書き替えるだけです。
 
-```json:package.json ins={2} del={1}
-"test": "testcafe chrome:headless",
-"test": "testcafe chrome:headless -s takeOnFails=true",
+```diff:json:package.json
+- "test": "testcafe chrome:headless",
++ "test": "testcafe chrome:headless -s takeOnFails=true",
 ```
 
 ## スクリーンショットはどこへ...
@@ -65,9 +65,9 @@ screenshots
 また、新しいテストを始めるときに、古いテストのスクリーンショットが残っているとわけがわからなくなってしまいます。
 そこで、`package.json`で`testcafe`実行前に`screenshots`ディレクトリを削除するようにしています。
 
-```json:package.json ins={2} del={1}
-"test": "testcafe chrome:headless -s takeOnFails=true"
-"test": "rm -rf ./screenshots && testcafe chrome:headless -s takeOnFails=true"
+```diff:json:package.json
+- "test": "testcafe chrome:headless -s takeOnFails=true"
++ "test": "rm -rf ./screenshots && testcafe chrome:headless -s takeOnFails=true"
 ```
 
 これでステキな自動テストライフを過ごせます🎁。
@@ -92,7 +92,7 @@ test('take a screenshot', async t => {
 これも特に指定しなければ`./screenshots`ディレクトリの中のテストケースのディレクトリ内に、テスト失敗のスクリーンショットと分けて格納されます。
 `takeScreenshot()`もパスや全画面を対象にするかを選択できますので、気になる方は公式サイトを御覧ください。
 
-[.takeScreenshot() | TestController | Test API | API](https://testcafe.io/documentation/402675/reference/test-api/testcontroller/takescreenshot)
+{% ogpLink url="https://testcafe.io/documentation/402675/reference/test-api/testcontroller/takescreenshot" /%}
 
 ## まとめ
 前回に引き続き、TestCafeについてお話しました。
