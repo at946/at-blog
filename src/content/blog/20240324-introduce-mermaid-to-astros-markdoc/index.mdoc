@@ -5,7 +5,7 @@ tags:
   - Markdoc
   - Mermaid
   - React
-publicationDate: 2024-03-23
+publicationDate: 2024-03-24
 isPublished: false
 ---
 
@@ -83,7 +83,7 @@ Astroでは、一部のコンポーネントを動的に、またはクライア
 
 ディレクトリ構造は以下です（関連部分を抽出）。
 
-```yaml:a.yml
+```
 - node_modules/
 - src/
   - components/
@@ -100,16 +100,14 @@ Astroでは、一部のコンポーネントを動的に、またはクライア
 - markdoc.config.mjs  
 ```
 
-```js
-// markdoc.config.mjs
+```js:markdoc.config.mjs
 import { defineMarkdocConfig } from '@astrojs/markdoc/config'
 import { config as markdocConfig } from './src/utils/mdoc/mdoc.config'
 
 export default defineMarkdocConfig(markdocConfig)
 ```
 
-```jsx
-// src/utils/mdoc/mdoc.config.ts
+```ts:src/utils/mdoc/mdoc.config.ts
 import { fence } from './schema/fence.mdoc';
 
 export const config = {
@@ -119,8 +117,7 @@ export const config = {
 };
 ```
 
-```jsx
-// src/utils/mdoc/schema/fence.mdoc.ts
+```ts:src/utils/mdoc/schema/fence.mdoc.ts
 import { component } from '@astrojs/markdoc/config';
 
 export const fence = {
@@ -137,8 +134,7 @@ export const fence = {
 };
 ```
 
-```jsx
-// src/components/mdoc/Fence.astro
+```astro:src/components/mdoc/Fence.astro
 ---
 import { Code } from 'astro-expressive-code/components';
 
@@ -155,7 +151,7 @@ const { content, language } = Astro.props as Props;
 
 code fenceのハイライトにはExpressive Codeを使っています。インストール手順などは公式サイトを参照してください。
 
-https://expressive-code.com/installation/
+{% ogpLink url="https://expressive-code.com/installation/" /%}
 
 これでcode fenceをカスタマイズする準備が整いました。
 
@@ -163,18 +159,17 @@ https://expressive-code.com/installation/
 
 Astroアイランドを使います。UIフレームワークはReactを選択します。ReactをAstroに導入する手順は公式サイトを参照してください。
 
-https://docs.astro.build/ja/guides/integrations-guide/react/
+{% ogpLink url="https://docs.astro.build/ja/guides/integrations-guide/react/" /%}
 
 では、Mermaidをinstallします。
 
-```bash
+```sh
 $ npm i mermaid
 ```
 
 Mermaidを描写するReactコンポーネントを作成します。
 
-```tsx
-// src/components/mdoc/Mermaid.tsx
+```tsx:src/components/mdoc/Mermaid.tsx
 import mermaid, { type MermaidConfig } from 'mermaid';
 import { useEffect } from 'react';
 
@@ -207,8 +202,7 @@ Mermaidはデフォルトで`class`に`mermaid`が与えられている`pre`ま�
 
 では、Fence.astroを編集してMermaidの描写を実現します。
 
-```tsx
-// src/components/mdoc/Fence.astro
+```diff:astro:src/components/mdoc/Fence.astro
   ---
   import { Code } from 'astro-expressive-code/components';
 + import Mermaid from './Mermaid';
@@ -221,31 +215,32 @@ Mermaidはデフォルトで`class`に`mermaid`が与えられている`pre`ま�
   const { content, language } = Astro.props as Props;
   ---
 
+- <Code code={content} language={language} />
 + { language === 'mermaid' ? (
 +   <Mermaid content={content} client:only={React} />
 + ) : (
-    <Code code={content} language={language} />
++   <Code code={content} language={language} />
 + )}
 ```
 
 `client:only={React}` を指定しクライアントでのみ描写されるようにしています。
 
-https://docs.astro.build/ja/reference/directives-reference/#client-directives
+{% ogpLink url="https://docs.astro.build/ja/reference/directives-reference/#client-directives" /%}
 
 ### 動作確認
 
 ブログ内でmermaidのコードを書いて、正しく表示されるか確かめます。
 
-```markdown
-<--! src/content/sample.mdoc -->
+````markdown:src/content/blog/sample.mdoc
 ```mermaid
 flowchart LR
   Start --> Something --> End
 ```
+````
 
-```javascript
-console.log('Hello world');
-```
+```mermaid
+flowchart LR
+  Start --> Something --> End
 ```
 
 表示が確認できました。
