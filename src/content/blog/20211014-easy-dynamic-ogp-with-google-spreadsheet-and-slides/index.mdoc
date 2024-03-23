@@ -150,13 +150,13 @@ columnNames = ['id', 'name', 'ogpId']
 ### 3-2. 置換して画像保存して置換し直す
 
 ```js
-  data.forEach((row, index) => {
-    const name = row[1]
-    replaceText(presentationId, name)
-    const ogpId = downloadImage(presentationId, `${index}.png`, folder)
-    row[2] = ogpId
-    resetText(presentationId, name)
-  })
+data.forEach((row, index) => {
+  const name = row[1]
+  replaceText(presentationId, name)
+  const ogpId = downloadImage(presentationId, `${index}.png`, folder)
+  row[2] = ogpId
+  resetText(presentationId, name)
+})
 ```
 
 ここが核です。なにか色々やっているようですが、ほとんどの行は別に作成した関数を呼び出しているのでそこも説明していきます。
@@ -269,7 +269,7 @@ sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
 次は先程OGPのIDを追記したSpreadsheetをWebAppで公開していきます。
 このやり方は、以前に記事を書いたので詳細はそちらを見てください。
 
-[Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
+{% ogpLink url="https://at-blog.vercel.app/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt" /%}
 
 GASのコードは以下のようになります。先程の`コード.js`に追記していきましょう。
 
@@ -305,21 +305,21 @@ function getUsers() {
 まずは、Nuxtアプリで先程公開したWebAppにリクエストする下準備をします。今回は`axios`を使うことを前提として、`serverMiddleware`経由でWebAppを呼び出します。
 こちらも過去に記事を書いていますので、詳細についてはそちらを参照してください。
 
-[NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！](/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3)
+{% ogpLink url="https://at-blog.vercel.app/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3" /%}
 
 以下の更新、もしくは新規作成します。
 
-```js:nuxt.config.js ins={3-8}
-export default {
-  ...
-  axios: {
-    proxy: true,
-  },
-  serverMiddleware: [
-    '@api/'
-  ],
-  ...
-}
+```diff:js:nuxt.config.js
+  export default {
+    ...
++   axios: {
++     proxy: true,
++   },
++   serverMiddleware: [
++     '@api/'
++   ],
+    ...
+  }
 ```
 
 ```js:api/index.js
@@ -400,9 +400,9 @@ Google Drive上で画像ファイルを見ようとするとプレビューモ�
 GAS、かなり色々なことができるので楽しいですね。
 
 ## 参考
-- [Slides Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/slides?hl=en)
-- [Spreadsheet Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/spreadsheet)
-- [Drive Service  |  Apps Script  |  Google Developers](https://developers.google.com/apps-script/reference/drive)
-- [[Google Apps Script]Googleスライドのプレゼンテーションを他形式に変換する | 初心者備忘録](https://www.ka-net.org/blog/?p=12905)
-- [Google ドライブでファイル名とリンクの一覧をお手軽に取得する方法 | DevelopersIO](https://dev.classmethod.jp/articles/gas-get-file-list-in-folder/)
-- [Google Drive に保存した画像を直接呼び出せるURLの取得 - Qiita](https://qiita.com/codeDiver/items/0394968fa318d9309d33)
+- {% ogpLink url="https://developers.google.com/apps-script/reference/slides?hl=en" type="link" /%}
+- {% ogpLink url="https://developers.google.com/apps-script/reference/spreadsheet" type="link" /%}
+- {% ogpLink url="https://developers.google.com/apps-script/reference/drive" type="link" /%}
+- {% ogpLink url="https://www.ka-net.org/blog/?p=12905" type="link" /%}
+- {% ogpLink url="https://dev.classmethod.jp/articles/gas-get-file-list-in-folder/" type="link" /%}
+- {% ogpLink url="https://qiita.com/codeDiver/items/0394968fa318d9309d33" type="link" /%}

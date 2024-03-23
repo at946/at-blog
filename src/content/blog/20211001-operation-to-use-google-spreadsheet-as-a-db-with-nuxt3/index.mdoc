@@ -10,11 +10,11 @@ isPublished: true
 
 シリーズ最終章です。
 
-[前回の記事]  
-[Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
+[前回の記事]
+{% ogpLink url="https://at-blog.vercel.app/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt" /%}
 
-[前々回の記事]  
-[NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part2 - モバイルだって使いたい！](/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2)
+[前々回の記事]
+{% ogpLink url="https://at-blog.vercel.app/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2" /%}
 
 Part2では、PCは表示できるけどモバイルはできない、というPart1の課題をJSON→JSONPに更新することで解決しました🎉。
 
@@ -32,56 +32,57 @@ Part2では、PCは表示できるけどモバイルはできない、というP
 Part2の内容を踏まえると、`asyncData`でも同じようにデータを取得しようとすれば実現できそうですよね。
 （ボタンを押したらデータを更新する感じにします）
 
-```vue:pages/index.vue ins={3,29-35} del={36-43}
-<template>
-  <div>
-    <button @click="getUsers">更新</button>
-    <table>
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>name</th>
-          <th>age</th>
-          <th>email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for='user in users' :key='user.id'>
-          <td>{{ user.id }}</td>
-          <td>{{ user.name }}</td>
-          <td>{{ user.age }}</td>
-          <td>{{ user.email }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</template>
+```diff:vue:pages/index.vue
+  <template>
+    <div>
++     <button @click="getUsers">更新</button>
+      <table>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for='user in users' :key='user.id'>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
 
-<script>
-  const jsonpAdapter = require('axios-jsonp')
+  <script>
+    const jsonpAdapter = require('axios-jsonp')
 
-  export default {
-    async asyncData({ $axios }) {
-      const users = await $axios.$get('/api', { adapter: jsonpAdapter })
-
-      return {
-        users: users
-      }
-    },
-    data() {
-      return {
-        users: []
-      }
-    },
-    created() {
-      this.getUsers()
-    },
-    methods: {
-      async getUsers() {
-        this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
+    export default {
++     async asyncData({ $axios }) {
++       const users = await $axios.$get('/api', { adapter: jsonpAdapter })
++ 
++       return {
++         users: users
++       }
++     },
+-     data() {
+-       return {
+-         users: []
+-       }
+-     },
+-     created() {
+-       this.getUsers()
+-     },
+      methods: {
+        async getUsers() {
+          this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
+        }
       }
     }
-  }
+  </script>
 ```
 よし、これで行けるはず。
 
@@ -142,7 +143,7 @@ module.exports = {
 今まで`pages/index.vue`でやっていた`axios`の処理を転記した感じですね。
 これを`nuxt.config.js`に`serverMiddleware`として登録しましょう（ついでにproxyも不要になったので消します）。
 
-```js:nuxt.config.js
+```diff:js:nuxt.config.js
   export default {
     ...
     axios: {
@@ -165,28 +166,28 @@ module.exports = {
 
 フロントエンドも`JSONP`から`JSON`を取得するように更新しておきましょう。
 
-```vue:pages/index.vue ins={8,17} del={3,4,7,16}
-...
-<script>
-const jsonpAdapter = require('axios-jsonp')
+```diff:vue:pages/index.vue
+  ...
+  <script>
+- const jsonpAdapter = require('axios-jsonp')
+- 
+  export default {
+    async asyncData({ $axios }) {
+-     const users = await $axios.$get('/api', { adapter: jsonpAdapter })
++     const users = await $axios.$get('/api')
 
-export default {
-  async asyncData({ $axios }) {
-    const users = await $axios.$get('/api', { adapter: jsonpAdapter })
-    const users = await $axios.$get('/api')
-
-    return {
-      users: users
-    }
-  },
-  methods: {
-    async getUsers() {
-      this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
-      this.users = await this.$axios.$get('/api')
+      return {
+        users: users
+      }
+    },
+    methods: {
+      async getUsers() {
+-       this.users = await this.$axios.$get('/api', { adapter: jsonpAdapter })
++       this.users = await this.$axios.$get('/api')
+      }
     }
   }
-}
-</script>
+  </script>
 ```
 
 `axios-jsonp`も不要になったので、パッケージを削除しておきましょう。
@@ -199,7 +200,7 @@ $ yarn remove axios-jsonp
 
 ## GAS APIをJSON返却に戻す
 
-```js:コード.js
+```diff:js:コード.js
   function doGet(e) {
     const users = getUsers()
 -   const callback = e.parameter.callback

@@ -1,0 +1,257 @@
+---
+title: AstroのmarkdocでMermaidを導入する
+tags:
+  - Astro
+  - Markdoc
+  - Mermaid
+  - React
+publicationDate: 2024-03-23
+isPublished: false
+---
+
+こんにちは、asatoです。
+
+このブログはAstro & Markdocを使っています。ブログ内でMermaidを利用したく、試行錯誤したので、最終的にどう実現したのかまとめておきます。
+
+実際のコードはGitHubで公開しています。
+
+{% ogpLink url="https://github.com/at946/at-blog" /%}
+
+{% toc /%}
+
+## 用語
+
+### Astro
+
+{% ogpLink url="https://astro.build/" /%}
+
+Astroはコンテンツ駆動のウェブサイトを作成するためのウェブフレームワークです。ブログなどに適しています。詳しくは公式サイトをご覧ください。
+
+{% ogpLink url="https://docs.astro.build/ja/concepts/why-astro" /%}
+
+### Markdoc
+
+{% ogpLink url="https://markdoc.dev/" /%}
+
+MarkdocはMarkdownベースのオーサリングフレームワークです。Markdownを自分好みに拡張できるイメージです。Markdownの記法の挙動をカスタマイズしたり、新たなタグを作成できます。
+
+AstroでのMarkdocの利用方法は公式で用意されており、簡単に使い始めることができます。このブログの内容はこの手順ですでにmarkdocが導入されている前提です。
+
+{% ogpLink url="https://docs.astro.build/ja/guides/integrations-guide/markdoc/" /%}
+
+### Mermaid
+
+{% ogpLink url="https://mermaid.js.org/" /%}
+
+MermaidはダイアグラムやチャートをMarkdownのような書き心地で描くためのツールです。
+
+## やりたいこと - ブログ内でMermaidを使いたい
+
+ブログ内で以下のようにMermaidのコードを書くことでダイアグラムが描写されるようにしたい。
+
+````markdown
+```mermaid
+flowchart LR
+  Start --> Stop
+```
+````
+
+```mermaid
+flowchart LR
+    Start --> Stop
+```
+
+## 課題 - Mermaidはクライアントで動作するのでAstroでは工夫が必要
+
+Astroはサイトの高速化のため、SSG（Static Site Generation）が採用されています。一方、Mermaidはフロントで動作するツールなので、少し工夫が必要です。
+
+{% ogpLink url="https://github.com/mermaid-js/mermaid/issues/3650" /%}
+
+## 解決方針 - Astroアイランド
+
+Astroでは、一部のコンポーネントを動的に、またはクライアントサイドで動作させるための手段として、Astroアイランドを用意しています。
+
+{% ogpLink url="https://docs.astro.build/ja/concepts/islands/" /%}
+
+今回は、Astroアイランドを利用してReactコンポーネントでMermaidをレンダリングさせてみます。
+
+## 実装
+
+### Markdocでcode fenceをカスタマイズ
+
+今回はcode fence（```で囲まれたやつ）の言語指定で`mermaid`を定義したときにMermaidの図が描写されるようにしたいです。そのため、まずはcode fenceをカスタマイズする準備をします。
+
+ディレクトリ構造は以下です（関連部分を抽出）。
+
+```yaml:a.yml
+- node_modules/
+- src/
+  - components/
+    - mdoc/
+      - Fence.astro
+  - content/
+    - blog/
+      - sample.mdoc
+  - utils/
+    - mdoc/
+      - schema/
+        - fence.mdoc.ts
+      - mdoc.config.ts
+- markdoc.config.mjs  
+```
+
+```js
+// markdoc.config.mjs
+import { defineMarkdocConfig } from '@astrojs/markdoc/config'
+import { config as markdocConfig } from './src/utils/mdoc/mdoc.config'
+
+export default defineMarkdocConfig(markdocConfig)
+```
+
+```jsx
+// src/utils/mdoc/mdoc.config.ts
+import { fence } from './schema/fence.mdoc';
+
+export const config = {
+	nodes: {
+		fence,
+	},
+};
+```
+
+```jsx
+// src/utils/mdoc/schema/fence.mdoc.ts
+import { component } from '@astrojs/markdoc/config';
+
+export const fence = {
+	render: component('./src/components/mdoc/Fence.astro'),
+	attributes: {
+		content: {
+			type: String,
+			required: true,
+		},
+		language: {
+			type: String,
+		},
+	},
+};
+```
+
+```jsx
+// src/components/mdoc/Fence.astro
+---
+import { Code } from 'astro-expressive-code/components';
+
+interface Props {
+	content: string;
+	language: string;
+}
+
+const { content, language } = Astro.props as Props;
+---
+
+<Code code={content} language={language} />
+```
+
+code fenceのハイライトにはExpressive Codeを使っています。インストール手順などは公式サイトを参照してください。
+
+https://expressive-code.com/installation/
+
+これでcode fenceをカスタマイズする準備が整いました。
+
+### language = mermaidの時はクライアントでMermaidを描写する
+
+Astroアイランドを使います。UIフレームワークはReactを選択します。ReactをAstroに導入する手順は公式サイトを参照してください。
+
+https://docs.astro.build/ja/guides/integrations-guide/react/
+
+では、Mermaidをinstallします。
+
+```bash
+$ npm i mermaid
+```
+
+Mermaidを描写するReactコンポーネントを作成します。
+
+```tsx
+// src/components/mdoc/Mermaid.tsx
+import mermaid, { type MermaidConfig } from 'mermaid';
+import { useEffect } from 'react';
+
+interface Props {
+	content: string;
+}
+
+const config: MermaidConfig = {
+	startOnLoad: true,
+};
+
+const Mermaid = ({ content }: Props) => {
+	mermaid.initialize(config);
+
+	useEffect(() => {
+		mermaid.contentLoaded();
+	}, []);
+
+	return (
+		<div>
+			<pre className='mermaid'>{content}</pre>
+		</div>
+	);
+};
+
+export default Mermaid;
+```
+
+Mermaidはデフォルトで`class`に`mermaid`が与えられている`pre`または`div`タグ内を解析し、図を描写してくれます。useEffect内で`mermaid.contentLoaded()`を呼ぶことで描写をトリガーしています。
+
+では、Fence.astroを編集してMermaidの描写を実現します。
+
+```tsx
+// src/components/mdoc/Fence.astro
+  ---
+  import { Code } from 'astro-expressive-code/components';
++ import Mermaid from './Mermaid';
+
+  interface Props {
+	  content: string;
+  	language: string;
+  }
+
+  const { content, language } = Astro.props as Props;
+  ---
+
++ { language === 'mermaid' ? (
++   <Mermaid content={content} client:only={React} />
++ ) : (
+    <Code code={content} language={language} />
++ )}
+```
+
+`client:only={React}` を指定しクライアントでのみ描写されるようにしています。
+
+https://docs.astro.build/ja/reference/directives-reference/#client-directives
+
+### 動作確認
+
+ブログ内でmermaidのコードを書いて、正しく表示されるか確かめます。
+
+```markdown
+<--! src/content/sample.mdoc -->
+```mermaid
+flowchart LR
+  Start --> Something --> End
+```
+
+```javascript
+console.log('Hello world');
+```
+```
+
+表示が確認できました。
+
+## まとめ
+
+このブログでは、クライアントでしか動作しないMermaidをAstro + Markdocの環境に導入する方法をまとめました。これでMermaidのいい感じなダイアグラムを手に入れました。
+
+このブログが誰かの役に立ちますように。
