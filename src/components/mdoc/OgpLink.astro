@@ -28,8 +28,8 @@ const ogImage: string =
 	typeof ogp['og:image'] === 'string'
 		? ogp['og:image']
 		: typeof ogp['og:image'] === 'object'
-		  ? ogp['og:image'][0]
-		  : '';
+			? ogp['og:image'][0]
+			: '';
 const ogImageAlt: string =
 	typeof ogp['og:image:alt'] === 'string' ? ogp['og:image:alt'] : '';
 const html: string | undefined =
