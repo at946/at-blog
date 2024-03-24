@@ -1,3 +1,11 @@
-<article class="prose dark:prose-invert prose-img:drop-shadow-md prose-img:rounded-xl prose-img:mx-auto max-w-none leading-loose dark:prose-dark prose-p:font-medium">
-    <slot />
+<article
+  class:list={[
+    'prose dark:prose-invert',
+    'max-w-none leading-loose',
+    'prose-p:font-medium',
+    'prose-a:text-text hover:prose-a:text-primary dark:prose-a:text-dark-text dark:hover:prose-a:text-primary',
+    'prose-img:drop-shadow-md prose-img:rounded-xl prose-img:mx-auto',
+  ]}
+>
+  <slot />
 </article>

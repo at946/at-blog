@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components';
 import Prose from './Prose.astro';
 import SocialMediaAccountIcons from './SocialMediaAccountIcons.astro';
 
@@ -13,14 +14,24 @@ interface Props {
   <div>
     <img src="/images/pigeon.jpg" title="My icon" class="rounded-full h-48 w-48" />
   </div>
-  <SocialMediaAccountIcons class="md:hidden mt-4" />
+  <SocialMediaAccountIcons class="md:hidden my-4" />
   <Prose>
-  <ul class="gap-4">
-    <li>Name🙎: asato</li>
-    <li>Works💼: スクラムマスター</li>
-    <li>Like💖: 家族、温泉、旅行、謎解き</li>
-    <li>Dislike💔: はじめまして、あんこ、うなぎ</li>
-    <SocialMediaAccountIcons class="hidden sm:flex" />
-  </ul>
+    <p class="flex items-center my-0">
+      <Icon name="mdi:id-card-outline" class="inline mt-0 mr-2" />
+      <span class="mb-0">名前：asato</span>
+    </p>
+    <p class="flex items-center my-0">
+      <Icon name="mdi:work-outline" class="inline mt-0 mr-2" />
+      <span class="mb-0">仕事：スクラムマスター</span>
+    </p>
+    <p class="flex items-center my-0">
+      <Icon name="mdi:heart-outline" class="inline mt-0 mr-2" />
+      <span class="mb-0">好き：家族、温泉、旅行、謎解き</span>
+    </p>
+    <p class="flex items-center my-0">
+      <Icon name="mdi:heart-broken-outline" class="inline mt-0 mr-2" />
+      <span class="mb-0">苦手：はじめまして、あんこ、うなぎ</span>
+    </p>
+    <SocialMediaAccountIcons class="hidden md:flex mt-4" />
   </Prose>
 </div>

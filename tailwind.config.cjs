@@ -16,13 +16,15 @@ module.exports = {
 		colors: {
 			...colors,
 			primary: colors.teal['500'],
-			secondary: colors.teal['300'],
+			text: colors.gray['600'],
+			dark: {
+				text: colors.gray['200'],
+			},
 		},
 		extend: {
 			typography: (theme) => ({
 				dark: {
 					css: {
-						color: colors.gray['100'],
 						blockquote: {
 							color: colors1.dark.secondary,
 							borderColor: colors1.dark.secondary,
@@ -40,12 +42,8 @@ module.exports = {
 				},
 				DEFAULT: {
 					css: {
-						a: {
-							color: colors1.dark.primary,
-							'&:hover': {
-								color: colors1.primary,
-							},
-						},
+						'--tw-prose-body': theme('colors.text'),
+						'--tw-prose-invert-body': theme('colors.dark.text'),
 						blockquote: {
 							color: colors1.secondary,
 							borderColor: colors1.secondary,
