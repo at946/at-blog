@@ -9,11 +9,11 @@ import { NAV_ITEMS } from '@/config';
           {
             Astro.url.pathname === NAV_ITEMS[navItemKey].path
             ?
-              <span class="underline underline-offset-8 font-bold text-theme-secondary dark:text-theme-dark-secondary border-theme-secondary dark:border-theme-dark-secondary uppercase">
+              <span class="underline underline-offset-8 font-bold text-primary capitalize">
                 {NAV_ITEMS[navItemKey].title}
               </span>
             : <a
-                class="pb-1 font-bold hover:underline underline-offset-8 uppercase"
+                class="hover:underline underline-offset-8 font-bold capitalize"
                 href={NAV_ITEMS[navItemKey].path}
               >
                 {NAV_ITEMS[navItemKey].title}
