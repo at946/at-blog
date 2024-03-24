@@ -1,19 +1,23 @@
 ---
 import { NAV_ITEMS } from '@/config';
+
+interface Props {
+	class?: string;
+}
 ---
-<nav class="py-3 text-center mb-8">
-  <ul class="inline-flex list-none gap-8 text-xl flex-wrap" transition:animate="fade">
+<nav class={Astro.props.class}>
+  <ul class="flex justify-center gap-8 text-xl" transition:animate="fade">
     {
       Object.keys(NAV_ITEMS).map(navItemKey =>
-        <li>
+        <li class="underline-offset-8 font-bold capitalize">
           {
             Astro.url.pathname === NAV_ITEMS[navItemKey].path
             ?
-              <span class="underline underline-offset-8 font-bold text-primary capitalize">
+              <span class="underline text-primary">
                 {NAV_ITEMS[navItemKey].title}
               </span>
             : <a
-                class="hover:underline underline-offset-8 font-bold capitalize"
+                class="hover:underline"
                 href={NAV_ITEMS[navItemKey].path}
               >
                 {NAV_ITEMS[navItemKey].title}
