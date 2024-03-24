@@ -1,63 +1,67 @@
+/** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
 const config = require('./tailwind.theme.config.cjs');
 const themeConfig =
 	process.env.THEME_KEY && config[process.env.THEME_KEY]
 		? config[process.env.THEME_KEY]
 		: config.default;
-const { colors } = themeConfig;
+const { colors1 } = themeConfig;
+
 module.exports = {
 	darkMode: 'class',
 	content: ['./public/**/*.html', './src/**/*.{astro,js,ts,jsx,tsx}'],
 	safelist: ['dark'],
 	theme: {
+		colors: {
+			...colors,
+			primary: colors.teal['500'],
+			secondary: colors.teal['300'],
+		},
 		extend: {
-			colors: {
-				theme: {
-					...colors,
-				},
-			},
 			typography: (theme) => ({
 				dark: {
 					css: {
-						color: theme('colors.gray.100'),
+						color: colors.gray['100'],
 						blockquote: {
-							color: colors.dark.secondary,
-							borderColor: colors.dark.secondary,
+							color: colors1.dark.secondary,
+							borderColor: colors1.dark.secondary,
 						},
 						code: {
-							color: theme('colors.gray.100'),
+							color: colors.gray['100'],
 						},
 						h1: {
-							color: colors.dark.primary,
+							color: colors1.dark.primary,
 						},
 						h2: {
-							color: colors.dark.secondary,
+							color: colors1.dark.secondary,
 						},
 					},
 				},
 				DEFAULT: {
 					css: {
 						a: {
-							color: colors.dark.primary,
+							color: colors1.dark.primary,
 							'&:hover': {
-								color: colors.primary,
+								color: colors1.primary,
 							},
 						},
 						blockquote: {
-							color: colors.secondary,
-							borderColor: colors.secondary,
+							color: colors1.secondary,
+							borderColor: colors1.secondary,
 						},
 						'blockquote p:first-of-type::before': { content: 'none' },
 						'blockquote p:first-of-type::after': { content: 'none' },
 						'blockquote p': { marginBottom: 0 },
 						code: {
 							letterSpacing: '0',
-							color: theme('colors.gray.600'),
+							color: colors.gray['600'],
 						},
 						h1: {
-							color: colors.primary,
+							color: colors1.primary,
 						},
 						h2: {
-							color: colors.secondary,
+							color: colors1.secondary,
 						},
 					},
 				},
