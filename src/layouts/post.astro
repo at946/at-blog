@@ -1,12 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '@/components/BaseHead.astro';
-import MainLayout from '@/components/MainLayout.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import ProfileCard from '@/components/ProfileCard.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
+import MainLayout from '@/layouts/MainLayout.astro';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
