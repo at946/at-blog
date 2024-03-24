@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import ProfileItem from './ProfileItem.astro';
 import Prose from './Prose.astro';
 import SocialMediaAccountIcons from './SocialMediaAccountIcons.astro';
 
@@ -14,24 +15,14 @@ interface Props {
   <div>
     <img src="/images/pigeon.jpg" title="My icon" class="rounded-full h-48 w-48" />
   </div>
-  <SocialMediaAccountIcons class="md:hidden my-4" />
   <Prose>
-    <p class="flex items-center my-0">
-      <Icon name="mdi:id-card-outline" class="inline mt-0 mr-2" />
-      <span class="mb-0">名前：asato</span>
-    </p>
-    <p class="flex items-center my-0">
-      <Icon name="mdi:work-outline" class="inline mt-0 mr-2" />
-      <span class="mb-0">仕事：スクラムマスター</span>
-    </p>
-    <p class="flex items-center my-0">
-      <Icon name="mdi:heart-outline" class="inline mt-0 mr-2" />
-      <span class="mb-0">好き：家族、温泉、旅行、謎解き</span>
-    </p>
-    <p class="flex items-center my-0">
-      <Icon name="mdi:heart-broken-outline" class="inline mt-0 mr-2" />
-      <span class="mb-0">苦手：はじめまして、あんこ、うなぎ</span>
-    </p>
+    <SocialMediaAccountIcons class="md:hidden my-4 justify-center" />
+    <ul class="not-prose">
+      <ProfileItem text="名前：asato" iconName='mdi:id-card-outline' />
+      <ProfileItem text="仕事：スクラムマスター" iconName='mdi:work-outline' />
+      <ProfileItem text="好き：家族、温泉、旅行、謎解き" iconName='mdi:heart-outline' />
+      <ProfileItem text="苦手：はじめまして、あんこ、うなぎ" iconName='mdi:heart-broken-outline' />
+    </ul>
     <SocialMediaAccountIcons class="hidden md:flex mt-4" />
   </Prose>
 </div>
