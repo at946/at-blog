@@ -1,26 +1,25 @@
 ---
 import { SITE } from '@/config';
 import { Icon } from 'astro-icon/components';
-import HeaderNavItem from './HeaderNavItem.astro';
 import ModeSwitcherBtn from './ModeSwitcherBtn.svelte';
 import Link from './mdoc/Link.astro';
 ---
 
 <header class="pt-7 pb-4">
   <div class="text-4xl font-extrabold text-primary">
-    <a href="/">{ SITE.name }</a>
+    <Link href="/">{ SITE.name }</Link>
   </div>
   <div class="flex justify-end">
     <nav>
       <ul class="flex gap-3">
-        <HeaderNavItem>
-          <Link href="/rss.xml" title="RSS">
+        <li>
+          <Link href="/rss.xml" title="RSSを表示" class="hover:text-link">
             <Icon name="mdi:rss" class="text-2xl" />
           </Link>
-        </HeaderNavItem>
-        <HeaderNavItem>
+        </li>
+        <li class="hover:text-link">
           <ModeSwitcherBtn client:visible />
-        </HeaderNavItem>
+        </li>
       </ul>
     </nav>
   </div> 

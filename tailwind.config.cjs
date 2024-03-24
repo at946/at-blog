@@ -17,6 +17,7 @@ module.exports = {
 			...colors,
 			primary: colors.teal['500'],
 			text: colors.gray['600'],
+			link: colors.teal['500'],
 			dark: {
 				text: colors.gray['200'],
 			},
