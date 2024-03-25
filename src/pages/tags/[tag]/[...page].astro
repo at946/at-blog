@@ -31,6 +31,7 @@ const { tag } = Astro.params;
 ---
 
 <DefaultPageLayout pageTitle=`Blog - ${tag}`>
-    <PostPreviewList posts={page.data} />
-    <Paginator page={page} />
+	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} posts`}</p>
+	<PostPreviewList posts={page.data} />
+	<Paginator page={page} />
 </DefaultPageLayout>
