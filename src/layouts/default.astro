@@ -12,13 +12,13 @@ const { pageTitle, description, showPageHeader = true }: Props = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">
-    <head>
-        <BaseHead pageTitle={pageTitle} description={description} />
-    </head>
-    <MainLayout>
-        {showPageHeader &&
-            <h1 class="text-4xl font-extrabold text-theme-primary dark:text-theme-dark-primary mb-16 text-center md:text-left">{pageTitle}</h1>
-        }
-        <slot />
-    </MainLayout>
+  <head>
+    <BaseHead pageTitle={pageTitle} description={description} />
+  </head>
+  <MainLayout>
+    {showPageHeader &&
+      <h1 class="text-4xl font-extrabold mb-8 text-center md:text-left">{pageTitle}</h1>
+    }
+    <slot />
+  </MainLayout>
 </html>

@@ -8,8 +8,6 @@ import { PAGE_SIZE } from '@/config';
 import DefaultPageLayout from '@/layouts/default.astro';
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
-const title = 'Blog';
-
 export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts = await getCollection('blog', ({ data }) => data.isPublished);
 	const sortedPosts = allPosts.sort(
@@ -25,9 +23,8 @@ export const getStaticPaths = (async ({ paginate }) => {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props;
 ---
-<DefaultPageLayout pageTitle={title}>
-  <div class="mb-10">
-    <PostPreviewList posts={page.data} heading={`${page.start + 1}-${page.end + 1} / ${page.total} posts`} />
-  </div>    
+<DefaultPageLayout pageTitle='Blog'>
+	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} posts`}</p>
+	<PostPreviewList posts={page.data} heading={`${page.start + 1}-${page.end + 1} / ${page.total} posts`} />
   <Paginator page={page} />
 </DefaultPageLayout>
