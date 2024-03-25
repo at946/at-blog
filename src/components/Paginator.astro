@@ -1,13 +1,13 @@
 ---
 const { page } = Astro.props;
 ---
-<div class="flex justify-center md:justify-end py-6 gap-2">
+<div class="flex justify-center py-6 gap-2">
   {
     page.url.prev &&
       <a
-        class="text-base uppercase text-gray-500 dark:text-gray-200 hover:underline underline-offset-4"
+        class="text-base uppercase hover:underline underline-offset-4 hover:text-primary"
         href={page.url.prev}
-        title="Go to Previous"
+        title="前に戻る"
       >
         &larr; Prev
       </a>
@@ -15,9 +15,9 @@ const { page } = Astro.props;
   {
     page.url.next &&
       <a
-        class="text-base uppercase text-gray-500 dark:text-gray-200 hover:underline underline-offset-4"
+        class="text-base uppercase hover:underline underline-offset-4 hover:text-primary"
         href={page.url.next}
-        title="Go to Next"
+        title="次に進む"
       >
         Next &rarr;
       </a>
