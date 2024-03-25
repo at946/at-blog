@@ -33,6 +33,7 @@ const plainText: string = body
 	.replace(/```.*?```/g, '')
 	.replace('`', '')
 	.replace(/ +/g, ' ');
+
 const beginning: string = plainText.slice(0, 199);
 const readingTime: number = estimateReadingTime(plainText.length);
 ---

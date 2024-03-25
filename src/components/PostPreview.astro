@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import LinkTag from '@/components/LinkTag.astro';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
 
@@ -25,16 +26,7 @@ const readingTime: number = estimateReadingTime(post.body.length);
   </h2>
   <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2">
     { tags && tags.length > 0 && tags.map(tag =>
-      <Link
-        class:list={[
-          "border border-text dark:border-dark-text rounded-full px-2 py-1",
-          "hover:text-primary hover:border-primary dark:hover:border-primary"
-        ]}
-        href={`/tags/${tag}`}
-        title={tag}
-      >
-        {tag}
-      </Link>
+      <LinkTag name={tag} href={`/tags/${tag}`} />
     )}
   </div>
   <p>読了時間の目安: { readingTime }分</p>
