@@ -4,16 +4,11 @@ import PostPreview from './PostPreview.astro';
 
 interface Props {
 	posts: CollectionEntry<'blog'>[];
-	heading?: string;
 }
 
-const { posts, heading } = Astro.props;
+const { posts } = Astro.props;
 ---
-{ heading
-  ? <h5 class="text-center sm:text-left mt-6 mb-6 font-bold uppercase text-gray-500 dark:text-gray-200">{heading}</h5>
-  : ''
-}
-<section class="flex flex-col gap-16">
+<section class="flex flex-col gap-10">
   {posts.map((post) => (
     <PostPreview post={post} />
   ))}

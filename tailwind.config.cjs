@@ -25,43 +25,43 @@ module.exports = {
 		extend: {
 			typography: (theme) => ({
 				dark: {
-					css: {
-						blockquote: {
-							color: colors1.dark.secondary,
-							borderColor: colors1.dark.secondary,
-						},
-						code: {
-							color: colors.gray['100'],
-						},
-						h1: {
-							color: colors1.dark.primary,
-						},
-						h2: {
-							color: colors1.dark.secondary,
-						},
-					},
+					// css: {
+					// 	blockquote: {
+					// 		color: colors1.dark.secondary,
+					// 		borderColor: colors1.dark.secondary,
+					// 	},
+					// 	code: {
+					// 		color: colors.gray['100'],
+					// 	},
+					// 	h1: {
+					// 		color: colors1.dark.primary,
+					// 	},
+					// 	h2: {
+					// 		color: colors1.dark.secondary,
+					// 	},
+					// },
 				},
 				DEFAULT: {
 					css: {
 						'--tw-prose-body': theme('colors.text'),
 						'--tw-prose-invert-body': theme('colors.dark.text'),
-						blockquote: {
-							color: colors1.secondary,
-							borderColor: colors1.secondary,
-						},
-						'blockquote p:first-of-type::before': { content: 'none' },
-						'blockquote p:first-of-type::after': { content: 'none' },
-						'blockquote p': { marginBottom: 0 },
-						code: {
-							letterSpacing: '0',
-							color: colors.gray['600'],
-						},
-						h1: {
-							color: colors1.primary,
-						},
-						h2: {
-							color: colors1.secondary,
-						},
+						// blockquote: {
+						// 	color: colors1.secondary,
+						// 	borderColor: colors1.secondary,
+						// },
+						// 'blockquote p:first-of-type::before': { content: 'none' },
+						// 'blockquote p:first-of-type::after': { content: 'none' },
+						// 'blockquote p': { marginBottom: 0 },
+						// code: {
+						// 	letterSpacing: '0',
+						// 	color: colors.gray['600'],
+						// },
+						// h1: {
+						// 	color: colors1.primary,
+						// },
+						// h2: {
+						// 	color: colors1.secondary,
+						// },
 					},
 				},
 			}),
