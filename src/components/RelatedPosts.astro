@@ -35,13 +35,15 @@ const posts = allPosts
 	.slice(0, 5);
 ---
 
-<div class={Astro.props.class}>
-	<h2>Related posts</h2>
-	<ul>
-		{ posts.map((post) => (
-			<li>
-				<Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
-			</li>
-		))}
-	</ul>
-</div>
+{ posts.length > 0 &&
+	<div class={Astro.props.class}>
+		<h2>Related posts</h2>
+		<ul>
+			{ posts.map((post) => (
+				<li>
+					<Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
+				</li>
+			))}
+		</ul>
+	</div>
+}
