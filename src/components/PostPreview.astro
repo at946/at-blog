@@ -9,26 +9,27 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const {
-	title,
-	publicationDate,
-	tags,
-}: { title: string; publicationDate: Date; tags?: string[] } = post.data;
+const { title, publicationDate, tags } = post.data;
 const slug: string = post.slug;
 const readingTime: number = estimateReadingTime(post.body.length);
 ---
 
 <div class:list={["text-center md:text-left", Astro.props.class]}>
-  <p class="mb-2 font-bold">
-    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(new Date(publicationDate))}
+  <p class="mb-2 font-semibold">
+    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
   </p>
-  <h2 class="text-2xl leading-snug font-bold text-theme-primary dark:text-theme-dark-primary mb-4" style="word-break: auto-phrase;">
-    <Link class="hover:underline" href={`/blog/${slug}`} title={title}>{title}</Link>
+  <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
+    <Link class="hover:text-primary" href={`/blog/${slug}`}>
+      {title}
+    </Link>
   </h2>
-  <div class="inline-flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
+  <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2">
     { tags && tags.length > 0 && tags.map(tag =>
       <a
-        class="hover:text-theme-secondary border rounded-full px-2 py-1 hover:border-theme-secondary border-gray-500 dark:border-white hover:dark:border-theme-secondary"
+        class:list={[
+          "border border-text dark:border-dark-text rounded-full px-2 py-1",
+          "hover:text-primary hover:border-primary dark:hover:border-primary"
+        ]}
         href={`/tags/${tag}`}
         title={tag}
       >
@@ -36,5 +37,5 @@ const readingTime: number = estimateReadingTime(post.body.length);
       </a>
     )}
   </div>
-  <p class="text-base">読了時間の目安: { readingTime }分</p>
+  <p>読了時間の目安: { readingTime }分</p>
 </div>
