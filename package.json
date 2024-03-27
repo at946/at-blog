@@ -23,7 +23,7 @@
 		"@astrojs/tailwind": "^5.0.3",
 		"@biomejs/biome": "1.6.3",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/typography": "^0.5.11",
+		"@tailwindcss/typography": "^0.5.12",
 		"@types/gtag.js": "^0.0.19",
 		"@types/katex": "^0.16.7",
 		"@types/node": "^20.11.30",
