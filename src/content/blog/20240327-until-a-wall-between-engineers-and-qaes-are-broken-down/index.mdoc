@@ -1,0 +1,282 @@
+---
+title: エンジニアとQAEの壁が崩れていくのを眺めていた
+tags:
+  - スクラム
+  - QA
+  - 開発者
+  - スクラムマスター
+  - 文化形成
+  - シフトレフト
+  - チームビルディング
+publicationDate: 2024-03-27
+isPublished: false
+---
+
+こんにちは、asatoです。
+
+あるスクラムチームの話です。とりとめもなく、そんなチームで起こったことを書き連ねていきます。
+
+{% toc /%}
+
+## 【スタート】エンジニアとQAEの間には壁がありました
+
+チームではエンジニアとQAEの間に壁がありました。エンジニアはコーディングをし、QAEはテストをしていました。
+
+チームはスクラムで開発を進めていましたが、スプリントの対象はコーディングまででした。エンジニアはストーリー単位にインクリメントを作ります。
+
+ストーリーのテストはスプリント後にQAEの手が空き次第行われていました。テストを行うために、エンジニアはQAEに何を作ったのかを伝え、テストしてほしい観点を共有していました。QAEは情報を元にテストケースを作成し、テストを実施していました。
+
+テストで不具合が見つかると、QAEはバグチケットをプロダクトバックログに追加します。エンジニアは次のスプリントでバグチケットを対応します。
+
+そんなありがちなスクラムチームです。
+
+## 【1ヶ月目】DoDを作成しました
+
+上記で説明した流れは、ひとりひとりの頭の中にあったものです。共通認識はなく、明文化もされていません。スクラムマスターはまず、DoD（Definition of Done：完成の定義）の作成をチームに提案します。
+
+DoDにはコーディングやユニットテスト、ピアレビュー、プレビュー環境などに関することが明文化されました。しかし、ストーリーのテスト（E2Eのテスト）は含まれませんでした。
+
+スクラムマスターは「DoDにテストを入れられないか」と開発者たちに相談しました。「テストまで完了していないと、ストーリーが完成したと自信を持って言えなくないか」と。
+
+開発者は苦い顔をしました。「1スプリントでテストまで終わるはずがない」と。
+
+## 【2ヶ月目】スプリント中にテストを完了できる方法を探しました、が見つかりませんでした。
+
+スクラムマスターはエンジニアとQAEに、スプリント中にテストを完了させる方法を探すことを依頼しました。まずは今の開発の流れを可視化してみました。エンジニア・QAE双方が何をしているかは知りませんでした。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer: Refinement
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over Engineer: 実装
+    Note over Engineer: コードレビュー
+    Note over Engineer: スプリントレビュー
+  end
+  
+  Engineer ->> QAE: テスト依頼/機能共有
+  Note over QAE: テスト観点作成
+  Note over QAE: テストケース作成
+  QAE ->> Engineer: テスト環境依頼
+  Engineer ->> QAE: テスト環境構築
+  Note over QAE: テスト実施
+  QAE ->> Engineer: テスト結果共有
+  
+  loop Sprint N+M
+    Note over Engineer: 不具合修正
+  end
+```
+
+DoDにテスト完了を追加できないか模索しましたが勇気が持てず、この段階では以下の整理に落ち着きました。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over QAE: テスト観点作成
+    Note over Engineer: 実装
+    Note over QAE: テストケース作成
+    Note over Engineer: コードレビュー
+    Note over Engineer: スプリントレビュー
+  end
+  
+  loop Sprint N+1
+    QAE ->> Engineer: テスト環境依頼
+    Engineer ->> QAE: テスト環境構築
+    Note over QAE: テスト実施
+    QAE ->> Engineer: テスト結果共有
+  end
+  
+  loop Sprint N+2
+    Note over Engineer: 不具合修正
+  end
+```
+
+これでもかなりアグレッシブな整理でした。
+
+まず、リファインメントにQAEも参加するようにしました。今まではEngineerがテストを依頼し、その際に実装機能の内容を説明するフローでしたが、ほぼリファインメントの焼き回しになっていました。
+
+QAEがリファインメントに参加することで、同じスプリント内でテスト観点やテストケースの作成が始められるようになりました。
+
+テスト実施のタイミングも任意でしたが、次のスプリントまでに実施完了する目標を共有しました。できる限りテストのフィードバックループを短くしたかったので、この整理はよかったです。
+
+## 【4ヶ月目】QAEもテスト環境構築ができるようになりました
+
+今まではテストを実施する際にテスト環境へのコードのデプロイやDBのカラム更新、環境変数の変更などの作業をQAEがEngineerに都度依頼し、Engineerが用意していました。これがQAEの仕事の障害物でもあり、申し訳ない気持ちを生み出していました。
+
+しかし実は、デプロイは誰でもGUIで簡単にできるようになっていたのです。EngineerはEngineerがやらなければならないものだと思い込んでおり、QAEは何か特別なことをしていて自分たちにはできないと思い込んでいました。
+
+また、QAEはテスト環境のインフラのアカウントを持っておらず、簡単な作業でもEngineerに依頼する必要がありました。こちらもQAEはアカウントを持てないという思い込みがあったことで怒っていましたが、アカウント発行がなされ、簡単な作業であればQAEが単独で実施できるようになりました。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over QAE: テスト観点作成
+    Note over Engineer: 実装
+    Note over QAE: テストケース作成
+    Note over Engineer: コードレビュー
+    Note over Engineer: スプリントレビュー
+  end
+  
+  loop Sprint N+1
+    Note over Engineer, QAE: テスト環境構築
+    Note over QAE: テスト実施
+    QAE ->> Engineer: テスト結果共有
+  end
+  
+  loop Sprint N+2
+    Note over Engineer: 不具合修正
+  end
+```
+
+## 【5ヶ月目】スプリント内でテストが完了するようになってきたのでDoDを更新しました
+
+スプリントを繰り返していくと、どんどんスプリント内にテストが完了するようになっていきました。これには大きく以下の2つのことが影響しているように感じました。
+
+- 優先順位が上のチケットに集中して実装完了させる意識がEngineerに定着してきた
+- ユーザーストーリーと受入基準がチームに定着し、テスト観点とテストケースの作成の効率化が図れた
+    - 実装着手前にテストケースが完成できている
+
+こんな状態でしたので、DoDにテスト完了を追加しました。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  Note over QAE: テスト観点作成
+  Note over QAE: テストケース作成
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over Engineer: 実装
+    Note over Engineer: コードレビュー
+    Note over Engineer, QAE: テスト環境構築
+    Note over QAE: テスト実施
+    QAE ->> Engineer: テスト結果共有
+    Note over Engineer: 不具合修正
+    Note over Engineer: スプリントレビュー
+  end
+```
+
+最初の頃に勇気が持てなかったテスト完了のDoD追加。ついに実現されました。
+
+## 【6ヶ月目】QAEみんなでAgile Testing Condencedを読み始めました
+
+{% ogpLink url="https://leanpub.com/agiletesting-condensed-japanese-edition" /%}
+
+DoDにテスト完了を追加できたので、これからの世界の認識を共有するためにスクラムマスターとしてQAEメンバーに『Agile Testing Condenced』を紹介しました。頭を殴られる内容だったようです。
+
+## 【6ヶ月目】Engineerもテストするようになりました
+
+DoDにテスト完了が加わったことで、テストが完了していないチケットは完成ではなくなりました。完成していない優先順位が上のチケットがあるのに、優先順位が下のチケットの開発を始めることにEngineerが違和感を持ってくれました。
+
+コードレビューが終わるまでにQAEがテストケースを完成させているので、テスト実施は誰がやってもよいのではないかという意見があり、実験を開始しました。実装者以外であれば誰がテストを実施してもOKのルールです。元々誰が見ても齟齬がないようにテストケースを作成してくれていたのが効きました。実験の結果、ネガティブなことはなく、リードタイムの課題も解決されたため、Engineerもテスト実施を担当するようになりました。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  Note over QAE: テスト観点作成
+  Note over QAE: テストケース作成
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over Engineer: 実装
+    Note over Engineer: コードレビュー
+    Note over Engineer, QAE: テスト環境構築
+    Note over Engineer, QAE: テスト実施
+    Note over Engineer, QAE: テスト結果共有
+    Note over Engineer: 不具合修正
+    Note over Engineer: スプリントレビュー
+  end
+```
+
+## 【7ヶ月目】QAEも見積もりに参加するようになりました
+
+Engineerはリファインメントにてプランニングポーカーで見積もりをしていました。このころ、QAEも見積もりに参加し始めました。
+
+DoDにテスト完了を追加しているので、テストも含めた作業量の見積もりをします。なので、QAEの見積もりの視点も大切になってきていました。
+
+また、純粋にQAEの視点で見積もりの根拠を共有してもらうことは、Engineerにとっても実装観点の補強に繋がりました。特に考慮しておきたい入力パターンや操作パターンなどは抜けやすく、QAEの方が大きな値を選択することが少なくありませんでした。
+
+## 【7ヶ月目】QAEもスプリントレビューでインクリメントをお披露目するようになりました
+
+スプリントレビューは、Engineerが自分の担当したチケットのインクリメントをデモする場でした。しかし、ある時からチケットではなくスプリントゴールのデモをするように変わっていました。スプリントレビューに向けてシナリオをつくり、シナリオの登場人物になりきってEngineerが操作することでフィードバックを集めやすくしようというものです。
+
+このシナリオベースのデモもまた、誰がやってもいいことであり、誰もがやれるようになっていたいものでした。そこで、EngineerだけでなくQAEもシナリオベースのデモを担当するようになりました。
+
+これにより、より一層、全員でプロダクトを開発している雰囲気が生まれました。シナリオベースでは、実際のユーザーや行動を想像しながら準備をする必要があり、その体験はテストを設計する際にも役立っていたようでした。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  Note over QAE: テスト観点作成
+  Note over QAE: テストケース作成
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over Engineer: 実装
+    Note over Engineer: コードレビュー
+    Note over Engineer, QAE: テスト環境構築
+    Note over Engineer, QAE: テスト実施
+    Note over Engineer, QAE: テスト結果共有
+    Note over Engineer: 不具合修正
+    Note over Engineer, QAE: スプリントレビュー
+  end
+```
+
+## 【7ヶ月目】開発者全員で探索的テストを実施する時間ができました
+
+QAEの提案で、スプリントごとに探索的テストを実施するイベントが誕生しました。
+
+最初は直近開発したチケットに関連する機能や画面をより注意深く触ってみることから始まりました。徐々に（LeSSチーム内の）別のチームの開発箇所を触ったり、高負荷状態で王道ケースの操作をしたりと発展していきました。『[Agile Testing Condenced](https://leanpub.com/agiletesting-condensed-japanese-edition)』で紹介されている方法（ランドマークツアーなど）も取り入れていました。
+
+## 【8ヶ月目】E2Eテストの自動化の話が盛り上がった
+
+E2Eテストを自動化したい、という話が開発者内で盛り上がりを見せました。Engineerが開発プロセスへの組み込みやコード管理のルールを考えたり、QAEがPlaywrightの使用感を確認したり。
+
+プロジェクトの状況を鑑みて今は取り組まない意思決定をしましたが、Engineer、QAEごちゃまぜでチームとして品質向上に取り組む姿勢が表に出ていました。
+
+## 【9ヶ月目】ユニットテストコードのペアプロ
+
+このころ、『単体テストの考え方/使い方』がチーム内で大盛り上がりしていました。
+
+{% amazonLink asin="B0BLTG8Z9K" /%}
+
+そんな中、Engineerからユニットテストを書いてはいるが観点に自信がないという話があがりました。また、QAEからはユニットテストとE2Eテストの重複が気になっているがユニットテストが何を担保しているかわからないから何もできないでいるという課題感の共有もありました。
+
+そこで始まったのがEngineerとQAEによるユニットテストコードのペアプロです。EngineerはQAEにどんな観点のユニットテストがあれば品質の保証に寄与できるかを相談しながらコーディングをします。QAEはそのテストコードが何をしているかを質問しながらE2Eテストの設計に活かします。また、テストコードの読み方と学びます。
+
+```mermaid
+sequenceDiagram
+  Note over Engineer, QAE: Refinement
+  Note over QAE: テスト観点作成
+  Note over QAE: テストケース作成
+  
+  loop Sprint N
+    Note over Engineer: 設計
+    Note over Engineer, QAE: 実装（UTペアプロ）
+    Note over Engineer: コードレビュー
+    Note over Engineer, QAE: テスト環境構築
+    Note over Engineer, QAE: テスト実施
+    Note over Engineer, QAE: テスト結果共有
+    Note over Engineer: 不具合修正
+    Note over Engineer, QAE: スプリントレビュー
+  end
+```
+
+## おわり
+
+ふー、つかれた。きっとここまで読んでる人はいないでしょう笑。
+
+少しスクラムマスター目線の話をします。スクラムマスターとして、僕はこれが起きる文化形成に勤しんでいました。それは、そのためのインプットを提供したり、直接的な提案や一緒に取り組む勧誘をしたり、行動を賞賛したり。楽しい、すごい、と思ってもらえるような言葉選びをしたり、実験することを推奨するチームの環境づくりに勤しみました。
+
+エンジニアとQAEは専門性も違うので壁ができやすいです。が、その壁を取っ払うことは絶対にチームのプロダクト開発にプラスであると信じ、その橋渡しや仲人をしてきました。ここで紹介した変化は、もちろんエンジニア、QAEひとりひとりの努力の結果です。でも、その変化の後押しを少しはできたかなと思えているのが、僕の自己満足です。
+
+以上、ありふれたチームで起こった、エンジニアとQAEの壁が崩れていった話でした。
+
+このブログが誰かの役に立ちますように。
