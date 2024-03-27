@@ -15,9 +15,6 @@ module.exports = {
 			dark: {
 				text: colors.gray['200'],
 			},
-			bg: {
-				pre: '#24292e',
-			},
 		},
 		extend: {
 			typography: (theme) => ({
