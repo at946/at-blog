@@ -12,10 +12,17 @@ const { name, href, imageSrc, imageAlt } = Astro.props;
 ---
 
 <Link href={href}>
-  <div class='flex items-center border rounded not-prose border-text dark:border-dark-text min-h-24'>
-    <p class="text-sm px-4 py-2 flex-1">{name}</p>
+  <div class:list={[
+    'flex sm:flex-row items-center',
+    'text-center sm:text-left',
+    'border rounded border-text dark:border-dark-text',
+    'overflow-hidden',
+    'not-prose',
+    imageSrc ? 'max-sm:flex-col-reverse' : 'h-24',
+  ]}>
+    <span class='text-sm px-4 py-2 flex-1'>{name}</span>
     { imageSrc &&
-      <img src={imageSrc} alt={imageAlt} class='my-0 rounded-r h-24 border-l border-text'>
+      <img src={imageSrc} alt={imageAlt} class='my-0 sm:h-24 max-sm:border-b sm:border-l border-text'>
     }
   </div>
 </Link>
