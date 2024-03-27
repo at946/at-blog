@@ -12,8 +12,10 @@ const { name, href, imageSrc, imageAlt } = Astro.props;
 ---
 
 <Link href={href}>
-  <div class='flex items-center border rounded not-prose border-gray-300'>
+  <div class='flex items-center border rounded not-prose border-text dark:border-dark-text min-h-24'>
     <p class="text-sm px-4 py-2 flex-1">{name}</p>
-    <img src={imageSrc} alt={imageAlt} class='my-0 rounded-r h-24'>
+    { imageSrc &&
+      <img src={imageSrc} alt={imageAlt} class='my-0 rounded-r h-24 border-l border-text'>
+    }
   </div>
 </Link>
