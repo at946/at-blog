@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import LinkTag from '@/components/LinkTag.astro';
+import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
 
@@ -12,7 +13,8 @@ interface Props {
 const { post } = Astro.props;
 const { title, publicationDate, tags } = post.data;
 const slug: string = post.slug;
-const readingTime: number = estimateReadingTime(post.body.length);
+const sentence: string = extractSentenceFromMarkdocBody(post.body);
+const readingTime: number = estimateReadingTime(sentence.length);
 ---
 
 <div class:list={["text-center md:text-left", Astro.props.class]}>
@@ -29,5 +31,5 @@ const readingTime: number = estimateReadingTime(post.body.length);
       <LinkTag name={tag} href={`/tags/${tag}`} />
     )}
   </div>
-  <p>読了時間の目安: { readingTime }分</p>
+  <p>読了時間: { readingTime }分</p>
 </div>
