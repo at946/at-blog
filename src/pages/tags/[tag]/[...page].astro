@@ -10,10 +10,7 @@ import TAGS from '@/content/zod/tags';
 import DefaultPageLayout from '@/layouts/default.astro';
 
 export async function getStaticPaths({ paginate }) {
-	const allPosts: CollectionEntry<'blog'>[] = await getCollection(
-		'blog',
-		({ data }) => data.isPublished,
-	);
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 
 	return TAGS.flatMap((tag) => {
 		const posts: CollectionEntry<'blog'>[] = allPosts

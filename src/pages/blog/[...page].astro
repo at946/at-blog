@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import Paginator from '@/components/Paginator.astro';
 import PostPreviewList from '@/components/PostPreviewList.astro';
 import { PAGE_SIZE } from '@/config';
@@ -9,7 +10,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const allPosts = await getCollection('blog', ({ data }) => data.isPublished);
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 	const sortedPosts = allPosts.sort(
 		(a, b) =>
 			b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
