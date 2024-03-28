@@ -4,6 +4,7 @@ export const prerender = true;
 import { type CollectionEntry, getCollection, getEntry } from 'astro:content';
 import PostLayout from '@/layouts/post.astro';
 import estimateReadingTime from '@/utils/estimateReadingTime';
+import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
 import type { GetStaticPaths, InferGetStaticParamsType } from 'astro';
 
 export const getStaticPaths = (async () => {
@@ -21,21 +22,9 @@ const entry: CollectionEntry<'blog'> = await getEntry('blog', path);
 const { data, body } = entry;
 const { Content } = await entry.render();
 
-const plainText: string = body
-	.replace(/#{1,6} /g, '')
-	.replace(/\*{1,3}/g, '')
-	.replace(/!\[.*\]\(.*\)/g, '')
-	.replace(/\[(.*)\]\(.*\)/g, '$1')
-	.replace(/---/g, '')
-	.replace(/<!-- .*? -->/g, '')
-	.replace(/\n/g, ' ')
-	.replace(/{%.*?\/%}/g, '')
-	.replace(/```.*?```/g, '')
-	.replace('`', '')
-	.replace(/ +/g, ' ');
-
-const beginning: string = plainText.slice(0, 199);
-const readingTime: number = estimateReadingTime(plainText.length);
+const sentence: string = extractSentenceFromMarkdocBody(body);
+const beginning: string = sentence.slice(0, 199);
+const readingTime: number = estimateReadingTime(sentence.length);
 ---
 <PostLayout content={data} description={beginning} slug={path} readingTime={readingTime}>
 	<Content />
