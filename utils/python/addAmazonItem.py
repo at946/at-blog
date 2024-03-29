@@ -36,7 +36,7 @@ def getAmazonItem(asin):
   contributors = ''
   for author in soup.find_all('span', {'class': 'author'}):
     contributors += author.text.replace('\n','').replace(' (', '(').strip().replace(',',', ')
-  newAmazonItem['contributers'] = contributors
+  newAmazonItem['contributors'] = contributors
   return newAmazonItem
 
 if __name__ == "__main__":
