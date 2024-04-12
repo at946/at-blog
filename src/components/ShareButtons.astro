@@ -1,5 +1,5 @@
 ---
-import { SITE } from '@/config';
+import { ACCOUNTS } from '@/config';
 import { Icon } from 'astro-icon/components';
 import CopyToClipboard from './CopyToClipboard';
 import Link from './mdoc/Link.astro';
@@ -10,13 +10,12 @@ interface Props {
 }
 
 const { blogTitle }: Props = Astro.props;
-const { xAccountOfAuthor, blueskyAccountOfAuthor } = SITE;
 
 const textSharedToX: string = encodeURIComponent(
-	`${blogTitle} @${xAccountOfAuthor}\n${Astro.url}`,
+	`${blogTitle} @${ACCOUNTS.x}\n${Astro.url}`,
 );
 const textSharedToBluesky: string = encodeURIComponent(
-	`${blogTitle} @${blueskyAccountOfAuthor}\n${Astro.url}`,
+	`${blogTitle} @${ACCOUNTS.bluesky}\n${Astro.url}`,
 );
 const copyText: string = `${blogTitle}\n${Astro.url}`;
 ---

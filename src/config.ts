@@ -21,8 +21,12 @@ export const SITE = {
 	githubUrl: 'https://github.com/at946',
 	listDrafts: true,
 	author: 'asato',
-	xAccountOfAuthor: 'at_946',
-	blueskyAccountOfAuthor: 'at946.bsky.social',
+};
+
+export const ACCOUNTS = {
+	x: 'at_946',
+	bluesky: 'at946.bsky.social',
+	github: 'at946',
 };
 
 export const PAGE_SIZE = 10;
