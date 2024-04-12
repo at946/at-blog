@@ -7,16 +7,15 @@ module.exports = {
 	content: ['./public/**/*.html', './src/**/*.{astro,js,ts,jsx,tsx}'],
 	safelist: ['dark'],
 	theme: {
-		colors: {
-			...colors,
-			primary: colors.teal['500'],
-			text: colors.gray['600'],
-			link: colors.teal['500'],
-			dark: {
-				text: colors.gray['200'],
-			},
-		},
 		extend: {
+			colors: {
+				primary: colors.teal['500'],
+				text: colors.gray['600'],
+				link: colors.teal['500'],
+				dark: {
+					text: colors.gray['200'],
+				},
+			},
 			typography: (theme) => ({
 				dark: {
 					css: {
