@@ -16,11 +16,7 @@ export const SITE = {
 	title: 'at-blog',
 	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
 	url: 'https://at-blog.vercel.app',
-	domain: 'at-blog.vercel.app',
 	image: '/ogp.png',
-	githubUrl: 'https://github.com/at946',
-	listDrafts: true,
-	author: 'asato',
 };
 
 export const ACCOUNTS = {

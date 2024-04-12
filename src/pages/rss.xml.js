@@ -1,6 +1,6 @@
+import { getCollection } from 'astro:content';
 import rss from '@astrojs/rss';
 import { SITE } from '../config';
-import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
 const sortedPosts = Object.values(allPosts).sort(
@@ -12,7 +12,7 @@ const sortedPosts = Object.values(allPosts).sort(
 export const GET = () =>
 	rss({
 		// `<title>` field in output xml
-		title: `${SITE.name} | Blog`,
+		title: `${SITE.name}`,
 		// `<description>` field in output xml
 		description: SITE.description,
 		// base URL for RSS <item> links
