@@ -10,14 +10,13 @@ interface Props {
 }
 
 const { blogTitle }: Props = Astro.props;
-const { xAccountOfAuthor } = SITE;
+const { xAccountOfAuthor, blueskyAccountOfAuthor } = SITE;
 
 const textSharedToX: string = encodeURIComponent(
 	`${blogTitle} @${xAccountOfAuthor}\n${Astro.url}`,
 );
-
-const shareText: string = encodeURIComponent(
-	`${blogTitle} #atblog\n${Astro.url}`,
+const textSharedToBluesky: string = encodeURIComponent(
+	`${blogTitle} @${blueskyAccountOfAuthor}\n${Astro.url}`,
 );
 const copyText: string = `${blogTitle}\n${Astro.url}`;
 ---
@@ -30,7 +29,7 @@ const copyText: string = `${blogTitle}\n${Astro.url}`;
     <Icon name="cib:hatena-bookmark" class="text-3xl" />
   </div>
   </Link>
-  <Link href=`https://bsky.app/intent/compose?text=${shareText}` title="Blueskyにシェア">
+  <Link href=`https://bsky.app/intent/compose?text=${textSharedToBluesky}` title="Blueskyにシェア">
     <Icon name="ri:bluesky-fill" class="text-3xl" style="color: #4F9BD9" />
   </Link>
   <CopyToClipboard copyText={copyText} client:visible>

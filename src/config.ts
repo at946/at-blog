@@ -22,6 +22,7 @@ export const SITE = {
 	listDrafts: true,
 	author: 'asato',
 	xAccountOfAuthor: 'at_946',
+	blueskyAccountOfAuthor: 'at946.bsky.social',
 };
 
 export const PAGE_SIZE = 10;
