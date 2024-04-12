@@ -21,7 +21,7 @@ export const SITE = {
 	githubUrl: 'https://github.com/at946',
 	listDrafts: true,
 	author: 'asato',
-	authorTwitter: 'at_946',
+	xAccountOfAuthor: 'at_946',
 };
 
 export const PAGE_SIZE = 10;

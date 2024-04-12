@@ -1,4 +1,5 @@
 ---
+import { SITE } from '@/config';
 import { Icon } from 'astro-icon/components';
 import CopyToClipboard from './CopyToClipboard';
 import Link from './mdoc/Link.astro';
@@ -9,6 +10,11 @@ interface Props {
 }
 
 const { blogTitle }: Props = Astro.props;
+const { xAccountOfAuthor } = SITE;
+
+const textSharedToX: string = encodeURIComponent(
+	`${blogTitle} @${xAccountOfAuthor}\n${Astro.url}`,
+);
 
 const shareText: string = encodeURIComponent(
 	`${blogTitle} #atblog\n${Astro.url}`,
@@ -16,7 +22,7 @@ const shareText: string = encodeURIComponent(
 const copyText: string = `${blogTitle}\n${Astro.url}`;
 ---
 <div class:list={["flex justify-center gap-4", Astro.props.class]}>
-  <Link href=`https://twitter.com/intent/tweet?text=${shareText}` title="Xにシェア">
+  <Link href=`https://twitter.com/intent/tweet?text=${textSharedToX}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>
   <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url.toString())}` title="はてなブックマークに追加">
