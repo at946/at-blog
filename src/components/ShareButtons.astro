@@ -1,4 +1,5 @@
 ---
+import { ACCOUNTS } from '@/config';
 import { Icon } from 'astro-icon/components';
 import CopyToClipboard from './CopyToClipboard';
 import Link from './mdoc/Link.astro';
@@ -10,13 +11,16 @@ interface Props {
 
 const { blogTitle }: Props = Astro.props;
 
-const shareText: string = encodeURIComponent(
-	`${blogTitle} #atblog\n${Astro.url}`,
+const textSharedToX: string = encodeURIComponent(
+	`${blogTitle} @${ACCOUNTS.x}\n${Astro.url}`,
+);
+const textSharedToBluesky: string = encodeURIComponent(
+	`${blogTitle} @${ACCOUNTS.bluesky}\n${Astro.url}`,
 );
 const copyText: string = `${blogTitle}\n${Astro.url}`;
 ---
 <div class:list={["flex justify-center gap-4", Astro.props.class]}>
-  <Link href=`https://twitter.com/intent/tweet?text=${shareText}` title="Xにシェア">
+  <Link href=`https://twitter.com/intent/tweet?text=${textSharedToX}` title="Xにシェア">
     <Icon name="fa6-brands:x-twitter" class="text-3xl" />
   </Link>
   <Link href=`https://b.hatena.ne.jp/entry?url=${encodeURIComponent(Astro.url.toString())}` title="はてなブックマークに追加">
@@ -24,7 +28,7 @@ const copyText: string = `${blogTitle}\n${Astro.url}`;
     <Icon name="cib:hatena-bookmark" class="text-3xl" />
   </div>
   </Link>
-  <Link href=`https://bsky.app/intent/compose?text=${shareText}` title="Blueskyにシェア">
+  <Link href=`https://bsky.app/intent/compose?text=${textSharedToBluesky}` title="Blueskyにシェア">
     <Icon name="ri:bluesky-fill" class="text-3xl" style="color: #4F9BD9" />
   </Link>
   <CopyToClipboard copyText={copyText} client:visible>

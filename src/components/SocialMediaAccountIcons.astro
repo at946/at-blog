@@ -1,4 +1,5 @@
 ---
+import { ACCOUNTS } from '@/config';
 import { Icon } from 'astro-icon/components';
 import Link from './mdoc/Link.astro';
 
@@ -8,19 +9,19 @@ interface Props {
 ---
 <div class:list={["flex gap-3", Astro.props.class]}>
   <Link
-    href='https://twitter.com/at_946'
+    href=`https://twitter.com/${ACCOUNTS.x}``
     title='asatoのXプロフィールページ'
   >
     <Icon name="fa6-brands:x-twitter" class="text-2xl" />
   </Link>
   <Link
-    href='https://bsky.app/profile/at946.bsky.social'
+    href=`https://bsky.app/profile/${ACCOUNTS.bluesky}`
     title="'asatoのBlueskyプロフィールページ"
   >
     <Icon name="ri:bluesky-fill" class="text-2xl" />
   </Link>
   <Link
-    href='https://github.com/at946'
+    href=`https://github.com/${ACCOUNTS.github}`
     title='asatoのGitHubプロフィールページ'
   >
     <Icon name="mdi:github" class="text-2xl" />

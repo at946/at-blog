@@ -16,12 +16,13 @@ export const SITE = {
 	title: 'at-blog',
 	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
 	url: 'https://at-blog.vercel.app',
-	domain: 'at-blog.vercel.app',
 	image: '/ogp.png',
-	githubUrl: 'https://github.com/at946',
-	listDrafts: true,
-	author: 'asato',
-	authorTwitter: 'at_946',
+};
+
+export const ACCOUNTS = {
+	x: 'at_946',
+	bluesky: 'at946.bsky.social',
+	github: 'at946',
 };
 
 export const PAGE_SIZE = 10;
