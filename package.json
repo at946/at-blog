@@ -21,7 +21,7 @@
 		"@astrojs/sitemap": "^3.1.2",
 		"@astrojs/svelte": "^5.4.0",
 		"@astrojs/tailwind": "^5.0.3",
-		"@biomejs/biome": "1.6.4",
+		"@biomejs/biome": "1.7.0",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.12",
 		"@types/gtag.js": "^0.0.19",
