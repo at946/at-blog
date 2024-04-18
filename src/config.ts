@@ -22,7 +22,13 @@ export const SITE = {
 export const ACCOUNTS = {
 	x: 'at_946',
 	bluesky: 'at946.bsky.social',
-	github: 'at946',
+};
+
+export const PROFILE_PAGE_URLS = {
+	x: `https://twitter.com/${ACCOUNTS.x}`,
+	bluesky: `https://bsky.app/profile/${ACCOUNTS.bluesky}`,
+	github: 'https://github.com/at946',
+	bmc: 'https://www.buymeacoffee.com/at946',
 };
 
 export const PAGE_SIZE = 10;
