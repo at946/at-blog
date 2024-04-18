@@ -26,6 +26,7 @@ const TAGS = [
 	'Scrum Fest Sendai',
 	'Scrum Fest',
 	'Slack',
+	'Tenkir',
 	'TestCafe',
 	'UX',
 	'XP',

@@ -1,0 +1,139 @@
+---
+title: PlaywrightのPage object modelsで、consoleのエラーメッセージを検知する
+tags:
+  - Playwright
+  - テスト自動化
+  - 個人開発
+  - Tenkir
+publicationDate: 2024-04-19
+---
+
+こんにちは、asatoです。
+
+先日、Tenkirの多言語化対応をしました。
+
+{% ogpLink url="https://tenkir.fly.dev/" /%}
+
+その際、Tenkirの最高にCoolな機能である、「コメントを求められたら音でお知らせする」機能が壊れ、音がならなくなってしまいました。
+
+Tenkirは[Playwright](https://playwright.dev/)を使った自動E2Eテストを導入しており、自信を持ってリリースしています。しかし、「音が出ている」ことの検証のやり方がわからず放置していたところでバグが入り込んでしまいました。なんとか回避したい。
+
+「音が出ている」ことを検証するテストはまだ書けていません。しかし、突破口として、console.errorの検出が使えそうであることに気がつきました。詳細は省きますが、今回は指定したパス先のmp3ファイルがNot Foundであるとconsoleに出力されていたのです。
+
+TenkirではPlaywrightのPage object modelsを利用しています。ここでconsoleへの出力を検証し、全てのテストケースでconsole.errorが出力されていないことを共通的に保証する方法をまとめます。
+
+## ToC
+
+## Page object models
+
+{% ogpLink url="https://playwright.dev/docs/pom" /%}
+
+Page object modelsは、その名の通りテスト対象のページの構造をまとめて、それぞれのテストケースから共通的に呼び出せるようにするPlaywrightの機能の1つです。これにより、プロダクションコードの変更を吸収したり、テストコードの可読性を高められます。
+
+```ts:models/top-page.ts
+import { Locator, Page } from '@playwright/test';
+import urls from '../helpers/urls';
+
+export default class TopPage {
+  readonly page: Page;
+  readonly createRoomButton: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+    this.createRoomButton = page.getByRole('button', { name: 'Create a room' });
+  }
+
+  async goto() {
+    await this.page.goto(urls.top);
+  }
+
+  async createRoom() {
+    await this.createRoomButton.click();
+  }
+}
+```
+
+これはTenkirのトップページ用のPage object modelです。createRoomButtonの存在がわかります。
+
+```ts:tests/top/createRoom.spec.ts
+import { expect, test } from '@playwright/test';
+import TopPage from '../../models/top-page';
+
+test('トップページで、「部屋をつくる」ボタンを選択したとき、ランダムのルームページが作成され遷移すること', async ({
+  page,
+}) => {
+  // Given
+  const top = new TopPage(page);
+  await top.goto();
+
+  // When - ルームを作成
+  await top.createRoom();
+
+  // Then - ルームが作成され、ルームページに遷移する
+  await expect(page).toHaveURL(/http:\/\/.*\/rooms\/.*/);
+});
+```
+
+そのPage object modelを使って書いたテストがこちらです。
+
+例えば、createRoomButtonのテキストを変更した場合、全てのテストケースを修正する代わりにPage object modelを修正するだけですみます。
+
+また、 `await top.createRoom()` のように操作をwrapすることでより直感的なテストコードにもできます。
+
+## Page object modelsにconsole.errorを検知する処理を追加する
+
+`page.on('console')` を使います。これはconsoleに出力されたメッセージを扱うイベントです。
+
+{% ogpLink url="https://playwright.dev/docs/api/class-consolemessage" /%}
+
+```diff:ts:models/top-page.ts
+- import { Locator, Page } from '@playwright/test';
++ import { Locator, Page, expect } from '@playwright/test';
+  import urls from '../helpers/urls';
+
+  export default class TopPage {
+    readonly page: Page;
+    readonly createRoomButton: Locator;
+
+    constructor(page: Page) {
+      this.page = page;
+      this.createRoomButton = page.getByRole('button', { name: 'Create a room' });
+      
++     const consoleErrorMessages: string[] = [];
++     page.on('console', (message) => {
++       if (message.type() === 'error') {
++         consoleErrorMessages.push(message.text());
++       }
++     });
++     page.on('close', async () => {
++       await expect(consoleErrorMessages[0]).toBeUndefined();
++     });
+    }
+
+    async goto() {
+      await this.page.goto(urls.top);
+    }
+
+    async createRoom() {
+      await this.createRoomButton.click();
+    }
+  }
+```
+
+これだけです。
+
+`page.on('console')` イベントでconsoleに出力されるメッセージ `message` を受け取ります。 `message.type()` が `error` であれば `consoleEroorMessages` に追加しておきます。
+
+`page.on('close')` でページが閉じられるときに `consoleErrorMessages` が0件であることを検証しています。もしconsoleにエラーメッセージが出力されていればこの検証は失敗します。
+
+実際に今回の不具合修正の前後でテストを実行し、修正前のみ失敗することを確認できました。
+
+## 最後に
+
+直接的な検証ではありませんが、consoleにエラーメッセージが出ていないことの検証は汎用的なセーフティネットになりそうです。
+
+そして、それを実現することはそんなに難しくありませんでした。もっと早くから対応していれば…。
+
+ということで、シンプルかつ楽しいプランニングポーカーアプリ「Tenkir」、ぜひ使ってみてください〜。
+
+{% ogpLink url="https://tenkir.fly.dev/" /%}
