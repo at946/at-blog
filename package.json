@@ -16,7 +16,7 @@
 		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@astrojs/partytown": "^2.0.4",
+		"@astrojs/partytown": "^2.1.0",
 		"@astrojs/rss": "^4.0.5",
 		"@astrojs/sitemap": "^3.1.4",
 		"@astrojs/svelte": "^5.4.0",
