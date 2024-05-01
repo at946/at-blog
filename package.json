@@ -50,7 +50,7 @@
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^18.3.1",
 		"@types/react-dom": "^18.3.0",
-		"astro-expressive-code": "^0.35.2",
+		"astro-expressive-code": "^0.35.3",
 		"clsx": "^2.1.1",
 		"crypto-js": "^4.2.0",
 		"katex": "^0.16.10",
