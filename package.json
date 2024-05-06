@@ -9,7 +9,7 @@
 		"check:astro": "astro check",
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"biome:check": "biome check src",
-		"lint:text": "textlint src",
+		"lint:text": "textlint",
 		"create:blog": "bash utils/commands/create-blog.sh",
 		"preinstall": "npx only-allow pnpm"
 	},
