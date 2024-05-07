@@ -4,7 +4,6 @@ import markdoc from '@astrojs/markdoc';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
 import { defineConfig } from 'astro/config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -19,7 +18,6 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig(
 	/** @type {import('astro').AstroUserConfig} */ {
-		output: 'server',
 		site: 'https://at-blog.vercel.app',
 		// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 		server: {
@@ -52,6 +50,5 @@ export default defineConfig(
 				allowNodeBuiltins: true,
 			},
 		},
-		adapter: vercel(),
 	},
 );
