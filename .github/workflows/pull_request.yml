@@ -16,10 +16,10 @@ jobs:
         with:
           node-version: 20
       - run: pnpm install --frozen-lockfile
-      - run: pnpm check:astro
-      - run: pnpm check:type
-      - run: pnpm biome:check
-      - run: pnpm lint:text src
+      - run: pnpm run check:astro
+      - run: pnpm run check:type
+      - run: pnpm run biome:check
+      - run: pnpm run lint:text src
       - if: ${{ !cancelled() }}
         uses: rtCamp/action-slack-notify@v2
         env:
