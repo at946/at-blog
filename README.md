@@ -9,5 +9,5 @@ I will write articles at my leisure.
 
 ```bash
 $ npm i
-$ npm run dev
+$ npm dev
 ```

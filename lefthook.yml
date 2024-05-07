@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    check:astro:
+      run: npm run check:astro
+    check:type:
+      run: npm run check:type
+    biome:
+      run: npx biome check --apply --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
+    lint:text:
+      blob: "*.{md,mdx,mdoc}"
+      run: npm run lint:text {staged_files}
