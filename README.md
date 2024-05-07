@@ -8,6 +8,6 @@ I will write articles at my leisure.
 # Get started
 
 ```bash
-$ pnpm i
-$ pnpm dev
+$ npm i
+$ npm dev
 ```

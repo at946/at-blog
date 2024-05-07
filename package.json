@@ -10,8 +10,7 @@
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"biome:check": "biome check src",
 		"lint:text": "textlint",
-		"create:blog": "bash utils/commands/create-blog.sh",
-		"preinstall": "npx only-allow pnpm"
+		"create:blog": "bash utils/commands/create-blog.sh"
 	},
 	"devDependencies": {
 		"@astrojs/partytown": "^2.1.0",

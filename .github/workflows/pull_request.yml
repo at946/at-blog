@@ -9,17 +9,14 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run check:astro
-      - run: pnpm run check:type
-      - run: pnpm run biome:check
-      - run: pnpm run lint:text src
+      - run: npm ci
+      - run: npm run check:astro
+      - run: npm run check:type
+      - run: npm run biome:check
+      - run: npm run lint:text src
       - if: ${{ !cancelled() }}
         uses: rtCamp/action-slack-notify@v2
         env:
