@@ -23,7 +23,7 @@
 		"@tailwindcss/typography": "^0.5.13",
 		"@types/gtag.js": "^0.0.19",
 		"@types/katex": "^0.16.7",
-		"@types/node": "^20.12.10",
+		"@types/node": "^20.12.11",
 		"astro": "^4.7.1",
 		"astro-icon": "^1.1.0",
 		"globby": "^14.0.1",
