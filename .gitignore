@@ -24,3 +24,4 @@ netlify
 .astro
 .idea
 .vercel
+.cache
