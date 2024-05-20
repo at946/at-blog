@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
 	darkMode: 'class',
@@ -8,12 +9,15 @@ module.exports = {
 	safelist: ['dark'],
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['Zen Kaku Gothic New'],
+			},
 			colors: {
 				primary: colors.teal['500'],
 				text: colors.gray['600'],
 				link: colors.teal['500'],
 				dark: {
-					text: colors.gray['200'],
+					text: colors.gray['300'],
 				},
 			},
 			typography: (theme) => ({
