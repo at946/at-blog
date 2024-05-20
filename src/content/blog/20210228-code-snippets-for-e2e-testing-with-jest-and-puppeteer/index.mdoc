@@ -16,7 +16,7 @@ publicationDate: 2021-02-28
 
 ## 基本
 
-テストファイル内の基本構文は以下のとおりです。
+テストファイル内の基本構文は次のとおりです。
 
 ```js
 describe('テストスイート名', () => {
@@ -48,7 +48,7 @@ describe('テストスイート名', () => {
 ## 操作系
 ### ページにアクセスする
 E2Eテストではページにアクセスしないと始まりませんね。ページにアクセスする場合は`page.goto()`を使います。
-例えば`http://localhost:3000`にアクセスしたい場合は、以下のように書きます。
+例えば`http://localhost:3000`にアクセスしたい場合は、次のように書きます。
 ```js
 await page.goto('http://localhost:3000')
 ```
@@ -57,11 +57,11 @@ await page.goto('http://localhost:3000')
 
 ### ボタンやリンクをクリックする
 ボタンやリンクなどの要素をクリックするときは`page.click()`を使います。  
-例えば、以下のボタン要素があるとします。
+例えば、次のボタン要素があるとします。
 ```html
 <button id="hoge">Click me!!</button>
 ```
-このボタンをクリックする場合、`id`属性を利用して以下のように書きます。
+このボタンをクリックする場合、`id`属性を利用して次のように書きます。
 ```js
 await page.click('#hoge')
 ```
@@ -70,11 +70,11 @@ await page.click('#hoge')
 
 ### 入力フォームに文字を入力する
 `input`や`textarea`に文字入力をします。  
-例えば、以下のテキストフィールドがあるとします。
+例えば、次のテキストフィールドがあるとします。
 ```html
 <input type="text" id="hoge" />
 ```
-このテキストフィールドに「こんにちは」と入力する場合、`id`属性を利用して以下のように書きます。
+このテキストフィールドに「こんにちは」と入力する場合、`id`属性を利用して次のように書きます。
 ```js
 await page.type('#hoge', 'こんにちは')
 ```
@@ -94,7 +94,7 @@ await page.type('#hoge', 'こんばんは') // 「こんにちはこんばんは
 ```html
 <input type="text" id="hoge" value="Hello" />
 ```
-のようにすでに「Hello」が入力されているテキストフィールドの入力値を消す場合、例えば以下のようなコードで実現できます。
+のようにすでに「Hello」が入力されているテキストフィールドの入力値を消す場合、例えば次のようなコードで実現できます。
 
 ```js
 const el = await page.$('#hoge')
@@ -151,12 +151,12 @@ await page.waitForNavigation()
 [page.waitForNavigation()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitfornavigationoptions)
 
 ### 画面に要素が現れるまで待つ
-例えば、以下のボタン要素があるとします。
+例えば、次のボタン要素があるとします。
 ```html
 <button id="hoge">Click me!!</button>
 ```
 このボタンがなにかの処理が終わってから表示されるとします。このとき、ボタンが表示される前に`page.click()`などをしてしまうと、要素が見つからないためエラーになってしまいます。
-そこで、以下のようにして要素が現れるのを待ちます。
+そこで、次のようにして要素が現れるのを待ちます。
 
 ```js
 await page.waitForSelector('#hoge')
@@ -166,11 +166,11 @@ await page.waitForSelector('#hoge')
 [page.waitForSelector(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitforselectorselector-options)
 
 ### 画面から要素が消えるまで待つ
-例えば、以下のボタン要素があり、一度クリックすると要素が消えるとします。
+例えば、次のボタン要素があり、一度クリックすると要素が消えるとします。
 ```html
 <button id="hoge">押したら消えるよ</button>
 ```
-画面から要素が消えるまで操作を待ちたい場合、以下のように書きます。
+画面から要素が消えるまで操作を待ちたい場合、次のように書きます。
 
 ```js
 await page.waitForSelector('#hoge', { hidden: true })
@@ -197,7 +197,7 @@ await page.$eval('#hoge', el => el.blur())
 
 ### とりあえずキーボード操作したい
 要素関係なく矢印を押してみたり、Enterを押してみたり、というケースもあります。
-その場合は`page.keyboard`が便利です。例えば「右矢印（→）」を押したい場合、以下のとおりです。
+その場合は`page.keyboard`が便利です。例えば「右矢印（→）」を押したい場合、次のとおりです。
 
 ```js
 await page.keyboard.press('ArrowRight')
@@ -220,7 +220,7 @@ await page.evaluate(() => {
 
 ## 検証系
 ### 表示中のページのURLを検証する
-表示中のページのURLは`page.url()`で取得できます。これが期待値（例：`http://localhost:3000`）かどうかは以下のように検証できます。
+表示中のページのURLは`page.url()`で取得できます。これが期待値（例：`http://localhost:3000`）かどうかは次のように検証できます。
 
 ```js
 await expect(page.url()).toBe('http://localhost:3000')
@@ -232,7 +232,7 @@ await expect(page.url()).toBe('http://localhost:3000')
 ```html
 <p id="hoge">Show me!!</p>
 ```
-の要素がページに表示されているかどうかは以下のように検証できます。
+の要素がページに表示されているかどうかは次のように検証できます。
 
 ```js
 await expect(page.$('#hoge')).not.toBeNull()
@@ -258,7 +258,7 @@ await expect(page.$('#hoge')).toBeNull()
 [.toBeNull()](https://jestjs.io/docs/ja/next/expect#tobenull)
 
 ### 要素の属性を検証する
-例えば、以下のimg要素があるとします。
+例えば、次のimg要素があるとします。
 ```html
 <img id="hoge" src="./images/hoge.png" />
 ```
@@ -274,7 +274,7 @@ await expect(src).toBe('./images/hoge.png')
 [page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)
 
 ### 要素のテキストを検証する
-例えば、以下のparagraph要素があるとします。
+例えば、次のparagraph要素があるとします。
 ```html
 <p id="greeting">こんにちは！</p>
 ```
@@ -327,7 +327,7 @@ await expect(await page.$eval('#hoge', el => el.disabled)).toBe(false)
 [HTMLButtonElement](https://developer.mozilla.org/ja/docs/Web/API/HTMLInputElement)
 
 ### 複数の要素の属性を検証する
-例えば、以下のように複数のimg要素があるとします。
+例えば、次のように複数のimg要素があるとします。
 ```html
 <img class="img" src="./images/hoge.png" />
 <img class="img" src="./images/fuga.png" />
@@ -351,7 +351,7 @@ await expect(src[1]).toBe('./images/fuga.png')
 <a id="link_google" href="https://www.google.com/" target="_blank">Google</a>
 ```
 のように別タブで遷移した場合、新しく開いたタブを検証したいときがあります。
-検索すると`browser.once('targetcreated', function)`を使ってやる例が多かったのですが、やりたいことができず直感的でない感じもしたため、以下のやり方で検証してます。
+検索すると`browser.once('targetcreated', function)`を使ってやる例が多かったのですが、やりたいことができず直感的でない感じもしたため、次のやり方で検証してます。
 
 ```js
 await page.click('#link_google')
@@ -370,7 +370,7 @@ await expect(newPage.url()).toBe('https://www.google.com/')
 
 ### meta tagsを検証する
 メタタグも要素の１つですので、他の要素と同じように検証できます。
-例えば、Nuxt.jsの場合、`nuxt.config.js`では以下のようにメタタグの定義します。
+例えば、Nuxt.jsの場合、`nuxt.config.js`では次のようにメタタグの定義します。
 ```js:nuxt.config.js
 export default {
   head: {
@@ -380,7 +380,7 @@ export default {
   }
 }
 ```
-これは以下のようにHTMLに変換されるため、同様に扱うことができます。
+これは次のようにHTMLに変換されるため、同様に扱うことができます。
 ```html
 <head>
   <mata data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="MyApp">
@@ -397,7 +397,7 @@ await expect(await page.$eval('meta[property="og:site_name"]', el => el.content)
 
 ## おわりに
 テストコードを書く機会があったので、よく使いそうだなというコードをユースケースドリブンでまとめてみました。
-色々なサイトを巡りましたが、最終的にはソースに落ち着く、ということで以下のページをとても参考にしました。
+色々なサイトを巡りましたが、最終的にはソースに落ち着く、ということで次のページをとても参考にしました。
 - [puppeteer/api.md at main · puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md)  
 - [Expect · Jest](https://jestjs.io/docs/ja/next/expect)
 

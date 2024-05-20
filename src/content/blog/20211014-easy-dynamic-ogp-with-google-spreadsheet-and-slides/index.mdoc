@@ -41,7 +41,7 @@ Coolです。ポイントとしてはOGPは1200mmx628mmのサイズがよいの�
 ## 2. 動的OGPのデータのもとになるSpreadsheetを準備
 「name」を置換していきたいので、そんな感じのSpreadsheetを用意します。
 spaces.bzの場合は、その日のランキング10位までをGASで集計して、そのデータを元に置換しています。
-今回は簡単な例なので、以下のようなシートを用意します。
+今回は簡単な例なので、次のようなシートを用意します。
 
 |id|name|ogpId|
 | --- | --- | --- |
@@ -134,7 +134,7 @@ const folder = DriveApp.getFolderById('<FolderのID>')
 |`presentationId`|1で作成したSlidesのID。`https://docs.google.com/presentation/d/<この部分>/edit#slide=id.p`|
 |`folder`|作成したOGP画像を格納しておきたいGoogle Driveのフォルダ。`<FolderのID>`は`https://drive.google.com/drive/u/0/folders/<この部分>`。このフォルダは公開設定にしておきます（後述）|
 
-このとき、`data`と`columnNames`は以下のようになっています。
+このとき、`data`と`columnNames`は次のようになっています。
 
 ```js
 data = [
@@ -162,7 +162,7 @@ data.forEach((row, index) => {
 
 まず、全体は`data.forEach`で回しています。
 最初に`row[1]`で、`Test A`, `Test B`, `Test C`をループごとに`name`に格納しています。
-それに続いて、以下の処理を行います。
+それに続いて、次の処理を行います。
 
 1. スライドのテキストを`name`に置換（`replaceText()`）
 2. スライドをイメージ保存（`downloadImage()`）
@@ -270,7 +270,7 @@ sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
 
 {% ogpLink url="https://at-blog.vercel.app/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt" /%}
 
-GASのコードは以下のようになります。先程の`コード.js`に追記していきましょう。
+GASのコードは次のようになります。先程の`コード.js`に追記していきましょう。
 
 ```js:コード.js
 ...
@@ -306,7 +306,7 @@ function getUsers() {
 
 {% ogpLink url="https://at-blog.vercel.app/blog/20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3" /%}
 
-以下の更新、もしくは新規作成します。
+次の更新、もしくは新規作成します。
 
 ```diff:js:nuxt.config.js
   export default {
