@@ -25,7 +25,13 @@
 		"preset-ja-spacing": true,
 		"preset-ja-technical-writing": {
 			"no-exclamation-question-mark": false,
-			"ja-no-weak-phrase": false
+			"ja-no-weak-phrase": false,
+			"no-doubled-joshi": {
+				"allow": ["も", "か"]
+			},
+			"ja-no-successive-word": {
+				"allow": ["〇"]
+			}
 		},
 		"@proofdict/proofdict": {
 			"dictURL": "https://azu.github.io/proof-dictionary/"
