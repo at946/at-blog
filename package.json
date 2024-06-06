@@ -41,7 +41,7 @@
 	"dependencies": {
 		"@astrojs/check": "^0.7.0",
 		"@astrojs/markdoc": "^0.11.0",
-		"@astrojs/react": "^3.4.0",
+		"@astrojs/react": "^3.5.0",
 		"@fontsource/zen-kaku-gothic-new": "^5.0.19",
 		"@iconify-json/cib": "^1.1.8",
 		"@iconify-json/fa6-brands": "^1.1.19",
