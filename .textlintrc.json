@@ -5,6 +5,7 @@
 		}
 	},
 	"filters": {
+		"comments": true,
 		"allowlist": {
 			"allow": [
 				"スクラムマスター",
