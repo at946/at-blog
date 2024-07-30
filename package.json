@@ -48,7 +48,7 @@
 		"@iconify-json/fa6-brands": "^1.1.21",
 		"@iconify-json/mdi": "^1.1.67",
 		"@iconify-json/ri": "^1.1.21",
-		"@iconify-json/simple-icons": "^1.1.110",
+		"@iconify-json/simple-icons": "^1.1.111",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^18.3.3",
