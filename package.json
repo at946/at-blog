@@ -44,7 +44,7 @@
 		"@astrojs/markdoc": "^0.11.3",
 		"@astrojs/react": "^3.6.1",
 		"@fontsource/zen-kaku-gothic-new": "^5.0.19",
-		"@iconify-json/cib": "^1.1.9",
+		"@iconify-json/cib": "^1.1.10",
 		"@iconify-json/fa6-brands": "^1.1.21",
 		"@iconify-json/mdi": "^1.1.67",
 		"@iconify-json/ri": "^1.1.21",
