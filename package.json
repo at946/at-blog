@@ -57,7 +57,7 @@
 		"clsx": "^2.1.1",
 		"crypto-js": "^4.2.0",
 		"katex": "^0.16.11",
-		"mermaid": "^10.9.1",
+		"mermaid": "^11.0.1",
 		"ogp-parser": "^0.8.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.3.1"
