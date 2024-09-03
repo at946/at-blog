@@ -45,7 +45,7 @@
 		"@astrojs/react": "^3.6.2",
 		"@fontsource/zen-kaku-gothic-new": "^5.0.20",
 		"@iconify-json/cib": "^1.1.10",
-		"@iconify-json/fa6-brands": "^1.1.22",
+		"@iconify-json/fa6-brands": "^1.2.0",
 		"@iconify-json/mdi": "^1.1.68",
 		"@iconify-json/ri": "^1.1.22",
 		"@iconify-json/simple-icons": "^1.1.115",
