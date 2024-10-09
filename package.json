@@ -46,7 +46,7 @@
 		"@fontsource/zen-kaku-gothic-new": "^5.1.0",
 		"@iconify-json/cib": "^1.2.1",
 		"@iconify-json/fa6-brands": "^1.2.1",
-		"@iconify-json/mdi": "^1.2.0",
+		"@iconify-json/mdi": "^1.2.1",
 		"@iconify-json/ri": "^1.2.1",
 		"@iconify-json/simple-icons": "^1.2.7",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
