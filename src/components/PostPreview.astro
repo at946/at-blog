@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import LinkTag from '@/components/LinkTag.astro';
 import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
+import { Icon } from 'astro-icon/components';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
 
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, publicationDate, tags } = post.data;
+const { title, publicationDate, tags, externalUrl } = post.data;
 const slug: string = post.slug;
 const sentence: string = extractSentenceFromMarkdocBody(post.body);
 const readingTime: number = estimateReadingTime(sentence.length);
@@ -22,8 +23,10 @@ const readingTime: number = estimateReadingTime(sentence.length);
     { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
   </p>
   <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
-    <Link class="hover:text-primary" href={`/blog/${slug}`}>
-      {title}
+    <Link class="hover:text-primary flex content-center items-center" href={externalUrl ?? `/blog/${slug}`}>
+      <span>{title}</span>
+      { externalUrl && <Icon name="mdi:external-link" class="ml-1" /> }
+    </span>
     </Link>
   </h2>
   <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2">
@@ -31,5 +34,7 @@ const readingTime: number = estimateReadingTime(sentence.length);
       <LinkTag name={tag} href={`/tags/${tag}`} />
     )}
   </div>
-  <p>読了時間: { readingTime }分</p>
+  { !externalUrl &&
+    <p>読了時間: { readingTime }分</p>
+  }
 </div>
