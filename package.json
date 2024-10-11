@@ -18,7 +18,7 @@
 		"@astrojs/rss": "^4.0.7",
 		"@astrojs/sitemap": "^3.2.0",
 		"@astrojs/svelte": "^5.7.2",
-		"@astrojs/tailwind": "^5.1.1",
+		"@astrojs/tailwind": "^5.1.2",
 		"@biomejs/biome": "1.9.3",
 		"@proofdict/textlint-rule-proofdict": "^3.1.2",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
