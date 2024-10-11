@@ -19,6 +19,7 @@ import icon from 'astro-icon';
 export default defineConfig(
 	/** @type {import('astro').AstroUserConfig} */ {
 		site: 'https://at-blog.vercel.app',
+		output: 'static',
 		// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 		server: {
 			// port: 4321, // The port to run the dev server on.
