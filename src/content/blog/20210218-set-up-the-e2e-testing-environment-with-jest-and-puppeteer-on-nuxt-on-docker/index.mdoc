@@ -15,10 +15,6 @@ publicationDate: 2021-02-18
 Nuxt.jsをDockerで開発するにあたって、E2Eテスト環境を用意するまでの軌跡です。
 テストフレームワークには[Jest](https://github.com/facebook/jest)、ブラウザ操作には[Puppeteer](https://github.com/puppeteer/puppeteer)を利用します。
 
-{% ogpLink url="https://github.com/facebook/jest" /%}
-
-{% ogpLink url="https://github.com/puppeteer/puppeteer" /%}
-
 ## 手順
 1. DockerでNuxtアプリをつくる
 2. Dockerコンテナ内でブラウザを起動できるようにする
@@ -84,12 +80,10 @@ $ docker-compose build
 $ docker-compose up
 ```
 `http://localhost:3000`にアクセスできていればOKです。
-![](images/nuxt-hello-world-page.png)
+![](./images/nuxt-hello-world.png)
 
 ## Dockerコンテナ内でブラウザを起動できるようにする
-PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動させられるようにする必要があります。Puppeteerのトラブルシューティングにやり方が載っているので、それに合わせてDockerfileを更新します。
-
-{% ogpLink url="https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker" /%}
+PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動させられるようにする必要があります。[Puppeteerのトラブルシューティング](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker)にやり方が載っているので、それに合わせてDockerfileを更新します。
 
 ```diff:dockerfile:Dockerfile
   FROM node
@@ -120,9 +114,7 @@ PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動さ�
 
 ## Jest+PuppeteerでE2Eテストできるようにする
 最後にJest+Puppeteerの環境を整えていきます。
-JestでPuppeteerを利用する手順は公式ドキュメントにも載っています。
-
-{% ogpLink url="https://jestjs.io/docs/ja/next/puppeteer" /%}
+JestでPuppeteerを利用する手順は[公式ドキュメント](https://jestjs.io/docs/ja/next/puppeteer)にも載っています。
 
 まず、Jest、Puppeteer、そしてその２つの設定をいい感じにやってくれる`jest-puppeteer`のライブラリをインストールします。`jest-puppeteer`のおかげで、`page`や`browser`などのPuppeteerのAPIが特に意識することなくGlobalに扱えたりします。
 
@@ -179,16 +171,11 @@ Headless chromeの設定と、サーバー（アプリの起動）について�
 ```
 
 `-i`オプションは`--runInBand`オプションの省略形で、テストスイートを並列でテストしないオプションです。並列でテストしたときにそれぞれのテストスイートが影響しあってしまったのか、うまく行かないことがあったのでつけてます。
-他のオプションはJestの公式ドキュメント参照です。
-
-{% ogpLink url="https://jestjs.io/docs/ja/cli" /%}
 
 ## テストしてみる
 では実際にテストが動作するか確認してみます。
 まずはテストファイルを格納するディレクトリを作成し、テストファイルをつくりましょう。
-Jestではデフォルトで`tests`ディレクトリ次のファイルを読み込みます。
-
-{% ogpLink url="https://jestjs.io/ja/docs/configuration#testmatch-arraystring" /%}
+Jestではデフォルトで`tests`ディレクトリ次のファイルを読み込みます。（[参考](https://jestjs.io/ja/docs/configuration#testmatch-arraystring)）
 
 ```sh
 $ mkdir tests
@@ -230,9 +217,3 @@ Done in 19.83s.
 本記事では、Nuxt on DockerにおけるJest + PuppeteerのE2Eテスト環境のセットアップをしました。
 Dockerコンテナ内でHeadless Chromeを操作できるようにするところが厄介ですが、公式のトラブルシューティングがありますのでご安心ください。
 jest-puppeteerの利用についてもJestの公式サイトで言及されています。ソースをたどればそんなに難しくないかもです。
-
-## 参考
-- {% ogpLink url="https://github.com/facebook/jest" type="link" /%}
-- {% ogpLink url="https://github.com/puppeteer/puppeteer" type="link" /%}
-- {% ogpLink url="https://github.com/smooth-code/jest-puppeteer" type="link" /%}
-- {% ogpLink url="https://jestjs.io/ja/docs/configuration" type="link" /%}
