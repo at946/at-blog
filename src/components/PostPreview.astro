@@ -23,9 +23,9 @@ const readingTime: number = estimateReadingTime(sentence.length);
     { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
   </p>
   <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
-    <Link class="hover:text-primary flex content-center items-center" href={externalUrl ?? `/blog/${slug}`}>
-      <span>{title}</span>
-      { externalUrl && <Icon name="mdi:external-link" class="ml-1" /> }
+    <Link class="hover:text-primary" href={externalUrl ?? `/blog/${slug}`}>
+      <span class="align-middle">{title}</span>
+      { externalUrl && <Icon name="mdi:external-link" class="inline text-2xl align-middle" /> }
     </span>
     </Link>
   </h2>
