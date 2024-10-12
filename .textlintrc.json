@@ -27,6 +27,10 @@
 		},
 		"no-dropping-the-ra": true,
 		"no-doubled-conjunctive-particle-ga": true,
-		"no-doubled-conjunction": true
+		"no-doubled-conjunction": true,
+		"ja-no-mixed-period": {
+			"allowPeriodMarks": ["%}", "笑"],
+			"allowEmojiAtEnd": true
+		}
 	}
 }
