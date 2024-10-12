@@ -1,5 +1,7 @@
 {
 	"plugins": {},
 	"filters": {},
-	"rules": {}
+	"rules": {
+		"max-ten": true
+	}
 }
