@@ -17,6 +17,7 @@
 			"allow": ["も", "か", "ても", "にも"]
 		},
 		"no-double-negative-ja": true,
-		"no-hankaku-kana": true
+		"no-hankaku-kana": true,
+		"ja-no-weak-phrase": true
 	}
 }
