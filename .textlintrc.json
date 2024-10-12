@@ -26,6 +26,7 @@
 			"skipPatterns": ["/\\{%[^%]*\\/%\\}/", "/\\{%[^%]*%\\}/"]
 		},
 		"no-dropping-the-ra": true,
-		"no-doubled-conjunctive-particle-ga": true
+		"no-doubled-conjunctive-particle-ga": true,
+		"no-doubled-conjunction": true
 	}
 }
