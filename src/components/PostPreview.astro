@@ -24,8 +24,12 @@ const readingTime: number = estimateReadingTime(sentence.length);
   </p>
   <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
     <Link class="hover:text-primary" href={externalUrl ?? `/blog/${slug}`}>
-      <span class="align-middle">{title}</span>
-      { externalUrl && <Icon name="mdi:external-link" class="inline text-2xl align-middle" /> }
+      { tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle" />} 
+      { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle" />} 
+      <span class="align-middle">
+        {title}
+      </span>
+      { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
     </span>
     </Link>
   </h2>
