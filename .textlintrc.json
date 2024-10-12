@@ -24,6 +24,7 @@
 		"no-mixed-zenkaku-and-hankaku-alphabet": true,
 		"sentence-length": {
 			"skipPatterns": ["/\\{%[^%]*\\/%\\}/", "/\\{%[^%]*%\\}/"]
-		}
+		},
+		"no-dropping-the-ra": true
 	}
 }
