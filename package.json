@@ -38,6 +38,7 @@
 		"textlint-rule-max-ten": "^5.0.0",
 		"textlint-rule-no-double-negative-ja": "^2.0.1",
 		"textlint-rule-no-doubled-joshi": "^5.1.0",
+		"textlint-rule-no-hankaku-kana": "^2.0.1",
 		"textlint-rule-no-mix-dearu-desumasu": "^6.0.3",
 		"typescript": "^5.6.3"
 	},

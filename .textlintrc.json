@@ -16,6 +16,7 @@
 		"no-doubled-joshi": {
 			"allow": ["も", "か", "ても", "にも"]
 		},
-		"no-double-negative-ja": true
+		"no-double-negative-ja": true,
+		"no-hankaku-kana": true
 	}
 }
