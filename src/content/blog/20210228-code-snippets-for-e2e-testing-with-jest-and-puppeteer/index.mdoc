@@ -263,7 +263,7 @@ await expect(page.$('#hoge')).toBeNull()
 ```html
 <img id="hoge" src="./images/hoge.png" />
 ```
-このimg要素の`src`が正しく設定されているか検証したいとします。
+このimg要素の`src`に正しい値が設定されているか検証したいとします。
 この場合、`page.$eval()`を使って`src`属性を取得して検証できます。
 
 ```js

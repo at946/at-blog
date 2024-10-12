@@ -32,6 +32,7 @@
 			"allowPeriodMarks": ["%}", "笑"],
 			"allowEmojiAtEnd": true
 		},
-		"ja-hiragana-keishikimeishi": true
+		"ja-hiragana-keishikimeishi": true,
+		"ja-hiragana-fukushi": true
 	}
 }
