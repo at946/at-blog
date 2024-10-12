@@ -64,7 +64,7 @@ spaces.bzは現在 [Vercel](https://vercel.com/) を利用しています。
 個人利用では無料でホスティングができ、GitHubと連携することでpushを検知してBuild&Deployまでやってくれます。クレカ登録不要なのも何気に嬉しい😆。
 もともとは [Netlify](https://www.netlify.com/) にホストしていたんですが、動的OGPをやりたいとなったときにSSGができるVercelに移行しました。（Netlifyでもpre-renderingを使って動的OGPをやる方法があるみたいですが、Netlifyはビルドの時間制限もあり移行を決行しました）
 
-他にも [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages) や [Heroku](https://jp.heroku.com/) など、無料枠でも十分にホスティングできるサービスが充実しています。Build&Deployまでしてくれるサービスが多いですし、いろいろと調べて試して、自分のプロダクトにあったホスティングサービスを利用すれば、無料でプロダクトをリリースすることは難しいことではありません。
+他にも [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages) や [Heroku](https://jp.heroku.com/) など、無料枠でも十分にホスティングできるサービスが充実しています。Build&Deployまでしてくれるサービスが多いですし、いろいろと調べて試して、自分のプロダクトにあったホスティングサービスを利用すれば、無料でプロダクトをリリースすることは難しくありません。
 
 ## 戦略４：無料でデータ管理 with Spreadsheet
 戦略１と矛盾するのですが...笑。
@@ -92,7 +92,7 @@ Netlifyを使っている頃はNetlifyにデプロイを任せるとすぐに無
 
 CI/CDはGitHub Actionsで十分です。パブリックリポジトリであれば制限なく、プライベートリポジトリでも2000分/月のワークフローを実行できます（Linuxの場合）。
 
-[GitHub Actions の課金について - GitHub Docs | 利用上限について](https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits)
+{% ogpLink url="https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits" /%}
 
 僕たちはPRを作成したときにLintやテストを回し、mergeされたとき（mainにpushがあったとき）にデータの更新をしています。
 割と高頻度に開発サイクルを回していますが、それでも2000分に達しないので、問題なく開発ができています。

@@ -4,12 +4,17 @@
 			"extensions": [".mdoc"]
 		}
 	},
-	"filters": {},
+	"filters": {
+		"comments": true
+	},
 	"rules": {
 		"max-ten": true,
 		"max-kanji-continuous-len": {
 			"allow": ["心理的安全性", "岡本太郎記念館", "多言語化対応"]
+		},
+		"no-mix-dearu-desumasu": true,
+		"no-doubled-joshi": {
+			"allow": ["も", "か", "ても", "にも"]
 		}
-	},
-	"no-mix-dearu-desumasu": true
+	}
 }
