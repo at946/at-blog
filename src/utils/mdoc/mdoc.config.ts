@@ -11,6 +11,7 @@ import { ogpLink } from './schema/ogp-link.mdoc';
 import { quote } from './schema/quote.mdoc';
 import { slideshareEmbed } from './schema/slideshare-embed.mdoc';
 import { speakerdeckEmbed } from './schema/speakerdeck-embed.mdoc';
+import { youtubeEmbed } from './schema/youtube-embed.mdoc';
 
 export const config = {
 	nodes: {
@@ -29,5 +30,6 @@ export const config = {
 		quote,
 		slideshare: slideshareEmbed,
 		speakerdeck: speakerdeckEmbed,
+		youtube: youtubeEmbed,
 	},
 };

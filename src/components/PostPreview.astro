@@ -26,6 +26,7 @@ const readingTime: number = estimateReadingTime(sentence.length);
     <Link class="hover:text-primary" href={externalUrl ?? `/blog/${slug}`}>
       { tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle" />} 
       { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle" />} 
+      { tags?.includes('Videos') && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
       <span class="align-middle">
         {title}
       </span>
