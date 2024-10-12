@@ -12,7 +12,7 @@ posts.sort(
 	(x, y) => y.data.publicationDate.getTime() - x.data.publicationDate.getTime(),
 );
 ---
-<DefaultPageLayout showPageHeader={false}>
+<DefaultPageLayout>
   <ProfileCard class="mb-16" />
   <h1 class="font-bold text-xl mb-4 text-center md:text-left">最近の投稿</h1>
   <PostPreviewList posts={posts.slice(0, 5)} />
