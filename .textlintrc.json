@@ -18,6 +18,7 @@
 		},
 		"no-double-negative-ja": true,
 		"no-hankaku-kana": true,
-		"ja-no-weak-phrase": true
+		"ja-no-weak-phrase": true,
+		"ja-no-redundant-expression": true
 	}
 }
