@@ -15,6 +15,7 @@
 		"no-mix-dearu-desumasu": true,
 		"no-doubled-joshi": {
 			"allow": ["も", "か", "ても", "にも"]
-		}
+		},
+		"no-double-negative-ja": true
 	}
 }
