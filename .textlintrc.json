@@ -25,6 +25,7 @@
 		"sentence-length": {
 			"skipPatterns": ["/\\{%[^%]*\\/%\\}/", "/\\{%[^%]*%\\}/"]
 		},
-		"no-dropping-the-ra": true
+		"no-dropping-the-ra": true,
+		"no-doubled-conjunctive-particle-ga": true
 	}
 }
