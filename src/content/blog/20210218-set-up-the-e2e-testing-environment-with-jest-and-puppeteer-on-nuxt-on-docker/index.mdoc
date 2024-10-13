@@ -13,15 +13,18 @@ publicationDate: 2021-02-18
 {% toc /%}
 
 ## はじめに
+
 Nuxt.jsをDockerで開発するにあたって、E2Eテスト環境を用意するまでの軌跡です。
 テストフレームワークには[Jest](https://github.com/facebook/jest)、ブラウザ操作には[Puppeteer](https://github.com/puppeteer/puppeteer)を利用します。
 
 ## 手順
+
 1. DockerでNuxtアプリをつくる
 2. Dockerコンテナ内でブラウザを起動できるようにする
 3. Jest+PuppeteerでE2Eテストできるようにする
 
 ## DockerでNuxtアプリをつくる
+
 アプリの前提の意味で、こんな感じでNuxt on Dockerを作っています紹介です。
 
 ```sh
@@ -43,6 +46,7 @@ n)
 ? What is your GitHub username? -
 ? Version control system: None
 ```
+
 `yarn create nuxt-app`はターゲットのディレクトリ（今回はカレントディレクトリ）が空でないとエラーになるので要注意。初期設定は特に何も入れてません。
 
 これでローカルにNuxtアプリのファイルが生成されるので、このアプリを動かすための`Dockerfile`と`docker-compose.yml`をつくっていきます。
@@ -74,15 +78,18 @@ services:
     ports:
       - 3000:3000
 ```
+
 これをビルドして起動してみます。
 
 ```sh
-$ docker-compose build
-$ docker-compose up
+docker-compose build
+docker-compose up
 ```
+
 `http://localhost:3000`にアクセスできていればOKです。
 
 ## Dockerコンテナ内でブラウザを起動できるようにする
+
 PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動させられるようにする必要があります。[Puppeteerのトラブルシューティング](https://github.com/puppeteer/puppeteer/blob/main/docs/troubleshooting.md#running-puppeteer-in-docker)にやり方が載っているので、それに合わせてDockerfileを更新します。
 
 ```diff:dockerfile:Dockerfile
@@ -113,19 +120,20 @@ PuppeteerをDockerで使う場合、コンテナ内でブラウザを起動さ�
 これでHeadless Chromeを使ってPuppeteerでブラウザ操作をする環境ができます。
 
 ## Jest+PuppeteerでE2Eテストできるようにする
+
 最後にJest+Puppeteerの環境を整えていきます。
 JestでPuppeteerを利用する手順は[公式ドキュメント](https://jestjs.io/docs/ja/next/puppeteer)にも載っています。
 
 まず、Jest、Puppeteer、そしてその２つの設定をいい感じにやってくれる`jest-puppeteer`のライブラリをインストールします。`jest-puppeteer`のおかげで、`page`や`browser`などのPuppeteerのAPIが特に意識することなくGlobalに扱えたりします。
 
 ```sh
-$ docker-compose run --rm app yarn add --dev jest puppeteer jest-puppeteer
+docker-compose run --rm app yarn add --dev jest puppeteer jest-puppeteer
 ```
 
 `package.json`に追加されるのでコンテナを再ビルドしてコンテナイメージにも適用してきます。
 
 ```sh
-$ docker-compose build
+docker-compose build
 ```
 
 次にconfigファイルをつくります。まずはjestの設定から。
@@ -136,6 +144,7 @@ module.exports = {
   preset: 'jest-puppeteer'
 }
 ```
+
 これで`jest-puppeteer`を活用できるようになります。次は`jest-puppeteer`の設定をします。
 
 ```js:jest-puppeteer.config.js
@@ -151,6 +160,7 @@ module.exports = {
   }
 }
 ```
+
 Headless chromeの設定と、サーバー（アプリの起動）についての設定をします。
 
 最後に、`package.json`でテスト実行コマンドを定義します。
@@ -173,12 +183,13 @@ Headless chromeの設定と、サーバー（アプリの起動）について�
 `-i`オプションは`--runInBand`オプションの省略形で、テストスイートを並列でテストしないオプションです。並列でテストしたときにそれぞれのテストスイートが影響しあってしまったのか、うまく行かないことがあったのでつけてます。
 
 ## テストしてみる
+
 では実際にテストが動作するか確認してみます。
 まずはテストファイルを格納するディレクトリを作成し、テストファイルをつくりましょう。
 Jestではデフォルトで`tests`ディレクトリ次のファイルを読み込みます。（[参考](https://jestjs.io/ja/docs/configuration#testmatch-arraystring)）
 
 ```sh
-$ mkdir tests
+mkdir tests
 ```
 
 ```js:tests/test.spec.js
@@ -189,6 +200,7 @@ describe('サンプルテストスイート', () => {
   })
 })
 ```
+
 トップページにアクセスして、「app」の文字列が`h1.title`要素に表示されていることをチェックするテストです。
 では、実行。
 
@@ -208,12 +220,14 @@ Time:        1.371 s
 Ran all test suites matching /tests\/test.spec.js/i.
 Done in 19.83s.
 ```
+
 パスしました。
 コマンドの後ろにファイルパスを付けてもOKですし、つけない場合は対象のファイルを全部実行します。
 
 テストの設定から動作確認まで、完了です。
 
 ## 結論
+
 本記事では、Nuxt on DockerにおけるJest + PuppeteerのE2Eテスト環境のセットアップをしました。
 Dockerコンテナ内でHeadless Chromeを操作できるようにするところが厄介ですが、公式のトラブルシューティングがありますのでご安心ください。
 jest-puppeteerの利用についてもJestの公式サイトで言及されています。ソースをたどればそんなに難しくないかもです。

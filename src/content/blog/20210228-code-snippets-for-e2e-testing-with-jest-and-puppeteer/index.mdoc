@@ -41,15 +41,19 @@ describe('テストスイート名', () => {
 [test(name, fn, timeout)](https://jestjs.io/docs/ja/next/api#testname-fn-timeout)
 
 ### expect(X).toBe(Y)
+
 検証は`expect(X).toBe(Y)`を使うことが多いです。`toBe`なので「`X`が`Y`である」ことを検証します。
 他にも、`expect(X).not.toBe(Y)`で「`X`が`Y`**でない**」、`expect(X).toContain(Y)`で「`X`に`Y`が含まれている」など、`toBe`の部分を変化させることで色々な検証ができます。
 
 [`expect`のメソッド](https://jestjs.io/docs/ja/next/expect#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89)
 
 ## 操作系
+
 ### ページにアクセスする
+
 E2Eテストではページにアクセスしないと始まりませんね。ページにアクセスする場合は`page.goto()`を使います。
 例えば`http://localhost:3000`にアクセスしたい場合は、次のように書きます。
+
 ```js
 await page.goto('http://localhost:3000')
 ```
@@ -57,12 +61,16 @@ await page.goto('http://localhost:3000')
 [page.goto(url)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagegotourl-options)
 
 ### ボタンやリンクをクリックする
+
 ボタンやリンクなどの要素をクリックするときは`page.click()`を使います。  
 例えば、次のボタン要素があるとします。
+
 ```html
 <button id="hoge">Click me!!</button>
 ```
+
 このボタンをクリックする場合、`id`属性を利用して次のように書きます。
+
 ```js
 await page.click('#hoge')
 ```
@@ -70,17 +78,22 @@ await page.click('#hoge')
 [page.click(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageclickselector-options)
 
 ### 入力フォームに文字を入力する
+
 `input`や`textarea`に文字入力をします。  
 例えば、次のテキストフィールドがあるとします。
+
 ```html
 <input type="text" id="hoge" />
 ```
+
 このテキストフィールドに「こんにちは」と入力する場合、`id`属性を利用して次のように書きます。
+
 ```js
 await page.type('#hoge', 'こんにちは')
 ```
 
 ちなみに、すでに文字が入力されている場合、入力済みの値に文字が追加されるので注意が必要です。
+
 ```js
 await page.type('#hoge', 'こんにちは') // 「こんにちは」と入力されている状態になる
 await page.type('#hoge', 'こんばんは') // 「こんにちはこんばんは」と入力されている状態になる
@@ -89,12 +102,14 @@ await page.type('#hoge', 'こんばんは') // 「こんにちはこんばんは
 [page.type(selector, text)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagetypeselector-text-options)
 
 ### 入力フォームの文字を消す
+
 `page.type()`は入力済みの文字列に追加されるので、新しく文字を入力したい場合は一度フォームの入力値をクリアする必要があります。
 `await page.type('#hoge', '')`などでクリアできればいいのですが、そうはいきません。
 
 ```html
 <input type="text" id="hoge" value="Hello" />
 ```
+
 のようにすでに「Hello」が入力されているテキストフィールドの入力値を消す場合、例えば次のようなコードで実現できます。
 
 ```js
@@ -102,6 +117,7 @@ const el = await page.$('#hoge')
 await el.click({ clickCount: 3 })
 await el.press('Backspace')
 ```
+
 `page.$()`で`selector`に合致する要素を取得し、それを3回クリックし、`Backspace`を押す、という操作です。
 実際にブラウザでテキストフィールド（内の文字列）を3回クリックすると、入力されている文字列が全選択の状態になり、そこで`Backspace`を押すと文字が全部消えますよね。
 このようにブラウザで実際に行う操作をコーディングすることで入力フォームの文字をクリアできます。
@@ -120,11 +136,13 @@ test('hoge' async () => {
   clearInput('#hoge')
 })
 ```
+
 これで、`clearInput('#hoge')`でid属性が`hoge`の`input`の入力文字を消すことができます。
 
 [page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)
 
 ### 入力フォームの文字を消して、新しい文字を入力する
+
 上の２つを組み合わせれば、すでに文字が入力されている`input`に新しい文字列を1列で入力できる関数もつくれます。
 
 ```js
@@ -141,55 +159,70 @@ test('hoge', async () => {
   ...
 })
 ```
+
 よく使うので、関数化しておくと便利です。
 
 ### 画面遷移やリロードを待つ
+
 ```js
 await page.waitForNavigation()
 ```
+
 で画面遷移やリロードを待つことができます。
 
 [page.waitForNavigation()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitfornavigationoptions)
 
 ### 画面に要素が現れるまで待つ
+
 例えば、次のボタン要素があるとします。
+
 ```html
 <button id="hoge">Click me!!</button>
 ```
+
 このボタンがなにかの処理が終わってから表示されるとします。このとき、ボタンが表示される前に`page.click()`などをしてしまうと、要素が見つからないためエラーになってしまいます。
 そこで、次のようにして要素が現れるのを待ちます。
 
 ```js
 await page.waitForSelector('#hoge')
 ```
+
 もし、ボタンが現れない場合はテストがタイムアウトで失敗になるので注意です。
 
 [page.waitForSelector(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitforselectorselector-options)
 
 ### 画面から要素が消えるまで待つ
+
 例えば、次のボタン要素があり、一度クリックすると要素が消えるとします。
+
 ```html
 <button id="hoge">押したら消えるよ</button>
 ```
+
 画面から要素が消えるまで操作を待ちたい場合、次のように書きます。
 
 ```js
 await page.waitForSelector('#hoge', { hidden: true })
 ```
+
 画面に要素が現れるまで待つ`page.waitForSelector()`の`hidden`オプションを有効にすることで、「消えるまで待つ」操作になります。
 
 [page.waitForSelector(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitforselectorselector-options)
 
 ### 指定時間待つ
+
 時間を指定して操作や検証を待ちたいことがあります。例えば1秒待ちたい場合は次のコードで実現できます。
+
 ```js
 await page.waitForTimeout(1000)
 ```
+
 `()`の単位はミリ秒なので、1秒の場合は1000です。
 
 [page.waitForTimeout(milliseconds)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitfortimeoutmilliseconds)
 
 ### フォーカスを外したい
+
 `input`に入力している状態からフォーカスを外す操作は`blur`を使えばできます。
 
 ```js
@@ -197,6 +230,7 @@ await page.$eval('#hoge', el => el.blur())
 ```
 
 ### とりあえずキーボード操作したい
+
 要素関係なく矢印を押してみたり、Enterを押してみたり、というケースもあります。
 その場合は`page.keyboard`が便利です。例えば「右矢印（→）」を押したい場合、次のとおりです。
 
@@ -207,6 +241,7 @@ await page.keyboard.press('ArrowRight')
 [class: KeyBoard](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#class-keyboard)
 
 ### とりあえず操作したい
+
 とりあえずブラウザを操作したい場合は`page.evaluate(pageFunction)`を使います。
 例えば、ページをスクロールしたいときは`window.scrollTo()`を使うとできます。スクロールすると出現する要素、とか検証するときに使います。
 
@@ -220,7 +255,9 @@ await page.evaluate(() => {
 [window.scrollTo](https://developer.mozilla.org/ja/docs/Web/API/Window/scrollTo)
 
 ## 検証系
+
 ### 表示中のページのURLを検証する
+
 表示中のページのURLは`page.url()`で取得できます。これが期待値（例：`http://localhost:3000`）かどうかは次のように検証できます。
 
 ```js
@@ -230,14 +267,17 @@ await expect(page.url()).toBe('http://localhost:3000')
 [page.url()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageurl)
 
 ### 要素が存在することを検証する
+
 ```html
 <p id="hoge">Show me!!</p>
 ```
+
 の要素がページに表示されているかどうかは次のように検証できます。
 
 ```js
 await expect(page.$('#hoge')).not.toBeNull()
 ```
+
 `page.$()`は要素が見つからない場合`null`を返します。なので「Nullであること」を検証する`.toBeNull()`に否定の`.not`をつけることで「Nullでないこと」を確認し、要素が存在することを検証できます。
 
 [page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)  
@@ -245,24 +285,30 @@ await expect(page.$('#hoge')).not.toBeNull()
 [.toBeNull()](https://jestjs.io/docs/ja/next/expect#tobenull)
 
 ### 要素が存在しないことを検証する
+
 ```html
 <p id="hoge" style="display: none;">見えない</p>
 ```
+
 の要素が存在しない（表示されていない）ことを検証します。
 
 ```js
 await expect(page.$('#hoge')).toBeNull()
 ```
+
 `page.$()`は要素が見つからない場合`null`を返すので、`toBeNull()`で検証します。
 
 [page.$(selector)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageselector)  
 [.toBeNull()](https://jestjs.io/docs/ja/next/expect#tobenull)
 
 ### 要素の属性を検証する
+
 例えば、次のimg要素があるとします。
+
 ```html
 <img id="hoge" src="./images/hoge.png" />
 ```
+
 このimg要素の`src`に正しい値が設定されているか検証したいとします。
 この場合、`page.$eval()`を使って`src`属性を取得して検証できます。
 
@@ -270,31 +316,39 @@ await expect(page.$('#hoge')).toBeNull()
 const src = await page.$eval('#hoge', el => el.src)
 await expect(src).toBe('./images/hoge.png')
 ```
+
 `page.$eval(selector, pageFunction)`は`selector`で取得した要素に対して`pageFunction`を返します。例の場合は`selector`に`#hoge`、`pageFunction`に`el => el.src`としているので、`#hoge`の`img`の`src`を取得してます。
 
 [page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)
 
 ### 要素のテキストを検証する
+
 例えば、次のparagraph要素があるとします。
+
 ```html
 <p id="greeting">こんにちは！</p>
 ```
+
 このparagraph要素のテキストが意図通りか検証したいとします。
 
 ```js
 const text = await page.$eval('#greeting', el => el.innerText)
 await expect(text).toBe('こんにちは！')
 ```
+
 要素の属性の検証と似ていますが、`innerText`を用いて`el`の中のテキストを抜いてくる方法があります。
 
 [page.$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args-1)  
 [HTMLElement.innerText](https://developer.mozilla.org/ja/docs/Web/API/HTMLElement/innerText)
 
 ### `input`の入力値を検証する
+
 これも要素の属性検証の応用です。
+
 ```html
 <input id="hoge" type="text" />
 ```
+
 のようなテキストフィールドに「こんにちは」と入力して、「こんにちは」と入力されたかを検証する、といった流れです。
 `input`の入力値は`value`属性になるので、それを拾ってくればOKです。
 
@@ -308,15 +362,19 @@ await expect(await page.$eval('#hoge', el => el.value)).toBe('こんにちは')
 [HTMLInputElement](https://developer.mozilla.org/ja/docs/Web/API/HTMLInputElement)
 
 ### `button`が非活性かを検証する
+
 これも要素の属性検証の応用です。
+
 ```html
 <button id="hoge" disabled>押せないよ</button>
 ```
+
 のような非活性なボタンを、ちゃんと非活性になっているか検証します。
 
 ```js
 await expect(await page.$eval('#hoge', el => el.disabled)).toBe(true)
 ```
+
 `HTMLButtonElement`はTrue or Falseの`disabled`を持っているのでそれで検証します。
 逆にボタンが活性状態かは以下で検証できます。
 
@@ -328,11 +386,14 @@ await expect(await page.$eval('#hoge', el => el.disabled)).toBe(false)
 [HTMLButtonElement](https://developer.mozilla.org/ja/docs/Web/API/HTMLInputElement)
 
 ### 複数の要素の属性を検証する
+
 例えば、次のように複数のimg要素があるとします。
+
 ```html
 <img class="img" src="./images/hoge.png" />
 <img class="img" src="./images/fuga.png" />
 ```
+
 この2つのimg要素の`src`がそれぞれ意図通りかを調べたいとします。
 
 ```js
@@ -340,6 +401,7 @@ const srcs = page.$$eval('.img', els => els.map(el => el.src))
 await expect(src[0]).toBe('./images/hoge.png')
 await expect(src[1]).toBe('./images/fuga.png')
 ```
+
 まず、`page.$$rval()`で`img`classの要素の配列を取得して、後続のfunctionに`els`として流してます。
 次に、`map`を使って配列の1要素ずつの`src`を取り出し、`srcs`に返却しています。
 `srcs`は`img`classの要素の`src`属性が順番に並んだ配列なので、`src[index]`で順番を指定して検証ができます。
@@ -348,9 +410,11 @@ await expect(src[1]).toBe('./images/fuga.png')
 [Array.prototype.map()](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ### `target="_blank"`の別タブで開くを検証する
+
 ```html
 <a id="link_google" href="https://www.google.com/" target="_blank">Google</a>
 ```
+
 のように別タブで遷移した場合、新しく開いたタブを検証したいときがあります。
 検索すると`browser.once('targetcreated', function)`を使ってやる例が多かったのですが、やりたいことができず直感的でない感じもしたため、次のやり方で検証してます。
 
@@ -361,6 +425,7 @@ const pages = await browser.pages()
 const newPage = pages[pages.length - 1]
 await expect(newPage.url()).toBe('https://www.google.com/')
 ```
+
 少しダサいですが、リンククリック後、タブの準備が整うまで`page.waitForTimeout()`でスリープを入れています。
 その後、`browser.page()`で全てのタブを取得し、`pages[pages.length - 1]`で一番うしろのタブ、つまり今新しく開かれたタブを`newPage`に入れてます。
 
@@ -370,8 +435,10 @@ await expect(newPage.url()).toBe('https://www.google.com/')
 [page.url()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageurl)
 
 ### meta tagsを検証する
+
 メタタグも要素の１つですので、他の要素と同じように検証できます。
 例えば、Nuxt.jsの場合、`nuxt.config.js`では次のようにメタタグの定義します。
+
 ```js:nuxt.config.js
 export default {
   head: {
@@ -381,7 +448,9 @@ export default {
   }
 }
 ```
+
 これは次のようにHTMLに変換されるため、同様に扱うことができます。
+
 ```html
 <head>
   <mata data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="MyApp">
@@ -391,14 +460,17 @@ export default {
 ```js
 await expect(await page.$eval('meta[property="og:site_name"]', el => el.content)).toBe('MyApp')
 ```
+
 で検証が可能です。
 
 [page.$$eval(selector, pageFunction)](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevalselector-pagefunction-args)  
 [メタタグと SEO - NuxtJS](https://ja.nuxtjs.org/docs/2.x/features/meta-tags-seo/)
 
 ## おわりに
+
 テストコードを書く機会があったので、よく使いそうだなというコードをユースケースドリブンでまとめてみました。
 色々なサイトを巡りましたが、最終的にはソースに落ち着く、ということで次のページをとても参考にしました。
+
 - [puppeteer/api.md at main · puppeteer/puppeteer](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md)  
 - [Expect · Jest](https://jestjs.io/docs/ja/next/expect)
 

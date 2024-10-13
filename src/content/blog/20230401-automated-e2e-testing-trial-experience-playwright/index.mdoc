@@ -13,6 +13,7 @@ publicationDate: 2023-04-01
 {% toc /%}
 
 ## Playwright
+
 {% ogpLink url="https://playwright.dev/" /%}
 
 とりあえず、今回はこのPlaywrightってやつを使ってみよう。
@@ -20,6 +21,7 @@ publicationDate: 2023-04-01
 でも軽快だし、クロスブラウザできるし、スクリーンショットやビデオも取れるし、いいぞ。
 
 ## Playwrightをインストール
+
 Docker使ってくぞ。まずは準備だ。
 
 ```dockerfile:Dockerfile
@@ -40,7 +42,7 @@ services:
 ```
 
 ```bash
-$ docker compose build
+docker compose build
 ```
 
 インストールは公式ドキュメント見てこう。
@@ -67,7 +69,7 @@ $ docker compose run playwright yarn create playwright
 
 いろいろなディレクトリやファイルが生成されているな。
 
-```
+```sh
 - node_modules/
 - tests/
   - example.spec.ts
@@ -80,6 +82,7 @@ $ docker compose run playwright yarn create playwright
 - playwright.config.ts
 - yarn.lock
 ```
+
 こんな感じになってるはず。
 
 browsersとoperating system dependenciesはほしいので、`Dockerfile`に書いてこう。
@@ -102,12 +105,13 @@ browsersとoperating system dependenciesはほしいので、`Dockerfile`に書�
 `Dockerfile`いじったのでもう一度ビルドしておく。
 
 ```bash
-$ docker compose build
+docker compose build
 ```
 
 準備はこんなとこでOKかな。
 
 ## テストを実行してみる
+
 最初から`tests/sample.spec.ts`ってサンプルテストコードがあるじゃないか。
 
 ```ts:tests/example.spec.ts
@@ -130,11 +134,13 @@ test('get started link', async ({ page }) => {
   await expect(page).toHaveURL(/.*intro/);
 });
 ```
+
 `test()`ってのが2つある。これがテストケースだな。
 その後に`'has title'`、`'get started link'`ってテキストが付いてるけど、テストケース名だろう。
 コメントアウトで説明も書かれているけど、なんかコードからある程度わかりそうだな。
 
 ### has title
+
 `page.goto()`で括弧内のURLにアクセスしてそう。
 `page.goto('https://playwright.dev/')`は https://playwright.dev/ にアクセスしてるんだろう。
 
@@ -143,6 +149,7 @@ test('get started link', async ({ page }) => {
 このページのタイトルは「Fast and reliable end-to-end testing for modern web apps | Playwright」みたいだからパスしそう。
 
 ### get started link
+
 `page.goto('https://playwright.dev/')`は`has title`のテストと同じだ。
 
 `page.getByRole('link', { name: 'Get started' }).click()`は、「Get strted」ってテキストを持つリンクをクリックしているんだろう。ページトップにあるボタンだな。
@@ -156,6 +163,7 @@ test('get started link', async ({ page }) => {
 $ docker compose up
 6 passed
 ```
+
 パスした。
 ちなみに`tests/sample.spec.ts`には`test()`は2つしかないけど6つのテストがパスしてる。
 そしてコンソールを眺めてると`[chromium]`,`[firefox]`,`[webkit]`の文字が見えた。
@@ -208,10 +216,12 @@ export default defaultConfig({
   ...
 })
 ```
+
 DesktopのChrome、Firefox、Saferiでテストしたようだ。
 そしてコメントアウトにさらなる夢を感じる。
 
 ## テストを書いてみる
+
 自分でもテストを追加してみたい。
 
 {% ogpLink url="https://playwright.dev/docs/writing-tests" /%}
@@ -219,7 +229,6 @@ DesktopのChrome、Firefox、Saferiでテストしたようだ。
 公式ドキュメントが丁寧。
 
 [https://playwright.dev/](https://playwright.dev/) にはページトップに「Playwright enables reliable end-to-end testing for modern web apps.」ってヒーロータイトルがある。これを検証してみよう。
-
 
 ```ts:tests/example.spec.ts
 ...
@@ -231,6 +240,7 @@ test('has hero title', async ({ page }) => {
 })
 ...
 ```
+
 要素はLocatorsというもので指定するらしい（`page.getByRole('header', { name: xxx })`のとこ）。
 `toBeVisible()`で存在していること（見えていること）を検証している。
 詳しくは、公式ドキュメントを参照。
@@ -254,6 +264,7 @@ test('has hero title', async ({ page }) => {
 $ docker compose up
 9 passed
 ```
+
 どちらの書き方にせよ、9つのテストがパスしたはず。
 
 おぉ...なんかこんな感じでなんだってできそうだな..。
@@ -270,6 +281,7 @@ Assertionもいろいろ..。
 これ、なんでもできるんじゃないの...??
 
 ## 失敗も見とく
+
 ちゃんと失敗するのかも見ておこう。
 
 ```diff:ts:tests/example.spec.ts
@@ -283,6 +295,7 @@ Assertionもいろいろ..。
   })
 ...
 ```
+
 `.toBeVisible()`の前に`.not`をつけた。これで「存在しない（見えない）」ことを検証することになる。
 でも実際はあるから失敗するはず。
 
@@ -294,6 +307,7 @@ $ docker compose up
 [webkit] › example.spec.ts:20:5 › has hero title
 6 passed
 ```
+
 3つ失敗してる。期待通り。
 
 ちなみにplaywrightはテストのレポートも作ってくれる。
@@ -308,6 +322,7 @@ $ docker compose up
 詳細まで見られるんですか..。
 
 ## 失敗時のオプションを少し追加
+
 でも失敗時どうだったのか、このレポートからではわからない。
 と思ったらテストオプションがめっちゃ豊富。
 
@@ -341,6 +356,7 @@ $ docker compose up
 便利すぎ！
 
 ## 怖くないよね？
+
 ということで、怖くなかったよね？
 むしろめっちゃ味方。頼れるやつやE2E。Playwrightすげぇ。
 公式ドキュメント見るとページありすぎて「沼...。今はやめておこう...。」となるレベル。

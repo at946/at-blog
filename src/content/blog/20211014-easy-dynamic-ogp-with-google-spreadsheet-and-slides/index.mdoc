@@ -16,6 +16,7 @@ publicationDate: 2021-10-14
 結構面白いアイデアなのでシェアします😊。
 
 ## 全体像
+
 まずこの記事で紹介する全体像を示します。
 
 1. 動的OGPのもとになるSlidesを作成
@@ -31,6 +32,7 @@ publicationDate: 2021-10-14
 ちょっと長いですが、お付き合いいただけると嬉しいです🙏。
 
 ## 1. 動的OGPの元になるSlidesを準備
+
 まずはいい感じのOGPのデザインをGoogle Slidesで作ります。
 
 ![slidesのイメージ](./images/1_slides_image.png)
@@ -40,6 +42,7 @@ Coolです。ポイントとしてはOGPは1200mmx628mmのサイズがよいの�
 このスライドに書いている「name」はこの後置換するためのキーワードになってます。
 
 ## 2. 動的OGPのデータのもとになるSpreadsheetを準備
+
 「name」を置換していきたいので、そんな感じのSpreadsheetを用意します。
 spaces.bzの場合は、その日のランキング10位までをGASで集計して、そのデータを元に置換しています。
 今回は簡単な例なので、次のようなシートを用意します。
@@ -53,6 +56,7 @@ spaces.bzの場合は、その日のランキング10位までをGASで集計し
 `ogp_id`はいまのところ空ですが列だけ用意しておきます。後でGASでOGP画像のファイルを生成したときに画像ファイルのIDをセットするカラムです。
 
 ## 3. GASを作成
+
 この記事の佳境です。
 
 まずコードの全容をさらします。
@@ -115,6 +119,7 @@ function resetText(presentationId, name) {
 少し長いですが、少しずつ区切ってみていきます。
 
 ### 3-1. 各種変数の設定
+
 ```js
 const ss = SpreadsheetApp.openById('<SpreadsheetのID>')
 const sheet = ss.getSheetByName('<Sheetの名前>')
@@ -182,6 +187,7 @@ function replaceText(presentationId, name) {
   presentation.saveAndClose()  
 }
 ```
+
 引数は`presentationId`と、置換後の文字列`name`です。
 まず、`SlidesApp.openById(presentationId)`で置換したいスライドがあるSlidesを開きます。
 そして、`getSlides()[0]`を使って、そのSlidesの1枚目のスライドを取得します。
@@ -193,6 +199,7 @@ function replaceText(presentationId, name) {
 複数のスライドに対しては`presentation`に対して`replaceAllText()`したり、`getSlides()`の結果を`forEach`で回してスライド1枚ずつに処理することで実現できます。
 
 #### 3-2-2. スライドを保存
+
 これで動的OGPのイメージの準備ができたので、これをイメージファイルに保存します。今回は`png`で。
 
 ```js
@@ -214,6 +221,7 @@ function downloadImage(presentationId, fileName, folder) {
   return file.getId()
 }
 ```
+
 何をするかというと、SlidesをダウンロードするURLにリクエストを投げて、レスポンスをpngファイルにして保存しようというやり方です。
 
 引数は、`presentationId`と`folder`、そしてファイル名として`fileName`を取ります。
@@ -230,15 +238,18 @@ function downloadImage(presentationId, fileName, folder) {
 最後に、保存したファイル`file`のIDを`getId()`で取得して、返り値にしています。
 
 #### 3-2-3. 保存したファイルのIDをデータに追加
+
 ```js
 const ogpId = downloadImage(presentationId, `${index}.png`, folder)
 row[2] = ogpId
 ```
+
 先程説明したように`downloadImage()`は作成したpngファイルのIDをreturnしてます。
 それを`row[2]`、つまり`ogpId`のカラムに設定しています。
 詳しくは後ほど紹介しますが、これがNuxtアプリでGoogle Driveの画像ファイルをOGPに設定する肝だったりします。
 
 #### 3-2-4. スライドのテキストを置換し直す
+
 ここまで終わったら次のループのためにスライドの文字列を元の`'name'`に戻しておきます。このために`resetText()`の関数を用意して呼び出しています。
 
 ```js
@@ -249,13 +260,16 @@ function resetText(presentationId, name) {
   presentation.saveAndClose()
 }
 ```
+
 やっていることは`replaceText()`の逆なので説明は省略します。
 
 ### 3-3. スプレッドシートのogpIdを更新
+
 ```js
 data.unshift(columnNames)
 sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
 ```
+
 最後にSpreadsheetのogpIdカラムを更新しましょう。
 すでにここまでの処理で`data`の各Array要素の3つ目の要素に`ogpId`が格納されているので、Spreadsheetを上書きすればOKですね。
 
@@ -266,6 +280,7 @@ sheet.getRange(1, 1, data.length, data[0].length).setValues(data)
 ここからはSpreadsheetをもとにNuxtアプリでOGP画像を動的に設定してみましょう。
 
 ## 4. SpreadsheetをWebApp（API）で公開
+
 次は先程OGPのIDを追記したSpreadsheetをWebAppで公開していきます。
 このやり方は、以前に記事を書いたので詳細はそちらを見てください。
 
@@ -299,9 +314,11 @@ function getUsers() {
   return users
 }
 ```
+
 これを、デプロイしてWebApp公開しましょー。
 
 ## 5. Nuxtアプリで動的OGPを設定
+
 まずは、Nuxtアプリで先程公開したWebAppにリクエストする下準備をします。今回は`axios`を使うことを前提として、`serverMiddleware`経由でWebAppを呼び出します。
 こちらも過去に記事を書いていますので、詳細についてはそちらを参照してください。
 
@@ -387,19 +404,23 @@ Google Drive上で画像ファイルを見ようとするとプレビューモ�
 [ngrok](https://ngrok.com/)で公開し、[Twitter Card Validator](https://cards-dev.twitter.com/validator)でOGPが正しく設定されているか確認してみましょう。
 
 ### id=1のとき
+
 ![id=1のとき](./images/2_twitter_card_validator_1.png)
 
 ### id=2のとき
+
 ![id=2のとき](./images/3_twitter_card_validator_2.png)
 
 動的にOGP画像が表示されてることを確認できました。
 
 ## まとめ
+
 長くなってしまいましたが、これでSpreadsheetとSlidesを使ってOGP画像を生成しNuxtアプリで動的OGPを実現する一連の流れを紹介させていただきました。
-かなり色々なサイトを参考にさせていただいてここまでできたので、この場を借りてお礼を。m(_ _)m
+かなり色々なサイトを参考にさせていただいてここまでできたので、この場を借りてお礼を。m(__)m
 GAS、かなり色々なことができるので楽しいですね。
 
 ## 参考
+
 - {% ogpLink url="https://developers.google.com/apps-script/reference/slides?hl=en" type="link" /%}
 - {% ogpLink url="https://developers.google.com/apps-script/reference/spreadsheet" type="link" /%}
 - {% ogpLink url="https://developers.google.com/apps-script/reference/drive" type="link" /%}

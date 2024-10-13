@@ -23,6 +23,7 @@ publicationDate: 2021-09-28
 ということなので、モバイルでもスプレッドシートのデータを表示するぞ💪。
 
 ## 何がだめだったのか
+
 PCでできてモバイルでできないとは何事か。一体何が起きているのでしょう。
 axiosでエラーハンドリングしてみると、モバイルでは「**Error: Network Error**」と表示されます。こいつだ👮。
 
@@ -39,10 +40,12 @@ axiosでエラーハンドリングしてみると、モバイルでは「**Erro
 今回はJSONPで情報を取得できるようにしてみます。
 
 ## やること
+
 - Nuxtのデータ取得をJSONPバージョンに更新
 - GASのレスポンスをJSONPバージョンに更新
 
 ## Nuxtの更新
+
 まずはNuxt側の更新をしていきます。最初に`axios`の中で`jsonp`を使えるようにしてくれる`axios-jsonp`を導入します。
 
 {% ogpLink url="https://www.npmjs.com/package/axios-jsonp" /%}
@@ -52,7 +55,7 @@ axiosでエラーハンドリングしてみると、モバイルでは「**Erro
 {% ogpLink url="https://github.com/axios/axios/blob/master/COOKBOOK.md#jsonp" /%}
 
 ```bash
-$ yarn add axios-jsonp
+yarn add axios-jsonp
 ```
 
 axiosのオプションに`adapter`として指定します。
@@ -140,7 +143,6 @@ const callback = e.parameter.callback
 この部分で`callback([{'id': '1', ...}, ...])`みたいなレスポンスを生成しています。
 これを`axios-jsonp`が受け取っていい感じにデータ`[{'id': '1', ...}, ...]`を扱ってくれるんですね。
 
-
 ```js
 .setMimeType(ContentService.MimeType.JAVASCRIPT)
 ```
@@ -151,12 +153,14 @@ const callback = e.parameter.callback
 WebAppをデプロイしてモバイルでもデータを表示できるか試してみましょう。
 
 ### 小噺：デプロイは「デプロイを管理」から
+
 また新しいデプロイからWebAppを作成するとURLが前回から変わってしまいます。
 「デプロイ」>「デプロイを管理」からバージョンアップがおすすめです。
 
 ![デプロイを管理](./images/1_manage_deploy.png)
 
 ## まとめ
+
 前回、スプレッドシートをDB代わりとして使えるようになったかと思いきや、まさかのモバイルで使えない問題...
 今回はJSONPを使うことでモバイルでもスプレッドシートのデータを表示できました。
 

@@ -84,6 +84,7 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
     }
   </script>
 ```
+
 よし、これで行けるはず。
 
 ![document is not found](./images/1_document_is_not_found.png)
@@ -93,11 +94,13 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
 ということで、今回は`asyncData`でもスプレッドシートをDB代わりに使おう大作戦です。
 
 ## 何がだめなの
+
 なにが起きてるかというと、`axios-jsonp`でエラーが発生しています。
 「document is not found」とか「window is not found」とか、このエラーはフロントエンドで動作する前提のパッケージがバックエンドで動作するときに起こります。
 つまり、`asyncData`はバックエンドでデータを取得するので、フロントエンドで動作する前提の`axios-jsonp`は利用できないのです。
 
 ## じゃあどうする
+
 こういうパッケージは`nuxt.config.js`で`ssr: false`する、`<no-ssr>`、`<client-only>`タグで囲む、などの解決策が提示されています。
 しかし、今回はasyncDataで動作させたいので採用できません。
 かといって、何も考えずにJSONPをやめてしまえばまたモバイルで使えなくなる...。
@@ -109,18 +112,19 @@ Part2の内容を踏まえると、`asyncData`でも同じようにデータを�
 モバイルで使えないってなったとき、`JSONP`じゃなくて`serverMiddleware`でもよかったのですが当時は気づきませんでした。
 
 ## NuxtアプリでserverMiddleware経由でGAS APIをコールする
+
 まずはBFFでGAS APIをコールするコードを書いていきましょう。
 ここでは[`express`](https://expressjs.com/)を利用します。
 
 ```sh
-$ yarn add express
+yarn add express
 ```
 
 新しく`api`ディレクトリを作成し、その中にBFFのコードを書いていきましょう。
 
 ```sh
-$ mkdir api
-$ touch api/index.js
+mkdir api
+touch api/index.js
 ```
 
 ```js:api/index.js
@@ -193,7 +197,7 @@ module.exports = {
 `axios-jsonp`も不要になったので、パッケージを削除しておきましょう。
 
 ```sh
-$ yarn remove axios-jsonp
+yarn remove axios-jsonp
 ```
 
 見ての通り、`JSONP`ではなく`JSON`を期待してのコールですので、GASのコードを元(Part1)時点に戻していきます。
@@ -213,9 +217,11 @@ $ yarn remove axios-jsonp
   }
   ...
 ```
+
 ここまででBFFの準備ができました🎉。
 
 ## 動作確認
+
 最後に動作確認をしておきましょう。
 期待動作は次の通りです。
 
@@ -225,13 +231,13 @@ $ yarn remove axios-jsonp
 
 ではやっていきましょう。
 
-#### 1. `http://localhost:3000/`にアクセス
+### 1. `http://localhost:3000/`にアクセス
 
 ![http://localhost:3000/にアクセスして、ユーザーA/B/Cのデータが表示されることを確認！](./images/2_test1.png)
 
 表示されてる。
 
-#### 2. スプレッドシートにユーザーDを追加
+### 2. スプレッドシートにユーザーDを追加
 
 |id|name|age|email|
 | --- | --- | --- | --- |
@@ -240,7 +246,8 @@ $ yarn remove axios-jsonp
 |3|Test C|40|test_c@sample.com|
 |4|Test D|50|test_d@sample.com|
 
-#### 3. 更新ボタンを押下
+### 3. 更新ボタンを押下
+
 ![http://localhost:3000/で更新ボタンを押して、ユーザーA/B/C/Dのデータが表示されることを確認！](./images/3_test2.png)
 ユーザーDの情報が新たに表示されてる。
 

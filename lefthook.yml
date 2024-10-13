@@ -8,5 +8,8 @@ pre-commit:
     biome:
       run: npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
     lint:text:
-      blob: "src/**/*.{md,mdx,mdoc}"
+      glob: "{*,.*}/**/*.{md,mdx,mdoc}"
       run: npx textlint {staged_files}
+    lint:markdown:
+      glob: "{*,.*}/**/*.{md,mdx,mdoc}"
+      run: npx markdownlint-cli2 {staged_files}
