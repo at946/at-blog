@@ -16,7 +16,8 @@ jobs:
       - run: npm run check:astro
       - run: npm run check:type
       - run: npm run biome:check
-      - run: npm run lint:text src
+      - run: npm run lint:text
+      - run: npm run lint:markdown
       - if: ${{ !cancelled() }}
         uses: rtCamp/action-slack-notify@v2
         env:
