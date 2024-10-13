@@ -36,6 +36,7 @@
 		"ja-hiragana-fukushi": true,
 		"ja-hiragana-hojodoushi": true,
 		"ja-unnatural-alphabet": true,
-		"@textlint-ja/textlint-rule-no-insert-dropping-sa": true
+		"@textlint-ja/textlint-rule-no-insert-dropping-sa": true,
+		"prefer-tari-tari": true
 	}
 }
