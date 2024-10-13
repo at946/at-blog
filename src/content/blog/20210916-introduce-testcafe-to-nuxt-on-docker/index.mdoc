@@ -56,7 +56,7 @@ services:
 [TestCafeのパッケージ](https://yarnpkg.com/package/testcafe)をインストールします。今回は`yarn`を使っているので、以下のコマンドを実行します。
 
 ```sh
-$ docker compose run app yarn add --dev testcafe
+docker compose run app yarn add --dev testcafe
 ```
 
 ## DockerfileでChromeをインストールする
@@ -84,7 +84,7 @@ ChromeのStable版と、日本語のフォントを表示するために`fonts-n
 追記ができたらビルドして、Dockerイメージを作成しましょう。
 
 ```sh
-$ docker compose build
+docker compose build
 ```
 
 ## コマンドでTestCafeを起動できるようにする
@@ -112,8 +112,8 @@ $ docker compose build
 いよいよテストコードです。まずはテスト用のディレクトリとファイルを作っておきましょう。
 
 ```sh
-$ mkdir tests
-$ touch tests/sample.test.js
+mkdir tests
+touch tests/sample.test.js
 ```
 
 テストの内容は「トップページにアクセスして、`<h1>`タグで`Hello World!!`と表示されていること」を検証してみましょう。
@@ -156,7 +156,7 @@ TDDでやってみたい場合は、この時点で一度テストを実行し�
 テストを実行する前にコンテナを起動させておきます。
 
 ```sh
-$ docker compose up -d
+docker compose up -d
 ```
 
 そして、`exec`を使って起動したコンテナ内でTestCafeを実行します。

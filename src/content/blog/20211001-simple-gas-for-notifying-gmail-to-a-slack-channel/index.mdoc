@@ -17,9 +17,9 @@ publicationDate: 2021-10-01
 色々と調べると次の方法が紹介されていました。
 
 1. Slackの転送先メールアドレスをGmailの転送先に指定する
-2. Google Workspace Marketplaceの「[Slack for Gmail](https://workspace.google.com/marketplace/app/slack_for_gmail/533288507123?hl=ja)」を使う
-2. Slackの「[Email](https://spacesbz.slack.com/apps/A0F81496D-email?tab=more_info)」アプリを使う
-3. GAS
+1. Google Workspace Marketplaceの「[Slack for Gmail](https://workspace.google.com/marketplace/app/slack_for_gmail/533288507123?hl=ja)」を使う
+1. Slackの「[Email](https://spacesbz.slack.com/apps/A0F81496D-email?tab=more_info)」アプリを使う
+1. GAS
 
 しかしながら、どれも要件を満たすのが難しそう。
 
@@ -87,6 +87,7 @@ JavaScriptのコードはおいておいて、GmailApp系の部分をちょっ�
 ```js
 const threads = GmailApp.search('in:Inbox is:Unread', 0, 100)
 ```
+
 `GmailApp.search(query, start, max)`は`query`の条件に合うスレッドの配列(`GmailThread[]`)を取得する関数です。
 今回は`'in:Inbox is:Unread'`を指定しているので、「受信ボックス」の中で「未読」のものを拾ってきます。
 また、`start`に`0`、`max`に`100`を指定しているので、最新のスレッドから100件までの中から`query`を検索してもらっています。
@@ -102,6 +103,7 @@ threads.forEach((thread) => {
   })
 })
 ```
+
 `GmailThread.getMessages()`でそのスレッド内のメッセージ（メール）の配列(`GmailMessage[]`)を取得してます。
 `forEach`を使えば1つ1つのメッセージを扱えます。こいつがメール本体。主役の登場です。
 
@@ -112,6 +114,7 @@ threads.forEach((thread) => {
 ```js
 if (!message.isUnread()) { return }
 ```
+
 `GmailMessage.inUnread()`はそのメッセージが未読なら`true`、既読なら`false`を返却します。
 このコードではそれの否定(`!`)でif文を書いているので、既読の場合`return`、つまり後続の処理をせずに`forEach`を継続させています。
 
@@ -131,6 +134,7 @@ function create_message(message) {
           + `\n[Body]\n${message.getPlainBody()}`
 }
 ```
+
 Slackに投稿するテキストメッセージを生成しているのがこの辺です。
 `GmailMessage.getXXX()`を使ってメッセージを作ってます。`getXXX()`はいろいろな種類があるので、投稿したいテキストメッセージに合わせてカスタマイズしてください。
 今回は、「受信日時(`getDate()`)」「送信者(`getFrom`)」「タイトル(`getSubject()`)」「プレーンテキストの本文(`getPlainBody()`)」を利用してみました。
@@ -142,6 +146,7 @@ Slackに投稿するテキストメッセージを生成しているのがこの
 ```js
 message.markRead()
 ```
+
 最後に`message.markRead()`でメッセージを既読にしています。
 これで、次回以降は`!message.isUnread()`に弾かれて処理されなくなります。
 

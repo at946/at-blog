@@ -83,7 +83,7 @@ Astroでは、一部のコンポーネントを動的に、またはクライア
 
 ディレクトリ構造は以下です（関連部分を抽出）。
 
-```
+```sh
 - node_modules/
 - src/
   - components/
@@ -111,9 +111,9 @@ export default defineMarkdocConfig(markdocConfig)
 import { fence } from './schema/fence.mdoc';
 
 export const config = {
-	nodes: {
-		fence,
-	},
+  nodes: {
+    fence,
+  },
 };
 ```
 
@@ -121,16 +121,16 @@ export const config = {
 import { component } from '@astrojs/markdoc/config';
 
 export const fence = {
-	render: component('./src/components/mdoc/Fence.astro'),
-	attributes: {
-		content: {
-			type: String,
-			required: true,
-		},
-		language: {
-			type: String,
-		},
-	},
+  render: component('./src/components/mdoc/Fence.astro'),
+  attributes: {
+    content: {
+      type: String,
+      required: true,
+    },
+    language: {
+      type: String,
+    },
+  },
 };
 ```
 
@@ -139,8 +139,8 @@ export const fence = {
 import { Code } from 'astro-expressive-code/components';
 
 interface Props {
-	content: string;
-	language: string;
+  content: string;
+  language: string;
 }
 
 const { content, language } = Astro.props as Props;
@@ -164,7 +164,7 @@ Astroアイランドを使います。UIフレームワークはReactを選択�
 では、Mermaidをinstallします。
 
 ```sh
-$ npm i mermaid
+npm i mermaid
 ```
 
 Mermaidを描写するReactコンポーネントを作成します。
@@ -174,25 +174,25 @@ import mermaid, { type MermaidConfig } from 'mermaid';
 import { useEffect } from 'react';
 
 interface Props {
-	content: string;
+  content: string;
 }
 
 const config: MermaidConfig = {
-	startOnLoad: true,
+  startOnLoad: true,
 };
 
 const Mermaid = ({ content }: Props) => {
-	mermaid.initialize(config);
+  mermaid.initialize(config);
 
-	useEffect(() => {
-		mermaid.contentLoaded();
-	}, []);
+  useEffect(() => {
+    mermaid.contentLoaded();
+  }, []);
 
-	return (
-		<div>
-			<pre className='mermaid'>{content}</pre>
-		</div>
-	);
+  return (
+    <div>
+      <pre className='mermaid'>{content}</pre>
+    </div>
+  );
 };
 
 export default Mermaid;
@@ -208,8 +208,8 @@ Mermaidはデフォルトで`class`に`mermaid`が与えられている`pre`ま�
 + import Mermaid from './Mermaid';
 
   interface Props {
-	  content: string;
-  	language: string;
+    content: string;
+    language: string;
   }
 
   const { content, language } = Astro.props as Props;
