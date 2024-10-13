@@ -64,7 +64,7 @@ spaces.bzは現在 [Vercel](https://vercel.com/) を利用しています。
 個人利用では無料でホスティングができ、GitHubと連携することでpushを検知してBuild&Deployまでやってくれます。クレカ登録不要なのも何気に嬉しい😆。
 もともとは [Netlify](https://www.netlify.com/) にホストしていたんですが、動的OGPをやりたいとなったときにSSGができるVercelに移行しました。（Netlifyでもpre-renderingを使って動的OGPをやる方法があるみたいですが、Netlifyはビルドの時間制限もあり移行を決行しました）
 
-他にも [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages) や [Heroku](https://jp.heroku.com/) など、無料枠でも十分にホスティングできるサービスが充実しています。Build&Deployまでしてくれるサービスが多いですし、いろいろと調べて試して、自分のプロダクトにあったホスティングサービスを利用すれば、無料でプロダクトをリリースすることは難しいことではありません。
+他にも [GitHub Pages](https://docs.github.com/ja/pages/getting-started-with-github-pages/about-github-pages) や [Heroku](https://jp.heroku.com/) など、無料枠でも十分にホスティングできるサービスが充実しています。Build&Deployまでしてくれるサービスが多いですし、いろいろと調べて試して、自分のプロダクトにあったホスティングサービスを利用すれば、無料でプロダクトをリリースすることは難しくありません。
 
 ## 戦略４：無料でデータ管理 with Spreadsheet
 戦略１と矛盾するのですが...笑。
@@ -72,11 +72,11 @@ spaces.bzでは最初こそTwitter APIを叩くだけのプロダクトでサー
 しかし、開発を重ねていく中でどうしてもTwitter APIを叩くだけでは実現できないやりたいことがでてきました。
 最初に行ったとおり、データベースサービスの無料枠でやりくりできるか不安があったため、spaces.bzがとった戦略はGoogle Spreadsheetをデータベース代わりに使うことでした。
 
-Spreadsheetにも5,000,000セルの制限があったりしますが、「見やすい」「使い勝手がわかる」「更新も楽」「すぐに使える」など、色々なメリットがあります。
+Spreadsheetにも5,000,000セルの制限があったりしますが、「見やすい」「使い勝手がわかる」「更新も楽」「すぐに使える」など、いろいろなメリットがあります。
 Google App Script（GAS）の存在も大きいです。spaces.bzの場合、定期的にTwitter APIを叩いてデータを更新する処理が必要だったのですが、GASが大いに力を発揮してくれています。そしてGASとSpreadsheetは言わずもがな親和性が高い。
 結果、今の段階ではSpreadsheet + GASを用いて無料でデータベースを利用している状態をつくりだしています。
 
-実現方法は別の記事を書いていますので、気になる方はどうぞ！
+実現方法は別の記事を書いていますのでぜひどうぞ！
 
 - [Nuxt で Google Spreadsheet を DB 代わりに使うぞ大作戦](/blog/20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt)
 - [NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part2 - モバイルだって使いたい！](/blog/20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2)
@@ -92,13 +92,13 @@ Netlifyを使っている頃はNetlifyにデプロイを任せるとすぐに無
 
 CI/CDはGitHub Actionsで十分です。パブリックリポジトリであれば制限なく、プライベートリポジトリでも2000分/月のワークフローを実行できます（Linuxの場合）。
 
-[GitHub Actions の課金について - GitHub Docs | 利用上限について](https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits)
+{% ogpLink url="https://docs.github.com/ja/billing/managing-billing-for-github-actions/about-billing-for-github-actions#about-spending-limits" /%}
 
 僕たちはPRを作成したときにLintやテストを回し、mergeされたとき（mainにpushがあったとき）にデータの更新をしています。
 割と高頻度に開発サイクルを回していますが、それでも2000分に達しないので、問題なく開発ができています。
 
 ## 戦略６：集客はBot
-通常サービスを認知してもらうためには、色々なところで情報発信をしたりお金を出して広告を出したりしないといけませんよね。
+通常サービスを認知してもらうためには、いろいろなところで情報発信をしたりお金を出して広告を出したりしないといけませんよね。
 人力orお金の力の選択を迫られたりしますが、spaces.bzではそれをBotに任せる戦略をとりました。
 
 待っていて流入があるほど甘くはないので、何かしら認知してもらわないといけない。けどお金は使いたくない。
@@ -106,7 +106,7 @@ CI/CDはGitHub Actionsで十分です。パブリックリポジトリであれ�
 アカウントを見ていただくとわかるのですが、リスナー数が100, 500, 1000, ...などの区切りを達成したアカウントをお知らせするBotです。
 もともとspaces.bzは「面白いスペースとの出会い」をコンセプトにしているので、そのビジョンから外れることなくサービスを認知してもらえるいい戦略になりました。
 
-更に、ここでとったもう1つの戦略が3,000円で購入したドメインとサービス名です。
+さらに、ここでとったもう1つの戦略が3,000円で購入したドメインとサービス名です。
 spaces.bzのサービス名はドメイン名と同じです。
 そのため、Twitterなどで「spaces.bz」と入力すると「あ、URLね」と認識してくれて勝手にリンクをはってくれます。
 このおかげで、Botが「spaces.bzがお知らせします」とつぶやけば集客に繋げられます。

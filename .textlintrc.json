@@ -5,37 +5,40 @@
 		}
 	},
 	"filters": {
-		"comments": true,
-		"allowlist": {
-			"allow": [
-				"スクラムマスター",
-				"スパイマスター",
-				"ブレイクアウトルーム",
-				"/<!-- ignore textlint -->[\\s\\S]*?<!-- /ignore textlint -->/m",
-				"/{%[\\s\\S]*?%}/",
-				"/{% quote .* %}[\\s\\S]*?{% /quote %}/",
-				"/> .*/",
-				"/。」/",
-				"/\\[.*\\](.*)/",
-				"x",
-				"単体テストの考え方/使い方"
-			]
-		}
+		"comments": true
 	},
 	"rules": {
-		"preset-ja-spacing": true,
-		"preset-ja-technical-writing": {
-			"no-exclamation-question-mark": false,
-			"ja-no-weak-phrase": false,
-			"no-doubled-joshi": {
-				"allow": ["も", "か"]
-			},
-			"ja-no-successive-word": {
-				"allow": ["〇"]
-			}
+		"max-ten": true,
+		"max-kanji-continuous-len": {
+			"allow": ["心理的安全性", "岡本太郎記念館", "多言語化対応"]
 		},
-		"@proofdict/proofdict": {
-			"dictURL": "https://azu.github.io/proof-dictionary/"
-		}
+		"no-mix-dearu-desumasu": true,
+		"no-doubled-joshi": {
+			"allow": ["も", "か", "ても", "にも"]
+		},
+		"no-double-negative-ja": true,
+		"no-hankaku-kana": true,
+		"ja-no-weak-phrase": true,
+		"ja-no-redundant-expression": true,
+		"ja-no-abusage": true,
+		"no-mixed-zenkaku-and-hankaku-alphabet": true,
+		"sentence-length": {
+			"skipPatterns": ["/\\{%[^%]*\\/%\\}/", "/\\{%[^%]*%\\}/"]
+		},
+		"no-dropping-the-ra": true,
+		"no-doubled-conjunctive-particle-ga": true,
+		"no-doubled-conjunction": true,
+		"ja-no-mixed-period": {
+			"allowPeriodMarks": ["%}", "笑"],
+			"allowEmojiAtEnd": true
+		},
+		"ja-hiragana-keishikimeishi": true,
+		"ja-hiragana-fukushi": true,
+		"ja-hiragana-hojodoushi": true,
+		"ja-unnatural-alphabet": true,
+		"@textlint-ja/textlint-rule-no-insert-dropping-sa": true,
+		"prefer-tari-tari": true,
+		"@textlint-ja/no-synonyms": true,
+		"ja-no-inappropriate-words": true
 	}
 }
