@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import Link from './mdoc/Link.astro';
 
 interface Props {
@@ -41,7 +42,13 @@ const posts = allPosts
 		<ul>
 			{ posts.map((post) => (
 				<li>
-					<Link href={`/blog/${post.slug}`}>{post.data.title}</Link>
+					<Link href={post.data.externalUrl ?? `/blog/${post.slug}`}>
+						{ tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle mr-2" />} 
+			      { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle mr-2" />} 
+      			{ tags?.includes('Videos') && <Icon name="mdi:video-youtube" class="inline align-middle mr-2" />} 
+						<span>{post.data.title}</span>
+						{ post.data.externalUrl && <Icon name="mdi:external-link" class="inline align-middle ml-2" /> }
+					</Link>
 				</li>
 			))}
 		</ul>
