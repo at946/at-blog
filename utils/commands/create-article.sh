@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo -n "title: "
-read title
-hyphenated_title="${title// /-}"
-directory=src/content/blog/$(date "+%Y%m%d")-$hyphenated_title
+directory=src/content/blog/$(date "+%Y%m%d")-XX
 file=$directory/index.mdoc
-mkdir $directory
+mkdir -p $directory
 touch $file
-cat >$file <<EOL
+cat > $file <<EOL
 ---
-title: $title
+title:
 tags:
+  - Articles
+  - Slides
+  - Videos
 publicationDate: $(date "+%Y-%m-%d")
 ---
 
