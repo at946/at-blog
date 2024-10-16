@@ -19,7 +19,13 @@
 		"no-double-negative-ja": true,
 		"no-hankaku-kana": true,
 		"ja-no-weak-phrase": true,
-		"ja-no-redundant-expression": true,
+		"ja-no-redundant-expression": {
+			"dictOptions": {
+				"dict2": {
+					"allows": ["/^することもできます/"]
+				}
+			}
+		},
 		"ja-no-abusage": true,
 		"no-mixed-zenkaku-and-hankaku-alphabet": true,
 		"sentence-length": {
