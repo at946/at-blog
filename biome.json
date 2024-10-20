@@ -19,7 +19,8 @@
 			"jsxQuoteStyle": "single",
 			"indentWidth": 2,
 			"indentStyle": "tab"
-		}
+		},
+		"globals": ["Astro"]
 	},
 	"json": {
 		"parser": {
@@ -37,5 +38,10 @@
 		"rules": {
 			"recommended": true
 		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
 	}
 }
