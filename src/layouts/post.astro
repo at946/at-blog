@@ -6,7 +6,10 @@ import ProfileCard from '@/components/ProfileCard.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
+import Link from '@/components/mdoc/Link.astro';
+import { PROFILE_PAGE_URLS } from '@/config';
 import MainLayout from '@/layouts/MainLayout.astro';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
@@ -28,6 +31,13 @@ const { content, description, slug, readingTime } = Astro.props;
     <Prose>
       <slot />
       <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />
+      <Link
+        href={PROFILE_PAGE_URLS.bmc}
+        class='flex justify-center mt-8 align-middle'
+      >
+        <span>気に入っていただけたら、サポートもお待ちしております！</span>
+        <Icon name="simple-icons:buymeacoffee" class="text-2xl align-middle" />
+      </Link>
       { content.tags && (
         <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
       )}
