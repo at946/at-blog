@@ -1,0 +1,18 @@
+name: New Article
+description: When you are going to create a new article
+title: "[New Article]: "
+labels: ["Articles"]
+body:
+  - type: textarea
+    attributes:
+      label: Target Audience
+  - type: textarea 
+    attributes:
+      label: What do you convey to them?
+  - type: textarea
+    attributes:
+      label: What structure can convey that to them?
+  - type: markdown
+    attributes:
+      value: |
+        What title can bring them to this post? Please fill that in this issue title.
