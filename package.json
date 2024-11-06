@@ -76,7 +76,7 @@
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
-		"astro-expressive-code": "^0.38.1",
+		"astro-expressive-code": "^0.38.2",
 		"clsx": "^2.1.1",
 		"crypto-js": "^4.2.0",
 		"katex": "^0.16.11",
