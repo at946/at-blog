@@ -29,7 +29,7 @@
 		"@types/gtag.js": "^0.0.20",
 		"@types/katex": "^0.16.7",
 		"@types/node": "^22.9.1",
-		"astro": "^4.16.13",
+		"astro": "^4.16.14",
 		"astro-icon": "^1.1.2",
 		"globby": "^14.0.2",
 		"gray-matter": "^4.0.3",
@@ -64,7 +64,7 @@
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.11.4",
-		"@astrojs/react": "^3.6.2",
+		"@astrojs/react": "^3.6.3",
 		"@fontsource/zen-kaku-gothic-new": "^5.1.0",
 		"@iconify-json/cib": "^1.2.1",
 		"@iconify-json/fa6-brands": "^1.2.2",
