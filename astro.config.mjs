@@ -12,6 +12,8 @@ import react from '@astrojs/react';
 import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
 
+import vercel from '@astrojs/vercel/serverless';
+
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -19,11 +21,13 @@ import icon from 'astro-icon';
 export default defineConfig(
 	/** @type {import('astro').AstroUserConfig} */ {
 		site: 'https://at-blog.vercel.app',
-		output: 'static',
+		output: 'hybrid',
+
 		// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 		server: {
 			// port: 4321, // The port to run the dev server on.
 		},
+
 		integrations: [
 			astroExpressiveCode(),
 			markdoc(),
@@ -40,6 +44,7 @@ export default defineConfig(
 			}),
 			react(),
 		],
+
 		vite: {
 			plugins: [],
 			resolve: {
@@ -51,5 +56,7 @@ export default defineConfig(
 				allowNodeBuiltins: true,
 			},
 		},
+
+		adapter: vercel(),
 	},
 );

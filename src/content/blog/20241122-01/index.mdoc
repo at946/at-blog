@@ -5,7 +5,7 @@ tags:
   - スクラム
   - 透明性
   - プロジェクトマネジメント
-publicationDate: 2024-11-22
+publicationDate: 2024-11-24
 ---
 
 ということで、自分がよくやっているスクラムチームにおける見通しの立て方を雑にまとめておきます。
@@ -43,7 +43,7 @@ publicationDate: 2024-11-22
 
 あるPBIが完了するまでの期間を見通したい場合、以下の式から算出できます。
 
-{% math formula="残スプリント数 = ceil(残ポイント数/ベロシティ)" /%}
+{% math formula="Number of required sprint left = ceil(Total story points left / Velocity)" /%}
 
 例えば、PBI_Cが完了する見通しを立てようとします。
 PBI_Cは5spで見積もっており、PBI_Cの前にはPBI_A（2sp）とPBI_B（3sp）が置いてあります。
@@ -51,7 +51,7 @@ PBI_Cは5spで見積もっており、PBI_Cの前にはPBI_A（2sp）とPBI_B（
 ベロシティは4spです。
 このとき、PBI_Cが完了する見通しは、以下のように求められます。
 
-{% math formula="ceil((2+3+5)/4) = ceil(2.5) = 3スプリント" /%}
+{% math formula="ceil((2+3+5)/4) = ceil(2.5) = 3 Sprint" /%}
 
 見通しが、立った！
 
@@ -71,7 +71,7 @@ PBI_D以降の見積もり前のチケットも平均すると3.3sp程度であ�
 
 PBI_Hが完了する見通しは、以下のように求められます。
 
-{% math formula="ceil((2 + 3 + 5 + 3.3 × 5) / 4) = ceil(26.5 / 4) = 7スプリント" /%}
+{% math formula="ceil((2 + 3 + 5 + 3.3 × 5) / 4) = ceil(26.5 / 4) = 7 Sprint" /%}
 
 PBI_D以降はリファインメントして見積もりが出たらその値で見通しを立て直せます。
 その場合、平均値も変わりますので、都度見通しを把握して目標とのギャップを検査することが大切です。
