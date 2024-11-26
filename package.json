@@ -30,7 +30,7 @@
 		"@types/katex": "^0.16.7",
 		"@types/node": "^22.9.4",
 		"astro": "^4.16.14",
-		"astro-icon": "^1.1.2",
+		"astro-icon": "^1.1.4",
 		"globby": "^14.0.2",
 		"gray-matter": "^4.0.3",
 		"lefthook": "^1.8.4",
