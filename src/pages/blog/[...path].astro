@@ -18,7 +18,8 @@ export const getStaticPaths = (async () => {
 
 type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 const { path } = Astro.params as Params;
-const entry: CollectionEntry<'blog'> = await getEntry('blog', path);
+const entry: CollectionEntry<'blog'> | undefined = await getEntry('blog', path);
+if (!entry) return;
 const { data, body } = entry;
 const { Content } = await entry.render();
 
