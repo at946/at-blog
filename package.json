@@ -12,7 +12,8 @@
 		"lint:text": "textlint {*,.*}/**/*.{md,mdx,mdoc}",
 		"lint:markdown": "markdownlint-cli2 {*,.*}/**/*.{md,mdx,mdoc}",
 		"lint:markdown:fix": "markdownlint-cli2 --fix {*,.*}/**/*.{md,mdx,mdoc}",
-		"create:article": "bash utils/commands/create-article.sh"
+		"create:article": "bash utils/commands/create-article.sh",
+		"lefthook": "lefthook run pre-commit"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.4",
