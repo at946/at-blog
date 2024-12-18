@@ -73,7 +73,7 @@
 		"@iconify-json/simple-icons": "^1.2.16",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/crypto-js": "^4.2.2",
-		"@types/react": "^18.3.13",
+		"@types/react": "^19.0.1",
 		"@types/react-dom": "^18.3.1",
 		"astro-expressive-code": "^0.38.3",
 		"clsx": "^2.1.1",
@@ -81,7 +81,7 @@
 		"katex": "^0.16.17",
 		"mermaid": "^11.4.1",
 		"ogp-parser": "^0.8.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.3.1"
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
 	}
 }
