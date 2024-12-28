@@ -31,7 +31,7 @@
 		"@types/katex": "^0.16.7",
 		"@types/node": "^22.10.2",
 		"astro": "^4.16.18",
-		"astro-icon": "^1.1.4",
+		"astro-icon": "^1.1.5",
 		"globby": "^14.0.2",
 		"gray-matter": "^4.0.3",
 		"lefthook": "^1.10.1",
