@@ -34,7 +34,7 @@
 		"astro-icon": "^1.1.5",
 		"globby": "^14.0.2",
 		"gray-matter": "^4.0.3",
-		"lefthook": "^1.10.4",
+		"lefthook": "^1.10.8",
 		"markdownlint-cli2": "^0.17.2",
 		"sudachi-synonyms-dictionary": "^14.0.0",
 		"svelte": "^5.17.3",
