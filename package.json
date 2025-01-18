@@ -35,7 +35,7 @@
 		"globby": "^14.0.2",
 		"gray-matter": "^4.0.3",
 		"lefthook": "^1.10.4",
-		"markdownlint-cli2": "^0.17.1",
+		"markdownlint-cli2": "^0.17.2",
 		"sudachi-synonyms-dictionary": "^14.0.0",
 		"svelte": "^5.17.3",
 		"tailwindcss": "^3.4.17",
