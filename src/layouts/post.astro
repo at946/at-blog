@@ -30,13 +30,13 @@ const { content, description, slug, readingTime } = Astro.props;
     <hr class="mb-16 border-gray-300" />
     <Prose>
       <slot />
-      <ShareButtons class="mt-16 not-prose" blogTitle={content.title} />
+      <ShareButtons class="mt-16 not-prose mb-12" blogTitle={content.title} />
       <Link
-        href={PROFILE_PAGE_URLS.bmc}
-        class='flex justify-center mt-8 align-middle'
+      href={PROFILE_PAGE_URLS.bmc}
+      class='flex justify-center flex-col text-center'
       >
-        <span>気に入っていただけたら、サポートもお待ちしております！</span>
-        <Icon name="simple-icons:buymeacoffee" class="text-2xl align-middle" />
+        <Icon name="simple-icons:buymeacoffee" class="text-2xl mx-auto mb-2" />
+        <span>気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
       </Link>
       { content.tags && (
         <RelatedPosts class="mt-16" slug={slug} tags={content.tags} />
