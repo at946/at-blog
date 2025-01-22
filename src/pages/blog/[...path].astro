@@ -1,7 +1,12 @@
 ---
 export const prerender = true;
 
-import { type CollectionEntry, getCollection, getEntry } from 'astro:content';
+import {
+	type CollectionEntry,
+	getCollection,
+	getEntry,
+	render,
+} from 'astro:content';
 import PostLayout from '@/layouts/post.astro';
 import estimateReadingTime from '@/utils/estimateReadingTime';
 import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
@@ -10,22 +15,20 @@ import type { GetStaticPaths, InferGetStaticParamsType } from 'astro';
 export const getStaticPaths = (async () => {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 	return allPosts.map((post) => ({
-		params: {
-			path: post.slug,
-		},
+		params: { path: post.id },
 	}));
 }) satisfies GetStaticPaths;
 
 type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 const { path } = Astro.params as Params;
-const entry: CollectionEntry<'blog'> = await getEntry('blog', path);
+const entry = (await getEntry('blog', path)) as CollectionEntry<'blog'>;
 const { data, body } = entry;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
-const sentence: string = extractSentenceFromMarkdocBody(body);
+const sentence: string = extractSentenceFromMarkdocBody(body || '');
 const beginning: string = sentence.slice(0, 199);
 const readingTime: number = estimateReadingTime(sentence.length);
 ---
-<PostLayout content={data} description={beginning} slug={path} readingTime={readingTime}>
+<PostLayout content={data} description={beginning} id={path} readingTime={readingTime}>
 	<Content />
 </PostLayout>

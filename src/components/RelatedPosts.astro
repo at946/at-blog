@@ -4,18 +4,18 @@ import { Icon } from 'astro-icon/components';
 import Link from './mdoc/Link.astro';
 
 interface Props {
-	slug: string;
+	id: string;
 	tags: string[];
 	class?: string;
 }
 
-const { slug, tags } = Astro.props;
+const { id, tags } = Astro.props;
 const allPosts = await getCollection('blog');
 
 const posts = allPosts
 	.filter(
 		(post: CollectionEntry<'blog'>) =>
-			post.slug !== slug &&
+			post.id !== id &&
 			post.data.tags &&
 			post.data.tags.filter((tag) => tags.includes(tag)).length > 0,
 	)
@@ -42,7 +42,7 @@ const posts = allPosts
 		<ul>
 			{ posts.map((post) => (
 				<li>
-					<Link href={post.data.externalUrl ?? `/blog/${post.slug}`}>
+					<Link href={post.data.externalUrl ?? `/blog/${post.id}`}>
 						{ tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle mr-2" />} 
 			      { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle mr-2" />} 
       			{ tags?.includes('Videos') && <Icon name="mdi:video-youtube" class="inline align-middle mr-2" />} 

@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getEntry } from 'astro:content';
+import { type CollectionEntry, getEntry, render } from 'astro:content';
 import Link from './Link.astro';
 
 interface ToCItem {
@@ -16,7 +16,7 @@ const entry: CollectionEntry<'blog'> | undefined = await getEntry(
 
 if (!entry) throw 'entry is undefined.';
 
-const { headings } = await entry.render();
+const { headings } = await render(entry);
 const tocItems: ToCItem[] = headings
 	.filter((heading) => heading.depth < 3)
 	.map((heading) => ({ slug: heading.slug, text: heading.text }));

@@ -25,12 +25,12 @@
 		"jsxImportSource": "react"
 	},
 	"include": [
-		"src/**/*.d.ts",
+		".astro/types.d.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/*.tsx",
 		"src/**/*.astro",
 		"src/pages/rss.xml.js"
 	],
-	"exclude": ["src/components/GoogleAnalytics.astro"]
+	"exclude": ["src/components/GoogleAnalytics.astro", "dist"]
 }
