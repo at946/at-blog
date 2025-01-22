@@ -23,7 +23,7 @@ export const GET = () =>
 		// see "Generating items" section for required frontmatter and advanced use cases
 		items: sortedPosts.map((item) => ({
 			title: item.data.title,
-			link: `blog/${item.slug}`,
+			link: `blog/${item.id}`,
 			pubDate: new Date(item.data.publicationDate),
 		})),
 		// (optional) inject custom xml
