@@ -1,6 +1,5 @@
 const TAGS = [
 	'Agile Japan',
-	'Articles',
 	'Astro',
 	'Definition of Done',
 	'Docker',
@@ -28,11 +27,9 @@ const TAGS = [
 	'Scrum Fest Sendai',
 	'Scrum Fest',
 	'Slack',
-	'Slides',
 	'Tenkir',
 	'TestCafe',
 	'UX',
-	'Videos',
 	'XP',
 	'XP祭り',
 	'アジャイル開発',

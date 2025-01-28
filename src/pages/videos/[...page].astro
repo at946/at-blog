@@ -12,7 +12,7 @@ import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 	const sortedPosts = allPosts
-		.filter((post: CollectionEntry<'blog'>) => post.data.type === 'blog')
+		.filter((post: CollectionEntry<'blog'>) => post.data.type === 'video')
 		.sort(
 			(a, b) =>
 				b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
@@ -26,8 +26,8 @@ export const getStaticPaths = (async ({ paginate }) => {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props;
 ---
-<DefaultPageLayout pageTitle='Blog'>
-	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} posts`}</p>
+<DefaultPageLayout pageTitle='Videos'>
+	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} videos`}</p>
 	<PostPreviewList posts={page.data} />
   <Paginator page={page} />
 </DefaultPageLayout>

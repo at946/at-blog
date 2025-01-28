@@ -7,7 +7,15 @@ export const NAV_ITEMS: NavItems = {
 	},
 	blog: {
 		path: '/blog',
-		title: 'Posts',
+		title: 'Blog',
+	},
+	slides: {
+		path: '/slides',
+		title: 'Slides',
+	},
+	videos: {
+		path: '/videos',
+		title: 'Videos',
 	},
 };
 

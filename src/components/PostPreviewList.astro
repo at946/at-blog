@@ -9,7 +9,7 @@ interface Props {
 const { posts } = Astro.props;
 ---
 <section class="flex flex-col gap-10">
-  {posts.map((post) => (
+  {posts.map((post: CollectionEntry<'blog'>) => (
     <PostPreview post={post} />
   ))}
 </section>

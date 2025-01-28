@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, publicationDate, tags, externalUrl } = post.data;
+const { title, publicationDate, tags, externalUrl, type } = post.data;
 const id: string = post.id;
 const sentence: string = extractSentenceFromMarkdocBody(post.body || '');
 const readingTime: number = estimateReadingTime(sentence.length);
@@ -24,9 +24,9 @@ const readingTime: number = estimateReadingTime(sentence.length);
   </p>
   <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
     <Link class="hover:text-primary" href={externalUrl ?? `/blog/${id}`}>
-      { tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle" />} 
-      { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle" />} 
-      { tags?.includes('Videos') && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
+      { type === 'blog' && <Icon name="mdi:document-sign" class="inline align-middle" />} 
+      { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />} 
+      { type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
       <span class="align-middle">
         {title}
       </span>

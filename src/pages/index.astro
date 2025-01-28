@@ -1,13 +1,12 @@
 ---
 export const prerender = true;
 
-import { getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import PostPreviewList from '@/components/PostPreviewList.astro';
 import ProfileCard from '@/components/ProfileCard.astro';
-import Link from '@/components/mdoc/Link.astro';
 import DefaultPageLayout from '@/layouts/default.astro';
 
-const posts = await getCollection('blog');
+const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
 posts.sort(
 	(x, y) => y.data.publicationDate.getTime() - x.data.publicationDate.getTime(),
 );
@@ -16,7 +15,4 @@ posts.sort(
   <ProfileCard class="mb-16" />
   <h1 class="font-bold text-xl mb-4 text-center md:text-left">最近の投稿</h1>
   <PostPreviewList posts={posts.slice(0, 5)} />
-  <div class="text-center md:text-right mt-8">
-    <Link class="hover:text-primary hover:underline hover:underline-offset-4" href="/blog">すべての投稿を見る &rarr;</Link>
-  </div>
 </DefaultPageLayout>
