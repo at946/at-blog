@@ -1,0 +1,31 @@
+---
+export const prerender = true;
+
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Paginator from '@/components/Paginator.astro';
+import PostPreviewList from '@/components/PostPreviewList.astro';
+import { PAGE_SIZE } from '@/config';
+import DefaultPageLayout from '@/layouts/default.astro';
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+
+export const getStaticPaths = (async ({ paginate }) => {
+	const allPosts: CollectionEntry<'videos'>[] = await getCollection('videos');
+	const sortedPosts = allPosts.sort(
+		(a, b) =>
+			b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
+	);
+
+	return paginate(sortedPosts, {
+		pageSize: PAGE_SIZE,
+	});
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { page } = Astro.props;
+---
+<DefaultPageLayout pageTitle='Videos'>
+	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} videos`}</p>
+	<PostPreviewList posts={page.data} />
+  <Paginator page={page} />
+</DefaultPageLayout>

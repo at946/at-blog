@@ -9,6 +9,14 @@ export const NAV_ITEMS: NavItems = {
 		path: '/blog',
 		title: 'Posts',
 	},
+	slides: {
+		path: '/slides',
+		title: 'Slides',
+	},
+	videos: {
+		path: '/videos',
+		title: 'Videos',
+	},
 };
 
 export const SITE = {
