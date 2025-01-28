@@ -34,7 +34,7 @@ const slidesCollection = defineCollection({
 			.max(100, 'The title length must be less than or equal to 100 chars'),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
-		externalUrl: z.string().url().optional(),
+		externalUrl: z.string().url(),
 	}),
 });
 
@@ -46,7 +46,7 @@ const videosCollection = defineCollection({
 			.max(100, 'The title length must be less than or equal to 100 chars'),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
-		externalUrl: z.string().url().optional(),
+		externalUrl: z.string().url(),
 	}),
 });
 

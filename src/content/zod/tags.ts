@@ -32,7 +32,6 @@ const TAGS = [
 	'Tenkir',
 	'TestCafe',
 	'UX',
-	'Videos',
 	'XP',
 	'XP祭り',
 	'アジャイル開発',

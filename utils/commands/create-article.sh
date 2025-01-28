@@ -10,7 +10,6 @@ title:
 tags:
   - Articles
   - Slides
-  - Videos
 publicationDate: $(date "+%Y-%m-%d")
 ---
 
