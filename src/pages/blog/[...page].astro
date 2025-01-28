@@ -24,7 +24,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props;
 ---
-<DefaultPageLayout pageTitle='Posts'>
+<DefaultPageLayout pageTitle='Blog'>
 	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} posts`}</p>
 	<PostPreviewList posts={page.data} />
   <Paginator page={page} />
