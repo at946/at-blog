@@ -12,7 +12,7 @@ import MainLayout from '@/layouts/MainLayout.astro';
 import { Icon } from 'astro-icon/components';
 
 interface Props {
-	content: CollectionEntry<'all'>['data'];
+	content: CollectionEntry<'blog'>['data'];
 	description: string;
 	id: string;
 	readingTime: number;
@@ -39,7 +39,7 @@ const { content, description, id, readingTime } = Astro.props;
         <span>気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
       </Link>
       { content.tags && (
-        <RelatedPosts class="mt-16" id={id} tags={content.tags} type={content.type} />
+        <RelatedPosts class="mt-16" id={id} tags={content.tags} />
       )}
     </Prose>
     <ProfileCard class="mt-10" />

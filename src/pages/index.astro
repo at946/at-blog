@@ -6,7 +6,7 @@ import PostPreviewList from '@/components/PostPreviewList.astro';
 import ProfileCard from '@/components/ProfileCard.astro';
 import DefaultPageLayout from '@/layouts/default.astro';
 
-const posts: CollectionEntry<'all'>[] = await getCollection('all');
+const posts: CollectionEntry<'blog'>[] = await getCollection('blog');
 posts.sort(
 	(x, y) => y.data.publicationDate.getTime() - x.data.publicationDate.getTime(),
 );

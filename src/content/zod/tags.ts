@@ -1,6 +1,5 @@
 const TAGS = [
 	'Agile Japan',
-	'Articles',
 	'Astro',
 	'Definition of Done',
 	'Docker',

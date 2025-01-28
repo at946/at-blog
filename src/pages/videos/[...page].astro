@@ -10,11 +10,13 @@ import DefaultPageLayout from '@/layouts/default.astro';
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
-	const allPosts: CollectionEntry<'videos'>[] = await getCollection('videos');
-	const sortedPosts = allPosts.sort(
-		(a, b) =>
-			b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
-	);
+	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
+	const sortedPosts = allPosts
+		.filter((post: CollectionEntry<'blog'>) => post.data.type === 'video')
+		.sort(
+			(a, b) =>
+				b.data.publicationDate.getTime() - a.data.publicationDate.getTime(),
+		);
 
 	return paginate(sortedPosts, {
 		pageSize: PAGE_SIZE,
