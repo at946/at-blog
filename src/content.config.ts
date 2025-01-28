@@ -8,6 +8,7 @@ const allCollection = defineCollection({
 		title: z
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
+		type: z.enum(['blog', 'slide', 'video']).optional(),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
 		externalUrl: z.string().url().optional(),
@@ -20,6 +21,7 @@ const blogCollection = defineCollection({
 		title: z
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
+		type: z.enum(['blog']).optional(),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
 		externalUrl: z.string().url().optional(),
@@ -32,6 +34,7 @@ const slidesCollection = defineCollection({
 		title: z
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
+		type: z.enum(['slide']),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
 		externalUrl: z.string().url(),
@@ -44,6 +47,7 @@ const videosCollection = defineCollection({
 		title: z
 			.string()
 			.max(100, 'The title length must be less than or equal to 100 chars'),
+		type: z.enum(['video']),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
 		externalUrl: z.string().url(),

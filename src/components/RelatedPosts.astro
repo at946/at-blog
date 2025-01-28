@@ -6,20 +6,21 @@ import Link from './mdoc/Link.astro';
 interface Props {
 	id: string;
 	tags: string[];
+	type: 'blog' | 'slide' | 'video' | undefined;
 	class?: string;
 }
 
-const { id, tags } = Astro.props;
-const allPosts = await getCollection('blog');
+const { id, tags, type } = Astro.props;
+const allPosts: CollectionEntry<'all'>[] = await getCollection('all');
 
 const posts = allPosts
 	.filter(
-		(post: CollectionEntry<'blog'>) =>
+		(post: CollectionEntry<'all'>) =>
 			post.id !== id &&
 			post.data.tags &&
 			post.data.tags.filter((tag) => tags.includes(tag)).length > 0,
 	)
-	.map((post: CollectionEntry<'blog'>) => ({
+	.map((post: CollectionEntry<'all'>) => ({
 		...post,
 		sameTagCount:
 			post.data.tags?.filter((tag) => tags.includes(tag)).length || 0,
@@ -42,10 +43,10 @@ const posts = allPosts
 		<ul>
 			{ posts.map((post) => (
 				<li>
-					<Link href={post.data.externalUrl ?? `/blog/${post.id}`}>
+					<Link href={post.data.externalUrl ?? `/${post.id}`}>
 						{ tags?.includes('Articles') && <Icon name="mdi:document-sign" class="inline align-middle mr-2" />} 
-			      { tags?.includes('Slides') && <Icon name="mdi:presentation" class="inline align-middle mr-2" />} 
-      			{ tags?.includes('Videos') && <Icon name="mdi:video-youtube" class="inline align-middle mr-2" />} 
+			      { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle mr-2" />} 
+      			{ type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle mr-2" />} 
 						<span>{post.data.title}</span>
 						{ post.data.externalUrl && <Icon name="mdi:external-link" class="inline align-middle ml-2" /> }
 					</Link>
