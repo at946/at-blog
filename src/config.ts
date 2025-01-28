@@ -7,7 +7,7 @@ export const NAV_ITEMS: NavItems = {
 	},
 	blog: {
 		path: '/blog',
-		title: 'Posts',
+		title: 'Blog',
 	},
 	slides: {
 		path: '/slides',

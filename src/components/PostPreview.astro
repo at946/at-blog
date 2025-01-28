@@ -7,7 +7,7 @@ import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
 
 interface Props {
-	post: CollectionEntry<'blog'>;
+	post: CollectionEntry<'blog' | 'slides' | 'videos' | 'all'>;
 	class?: string;
 }
 

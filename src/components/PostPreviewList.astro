@@ -3,16 +3,15 @@ import type { CollectionEntry } from 'astro:content';
 import PostPreview from './PostPreview.astro';
 
 interface Props {
-	posts:
-		| CollectionEntry<'blog'>[]
-		| CollectionEntry<'slides'>[]
-		| CollectionEntry<'videos'>[];
+	posts: CollectionEntry<'blog' | 'slides' | 'videos' | 'all'>[];
 }
+
+type post = CollectionEntry<'blog' | 'slides' | 'videos' | 'all'>;
 
 const { posts } = Astro.props;
 ---
 <section class="flex flex-col gap-10">
-  {posts.map((post) => (
+  {posts.map((post: post) => (
     <PostPreview post={post} />
   ))}
 </section>
