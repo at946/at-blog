@@ -7,9 +7,9 @@ touch $file
 cat > $file <<EOL
 ---
 title:
+type: blog | slide | video
 tags:
-  - Articles
-  - Slides
+  - 
 publicationDate: $(date "+%Y-%m-%d")
 ---
 
