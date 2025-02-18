@@ -73,7 +73,7 @@
 		"@iconify-json/simple-icons": "^1.2.24",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@types/crypto-js": "^4.2.2",
-		"@types/react": "^19.0.8",
+		"@types/react": "^19.0.10",
 		"@types/react-dom": "^19.0.3",
 		"astro-expressive-code": "^0.40.2",
 		"clsx": "^2.1.1",
