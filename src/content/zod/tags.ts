@@ -1,4 +1,5 @@
 const TAGS = [
+	'1on1',
 	'Agile Japan',
 	'Astro',
 	'Definition of Done',
