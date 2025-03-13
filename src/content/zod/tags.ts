@@ -12,6 +12,7 @@ const TAGS = [
 	'Google Slides',
 	'Jest',
 	'Just talk',
+	'Language Barrier',
 	'Markdoc',
 	'Mermaid',
 	'North Star Metric',
