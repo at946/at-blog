@@ -12,9 +12,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci
-      - run: npm run check:astro
-      - run: npm run check:type
-      - run: npm run biome:check
-      - run: npm run lint:text
-      - run: npm run lint:markdown
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run check:astro
+      - run: pnpm run check:type
+      - run: pnpm run biome:check
+      - run: pnpm run lint:text
+      - run: pnpm run lint:markdown
