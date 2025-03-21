@@ -85,8 +85,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0
       '@astrojs/svelte':
-        specifier: ^7.0.6
-        version: 7.0.6(@types/node@22.13.10)(astro@5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@1.21.7)(svelte@5.25.1)(typescript@5.8.2)(yaml@2.7.0)
+        specifier: ^7.0.7
+        version: 7.0.7(@types/node@22.13.10)(astro@5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@1.21.7)(svelte@5.25.1)(typescript@5.8.2)(yaml@2.7.0)
       '@astrojs/tailwind':
         specifier: ^6.0.0
         version: 6.0.0(astro@5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)
@@ -279,8 +279,8 @@ packages:
   '@astrojs/sitemap@3.3.0':
     resolution: {integrity: sha512-nYE4lKQtk+Kbrw/w0G0TTgT724co0jUsU4tPlHY9au5HmTBKbwiCLwO/15b1/y13aZ4Kr9ZbMeMHlXuwn0ty4Q==}
 
-  '@astrojs/svelte@7.0.6':
-    resolution: {integrity: sha512-YW1s9yN4ihN7u2z6JZtiWJHk7pXHu8e1D+yyKOuvV/6XkVi1bBHMytF0a4BvlM1/cRTLywPUwxYCVfg6hNcyjw==}
+  '@astrojs/svelte@7.0.7':
+    resolution: {integrity: sha512-ax+xk1ayUw30kdtDHjSN2js5Y1jxj1HvyPjlrRQwB/W2O3v3p/Fjreaqzyll7gAKUjgpincsXqZONGTNaKM7aw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -4825,7 +4825,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/svelte@7.0.6(@types/node@22.13.10)(astro@5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@1.21.7)(svelte@5.25.1)(typescript@5.8.2)(yaml@2.7.0)':
+  '@astrojs/svelte@7.0.7(@types/node@22.13.10)(astro@5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@1.21.7)(svelte@5.25.1)(typescript@5.8.2)(yaml@2.7.0)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.25.1)(vite@6.2.2(@types/node@22.13.10)(jiti@1.21.7)(yaml@2.7.0))
       astro: 5.5.3(@types/node@22.13.10)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0)
