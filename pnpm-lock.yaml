@@ -88,8 +88,8 @@ importers:
         specifier: ^7.0.7
         version: 7.0.7(@types/node@22.13.11)(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@1.21.7)(svelte@5.25.1)(typescript@5.8.2)(yaml@2.7.0)
       '@astrojs/tailwind':
-        specifier: ^6.0.0
-        version: 6.0.0(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)
+        specifier: ^6.0.1
+        version: 6.0.1(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
@@ -287,8 +287,8 @@ packages:
       svelte: ^5.1.16
       typescript: ^5.3.3
 
-  '@astrojs/tailwind@6.0.0':
-    resolution: {integrity: sha512-GbEK2/h0nvY8i6g1GZT5ddHAgj71lQIf34/j7+jPLhUti3xDxKcWElApDe2jWvqAaKl2oKEh045ITSm8mU9BVQ==}
+  '@astrojs/tailwind@6.0.1':
+    resolution: {integrity: sha512-jYrqG6dXwRnS3xUcRIoeYGFB2L2SISuTNaqMMFp0otW55HQ4fhiz941VaE9EVbs49tF2+1aAZCT3xgt2l/j5tQ==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
@@ -4844,7 +4844,7 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/tailwind@6.0.0(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)':
+  '@astrojs/tailwind@6.0.1(astro@5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0))(tailwindcss@3.4.17)':
     dependencies:
       astro: 5.5.4(@types/node@22.13.11)(jiti@1.21.7)(rollup@4.36.0)(typescript@5.8.2)(yaml@2.7.0)
       autoprefixer: 10.4.21(postcss@8.5.3)
