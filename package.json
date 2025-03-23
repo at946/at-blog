@@ -72,6 +72,7 @@
 		"@iconify-json/ri": "^1.2.5",
 		"@iconify-json/simple-icons": "^1.2.29",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"@tailwindcss/postcss": "^4.0.15",
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^19.0.12",
 		"@types/react-dom": "^19.0.4",
@@ -82,7 +83,10 @@
 		"mermaid": "^11.5.0",
 		"ogp-parser": "^0.8.1",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"sharp": "^0.33.5"
+		"react-dom": "^19.0.0"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": ["@biomejs/biome", "lefthook"],
+		"ignoredBuiltDependencies": ["esbuild", "sharp"]
 	}
 }
