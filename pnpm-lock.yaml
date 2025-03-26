@@ -85,8 +85,8 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0
       '@astrojs/svelte':
-        specifier: ^7.0.7
-        version: 7.0.7(@types/node@22.13.13)(astro@5.5.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@2.4.2)(lightningcss@1.29.2)(svelte@5.25.3)(typescript@5.8.2)(yaml@2.7.0)
+        specifier: ^7.0.8
+        version: 7.0.8(@types/node@22.13.13)(astro@5.5.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@2.4.2)(lightningcss@1.29.2)(svelte@5.25.3)(typescript@5.8.2)(yaml@2.7.0)
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
@@ -272,8 +272,8 @@ packages:
   '@astrojs/sitemap@3.3.0':
     resolution: {integrity: sha512-nYE4lKQtk+Kbrw/w0G0TTgT724co0jUsU4tPlHY9au5HmTBKbwiCLwO/15b1/y13aZ4Kr9ZbMeMHlXuwn0ty4Q==}
 
-  '@astrojs/svelte@7.0.7':
-    resolution: {integrity: sha512-ax+xk1ayUw30kdtDHjSN2js5Y1jxj1HvyPjlrRQwB/W2O3v3p/Fjreaqzyll7gAKUjgpincsXqZONGTNaKM7aw==}
+  '@astrojs/svelte@7.0.8':
+    resolution: {integrity: sha512-A995LM8ADSHjoCEyXzvuSh/ZSIvHN9FEWQ6OJ16v99ASqeau8yObSAi6BrNpsPxXLwquWBIhydaXTNYKROC6Nw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -4837,7 +4837,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/svelte@7.0.7(@types/node@22.13.13)(astro@5.5.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@2.4.2)(lightningcss@1.29.2)(svelte@5.25.3)(typescript@5.8.2)(yaml@2.7.0)':
+  '@astrojs/svelte@7.0.8(@types/node@22.13.13)(astro@5.5.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0))(jiti@2.4.2)(lightningcss@1.29.2)(svelte@5.25.3)(typescript@5.8.2)(yaml@2.7.0)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.25.3)(vite@6.2.3(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))
       astro: 5.5.5(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.37.0)(typescript@5.8.2)(yaml@2.7.0)
