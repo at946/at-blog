@@ -30,7 +30,7 @@ const CopyToClipboard = ({ copyText, children }: Props) => {
 				<span
 					aria-hidden={!tooltipIsOpen}
 					className={clsx(
-						'absolute -top-10 rounded bg-green-600 p-2 text-xs text-white transition-all',
+						'absolute -top-10 rounded-sm bg-green-600 p-2 text-xs text-white transition-all',
 						tooltipIsOpen ? 'scale-100' : 'scale-0',
 					)}
 				>

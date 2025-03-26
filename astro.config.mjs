@@ -3,7 +3,6 @@ import { fileURLToPath } from 'node:url';
 import markdoc from '@astrojs/markdoc';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
-import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -11,6 +10,8 @@ import partytown from '@astrojs/partytown';
 import react from '@astrojs/react';
 import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
+
+import tailwindcss from '@tailwindcss/vite';
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -28,9 +29,6 @@ export default defineConfig(
 			astroExpressiveCode(),
 			markdoc(),
 			svelte(),
-			tailwind({
-				applyBaseStyles: false,
-			}),
 			icon(),
 			sitemap(),
 			partytown({
@@ -41,7 +39,7 @@ export default defineConfig(
 			react(),
 		],
 		vite: {
-			plugins: [],
+			plugins: [tailwindcss()],
 			resolve: {
 				alias: {
 					$: path.resolve(__dirname, './src'),
