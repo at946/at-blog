@@ -92,10 +92,10 @@ importers:
         version: 1.9.4
       '@tailwindcss/aspect-ratio':
         specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@4.0.16)
+        version: 0.4.2(tailwindcss@4.0.17)
       '@tailwindcss/typography':
         specifier: ^0.5.16
-        version: 0.5.16(tailwindcss@4.0.16)
+        version: 0.5.16(tailwindcss@4.0.17)
       '@textlint-ja/textlint-rule-no-insert-dropping-sa':
         specifier: ^2.0.1
         version: 2.0.1
@@ -136,8 +136,8 @@ importers:
         specifier: ^5.25.3
         version: 5.25.3
       tailwindcss:
-        specifier: ^4.0.16
-        version: 4.0.16
+        specifier: ^4.0.17
+        version: 4.0.17
       textlint:
         specifier: ^14.5.0
         version: 14.5.0
@@ -4040,9 +4040,6 @@ packages:
     resolution: {integrity: sha512-9kY+CygyYM6j02t5YFHbNz2FN5QmYGv9zAjVp4lCDjlCw7amdckXlEt/bjMhUIfj4ThGRE4gCUH5+yGnNuPo5A==}
     engines: {node: '>=10.0.0'}
 
-  tailwindcss@4.0.16:
-    resolution: {integrity: sha512-i/SbG7ThTIcLshcFJL+je7hCv9dPis4Xl4XNeel6iZNX42pp/BZ+la+SbZIPoYE+PN8zhKbnHblpQ/lhOWwIeQ==}
-
   tailwindcss@4.0.17:
     resolution: {integrity: sha512-OErSiGzRa6rLiOvaipsDZvLMSpsBZ4ysB4f0VKGXUrjw2jfkJRd6kjRKV2+ZmTCNvwtvgdDam5D7w6WXsdLJZw==}
 
@@ -5531,9 +5528,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@4.0.16)':
+  '@tailwindcss/aspect-ratio@0.4.2(tailwindcss@4.0.17)':
     dependencies:
-      tailwindcss: 4.0.16
+      tailwindcss: 4.0.17
 
   '@tailwindcss/node@4.0.17':
     dependencies:
@@ -5588,13 +5585,13 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.17
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.17
 
-  '@tailwindcss/typography@0.5.16(tailwindcss@4.0.16)':
+  '@tailwindcss/typography@0.5.16(tailwindcss@4.0.17)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.0.16
+      tailwindcss: 4.0.17
 
   '@tailwindcss/vite@4.0.17(vite@6.2.3(@types/node@22.13.13)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.7.0))':
     dependencies:
@@ -9496,8 +9493,6 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
-
-  tailwindcss@4.0.16: {}
 
   tailwindcss@4.0.17: {}
 
