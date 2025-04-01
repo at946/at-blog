@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/markdoc':
-        specifier: ^0.13.2
-        version: 0.13.2(@types/react@19.0.12)(astro@5.5.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.0))(react@19.0.0)
+        specifier: ^0.13.3
+        version: 0.13.3(@types/react@19.0.12)(astro@5.5.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.0))(react@19.0.0)
       '@astrojs/react':
         specifier: ^4.2.2
         version: 4.2.2(@types/node@22.13.14)(@types/react-dom@19.0.4(@types/react@19.0.12))(@types/react@19.0.12)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(yaml@2.7.0)
@@ -241,8 +241,8 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdoc@0.13.2':
-    resolution: {integrity: sha512-4KzUPT+Kpxb5TP3bOOSFiLV/xS3PVK/ijQ6f5TH+fMETq1Qme+cjyYvXdpfBzLsWwNehWex0pROE/wx1lC7rbw==}
+  '@astrojs/markdoc@0.13.3':
+    resolution: {integrity: sha512-u2aowlTObTjvhDKK4aXV4sLEZexWfZJEwaGCPTaDJobHXregUl7HpxNjhGzRRu3cOfHoNFS4KO7spz+U8CyGYg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -5053,14 +5053,14 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdoc@0.13.2(@types/react@19.0.12)(astro@5.5.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.0))(react@19.0.0)':
+  '@astrojs/markdoc@0.13.3(@types/react@19.0.12)(astro@5.5.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.0))(react@19.0.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/markdown-remark': 6.3.1
       '@astrojs/prism': 3.2.0
       '@markdoc/markdoc': 0.5.1(@types/react@19.0.12)(react@19.0.0)
       astro: 5.5.5(@types/node@22.13.14)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.38.0)(typescript@5.8.2)(yaml@2.7.0)
-      esbuild: 0.25.1
+      esbuild: 0.25.2
       github-slugger: 2.0.0
       htmlparser2: 10.0.0
     transitivePeerDependencies:
