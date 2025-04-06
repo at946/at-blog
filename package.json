@@ -59,7 +59,7 @@
 		"textlint-rule-no-mix-dearu-desumasu": "^6.0.4",
 		"textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "^1.0.1",
 		"textlint-rule-sentence-length": "^5.2.0",
-		"typescript": "^5.8.2"
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.13.3",
