@@ -30,7 +30,7 @@
 		"@types/gtag.js": "^0.0.20",
 		"@types/katex": "^0.16.7",
 		"@types/node": "^22.15.3",
-		"astro": "^5.7.9",
+		"astro": "^5.7.10",
 		"astro-icon": "^1.1.5",
 		"globby": "^14.1.0",
 		"gray-matter": "^4.0.3",
