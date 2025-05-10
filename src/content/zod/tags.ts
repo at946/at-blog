@@ -26,6 +26,7 @@ const TAGS = [
 	'React',
 	'Regional Scrum Gathering Tokyo',
 	'Scrum Fest Kanagawa',
+	'Scrum Fest Niigata',
 	'Scrum Fest Osaka',
 	'Scrum Fest Sendai',
 	'Scrum Fest',
