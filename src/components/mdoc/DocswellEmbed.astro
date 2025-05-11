@@ -2,20 +2,13 @@
 import Link from './Link.astro';
 
 interface Props {
-	src: string;
+	id: string;
 	title: string;
 	href: string;
 }
 
-const { src, title, href } = Astro.props;
+const { id, title, href } = Astro.props;
 ---
 
-<div class="shadow-md mb-2">
-<script is:inline
-  async
-  class="docswell-embed"
-  src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js"
-  data-src={src}
-></script>
-</div>
-<div class="docswell-link text-center" style="word-break: auto-phrase;"><Link href={href} title={title}>{title}</Link></div>
+<iframe src=`https://www.docswell.com/slide/${id}/embed` allowfullscreen="true" class="docswell-iframe" width="100%" style="border: 1px solid #ccc; display: block; margin: 0px auto; padding: 0px; aspect-ratio: 620/349;"></iframe>
+<div class="docswell-link text-center mt-3" style="word-break: auto-phrase;"><Link href={href} title={title}>{title}</Link></div>

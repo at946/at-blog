@@ -10,7 +10,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Zen Kaku Gothic New', ...defaultTheme.fontFamily.sans],
+				sans: ['Zen Maru Gothic', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				primary: colors.teal['500'],

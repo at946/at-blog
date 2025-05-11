@@ -3,7 +3,7 @@ import { component } from '@astrojs/markdoc/config';
 export const docswellEmbed = {
 	render: component('./src/components/mdoc/DocswellEmbed.astro'),
 	attributes: {
-		src: {
+		id: {
 			type: String,
 			required: true,
 		},
