@@ -37,7 +37,7 @@
 		"lefthook": "^1.11.12",
 		"markdownlint-cli2": "^0.18.0",
 		"sudachi-synonyms-dictionary": "^14.0.0",
-		"svelte": "^5.31.1",
+		"svelte": "^5.33.6",
 		"tailwindcss": "^4.1.4",
 		"textlint": "^14.7.2",
 		"textlint-filter-rule-comments": "^1.2.2",
