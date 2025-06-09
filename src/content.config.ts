@@ -12,6 +12,7 @@ const blogCollection = defineCollection({
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
 		externalUrl: z.string().url().optional(),
+		youtubeEmbeddedUrl: z.string().url().optional(),
 	}),
 });
 

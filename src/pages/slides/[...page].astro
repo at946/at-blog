@@ -3,8 +3,8 @@ export const prerender = true;
 
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import EmbeddedPreviewList from '@/components/EmbeddedPreviewList.astro';
 import Paginator from '@/components/Paginator.astro';
-import PostPreviewList from '@/components/PostPreviewList.astro';
 import { PAGE_SIZE } from '@/config';
 import DefaultPageLayout from '@/layouts/default.astro';
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
@@ -28,6 +28,6 @@ const { page } = Astro.props;
 ---
 <DefaultPageLayout pageTitle='Slides'>
 	<p class="mb-4 font-semibold">{`${page.start + 1}-${page.end + 1} / ${page.total} slides`}</p>
-	<PostPreviewList posts={page.data} />
+	<EmbeddedPreviewList posts={page.data} />
   <Paginator page={page} />
 </DefaultPageLayout>
