@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import EmbeddedPostPreview from '@/components/EmbeddedPostPreview.astro';
+import SlidesPostPreview from '@/components/SlidesPostPreview.astro';
 
 interface Props {
 	posts: CollectionEntry<'blog'>[];
@@ -10,6 +10,6 @@ const { posts } = Astro.props;
 ---
 <section class="flex flex-col gap-20">
   {posts.map((post: CollectionEntry<'blog'>) => (
-    <EmbeddedPostPreview post={post} />
+    <SlidesPostPreview post={post} />
   ))}
 </section>
