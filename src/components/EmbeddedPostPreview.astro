@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import LinkTag from '@/components/LinkTag.astro';
+import OgpLink from '@/components/mdoc/OgpLink.astro';
+import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
+import { Icon } from 'astro-icon/components';
+import estimateReadingTime from '../utils/estimateReadingTime';
+import Link from './mdoc/Link.astro';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+	class?: string;
+}
+
+const { post } = Astro.props;
+const { title, publicationDate, tags, externalUrl, type } = post.data;
+const id: string = post.id;
+const sentence: string = extractSentenceFromMarkdocBody(post.body || '');
+const readingTime: number = estimateReadingTime(sentence.length);
+---
+
+<div class:list={["text-center", Astro.props.class]}>
+  <OgpLink url=`${externalUrl}` type="oembed" />
+  <p class="mb-2 font-semibold mt-4">
+    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
+  </p>
+  <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
+    <Link class="hover:text-primary" href=`${externalUrl}`>
+      { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />}
+      { type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
+      <span class="align-middle">{title}</span>
+      <Icon name="mdi:external-link" class="inline align-middle" />
+    </Link>
+  </h2>
+  <div class="flex gap-2 flex-wrap justify-center">
+    { tags && tags.length > 0 && tags.map(tag =>
+      <LinkTag name={tag} href={`/tags/${tag}`} />
+    )}
+  </div>
+</div>
