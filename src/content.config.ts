@@ -13,6 +13,8 @@ const blogCollection = defineCollection({
 		publicationDate: z.date(),
 		externalUrl: z.string().url().optional(),
 		youtubeEmbeddedUrl: z.string().url().optional(),
+		docswellId: z.string().optional(),
+		speakerDeckId: z.string().optional(),
 	}),
 });
 
