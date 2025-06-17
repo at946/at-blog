@@ -34,7 +34,7 @@
 		"no-doubled-conjunctive-particle-ga": true,
 		"no-doubled-conjunction": true,
 		"ja-no-mixed-period": {
-			"allowPeriodMarks": ["%}", "笑"],
+			"allowPeriodMarks": ["%}", "笑", "☺️"],
 			"allowEmojiAtEnd": true
 		},
 		"ja-hiragana-keishikimeishi": true,
