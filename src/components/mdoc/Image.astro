@@ -18,16 +18,17 @@ const image = await getImage({ src: src });
 
 <figure class="text-center">
   <img src={image.src} alt={alt}>
-  <figcaption class="text-gray-100 font-bold">{ caption }</figcaption>
+  {caption && (
+    <figcaption class="dark:text-gray-100 font-bold">{ caption }</figcaption>
+  )}
   {srcUrl && (
-    srcName ? (
-      <span class="text-sm">
+    <div class="pt-2">
+      from
+      { srcName ? (
         <Link href={srcUrl}>{ srcName }</Link>
-      </span>
-    ) : (
-      <span class="text-sm">
+      ) : (
         <OgpLink url={srcUrl} type="link" />
-      </span>
-    )
+      )}
+    </div>
   )}
 </figure>
