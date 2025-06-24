@@ -14,7 +14,7 @@ jobs:
           node-version: 20
       - uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 10.12.3
       - run: pnpm install --frozen-lockfile
       - run: pnpm run check:astro
       - run: pnpm run check:type
