@@ -24,7 +24,7 @@ export const SITE = {
 	title: 'at-blog',
 	description: 'こんにちは、asatoです。ゆっくりブログを書いています。',
 	url: 'https://at-blog.vercel.app',
-	image: '/ogp.png',
+	image: '/images/tonpekun.png',
 };
 
 export const ACCOUNTS = {
