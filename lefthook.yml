@@ -7,9 +7,12 @@ pre-commit:
       run: npm run check:type
     biome:
       run: npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
+      stage_fixed: true
     lint:text:
       glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: npx textlint {staged_files}
+      run: npx textlint --fix {staged_files}
+      stage_fixed: true
     lint:markdown:
       glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: npx markdownlint-cli2 {staged_files}
+      run: npx markdownlint-cli2 --fix {staged_files}
+      stage_fixed: true
