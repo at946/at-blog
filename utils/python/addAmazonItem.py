@@ -4,7 +4,7 @@ import re
 import json
 
 def main():
-  file_path = '../../src/data/amazonItems.json'
+  file_path = './src/data/amazonItems.json'
   amazonItems = []
   asin = input('ASIN: ')
 

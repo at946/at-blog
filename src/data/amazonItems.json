@@ -158,5 +158,21 @@
 		"imageUrl": "https://m.media-amazon.com/images/I/51MnLOrClbL._SL500_.jpg",
 		"publisher": "カンゼン",
 		"contributors": "ダグ・レモフ(著), 有馬 丈博(翻訳), マーレー 志雄(翻訳), 高野 鉄平(翻訳)"
+	},
+	{
+		"asin": "B00H7RACY8",
+		"url": "https://www.amazon.co.jp/dp/B00H7RACY8?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "嫌われる勇気 自己啓発の源流「アドラー」の教え",
+		"imageUrl": "https://m.media-amazon.com/images/I/51pfi-lM-HL._SL500_.jpg",
+		"publisher": "ダイヤモンド社",
+		"contributors": "岸見 一郎 (著), 古賀 史健 (著)"
+	},
+	{
+		"asin": "B01AHLTSAY",
+		"url": "https://www.amazon.co.jp/dp/B01AHLTSAY?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "幸せになる勇気 自己啓発の源流「アドラー」の教えII",
+		"imageUrl": "https://m.media-amazon.com/images/I/913abZi75gL._SL500_.jpg",
+		"publisher": "ダイヤモンド社",
+		"contributors": "岸見 一郎 (著), 古賀 史健 (著)"
 	}
 ]
