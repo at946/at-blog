@@ -14,7 +14,8 @@
 		"lint:markdown": "markdownlint-cli2 {*,.*}/**/*.{md,mdx,mdoc}",
 		"lint:markdown:fix": "markdownlint-cli2 --fix {*,.*}/**/*.{md,mdx,mdoc}",
 		"create:article": "bash utils/commands/create-article.sh",
-		"lefthook": "lefthook run pre-commit"
+		"lefthook": "lefthook run pre-commit",
+		"add:amazonLink": "python3 utils/python/addAmazonItem.py"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.4",
