@@ -13,9 +13,6 @@
 			"allow": ["心理的安全性", "岡本太郎記念館", "多言語化対応"]
 		},
 		"no-mix-dearu-desumasu": true,
-		"no-doubled-joshi": {
-			"allow": ["も", "か", "ても", "にも"]
-		},
 		"no-double-negative-ja": true,
 		"no-hankaku-kana": true,
 		"ja-no-redundant-expression": {
