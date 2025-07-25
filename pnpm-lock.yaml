@@ -183,9 +183,6 @@ importers:
       textlint-rule-no-doubled-conjunctive-particle-ga:
         specifier: ^3.0.0
         version: 3.0.0
-      textlint-rule-no-doubled-joshi:
-        specifier: ^5.1.0
-        version: 5.1.0
       textlint-rule-no-dropping-the-ra:
         specifier: ^3.0.0
         version: 3.0.0
@@ -4534,9 +4531,6 @@ packages:
 
   textlint-rule-no-doubled-conjunctive-particle-ga@3.0.0:
     resolution: {integrity: sha512-4IowX2YlTlD9VifThZwpENRh918BpPNTks0i4bOL7Gn82jUiXK0EZuV8Jtksm7i+RYG1xsO0U7P9AnxmuSxeDg==}
-
-  textlint-rule-no-doubled-joshi@5.1.0:
-    resolution: {integrity: sha512-2KkzlSlGZSM9W44SqYgtJYf1qOCBnzHS8Xs4LEZkgY78+TFsPg5kSLnC/PaAI6KdBDZJY0aI/yyAFZ7MJp/caw==}
 
   textlint-rule-no-dropping-the-ra@3.0.0:
     resolution: {integrity: sha512-KbSIlcxj1kLs4sGSMSLGA8OmgRoaPAWtodJaGEyEUiy7uiZM/VPqYALpuD8vf16N1OR5SM/bXXeZFME65r8ZgQ==}
@@ -10468,13 +10462,6 @@ snapshots:
       textlint-rule-helper: 2.3.1
 
   textlint-rule-no-doubled-conjunctive-particle-ga@3.0.0:
-    dependencies:
-      kuromojin: 3.0.0
-      sentence-splitter: 5.0.0
-      textlint-rule-helper: 2.3.1
-      textlint-util-to-string: 3.3.4
-
-  textlint-rule-no-doubled-joshi@5.1.0:
     dependencies:
       kuromojin: 3.0.0
       sentence-splitter: 5.0.0
