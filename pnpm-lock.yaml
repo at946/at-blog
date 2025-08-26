@@ -30,8 +30,8 @@ importers:
         specifier: ^1.2.5
         version: 1.2.5
       '@iconify-json/simple-icons':
-        specifier: ^1.2.48
-        version: 1.2.48
+        specifier: ^1.2.49
+        version: 1.2.49
       '@tailwindcss/vite':
         specifier: ^4.1.12
         version: 4.1.12(vite@6.3.5(@types/node@24.3.0)(jiti@2.5.1)(lightningcss@1.30.1)(yaml@2.7.0))
@@ -666,8 +666,8 @@ packages:
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
 
-  '@iconify-json/simple-icons@1.2.48':
-    resolution: {integrity: sha512-EACOtZMoPJtERiAbX1De0asrrCtlwI27+03c9OJlYWsly9w1O5vcD8rTzh+kDPjo+K8FOVnq2Qy+h/CzljSKDA==}
+  '@iconify-json/simple-icons@1.2.49':
+    resolution: {integrity: sha512-nRLwrHzz+cTAQYBNQrcr4eWOmQIcHObTj/QSi7nj0SFwVh5MvBsgx8OhoDC/R8iGklNmMpmoE/NKU0cPXMlOZw==}
 
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
@@ -5530,7 +5530,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.48':
+  '@iconify-json/simple-icons@1.2.49':
     dependencies:
       '@iconify/types': 2.0.0
 
