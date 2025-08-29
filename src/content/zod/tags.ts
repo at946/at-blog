@@ -92,6 +92,7 @@ const TAGS = [
 	'読書',
 	'文化形成',
 	'勉強会',
+	'勇気',
 ] as const;
 
 export default TAGS;

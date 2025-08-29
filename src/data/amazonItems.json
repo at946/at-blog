@@ -182,5 +182,29 @@
 		"imageUrl": "https://m.media-amazon.com/images/I/51gxV-GXv2L._SL500_.jpg",
 		"publisher": "ハーパーコリンズ・ジャパン",
 		"contributors": "クレイトン・Ｍ・クリステンセン(著), 依田光江(翻訳), タディ・ホール(その他), カレン・ディロン(その他), デイビッド・S・ダンカン(その他)"
+	},
+	{
+		"asin": "B0947829PY",
+		"url": "https://www.amazon.co.jp/dp/B0947829PY?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "SCRUM MASTERY - From Good To Great Servant Leadership",
+		"imageUrl": "https://m.media-amazon.com/images/I/41XurfsTMML._SL500_.jpg",
+		"publisher": "Inspect & Adapt Ltd",
+		"contributors": "Geoff Watts (著), Ole Størksen (イラスト), Rebecca Traeger (編集), Mike Cohn (はしがき), Esther Derby (はしがき)"
+	},
+	{
+		"asin": "B0CW1N21MX",
+		"url": "https://www.amazon.co.jp/dp/B0CW1N21MX?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "マンガでよくわかる　アドラー流子育て",
+		"imageUrl": "https://m.media-amazon.com/images/I/71QMEygf1aL._SL500_.jpg",
+		"publisher": "かんき出版",
+		"contributors": "岩井俊憲 (著), 藤井昌子 (イラスト)"
+	},
+	{
+		"asin": "B06XKKJPHP",
+		"url": "https://www.amazon.co.jp/dp/B06XKKJPHP?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "もしアドラーが上司だったら",
+		"imageUrl": "https://m.media-amazon.com/images/I/81nD7IPOL7L._SL500_.jpg",
+		"publisher": "プレジデント社",
+		"contributors": "小倉 広 (著)"
 	}
 ]

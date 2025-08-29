@@ -150,9 +150,6 @@ importers:
       textlint-rule-ja-hiragana-hojodoushi:
         specifier: ^1.1.0
         version: 1.1.0
-      textlint-rule-ja-hiragana-keishikimeishi:
-        specifier: ^1.1.0
-        version: 1.1.0
       textlint-rule-ja-no-abusage:
         specifier: ^3.0.0
         version: 3.0.0
@@ -4327,9 +4324,6 @@ packages:
 
   textlint-rule-ja-hiragana-hojodoushi@1.1.0:
     resolution: {integrity: sha512-J+7thUQx5/o4grCbgiQPwT5uFhXYulaP+rf+QnA8H5fYrEjwDrvSlU/RVuibbrYIjigDso09FU8lft02y+XgMA==}
-
-  textlint-rule-ja-hiragana-keishikimeishi@1.1.0:
-    resolution: {integrity: sha512-rNwTzQdwGopLxesjXMYQi1MVzZbQOx7fap7dAcbajtvMCKMtucYcvOIptgegagpHctaRa303NqbHLhqMv3OIeg==}
 
   textlint-rule-ja-no-abusage@3.0.0:
     resolution: {integrity: sha512-DIqPZgYTwTsvjX6Bgj7GA8vlwGMObagJpNoUtkucOaoy7E7GwUOL+knqFjcTtlkWSmoKpIkw5OWW5CV3kivlfQ==}
@@ -10086,11 +10080,6 @@ snapshots:
       kuromojin: 2.1.1
       morpheme-match-all: 1.2.0
       untildify: 4.0.0
-
-  textlint-rule-ja-hiragana-keishikimeishi@1.1.0:
-    dependencies:
-      kuromojin: 2.1.1
-      morpheme-match-all: 1.2.0
 
   textlint-rule-ja-no-abusage@3.0.0:
     dependencies:
