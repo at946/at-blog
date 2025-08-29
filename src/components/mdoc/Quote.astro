@@ -11,11 +11,12 @@ interface Props {
 
 const { citeName, citeUrl, amazonAsin } = Astro.props;
 ---
-<blockquote class="prose-quoteless mb-0">
-  <slot/>
-</blockquote>
-<cite class="block text-right">
-  { (citeName && citeUrl) &&
+<blockquote class="prose-quoteless mb-1">
+  <div class="[&>p]:mb-2">
+    <slot />
+  </div>
+  <cite class="block text-right">
+    { (citeName && citeUrl) &&
     <Link href={citeUrl}>{citeName}</Link>
   }
   { (citeName && !citeUrl) &&
@@ -28,3 +29,4 @@ const { citeName, citeUrl, amazonAsin } = Astro.props;
     <AmazonLink asin={amazonAsin} type="link" />
   }
 </cite>
+</blockquote>
