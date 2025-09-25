@@ -9,7 +9,6 @@ export type NavItem = {
 
 export type amazonItem = {
 	asin: string;
-	url: string;
 	imageUrl: string;
 	title: string;
 	contributors: string;

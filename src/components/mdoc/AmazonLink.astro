@@ -14,13 +14,14 @@ const item: amazonItem | undefined = items.find((item) => item.asin === asin);
 if (!item) {
 	throw `ASIN ${asin} is not found.`;
 }
+const url: string = `https://www.amazon.co.jp/dp/${asin}?tag=at946-22&linkCode=ogi&th=1&psc=1`;
 ---
 
 { type === 'link' &&
-  <Link href={item.url}>{item.title}</Link>
+  <Link href={url}>{item.title}</Link>
 }
 { type === 'linkCard' &&
-  <Link href={item.url}>
+  <Link href={url}>
     <div class:list={[
       'flex max-sm:flex-col items-center',
       'max-sm:text-center sm:text-left',
