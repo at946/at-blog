@@ -18,7 +18,7 @@
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.4",
+		"@astrojs/check": "^0.9.5",
 		"@astrojs/partytown": "^2.1.4",
 		"@astrojs/rss": "^4.0.11",
 		"@astrojs/sitemap": "^3.6.0",
