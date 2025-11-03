@@ -63,7 +63,7 @@
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^0.15.8",
-		"@astrojs/react": "^4.4.0",
+		"@astrojs/react": "^4.4.1",
 		"@fontsource/zen-kaku-gothic-new": "^5.2.7",
 		"@iconify-json/cib": "^1.2.3",
 		"@iconify-json/fa6-brands": "^1.2.6",
