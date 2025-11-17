@@ -33,7 +33,7 @@
 		"@types/node": "^24.10.0",
 		"astro": "^5.15.1",
 		"astro-icon": "^1.1.5",
-		"globby": "^15.0.0",
+		"globby": "^16.0.0",
 		"gray-matter": "^4.0.3",
 		"lefthook": "^2.0.3",
 		"markdownlint-cli2": "^0.18.0",
