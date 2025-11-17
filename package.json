@@ -70,7 +70,7 @@
 		"@iconify-json/mdi": "^1.2.3",
 		"@iconify-json/ri": "^1.2.6",
 		"@iconify-json/simple-icons": "^1.2.57",
-		"@tailwindcss/vite": "^4.1.16",
+		"@tailwindcss/vite": "^4.1.17",
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^19.1.6",
 		"@types/react-dom": "^19.1.3",
