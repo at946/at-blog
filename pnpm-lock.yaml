@@ -57,7 +57,7 @@ importers:
         specifier: ^0.16.25
         version: 0.16.25
       mermaid:
-        specifier: ^11.12.0
+        specifier: ^11.12.1
         version: 11.12.1
       ogp-parser:
         specifier: ^0.8.1
