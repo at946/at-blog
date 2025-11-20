@@ -10,6 +10,7 @@
 		"check:astro": "astro check",
 		"check:type": "tsc --project tsconfig.json --pretty --noEmit",
 		"biome:check": "biome check src",
+		"biome:write": "biome check --write src",
 		"lint:text": "textlint {*,.*}/**/*.{md,mdx,mdoc}",
 		"lint:markdown": "markdownlint-cli2 {*,.*}/**/*.{md,mdx,mdoc}",
 		"lint:markdown:fix": "markdownlint-cli2 --fix {*,.*}/**/*.{md,mdx,mdoc}",

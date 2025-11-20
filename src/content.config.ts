@@ -1,6 +1,6 @@
 import { defineCollection, z } from 'astro:content';
-import TAGS from '@/content/zod/tags';
 import { glob } from 'astro/loaders';
+import TAGS from '@/content/zod/tags';
 
 const blogCollection = defineCollection({
 	loader: glob({ pattern: '**/[^_]*.mdoc', base: './src/content/blog' }),
