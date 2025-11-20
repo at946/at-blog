@@ -16,7 +16,8 @@
 		"lint:markdown:fix": "markdownlint-cli2 --fix {*,.*}/**/*.{md,mdx,mdoc}",
 		"create:article": "bash utils/commands/create-article.sh",
 		"lefthook": "lefthook run pre-commit",
-		"add:amazonLink": "python3 utils/python/addAmazonItem.py"
+		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
+		"recreate:pnpm-lock": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm i"
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.9.5",
