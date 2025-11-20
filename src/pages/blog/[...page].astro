@@ -1,13 +1,13 @@
 ---
 export const prerender = true;
 
-import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import Paginator from '@/components/Paginator.astro';
 import PostPreviewList from '@/components/PostPreviewList.astro';
 import { PAGE_SIZE } from '@/config';
 import DefaultPageLayout from '@/layouts/default.astro';
-import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
 export const getStaticPaths = (async ({ paginate }) => {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');

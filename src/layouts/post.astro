@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
+import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import ProfileCard from '@/components/ProfileCard.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
-import Link from '@/components/mdoc/Link.astro';
 import { PROFILE_PAGE_URLS } from '@/config';
 import MainLayout from '@/layouts/MainLayout.astro';
-import { Icon } from 'astro-icon/components';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];

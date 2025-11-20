@@ -1,14 +1,10 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"files": {
-		"ignore": ["node_modules/**/*"]
-	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"files": {},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"formatter": {
 		"enabled": true,
-		"ignore": [],
+		"includes": ["**"],
 		"indentWidth": 2,
 		"indentStyle": "tab"
 	},
@@ -43,5 +39,23 @@
 		"enabled": true,
 		"clientKind": "git",
 		"useIgnoreFile": true
-	}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.astro", "**/*.svelte"],
+			"linter": {
+				"rules": {
+					"correctness": {
+						"noUnusedImports": "off",
+						"noUnusedVariables": "off"
+					}
+				}
+			}
+		}
+	]
 }
