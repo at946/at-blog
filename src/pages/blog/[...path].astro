@@ -7,10 +7,10 @@ import {
 	getEntry,
 	render,
 } from 'astro:content';
+import type { GetStaticPaths, InferGetStaticParamsType } from 'astro';
 import PostLayout from '@/layouts/post.astro';
 import estimateReadingTime from '@/utils/estimateReadingTime';
 import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
-import type { GetStaticPaths, InferGetStaticParamsType } from 'astro';
 
 export const getStaticPaths = (async () => {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
