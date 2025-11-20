@@ -48,7 +48,7 @@ spaces.bzの場合は、その日のランキング10位までをGASで集計し
 今回は簡単な例なので、次のようなシートを用意します。
 
 |id|name|ogpId|
-| --- | --- | --- |
+|---|---|---|
 |1|Test A||
 |2|Test B||
 |3|Test C||
@@ -132,7 +132,7 @@ const folder = DriveApp.getFolderById('<FolderのID>')
 最初の`const`たちは変数の設定です。
 
 |変数|説明|
-| ----- | ----- |
+|-----|-----|
 |`ss`|2で作成したSpreadsheet。`<SpreadsheetのID>`は`https://docs.google.com/spreadsheets/d/<この部分>/edit`|
 |`sheet`|2で作成したシート|
 |`data`|`sheet`のデータをArrayで取得したもの|
