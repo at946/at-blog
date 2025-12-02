@@ -40,7 +40,7 @@
 		"lefthook": "^2.0.3",
 		"markdownlint-cli2": "^0.19.1",
 		"sudachi-synonyms-dictionary": "^16.0.0",
-		"svelte": "^5.43.15",
+		"svelte": "^5.45.3",
 		"tailwindcss": "^4.1.17",
 		"textlint": "^15.4.0",
 		"textlint-filter-rule-comments": "^1.2.2",
