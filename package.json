@@ -20,7 +20,7 @@
 		"recreate:pnpm-lock": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm i"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.5",
+		"@astrojs/check": "^0.9.6",
 		"@astrojs/partytown": "^2.1.4",
 		"@astrojs/rss": "^4.0.14",
 		"@astrojs/sitemap": "^3.6.0",
