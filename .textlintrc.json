@@ -10,7 +10,12 @@
 	"rules": {
 		"max-ten": true,
 		"max-kanji-continuous-len": {
-			"allow": ["心理的安全性", "岡本太郎記念館", "多言語化対応"]
+			"allow": [
+				"心理的安全性",
+				"岡本太郎記念館",
+				"多言語化対応",
+				"死亡前死因分析"
+			]
 		},
 		"no-mix-dearu-desumasu": true,
 		"no-double-negative-ja": true,
