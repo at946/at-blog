@@ -17,16 +17,4 @@
       <slot />
     </main>
   </div>
-  
-  <!-- Show Google Adsense ads with ClientRouter -->
-   <script is:inline>
-    document.addEventListener('astro:after-swap', () => {
-      const ads = document.querySelectorAll('.adsbygoogle');
-      ads.forEach(() => {
-        try {
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        } catch (e) {}
-      });
-    });
-   </script>
 </body>
