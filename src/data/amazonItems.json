@@ -202,5 +202,125 @@
 		"imageUrl": "https://m.media-amazon.com/images/I/314RErfLhuL._SL500_.jpg",
 		"publisher": "みすず書房",
 		"contributors": "ジェリー・Z・ミュラー(著), 松本裕(翻訳)"
+	},
+	{
+		"asin": "B084WVMKLC",
+		"url": "https://www.amazon.co.jp/dp/B084WVMKLC?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "When Will It Be Done?: Lean-Agile Forecasting to Answer Your Customers' Most Important Question",
+		"imageUrl": "https://m.media-amazon.com/images/I/51OqZADL0NL._SL500_.jpg",
+		"publisher": "ActionableAgilePress",
+		"contributors": "Daniel Vacanti (著)"
+	},
+	{
+		"asin": "B0BRCTG2Y8",
+		"url": "https://www.amazon.co.jp/dp/B0BRCTG2Y8?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "プロジェクトマネジメント知識体系ガイド（PMBOKガイド）第7版＋プロジェクトマネジメント標準: PMI日本支部 監訳",
+		"imageUrl": "https://m.media-amazon.com/images/I/71pHbu3guLL._SL500_.jpg",
+		"publisher": "一般社団法人 PMI日本支部",
+		"contributors": "プロジェクトマネジメント協会（PMI） (著)"
+	},
+	{
+		"asin": "4814400640",
+		"url": "https://www.amazon.co.jp/dp/4814400640?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "組織を変える5つの対話 ―対話を通じてアジャイルな組織文化を創る",
+		"imageUrl": "https://m.media-amazon.com/images/I/41XgeQkGH5L._SL500_.jpg",
+		"publisher": "オライリー・ジャパン",
+		"contributors": "Douglas Squirrel(著), Jeffrey Fredrick(著), 宮澤 明日香(翻訳), 中西 健人(翻訳), 和智 右桂(翻訳)"
+	},
+	{
+		"asin": "4873119944",
+		"url": "https://www.amazon.co.jp/dp/4873119944?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "エンジニアリングマネージャーのしごと ―チームが必要とするマネージャーになる方法",
+		"imageUrl": "https://m.media-amazon.com/images/I/512FunhYKsL._SL500_.jpg",
+		"publisher": "オライリージャパン",
+		"contributors": "James Stanier(著), 吉羽 龍太郎(翻訳), 永瀬 美穂(翻訳), 原田 騎郎(翻訳), 竹葉 美沙(翻訳)"
+	},
+	{
+		"asin": "B09VGRKLX5",
+		"url": "https://www.amazon.co.jp/dp/B09VGRKLX5?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "NEW SALES――新時代の営業に必要な7つの原則",
+		"imageUrl": "https://m.media-amazon.com/images/I/51Iks+VKIsL._SL500_.jpg",
+		"publisher": "ダイヤモンド社",
+		"contributors": "麻野 耕司(著)"
+	},
+	{
+		"asin": "B0998ZTVTD",
+		"url": "https://www.amazon.co.jp/dp/B0998ZTVTD?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "人月の神話",
+		"imageUrl": "https://m.media-amazon.com/images/I/51Qt7CEQh2S._SL500_.jpg",
+		"publisher": "丸善出版",
+		"contributors": "フレデリック・P・ブルックス，Jr.(著), 滝沢徹(著), 牧野祐子(著), 富澤昇(著)"
+	},
+	{
+		"asin": "4814400918",
+		"url": "https://www.amazon.co.jp/dp/4814400918?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "Tidy First? ―個人で実践する経験主義的ソフトウェア設計",
+		"imageUrl": "https://m.media-amazon.com/images/I/412F5DiRwuL._SL500_.jpg",
+		"publisher": "オライリー・ジャパン",
+		"contributors": "Kent Beck(著), 吉羽 龍太郎(翻訳), 永瀬 美穂(翻訳), 細澤 あゆみ(翻訳)"
+	},
+	{
+		"asin": "4798185701",
+		"url": "https://www.amazon.co.jp/dp/4798185701?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "GitLabに学ぶ パフォーマンスを最大化させるドキュメンテーション技術 数千ページにもわたるハンドブックを活用したテキストコミュニケーションの作法",
+		"imageUrl": "https://m.media-amazon.com/images/I/41McxwZ2SLL._SL500_.jpg",
+		"publisher": "翔泳社",
+		"contributors": "千田 和央(著), 伊藤 俊廷(監修), 佐々木 直晴(監修)"
+	},
+	{
+		"asin": "B09L4KPJWT",
+		"url": "https://www.amazon.co.jp/dp/B09L4KPJWT?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "エフォートレス思考 努力を最小化して成果を最大化する",
+		"imageUrl": "https://m.media-amazon.com/images/I/41Aq9AogJbL._SL500_.jpg",
+		"publisher": "かんき出版",
+		"contributors": "グレッグ・マキューン(著), 高橋璃子(翻訳)"
+	},
+	{
+		"asin": "B08FT4M5Z7",
+		"url": "https://www.amazon.co.jp/dp/B08FT4M5Z7?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "ａｍａｚｏｎのすごい会議―ジェフ・ベゾスが生んだマネジメントの技法",
+		"imageUrl": "https://m.media-amazon.com/images/I/51MnNC7IayL._SL500_.jpg",
+		"publisher": "東洋経済新報社",
+		"contributors": "佐藤 将之(著)"
+	},
+	{
+		"asin": "4906790402",
+		"url": "https://www.amazon.co.jp/dp/4906790402?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "自分に語りかける時も敬語で -- 機嫌よく日々を送るための哲学",
+		"imageUrl": "https://m.media-amazon.com/images/I/41z58LnITBL._SL500_.jpg",
+		"publisher": "夜間飛行",
+		"contributors": "秋田 道夫(著)"
+	},
+	{
+		"asin": "4622087936",
+		"url": "https://www.amazon.co.jp/dp/4622087936?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "測りすぎ――なぜパフォーマンス評価は失敗するのか?",
+		"imageUrl": "https://m.media-amazon.com/images/I/41Na05oygEL._SL500_.jpg",
+		"publisher": "みすず書房",
+		"contributors": "ジェリー・Z・ミュラー(著), 松本 裕(翻訳)"
+	},
+	{
+		"asin": "447812132X",
+		"url": "https://www.amazon.co.jp/dp/447812132X?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "ハーバード・ビジネス・レビューが贈る リーダーを支える365の言葉",
+		"imageUrl": "https://m.media-amazon.com/images/I/41r+CoLjRGL._SL500_.jpg",
+		"publisher": "ダイヤモンド社",
+		"contributors": "ハーバード・ビジネス・レビュー編集部(編集), ＤＩＡＭＯＮＤハーバード・ビジネス・レビュー編集部(翻訳)"
+	},
+	{
+		"asin": "4820719718",
+		"url": "https://www.amazon.co.jp/dp/4820719718?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "マンガでやさしくわかる学習する組織",
+		"imageUrl": "https://m.media-amazon.com/images/I/51M-+Zkd9UL._SL500_.jpg",
+		"publisher": "日本能率協会マネジメントセンター, jp_books, JMAMC",
+		"contributors": "小田 理一郎(著), 松尾 陽子(その他)"
+	},
+	{
+		"asin": "4820719998",
+		"url": "https://www.amazon.co.jp/dp/4820719998?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "マンガでやさしくわかるモンテッソーリ教育",
+		"imageUrl": "https://m.media-amazon.com/images/I/51V8rLXjIzL._SL500_.jpg",
+		"publisher": "日本能率協会マネジメントセンター",
+		"contributors": "田中 昌子(著), 空生 直(その他)"
 	}
 ]
