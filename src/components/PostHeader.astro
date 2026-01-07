@@ -15,7 +15,7 @@ const { title, publicationDate, tags, readingTime } = Astro.props;
   <p class="mb-2 font-semibold">
     { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
   </p>
-  <h1 class="text-3xl leading-snug font-bold mb-4" style="word-break: auto-phrase;">
+  <h1 class="text-3xl leading-snug font-bold mb-4">
     { title }
   </h1>
   <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
