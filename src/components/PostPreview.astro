@@ -22,7 +22,7 @@ const readingTime: number = estimateReadingTime(sentence.length);
   <p class="mb-2 font-semibold">
     { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
   </p>
-  <h2 class="text-2xl font-bold mb-4" style="word-break: auto-phrase;">
+  <h2 class="text-2xl font-bold mb-4">
     <Link class="hover:text-primary" href={externalUrl ?? `/blog/${id}`}>
       { type === 'blog' && <Icon name="mdi:document-sign" class="inline align-middle" />} 
       { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />} 

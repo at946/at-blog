@@ -12,7 +12,7 @@ const { id, title, href } = Astro.props;
 
 <iframe src=`https://www.docswell.com/slide/${id}/embed` allowfullscreen="true" class="docswell-iframe" width="100%" style="border: 1px solid #ccc; display: block; margin: 0px auto; padding: 0px; aspect-ratio: 620/349;"></iframe>
 { title &&
-	<div class="docswell-link text-center mt-3" style="word-break: auto-phrase;">
+	<div class="docswell-link text-center mt-3">
 		{ href ? <Link href={href} title={title}>{title}</Link> : {title} }
 	</div>
 }
