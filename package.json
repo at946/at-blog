@@ -79,7 +79,7 @@
 		"astro-expressive-code": "^0.41.6",
 		"clsx": "^2.1.1",
 		"crypto-js": "^4.2.0",
-		"katex": "^0.16.27",
+		"katex": "^0.16.28",
 		"mermaid": "^11.12.2",
 		"ogp-parser": "^0.8.1",
 		"react": "^19.2.3",
