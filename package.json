@@ -22,7 +22,7 @@
 	"devDependencies": {
 		"@astrojs/check": "^0.9.8",
 		"@astrojs/partytown": "^2.1.5",
-		"@astrojs/rss": "^4.0.15",
+		"@astrojs/rss": "^4.0.17",
 		"@astrojs/sitemap": "^3.7.1",
 		"@astrojs/svelte": "^7.2.5",
 		"@biomejs/biome": "2.4.7",
