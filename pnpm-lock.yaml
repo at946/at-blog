@@ -76,8 +76,8 @@ importers:
         specifier: ^0.9.8
         version: 0.9.8(prettier@3.8.1)(typescript@5.9.3)
       '@astrojs/partytown':
-        specifier: ^2.1.5
-        version: 2.1.5
+        specifier: ^2.1.6
+        version: 2.1.6
       '@astrojs/rss':
         specifier: ^4.0.17
         version: 4.0.17
@@ -243,8 +243,8 @@ packages:
   '@astrojs/markdown-remark@6.3.11':
     resolution: {integrity: sha512-hcaxX/5aC6lQgHeGh1i+aauvSwIT6cfyFjKWvExYSxUhZZBBdvCliOtu06gbQyhbe0pGJNoNmqNlQZ5zYUuIyQ==}
 
-  '@astrojs/partytown@2.1.5':
-    resolution: {integrity: sha512-Uo2Uqmvjh/5w08wGoVAspdj14hUoE28uQH8SkzaBMw9bTBNIviEkPi3VkJi+tj1ZYAY9oX7OSkRDJ48QRtMhlw==}
+  '@astrojs/partytown@2.1.6':
+    resolution: {integrity: sha512-pS95OSnPkSmuOHzwLXCea8p4P8bqmA2fm3BUBW6/egzSTaWYte/Gp1jiAoPmCZ6FV7jGx4GHduO2CUltUXc3Og==}
 
   '@astrojs/prism@3.3.0':
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
@@ -5391,7 +5391,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/partytown@2.1.5':
+  '@astrojs/partytown@2.1.6':
     dependencies:
       '@qwik.dev/partytown': 0.11.2
       mrmime: 2.0.1
