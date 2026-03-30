@@ -54,8 +54,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0
       katex:
-        specifier: ^0.16.40
-        version: 0.16.40
+        specifier: ^0.16.44
+        version: 0.16.44
       mermaid:
         specifier: ^11.13.0
         version: 11.13.0
@@ -3178,8 +3178,8 @@ packages:
   jsonc-parser@3.3.1:
     resolution: {integrity: sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==}
 
-  katex@0.16.40:
-    resolution: {integrity: sha512-1DJcK/L05k1Y9Gf7wMcyuqFOL6BiY3vY0CFcAM/LPRN04NALxcl6u7lOWNsp3f/bCHWxigzQl6FbR95XJ4R84Q==}
+  katex@0.16.44:
+    resolution: {integrity: sha512-EkxoDTk8ufHqHlf9QxGwcxeLkWRR3iOuYfRpfORgYfqc8s13bgb+YtRY59NK5ZpRaCwq1kqA6a5lpX8C/eLphQ==}
     hasBin: true
 
   keyv@5.6.0:
@@ -8532,7 +8532,7 @@ snapshots:
 
   jsonc-parser@3.3.1: {}
 
-  katex@0.16.40:
+  katex@0.16.44:
     dependencies:
       commander: 8.3.0
 
@@ -9011,7 +9011,7 @@ snapshots:
       dagre-d3-es: 7.0.14
       dayjs: 1.11.19
       dompurify: 3.3.2
-      katex: 0.16.40
+      katex: 0.16.44
       khroma: 2.1.0
       lodash-es: 4.17.23
       marked: 16.4.2
@@ -9158,7 +9158,7 @@ snapshots:
     dependencies:
       '@types/katex': 0.16.8
       devlop: 1.1.0
-      katex: 0.16.40
+      katex: 0.16.44
       micromark-factory-space: 2.0.1
       micromark-util-character: 2.1.1
       micromark-util-symbol: 2.0.1
