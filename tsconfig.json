@@ -12,12 +12,11 @@
 		"forceConsistentCasingInFileNames": true,
 		"allowJs": false,
 		"checkJs": false,
-		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
-			"@components/*": ["src/components/*"],
-			"@layouts/*": ["src/layouts/*"],
-			"@utils/*": ["src/utils/*"]
+			"@/*": ["./src/*"],
+			"@components/*": ["./src/components/*"],
+			"@layouts/*": ["./src/layouts/*"],
+			"@utils/*": ["./src/utils/*"]
 		},
 		"types": ["astro/env"],
 		"strictNullChecks": true,
