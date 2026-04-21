@@ -24,7 +24,7 @@
 		"@astrojs/partytown": "^2.1.7",
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.2",
-		"@astrojs/svelte": "^7.2.5",
+		"@astrojs/svelte": "^8.0.5",
 		"@biomejs/biome": "2.4.12",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.19",
@@ -33,7 +33,7 @@
 		"@types/gtag.js": "^0.0.20",
 		"@types/katex": "^0.16.8",
 		"@types/node": "^25.6.0",
-		"astro": "^5.18.1",
+		"astro": "^6.1.8",
 		"astro-icon": "^1.1.5",
 		"globby": "^16.2.0",
 		"gray-matter": "^4.0.3",
@@ -64,7 +64,7 @@
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
-		"@astrojs/markdoc": "^0.15.11",
+		"@astrojs/markdoc": "^1.0.3",
 		"@astrojs/react": "^5.0.3",
 		"@fontsource/zen-kaku-gothic-new": "^5.2.7",
 		"@iconify-json/cib": "^1.2.3",
