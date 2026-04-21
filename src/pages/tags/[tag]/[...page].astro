@@ -3,13 +3,14 @@ export const prerender = true;
 
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import type { GetStaticPathsOptions } from 'astro';
 import Paginator from '@/components/Paginator.astro';
 import PostPreviewList from '@/components/PostPreviewList.astro';
 import { PAGE_SIZE } from '@/config';
 import TAGS from '@/content/zod/tags';
 import DefaultPageLayout from '@/layouts/default.astro';
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
 
 	return TAGS.flatMap((tag) => {
