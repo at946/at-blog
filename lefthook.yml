@@ -2,17 +2,17 @@ pre-commit:
   parallel: true
   commands:
     check:astro:
-      run: npm run check:astro
+      run: pnpm run check:astro
     check:type:
-      run: npm run check:type
+      run: pnpm run check:type
     biome:
-      run: npx biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
+      run: pnpm biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
       stage_fixed: true
     lint:text:
-      glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: npx textlint --fix {staged_files}
+      glob: "**/*.{md,mdx,mdoc}"
+      run: pnpm textlint --fix {staged_files}
       stage_fixed: true
     lint:markdown:
-      glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: npx markdownlint-cli2 --fix {staged_files}
+      glob: "**/*.{md,mdx,mdoc}"
+      run: pnpm markdownlint-cli2 --fix {staged_files}
       stage_fixed: true

@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 import TAGS from '@/content/zod/tags';
 
 const blogCollection = defineCollection({
@@ -11,8 +12,8 @@ const blogCollection = defineCollection({
 		type: z.enum(['blog', 'slide', 'video']),
 		tags: z.enum(TAGS).array().optional(),
 		publicationDate: z.date(),
-		externalUrl: z.string().url().optional(),
-		youtubeEmbeddedUrl: z.string().url().optional(),
+		externalUrl: z.url().optional(),
+		youtubeEmbeddedUrl: z.url().optional(),
 		docswellId: z.string().optional(),
 		speakerDeckId: z.string().optional(),
 	}),
