@@ -101,7 +101,7 @@ importers:
         version: 2.0.1
       '@textlint-ja/textlint-rule-no-synonyms':
         specifier: ^1.3.0
-        version: 1.3.0(sudachi-synonyms-dictionary@17.0.0)
+        version: 1.3.0(sudachi-synonyms-dictionary@18.0.0)
       '@types/gtag.js':
         specifier: ^0.0.20
         version: 0.0.20
@@ -130,8 +130,8 @@ importers:
         specifier: ^0.22.1
         version: 0.22.1
       sudachi-synonyms-dictionary:
-        specifier: ^17.0.0
-        version: 17.0.0
+        specifier: ^18.0.0
+        version: 18.0.0
       svelte:
         specifier: ^5.55.5
         version: 5.55.5
@@ -4223,8 +4223,8 @@ packages:
   stylis@4.4.0:
     resolution: {integrity: sha512-5Z9ZpRzfuH6l/UAvCPAPUo3665Nk2wLaZU3x+TLHKVzIz33+sbJqbtrYoC3KD4/uVOr2Zp+L0LySezP9OHV9yA==}
 
-  sudachi-synonyms-dictionary@17.0.0:
-    resolution: {integrity: sha512-uXmPFF7YQ4sqLobz8DYR4LG48VEbM8UFpc2qIXZ3bvHp6SIKuPlQG+c5PHtT+eBK1ix2MbvNNKBmNl1mBYhrmQ==}
+  sudachi-synonyms-dictionary@18.0.0:
+    resolution: {integrity: sha512-dVjrhGBCaM5QHn7Ys+L+vPdZib9aWR8F0uvYG0Ww3kEZ5C1pH/OwjLp7rWcgWYPE8io+f4UhpTCjVaoGDlcoWw==}
 
   supports-color@7.2.0:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
@@ -5943,9 +5943,9 @@ snapshots:
       kuromojin: 3.0.1
       morpheme-match-all: 2.0.5
 
-  '@textlint-ja/textlint-rule-no-synonyms@1.3.0(sudachi-synonyms-dictionary@17.0.0)':
+  '@textlint-ja/textlint-rule-no-synonyms@1.3.0(sudachi-synonyms-dictionary@18.0.0)':
     dependencies:
-      sudachi-synonyms-dictionary: 17.0.0
+      sudachi-synonyms-dictionary: 18.0.0
       textlint-rule-helper: 2.5.0
       tiny-segmenter: 0.2.0
 
@@ -9769,7 +9769,7 @@ snapshots:
 
   stylis@4.4.0: {}
 
-  sudachi-synonyms-dictionary@17.0.0: {}
+  sudachi-synonyms-dictionary@18.0.0: {}
 
   supports-color@7.2.0:
     dependencies:
