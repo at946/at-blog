@@ -24,7 +24,7 @@
 		"@astrojs/partytown": "^2.1.7",
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.2",
-		"@astrojs/svelte": "^8.0.5",
+		"@astrojs/svelte": "^8.1.0",
 		"@biomejs/biome": "2.4.14",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/typography": "^0.5.19",
