@@ -20,7 +20,7 @@
 		"reinstall": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm i"
 	},
 	"devDependencies": {
-		"@astrojs/check": "^0.9.8",
+		"@astrojs/check": "^0.9.9",
 		"@astrojs/partytown": "^2.1.7",
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.2",
