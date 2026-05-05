@@ -39,7 +39,7 @@
 		"gray-matter": "^4.0.3",
 		"lefthook": "^2.1.6",
 		"markdownlint-cli2": "^0.22.1",
-		"sudachi-synonyms-dictionary": "^17.0.0",
+		"sudachi-synonyms-dictionary": "^18.0.0",
 		"svelte": "^5.55.5",
 		"tailwindcss": "^4.2.4",
 		"textlint": "^15.6.0",
