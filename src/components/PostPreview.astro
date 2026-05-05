@@ -27,7 +27,7 @@ const readingTime: number = estimateReadingTime(sentence.length);
       { type === 'blog' && <Icon name="mdi:document-sign" class="inline align-middle" />} 
       { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />} 
       { type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
-      <span class="align-middle">
+      <span class="align-middle" style="word-break: auto-phrase">
         {title}
       </span>
       { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
