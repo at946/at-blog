@@ -10,7 +10,7 @@ pre-commit:
       stage_fixed: true
     lint:text:
       glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: pnpm textlint --fix {staged_files}
+      run: pnpm textlint --fix {staged_files} && pnpm textlint {staged_files}
       stage_fixed: true
     lint:markdown:
       glob: "**/*.{md,mdx,mdoc}"
