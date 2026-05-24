@@ -5,9 +5,9 @@ https://at-blog.vercel.app
 This is my blog.
 I will write articles at my leisure.
 
-# Get started
+## Get started
 
 ```bash
-$ npm i
-$ npm dev
+npm i
+npm dev
 ```

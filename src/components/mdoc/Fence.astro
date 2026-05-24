@@ -1,6 +1,7 @@
 ---
 import FenceBase from './FenceBase.astro';
 import FenceMermaid from './FenceMermaid.astro';
+import MdocMath from './Math.astro';
 
 interface Props {
 	content: string;
@@ -22,6 +23,8 @@ const title = hasDiff ? arg3 : arg2;
 
 { lang === 'mermaid' ? (
 	<FenceMermaid content={content} />
+) : lang === 'math' ? (
+	<MdocMath formula={content} />
 ) : (
 	<FenceBase content={content} language={lang} title={title} hasDiff={hasDiff} />
 ) }

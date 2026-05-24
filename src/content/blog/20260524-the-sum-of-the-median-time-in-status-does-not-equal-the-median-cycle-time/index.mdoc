@@ -1,0 +1,113 @@
+---
+title: Time in Statusの中央値の合計はCycle Timeの中央値にならない
+type: blog
+tags:
+  - フロー
+  - 開発生産性
+publicationDate: 2026-05-24
+---
+
+「そりゃそうだろ」と「え、そうなの」をよく右往左往するので、ブログにまとめておく。
+
+## Cycle TimeとTime in Status
+
+まずはCycle TimeとTime in Statusの定義をおさらい。
+
+Cycle Timeはある定義されたワークフローにおける「作業項目の開始してから終了までの経過時間」（From {% ogpLink type="link" url="https://kanbanguides.org/ja/the-kanban-guide/#フロー指標" /%}）。
+
+Time in Statusはそのワークフロー内の各ステータスの滞留時間のこと。
+
+例えば、ワークフローAは2つのステータス1、2（待ちやアクティビティ）からなっているとする。ステータス1に2日、ステータス2に5日滞留していたとすると、Cycle Timeは7日。
+<!-- textlint-disable ja-no-mixed-period -->
+つまり、
+<!-- textlint-enable ja-no-mixed-period -->
+
+```math
+\mathrm{Cycle Time} = \sum_i \mathrm{Time in Status}_i
+```
+
+<!-- textlint-disable ja-no-mixed-period -->
+一方で、
+<!-- textlint-enable ja-no-mixed-period -->
+
+```math
+med(\mathrm{Cycle Time}) \neq \sum_i med(\mathrm{Time in Status}_i)
+```
+
+直感的にわかりそうでわからない。
+
+## ばらつきがあるとTime in Statusの中央値の合計はCycle Timeの中央値にならない
+
+<!-- textlint-disable ja-no-mixed-period -->
+例えば、
+<!-- textlint-enable ja-no-mixed-period -->
+
+| | Time in Status1 | Time in Status2 | Cycle Time |
+| --- | --- | --- | --- |
+| Item A | 1 | 100 | 101 |
+| Item B | 2 | 3 | 5 |
+| Item C | 100 | 1 | 101 |
+
+<!-- textlint-disable ja-no-mixed-period -->
+このとき、
+<!-- textlint-enable ja-no-mixed-period -->
+
+```math
+\begin{align*}
+med(\mathrm{Cycle Time}) &= 101 \\
+\sum_i med(\mathrm{Time in Status}_i) &= 2+3 = 5
+\end{align*}
+```
+
+<!-- textlint-disable ja-no-mixed-period -->
+となる。逆に、
+<!-- textlint-enable ja-no-mixed-period -->
+
+| | Time in Status1 | Time in Status2 | Cycle Time |
+| --- | --- | --- | --- |
+| Item A | 1 | 100 | 101 |
+| Item B | 99 | 98 | 197 |
+| Item C | 100 | 1 | 101 |
+
+<!-- textlint-disable ja-no-mixed-period -->
+のときは、
+<!-- textlint-enable ja-no-mixed-period -->
+
+```math
+\begin{align*}
+med(\mathrm{Cycle Time}) &= 101 \\
+\sum_i med(\mathrm{Time in Status}_i) &= 99 + 98 = 197
+\end{align*}
+```
+
+となり、こちらもCycle TimeとTime in Statusで乖離があるように見えてしまう。
+
+<!-- textlint-disable sentence-length -->
+このように同じステータスでもアイテムによってTime in Statusにばらつきがあったり、同じアイテムでもステータスによってTime in Statusにばらつきがある場合、Cycle Timeの中央値とTime in Statusの中央値の合計は全く違う値になる。
+<!-- textlint-enable sentence-length -->
+
+これはちなみに平均値だと起きない。
+
+| | Time in Status1 | Time in Status2 | Cycle Time |
+| --- | --- | --- | --- |
+| Item A | 1 | 100 | 101 |
+| Item B | 2 | 3 | 5 |
+| Item C | 100 | 1 | 101 |
+| 平均値 | 34.3 | 34.7 | 69 |
+
+## クロスファンクショナルなチームではTime in Statusの合計はCycle Timeよりも長くなる
+
+集計方法によるけど。
+<!-- textlint-disable sentence-length -->
+ここで言っているクロスファンクショナルチームとは、『[The New New Product Development Game](https://hbr.org/1986/01/the-new-new-product-development-game)』のアプローチの分類のType B（Sashimi）やType C（Rugby）のようなチーム。
+<!-- textlint-enable ja-no-mixed-period -->
+
+![シーケンシャル開発とオーバーラップ開発の比較図](./images/sequential-vs-overlapping-phases-of-development.png)
+
+こういうチームは従来のフェーズ分けがオーバーラップするので、開発中かつテスト中みたいなことが起こる。各ステータスごとに開始日・終了日を独立して計測したりしてる場合、オーバーラップ部分はTime in Statusを合計すると重複して加算されることになる。
+
+なので、こっちは平均値でもTime in Statusの合計とCycle Timeは一致しない。
+
+## おわり
+
+思い切った数字を例で使うとわかりやすかった。
