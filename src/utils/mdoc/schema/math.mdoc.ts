@@ -7,4 +7,5 @@ export const math = {
 			type: String,
 		},
 	},
+	selfClosing: false,
 };

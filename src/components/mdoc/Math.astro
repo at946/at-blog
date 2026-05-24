@@ -2,13 +2,36 @@
 import katex from 'katex';
 
 interface Props {
-	formula: string;
+	formula?: string;
 }
 
-const { formula } = Astro.props;
-const html = katex.renderToString(formula, { throwOnError: false });
+let { formula } = Astro.props;
+
+if (!formula) {
+	const content = await Astro.slots.render('default');
+	// HTMLタグの除去と基本的なエンティティのデコード
+	formula = content
+		.replace(/<[^>]*>?/gm, '')
+		.replace(/&amp;/g, '&')
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/&quot;/g, '"')
+		.replace(/&#39;/g, "'");
+}
+
+const html = katex.renderToString(formula || '', {
+	throwOnError: false,
+	displayMode: true,
+});
 ---
 
-<div class="text-center">
-    <span set:html={html} />
+<div class="math-block my-4 py-2 overflow-x-auto overflow-y-hidden">
+    <div set:html={html} />
 </div>
+
+<style is:global>
+  .math-block .katex-display {
+    margin: 0 auto;
+    width: 98%; /* スクロールバーの誤表示防止 */
+  }
+</style>
