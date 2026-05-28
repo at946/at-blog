@@ -4,14 +4,49 @@ import markdoc from '@astrojs/markdoc';
 import sitemap from '@astrojs/sitemap';
 import svelte from '@astrojs/svelte';
 import { defineConfig } from 'astro/config';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 import partytown from '@astrojs/partytown';
 import react from '@astrojs/react';
-import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
+import tailwindcss from '@tailwindcss/vite';
+import { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
 
-import tailwindcss from '@tailwindcss/vite';
+const markdocMath = () => ({
+	name: 'markdoc-math',
+	enforce: 'pre',
+	transform(code, id) {
+		if (!id.endsWith('.mdoc')) return;
+		const codeBlocks = [];
+		let transformed = code.replace(/(```[\s\S]*?```|`[\s\S]*?`)/g, (match) => {
+			codeBlocks.push(match);
+			return `__CODE_BLOCK_${codeBlocks.length - 1}__`;
+		});
+		// Display math: $$ ... $$ (requires newlines)
+		transformed = transformed.replace(
+			/(?<![\w\\$.])\$\$\s*\n([\s\S]+?)\n\s*\$\$/g,
+			(_match, formula) => {
+				return `{% math formula=${JSON.stringify(formula.trim())} /%}`;
+			},
+		);
+		// Inline math: $ ... $ (must not be part of a word)
+		transformed = transformed.replace(
+			/(?<![\w\\$.])\$([^\s$\n](?:[^$\n]*[^\s$\n])?)\$(?![\w$])/g,
+			(_match, formula) => {
+				return `{% inlineMath formula=${JSON.stringify(formula.trim())} /%}`;
+			},
+		);
+		transformed = transformed.replace(
+			/__CODE_BLOCK_(\d+)__/g,
+			(_match, index) => {
+				return codeBlocks[parseInt(index, 10)];
+			},
+		);
+		return { code: transformed, map: null };
+	},
+});
 
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
@@ -23,7 +58,7 @@ export default defineConfig(
 		output: 'static',
 		// Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
 		server: {
-			// port: 4321, // The port to run the dev server on.
+			// port: 4321, // The dev server port.
 		},
 		integrations: [
 			astroExpressiveCode(),
@@ -39,7 +74,7 @@ export default defineConfig(
 			react(),
 		],
 		vite: {
-			plugins: [tailwindcss()],
+			plugins: [tailwindcss(), markdocMath()],
 			resolve: {
 				alias: {
 					$: path.resolve(__dirname, './src'),

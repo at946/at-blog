@@ -8,10 +8,6 @@ pre-commit:
     biome:
       run: pnpm biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files} && git update-index --again
       stage_fixed: true
-    lint:text:
-      glob: "{*,.*}/**/*.{md,mdx,mdoc}"
-      run: pnpm textlint --fix {staged_files} && pnpm textlint {staged_files}
-      stage_fixed: true
     lint:markdown:
       glob: "**/*.{md,mdx,mdoc}"
       run: pnpm markdownlint-cli2 --fix {staged_files}
