@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 import partytown from '@astrojs/partytown';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
-import expressiveCode, { astroExpressiveCode } from 'astro-expressive-code';
+import { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
 
 const markdocMath = () => ({
@@ -24,16 +24,16 @@ const markdocMath = () => ({
 			codeBlocks.push(match);
 			return `__CODE_BLOCK_${codeBlocks.length - 1}__`;
 		});
-		// Display math: $$ ... $$
+		// Display math: $$ ... $$ (requires newlines)
 		transformed = transformed.replace(
-			/(?<!\\)\$\$\s*([\s\S]+?)\s*(?<!\\)\$\$/g,
+			/(?<![\w\\$.])\$\$\s*\n([\s\S]+?)\n\s*\$\$/g,
 			(_match, formula) => {
 				return `{% math formula=${JSON.stringify(formula.trim())} /%}`;
 			},
 		);
-		// Inline math: $ ... $
+		// Inline math: $ ... $ (must not be part of a word)
 		transformed = transformed.replace(
-			/(?<!\\)\$([^\s$](?:[^$]*[^\s$])?)(?<!\\)\$/g,
+			/(?<![\w\\$.])\$([^\s$\n](?:[^$\n]*[^\s$\n])?)\$(?![\w$])/g,
 			(_match, formula) => {
 				return `{% inlineMath formula=${JSON.stringify(formula.trim())} /%}`;
 			},
@@ -41,7 +41,7 @@ const markdocMath = () => ({
 		transformed = transformed.replace(
 			/__CODE_BLOCK_(\d+)__/g,
 			(_match, index) => {
-				return codeBlocks[parseInt(index)];
+				return codeBlocks[parseInt(index, 10)];
 			},
 		);
 		return { code: transformed, map: null };
