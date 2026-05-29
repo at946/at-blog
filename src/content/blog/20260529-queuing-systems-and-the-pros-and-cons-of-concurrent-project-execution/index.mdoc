@@ -29,8 +29,8 @@ block
     PBI_B3
   end
 
-  classDef A fill:blue
-  classDef B fill:red
+  classDef A stroke:blue,stroke-width:4px
+  classDef B stroke:red,stroke-width:4px
   class PBI_A1,PBI_A2,PBI_A3 A
   class PBI_B1,PBI_B2,PBI_B3 B
 ```
@@ -51,8 +51,8 @@ block
     PBI_B3
   end
 
-  classDef A fill:blue
-  classDef B fill:red
+  classDef A stroke:blue,stroke-width:4px
+  classDef B stroke:red,stroke-width:4px
   class PBI_A1,PBI_A2,PBI_A3 A
   class PBI_B1,PBI_B2,PBI_B3 B
 ```
@@ -127,8 +127,8 @@ block
   pbl space Team
   pbl --> Team
 
-  classDef A fill:blue
-  classDef B fill:red
+  classDef A stroke:blue,stroke-width:4px
+  classDef B stroke:red,stroke-width:4px
   class PBI_A1,PBI_A2,PBI_A3 A
   class PBI_B1,PBI_B2,PBI_B3 B
 ```
@@ -156,8 +156,8 @@ columns 3
   pbl_b space Team_B
   pbl_b --> Team_B
 
-  classDef A fill:blue
-  classDef B fill:red
+  classDef A stroke:blue,stroke-width:4px
+  classDef B stroke:red,stroke-width:4px
   class PBI_A1,PBI_A2,PBI_A3 A
   class PBI_B1,PBI_B2,PBI_B3 B
 ```
@@ -179,7 +179,7 @@ gantt
 
 1チームで並列するケースよりはいい。
 
-別の考え方もある。もともと1チーム直列のとき、$\mathrm{PJ_A}$は$3 T_s$のリードタイムで完了できる見込みだった。つまり、$\mathrm{Team_A}$$\mathrm{}$$\mathrm{Team_A}$$T_s$以下の平均サイクルタイムでなければ1チームのときよりリードタイムが長くなってしまう。
+別の考え方もある。もともと1チーム直列のとき、$\mathrm{PJ_A}$は$3 T_s$のリードタイムで完了できる見込みだった。つまり、$\mathrm{Team_A}$は$T_s$以下の平均サイクルタイムでなければ1チームのときよりリードタイムが長くなってしまう。
 
 $\mathrm{PJ_B}$は$6 T_s$だったので、$\mathrm{Team_B}$の平均サイクルタイムは$2 T_s$以下である必要がある。同時に着手が必要ということは、プロジェクト内に重要なマイルストーンなどがあったのだと思うのでこんなに単純ではないだろうが、単純に考えるならこうなる。
 
@@ -241,8 +241,8 @@ block
   Eng_A --> qa_pbl
   Eng_B --> qa_pbl
 
-  classDef A fill:blue
-  classDef B fill:red
+  classDef A stroke:blue,stroke-width:4px
+  classDef B stroke:red,stroke-width:4px
   class PBI_A1,PBI_A2,PBI_A3,eng_pbi_a1,eng_pbi_a2,eng_pbi_a3,qa_pbi_a1,qa_pbi_a2,qa_pbi_a3 A
   class PBI_B1,PBI_B2,PBI_B3,eng_pbi_b1,eng_pbi_b2,eng_pbi_b3,qa_pbi_b1,qa_pbi_b2,qa_pbi_b3 B
 ```
