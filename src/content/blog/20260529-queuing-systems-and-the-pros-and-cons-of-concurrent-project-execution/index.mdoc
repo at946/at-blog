@@ -1,0 +1,256 @@
+---
+title: 待ち行列システムとプロジェクトの同時進行の良し悪し
+type: blog
+tags:
+  - チーム
+  - フロー
+  - リーン思考
+  - 待ち行列理論
+publicationDate: 2026-05-29
+---
+
+待ち行列システムを用いて、プロジェクトの同時進行について考える。プロジェクトの同時進行はアンチパターンとされることが多いが、それはなぜなのかを考えていきたい。
+
+## すべてのプロジェクトのリードタイムが悪化する
+
+ここでは、2つのプロジェクト（$\mathrm{PJ_A}$と$\mathrm{PJ_B}$）を1つのチームが並行開発することを考える。$\mathrm{PJ_A}$と$\mathrm{PJ_B}$はそれぞれ3個ずつのプロダクトバックログアイテムに分割できるとする。
+
+$\mathrm{PJ_A}$を完了してから$\mathrm{PJ_{B}}$に着手する場合、プロダクトバックログはこんな感じ。
+
+```mermaid
+block
+  block
+    columns 1
+    PBI_A1
+    PBI_A2
+    PBI_A3
+    PBI_B1
+    PBI_B2
+    PBI_B3
+  end
+
+  classDef A fill:blue
+  classDef B fill:red
+  class PBI_A1,PBI_A2,PBI_A3 A
+  class PBI_B1,PBI_B2,PBI_B3 B
+```
+
+このチームの平均サービス時間（平均サイクルタイム）を$T_s$とすると、$\mathrm{PJ_A}$の滞在時間（リードタイム）は$3 T_s$、$\mathrm{PJ_B}$は$6 T_s$となる。
+
+一方、$\mathrm{PJ_A}$と$\mathrm{PJ_B}$を同時並行した場合のプロダクトバックログは以下のようになる。
+
+```mermaid
+block
+  block
+    columns 1
+    PBI_A1
+    PBI_B1
+    PBI_A2
+    PBI_B2
+    PBI_A3
+    PBI_B3
+  end
+
+  classDef A fill:blue
+  classDef B fill:red
+  class PBI_A1,PBI_A2,PBI_A3 A
+  class PBI_B1,PBI_B2,PBI_B3 B
+```
+
+このとき、$\mathrm{PJ_A}$と$\mathrm{PJ_B}$のリードタイムはそれぞれ$5 T_s$、$6 T_s$となる。$\mathrm{PJ_A}$のリードタイムが$2 T_s$も遅くなっている。
+
+ガントチャートで表現すると以下。
+
+```mermaid
+gantt
+  dateFormat X
+  axisFormat %s
+  section 直列
+    PJ_A: 0, 30
+    PJ_B: 30, 60
+  section 並列
+    PJ_A: 0, 50
+    PJ_B: 10,60
+```
+
+並列にプロジェクトを増やせば増やすほど、すべてが等しく遅くなる傾向がある。
+
+## コンテキストスイッチングの損失でさらにリードタイムが遅くなる
+
+『[ワインバーグのシステム思考法](https://amzn.to/4dGgbNN)』では、スイッチングコストによる損失について経験則的に以下のように言及されている。
+
+| 並行作業数 | スイッチングコストによる損失 |
+| --- | --- |
+| 1 | 0% |
+| 2 | 20% |
+| 3 | 40% |
+| 4 | 60% |
+| 5 | 75% |
+
+2並列でパフォーマンスが20%ロスする。さきほどは直列でも並列でも平均サイクルタイムは変わらず$T_s$とした。しかし、2並列の場合パフォーマンスが20%悪化する。直列ならある期間で$\mu$個のプロダクトバックログアイテムを完了させられるチームが、$0.8\mu$個しか完了させられなくなる。平均サイクルタイムは平均サービス率の逆数なので、2並列の平均サイクルタイム$T'_s$は、
+
+$$
+T'_s = \frac{1}{0.8\mu} = \frac{5}{4} T_s
+$$
+
+になる。ガントチャートで表すと、
+
+```mermaid
+gantt
+  dateFormat X
+  axisFormat %s
+  section 直列
+    PJ_A: 0, 30
+    PJ_B: 30, 60
+  section 並列
+    PJ_A: 0, 63
+    PJ_B: 13 ,75
+```
+
+$\mathrm{PJ_A}$は$6.25 T_s - 3 T_s = 3.25 T_s$遅くなり、$\mathrm{PJ_B}$も$7.5 T_s - 6 T_s = 1.5 T_s$遅くなる。
+
+## どうしても同時並行しなければならないならチームを分けたほうがいい
+
+$\mathrm{PJ_A}$も$\mathrm{PJ_B}$も諸事情によりどうしても同時並行しないといけない場合はどうしよう。それならもうチームを分けたほうがよいのではないだろうか。ただ、もとのチームと同じようなクロスファンクショナルなチームに分割できれば、だけど。
+
+```mermaid
+block
+  block:pbl
+    columns 1
+    PBI_A1
+    PBI_B1
+    PBI_A2
+    PBI_B2
+    PBI_A3
+    PBI_B3
+  end
+  pbl space Team
+  pbl --> Team
+
+  classDef A fill:blue
+  classDef B fill:red
+  class PBI_A1,PBI_A2,PBI_A3 A
+  class PBI_B1,PBI_B2,PBI_B3 B
+```
+
+こうだったのを、
+
+```mermaid
+block
+columns 3
+  block:pbl_a
+    columns 1
+    PBI_A1
+    PBI_A2
+    PBI_A3
+  end
+  pbl_a space Team_A
+  pbl_a --> Team_A
+
+  block:pbl_b
+    columns 1
+    PBI_B1
+    PBI_B2
+    PBI_B3
+  end
+  pbl_b space Team_B
+  pbl_b --> Team_B
+
+  classDef A fill:blue
+  classDef B fill:red
+  class PBI_A1,PBI_A2,PBI_A3 A
+  class PBI_B1,PBI_B2,PBI_B3 B
+```
+
+こうする。
+
+このとき、サイクルタイムはどうなるだろう。それはやってみないとわからない。少なくとも、スイッチングコストによるロスは考えなくていい。1チーム内の労働力が減ることでサイクルタイムが増加するかもしれないし、コミュニケーションコストが減ることでサイクルタイムも減少するかもしれない。メンバーのスキルや経験の差で、サイクルタイムが良くなるチームと悪くなるチームが生まれるかもしれない。
+
+単純にそれぞれのチームのサイクルタイムが2倍になってしまうとする。その場合、こうだ。
+
+```mermaid
+gantt
+  dateFormat X
+  axisFormat %s
+
+  PJ_A: 0, 60
+  PJ_B: 0, 60
+```
+
+1チームで並列するケースよりはいい。
+
+別の考え方もある。もともと1チーム直列のとき、$\mathrm{PJ_A}$は$3 T_s$のリードタイムで完了できる見込みだった。つまり、$\mathrm{Team_A}$$\mathrm{}$$\mathrm{Team_A}$$T_s$以下の平均サイクルタイムでなければ1チームのときよりリードタイムが長くなってしまう。
+
+$\mathrm{PJ_B}$は$6 T_s$だったので、$\mathrm{Team_B}$の平均サイクルタイムは$2 T_s$以下である必要がある。同時に着手が必要ということは、プロジェクト内に重要なマイルストーンなどがあったのだと思うのでこんなに単純ではないだろうが、単純に考えるならこうなる。
+
+他にも、$\mathrm{PJ_A}$と$\mathrm{PJ_B}$のリードタイムの合計で考える方法もある。もともと合計$3 T_s +6 T_s = 9 T_s$かかっていたので、それぞれ$4.5 T_s$以内に終われば効率化されたとも言える。このとき、$\mathrm{Team_A}$と$\mathrm{Team_B}$はそれぞれ$1.5 T_s$以下のサイクルタイムが求められる。
+
+## チームの一部だけしか分けられないケースは要注意
+
+チーム分割しようとして、一部だけしか分けられないケースもよくある。もともとチームにPOやデザイナー、QAエンジニアが1人しかいないケースでは、分けられたどちらのチームにも所属することがある。エンジニアは2チームに分かれコンテキストスイッチから解放されるが他のメンバーには依然残るようなケース。
+
+```mermaid
+block
+  block:pbl
+    columns 1
+    PBI_A1
+    PBI_B1
+    PBI_A2
+    PBI_B2
+    PBI_A3
+    PBI_B3
+  end
+  Designer
+
+  space
+
+  block:engs
+    columns 2
+    block:eng_a_pbl
+      columns 1
+      eng_pbi_a1["PBI_A1"]
+      eng_pbi_a2["PBI_A2"]
+      eng_pbi_a3["PBI_A3"]
+    end
+    Eng_A
+    block:eng_b_pbl
+      columns 1
+      eng_pbi_b1["PBI_B1"]
+      eng_pbi_b2["PBI_B2"]
+      eng_pbi_b3["PBI_B3"]
+    end
+    Eng_B
+  end
+
+  Designer --> eng_a_pbl
+  Designer --> eng_b_pbl
+
+  space
+
+    block:qa_pbl
+    columns 1
+    qa_pbi_a1["PBI_A1"]
+    qa_pbi_b1["PBI_B1"]
+    qa_pbi_a2["PBI_A2"]
+    qa_pbi_b2["PBI_B2"]
+    qa_pbi_a3["PBI_A3"]
+    qa_pbi_b3["PBI_B3"]
+  end
+  QA
+
+  Eng_A --> qa_pbl
+  Eng_B --> qa_pbl
+
+  classDef A fill:blue
+  classDef B fill:red
+  class PBI_A1,PBI_A2,PBI_A3,eng_pbi_a1,eng_pbi_a2,eng_pbi_a3,qa_pbi_a1,qa_pbi_a2,qa_pbi_a3 A
+  class PBI_B1,PBI_B2,PBI_B3,eng_pbi_b1,eng_pbi_b2,eng_pbi_b3,qa_pbi_b1,qa_pbi_b2,qa_pbi_b3 B
+```
+
+$\mathrm{Eng_A}$と$\mathrm{Eng_B}$はチームが小さくなりコンテキストスイッチからも解放された。このふたつのサイクルタイムは良くなるかもしれない。一方で、DesignerとQAは依然コンテキストスイッチを抱えている。$\mathrm{Eng_A}$と$\mathrm{Eng_B}$のサイクルタイムがよくなり、QAがまだコンテキストスイッチを抱えていることで、QAフェーズで待ちが長くなるかもしれない。実装は速くなってもリードタイムは長くなるケースも出てくる。ボトルネックをチームで協力し合えるなら問題ないけど。
+
+## まとめ
+
+複数のプロジェクトを1チームで同時進行すると、コンテキストスイッチの損失により遅くなる。1チームで直列的に実施するか、2チームに分けてしまったほうがよさそう。
+
+部分的にチームを分けるしかない場合は、コンテキストスイッチを抱えたままの部分がボトルネックになりやすい構造になる。チーム内で協力し合い、ボトルネックをなんとかできる前提があるときの選択肢になりそう。
