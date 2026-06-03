@@ -51,7 +51,7 @@
 		"@iconify-json/simple-icons": "^1.2.85",
 		"@tailwindcss/vite": "^4.3.0",
 		"@types/crypto-js": "^4.2.2",
-		"@types/react": "^19.2.15",
+		"@types/react": "^19.2.16",
 		"@types/react-dom": "^19.2.3",
 		"astro-expressive-code": "^0.42.0",
 		"clsx": "^2.1.1",
@@ -59,7 +59,7 @@
 		"katex": "^0.17.0",
 		"mermaid": "^11.15.0",
 		"ogp-parser": "^0.8.1",
-		"react": "^19.2.6",
+		"react": "^19.2.7",
 		"react-dom": "^19.2.6",
 		"sharp": "^0.34.5"
 	}
