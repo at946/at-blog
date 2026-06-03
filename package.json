@@ -41,7 +41,7 @@
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
-		"@astrojs/markdoc": "^1.0.5",
+		"@astrojs/markdoc": "^1.0.6",
 		"@astrojs/react": "^5.0.5",
 		"@fontsource/zen-kaku-gothic-new": "^5.2.7",
 		"@iconify-json/cib": "^1.2.3",
