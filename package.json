@@ -34,7 +34,7 @@
 		"astro-icon": "^1.1.5",
 		"globby": "^16.2.0",
 		"gray-matter": "^4.0.3",
-		"lefthook": "^2.1.8",
+		"lefthook": "^2.1.9",
 		"markdownlint-cli2": "^0.22.1",
 		"svelte": "^5.55.9",
 		"tailwindcss": "^4.3.0",
