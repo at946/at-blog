@@ -48,7 +48,7 @@
 		"@iconify-json/fa6-brands": "^1.2.6",
 		"@iconify-json/mdi": "^1.2.3",
 		"@iconify-json/ri": "^1.2.10",
-		"@iconify-json/simple-icons": "^1.2.85",
+		"@iconify-json/simple-icons": "^1.2.86",
 		"@tailwindcss/vite": "^4.3.0",
 		"@types/crypto-js": "^4.2.2",
 		"@types/react": "^19.2.15",
