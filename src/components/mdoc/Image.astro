@@ -17,7 +17,7 @@ const image = await getImage({ src: src });
 ---
 
 <figure class="text-center">
-  <img src={image.src} alt={alt}>
+  <img src={image.src} alt={alt} class="mx-auto">
   {caption && (
     <figcaption class="dark:text-gray-100 font-bold">{ caption }</figcaption>
   )}
