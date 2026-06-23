@@ -5,7 +5,7 @@
   ],
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch", "minor", "major"},
+      "matchUpdateTypes": ["patch", "minor", "major", "github-actions"],
       "rebaseWhen": "behind",
       "automerge": true
     }
