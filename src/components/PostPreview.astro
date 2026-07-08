@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import LinkTag from '@/components/LinkTag.astro';
-import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
+import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
 
@@ -14,8 +14,8 @@ interface Props {
 const { post } = Astro.props;
 const { title, publicationDate, tags, externalUrl, type } = post.data;
 const id: string = post.id;
-const sentence: string = extractSentenceFromMarkdocBody(post.body || '');
-const readingTime: number = estimateReadingTime(sentence.length);
+const plainText: string = normalizeMarkdoc(post.body || '');
+const readingTime: number = estimateReadingTime(plainText.length);
 ---
 
 <div class:list={["text-center md:text-left", Astro.props.class]}>
