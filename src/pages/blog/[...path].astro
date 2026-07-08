@@ -10,7 +10,7 @@ import {
 import type { GetStaticPaths, InferGetStaticParamsType } from 'astro';
 import PostLayout from '@/layouts/post.astro';
 import estimateReadingTime from '@/utils/estimateReadingTime';
-import extractSentenceFromMarkdocBody from '@/utils/extractSentenceFromMarkdocBody';
+import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
 
 export const getStaticPaths = (async () => {
 	const allPosts: CollectionEntry<'blog'>[] = await getCollection('blog');
@@ -25,9 +25,9 @@ const entry = (await getEntry('blog', path)) as CollectionEntry<'blog'>;
 const { data, body } = entry;
 const { Content } = await render(entry);
 
-const sentence: string = extractSentenceFromMarkdocBody(body || '');
-const beginning: string = sentence.slice(0, 199);
-const readingTime: number = estimateReadingTime(sentence.length);
+const plainText: string = normalizeMarkdoc(body || '');
+const beginning: string = plainText.slice(0, 199);
+const readingTime: number = estimateReadingTime(plainText.length);
 ---
 <PostLayout content={data} description={beginning} id={path} readingTime={readingTime}>
 	<Content />
