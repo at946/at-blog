@@ -38,7 +38,7 @@
 		"markdownlint-cli2": "^0.23.0",
 		"svelte": "^5.56.1",
 		"tailwindcss": "^4.3.1",
-		"typescript": "^6.0.3"
+		"typescript": "^7.0.0"
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^2.0.0",
