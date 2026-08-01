@@ -16,6 +16,7 @@
 		"create:article": "bash utils/commands/create-article.sh",
 		"lefthook": "lefthook run pre-commit",
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
+		"embedding": "tsx --env-file=.env utils/embedding.ts",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
 	"devDependencies": {
@@ -38,12 +39,14 @@
 		"markdownlint-cli2": "^0.23.0",
 		"svelte": "^5.56.1",
 		"tailwindcss": "^4.3.1",
+		"tsx": "^4.23.1",
 		"typescript": "^6.0.3"
 	},
 	"dependencies": {
 		"@astrojs/markdoc": "^2.0.0",
 		"@astrojs/react": "^6.0.0",
 		"@fontsource/zen-kaku-gothic-new": "^5.2.7",
+		"@google/genai": "^2.15.0",
 		"@iconify-json/cib": "^1.2.3",
 		"@iconify-json/fa6-brands": "^1.2.6",
 		"@iconify-json/mdi": "^1.2.3",
