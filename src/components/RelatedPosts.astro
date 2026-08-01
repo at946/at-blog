@@ -13,11 +13,13 @@ interface Props {
 const { id } = Astro.props;
 
 const similarityList = similarityListJson.find((item) => item.slug === id);
-const posts: CollectionEntry<'blog'>[] = await Promise.all(
-	similarityList?.similarArticles
-		.map((article) => getEntry('blog', article.slug))
-		.filter((post) => post !== undefined) ?? [],
-);
+const posts: CollectionEntry<'blog'>[] = (
+	await Promise.all(
+		similarityList?.similarArticles.map((article) =>
+			getEntry('blog', article.slug),
+		) ?? [],
+	)
+).filter((post): post is CollectionEntry<'blog'> => post !== undefined);
 ---
 
 { posts.length > 0 &&
