@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
-import LinkTag from '@/components/LinkTag.astro';
 import DocswellEmbed from '@/components/mdoc/DocswellEmbed.astro';
 import SpeakerDeckEmbed from '@/components/mdoc/SpeakerDeckEmbed.astro';
 import YouTubeEmbed from '@/components/mdoc/YouTubeEmbed.astro';
@@ -16,7 +15,6 @@ const { post } = Astro.props;
 const {
 	title,
 	publicationDate,
-	tags,
 	externalUrl,
 	type,
 	youtubeEmbeddedUrl,
@@ -46,12 +44,6 @@ const {
     { type === 'slide' && docswellId && <DocswellEmbed id={docswellId} /> }
     { type === 'slide' && speakerDeckId && <SpeakerDeckEmbed id={speakerDeckId} /> }
     { type === 'video' && youtubeEmbeddedUrl && <YouTubeEmbed src={youtubeEmbeddedUrl} /> }
-  </div>
-
-  <div class="flex gap-2 flex-wrap justify-center">
-    { tags && tags.length > 0 && tags.map(tag =>
-      <LinkTag name={tag} href={`/tags/${tag}`} />
-    )}
   </div>
 
 </div>
