@@ -1,5 +1,5 @@
 import { GoogleGenAI } from '@google/genai';
-import { env } from './env';
+import { env } from '../env';
 
 const EMBEDDING_MODEL = 'gemini-embedding-2';
 
