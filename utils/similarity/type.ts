@@ -1,12 +1,15 @@
+export type Slug = string;
+export type Embedding = number[];
+
 export type Article = {
-	slug: string;
+	slug: Slug;
 	title: string;
 	content: string;
 	articleHash: string;
 };
 
-export type Embedding = {
-	slug: string;
+export type ArticleEmbedding = {
+	slug: Slug;
 	articleHash: string;
-	embedding: number[];
+	embedding: Embedding;
 };

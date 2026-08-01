@@ -1,6 +1,6 @@
 import { GoogleGenAI } from '@google/genai';
 import { env } from '../env';
-import type { Article, Embedding } from './type';
+import type { Article, ArticleEmbedding } from './type';
 
 const EMBEDDING_MODEL = 'gemini-embedding-2';
 
@@ -8,7 +8,9 @@ const ai = new GoogleGenAI({
 	apiKey: env.geminiApiKey,
 });
 
-const generateEmbedding = async (article: Article): Promise<Embedding> => {
+const calculateEmbedding = async (
+	article: Article,
+): Promise<ArticleEmbedding> => {
 	const response = await ai.models.embedContent({
 		model: EMBEDDING_MODEL,
 		contents: article.content,
@@ -30,4 +32,4 @@ const generateEmbedding = async (article: Article): Promise<Embedding> => {
 	};
 };
 
-export default generateEmbedding;
+export default calculateEmbedding;

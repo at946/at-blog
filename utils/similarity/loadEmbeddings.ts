@@ -1,10 +1,10 @@
 import fs from 'node:fs/promises';
-import { EMBEDDINGS_FILE_PATH } from './config';
-import type { Embedding } from './type';
+import { EMBEDDINGS_JSON_FILE_PATH } from './config';
+import type { ArticleEmbedding } from './type';
 
-const loadEmbeddings = async (): Promise<Embedding[]> => {
+const loadEmbeddings = async (): Promise<ArticleEmbedding[]> => {
 	try {
-		const json = await fs.readFile(EMBEDDINGS_FILE_PATH, 'utf-8');
+		const json = await fs.readFile(EMBEDDINGS_JSON_FILE_PATH, 'utf-8');
 		return JSON.parse(json);
 	} catch {
 		return [];

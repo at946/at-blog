@@ -1,15 +1,18 @@
-import type { Article, Embedding } from './type';
+import type { Article, ArticleEmbedding } from './type';
 
 const filterChangedArticles = (
 	articles: Article[],
-	embeddings: Embedding[],
+	articleEmbeddings: ArticleEmbedding[],
 ): Article[] => {
-	const EmbeddingMap = new Map(
-		embeddings.map((embedding) => [embedding.slug, embedding.articleHash]),
+	const articleEmbeddingMap = new Map(
+		articleEmbeddings.map((articleEmbedding) => [
+			articleEmbedding.slug,
+			articleEmbedding.articleHash,
+		]),
 	);
 
 	return articles.filter((article) => {
-		return EmbeddingMap.get(article.slug) !== article.articleHash;
+		return articleEmbeddingMap.get(article.slug) !== article.articleHash;
 	});
 };
 
