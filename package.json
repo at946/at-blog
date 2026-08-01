@@ -16,7 +16,7 @@
 		"create:article": "bash utils/commands/create-article.sh",
 		"lefthook": "lefthook run pre-commit",
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
-		"generate:embedding": "tsx --env-file=.env utils/similarity/generateEmbeddingJson.ts",
+		"generate:embedding": "tsx utils/similarity/generateEmbeddingJson.ts",
 		"generate:similarity": "tsx utils/similarity/generateSimilarityJson.ts",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
@@ -34,6 +34,7 @@
 		"@types/node": "^26.0.0",
 		"astro": "^7.0.0",
 		"astro-icon": "^1.1.5",
+		"dotenv": "^17.4.2",
 		"fast-glob": "^3.3.3",
 		"globby": "^16.2.0",
 		"gray-matter": "^4.0.3",

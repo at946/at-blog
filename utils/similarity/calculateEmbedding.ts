@@ -1,6 +1,7 @@
 import { GoogleGenAI } from '@google/genai';
 import { env } from '../env';
 import type { Article, ArticleEmbedding } from './type';
+import 'dotenv/config';
 
 const EMBEDDING_MODEL = 'gemini-embedding-2';
 
