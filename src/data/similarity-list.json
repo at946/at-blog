@@ -70,8 +70,8 @@
 				"score": 0.7597964061340173
 			},
 			{
-				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
-				"score": 0.7505774626660086
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.7562236446361595
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1963,12 +1963,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5205719585050668
-			},
-			{
 				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
 				"score": 0.51993877241265
+			},
+			{
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.5144136154668658
 			},
 			{
 				"slug": "20220113-memo-for-north-star-metric",
@@ -3793,8 +3793,8 @@
 				"score": 0.7499473748914717
 			},
 			{
-				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
-				"score": 0.7469984938050366
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.748567279919906
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4299,12 +4299,12 @@
 				"score": 0.7577390668545683
 			},
 			{
-				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
-				"score": 0.7506914878272777
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.7561145674432781
 			},
 			{
-				"slug": "20241211-01",
-				"score": 0.7500539166461564
+				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
+				"score": 0.7506914878272777
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5315,16 +5315,16 @@
 				"score": 0.751218190867593
 			},
 			{
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.7249000257786371
+			},
+			{
 				"slug": "20210926-reflection-with-emotion",
 				"score": 0.7180551798271662
 			},
 			{
 				"slug": "20241227-01",
 				"score": 0.7150710546515815
-			},
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.7092486452399979
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5380,8 +5380,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250121-01",
-				"score": 0.5128541399334777
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.511885455302718
 			},
 			{
 				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
@@ -6037,8 +6037,8 @@
 				"score": 0.7496735326902884
 			},
 			{
-				"slug": "20241220-01",
-				"score": 0.742712798592622
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.7491813162332135
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6276,6 +6276,10 @@
 		"slug": "20260512-what-is-a-good-team-like",
 		"similarArticles": [
 			{
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.7935717293895533
+			},
+			{
 				"slug": "20250121-01",
 				"score": 0.7777348424772685
 			},
@@ -6290,10 +6294,6 @@
 			{
 				"slug": "20250515-re-do-not-create-bug-tickets",
 				"score": 0.7628648137949612
-			},
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.7604669396372641
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6349,10 +6349,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251204-what-are-scrum-masters-doing",
-				"score": 0.5091152708083084
-			},
-			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.5077416419641781
 			},
@@ -6367,6 +6363,10 @@
 			{
 				"slug": "20241227-01",
 				"score": 0.5047933593299979
+			},
+			{
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.5033087902204239
 			},
 			{
 				"slug": "20250621-a-playground-is-more-necessary-than-just-a-place",
@@ -6779,6 +6779,57 @@
 			{
 				"slug": "20241217-01",
 				"score": 0.5127603847288554
+			}
+		]
+	},
+	{
+		"slug": "20260802-when-will-a-team-end",
+		"similarArticles": [
+			{
+				"slug": "20260512-what-is-a-good-team-like",
+				"score": 0.7935717293895533
+			},
+			{
+				"slug": "20250121-01",
+				"score": 0.7813076797809165
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7564906329720853
+			},
+			{
+				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
+				"score": 0.7562236446361595
+			},
+			{
+				"slug": "20241227-01",
+				"score": 0.7561145674432781
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"score": 0.5225477611644516
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5219053659773255
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5169241571083814
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5144136154668658
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.511885455302718
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5033087902204239
 			}
 		]
 	}
