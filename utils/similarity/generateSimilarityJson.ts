@@ -21,7 +21,7 @@ const main = async () => {
 
 	const similarityList: ArticleSimilarity[] = articleEmbeddings.map(
 		(articleEmbedding) => {
-			const similarArticles = articleEmbeddings
+			const similarity = articleEmbeddings
 				.filter(
 					(targetEmbedding) => targetEmbedding.slug !== articleEmbedding.slug,
 				)
@@ -32,12 +32,18 @@ const main = async () => {
 						targetEmbedding.embedding,
 					),
 				}))
-				.sort((a, b) => b.score - a.score)
-				.slice(0, SIMILAR_ARTICLE_COUNT);
+				.filter((target) => target.score > 0.5)
+				.sort((a, b) => b.score - a.score);
+
+			const similarArticles = similarity.slice(0, SIMILAR_ARTICLE_COUNT);
+			const differentPerspectiveArticles = similarity.slice(
+				-(SIMILAR_ARTICLE_COUNT + 1),
+			);
 
 			return {
 				slug: articleEmbedding.slug,
 				similarArticles,
+				differentPerspectiveArticles,
 			};
 		},
 	);
