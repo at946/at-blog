@@ -5,7 +5,7 @@ export const EMBEDDINGS_JSON_FILE_PATH = path.resolve(
 );
 
 export const SIMILARITY_JSON_FILE_PATH = path.resolve(
-	'utils/similarity/similarity-list.json',
+	'src/data/similarity-list.json',
 );
 
 export const SIMILAR_ARTICLE_COUNT: number = 5;

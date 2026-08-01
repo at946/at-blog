@@ -39,7 +39,7 @@ const { content, description, id, readingTime } = Astro.props;
         <span>気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
       </Link>
       { content.tags && (
-        <RelatedPosts class="mt-16" id={id} tags={content.tags} />
+        <RelatedPosts class="mt-16" id={id} />
       )}
     </Prose>
     <ProfileCard class="mt-10" />
