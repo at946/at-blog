@@ -16,7 +16,7 @@
 		"create:article": "bash utils/commands/create-article.sh",
 		"lefthook": "lefthook run pre-commit",
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
-		"calcSimilarity": "tsx --env-file=.env utils/similarity/index.ts",
+		"calcSimilarity": "tsx --env-file=.env utils/similarity/index.ts; biome check --write utils/similarity/embeddiings.json",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
 	"devDependencies": {
