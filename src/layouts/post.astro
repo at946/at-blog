@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
+import DifferentPerspectivePosts from '@/components/DifferentPerspectivePosts.astro';
 import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import ProfileCard from '@/components/ProfileCard.astro';
@@ -26,7 +27,7 @@ const { content, description, id, readingTime } = Astro.props;
     <BaseHead pageTitle={content.title} description={description} />
   </head>
   <MainLayout>
-    <PostHeader title={content.title} publicationDate={content.publicationDate} tags={content.tags} readingTime={readingTime} class="mb-4" />
+    <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" />
     <hr class="mb-16 border-gray-300" />
     <Prose>
       <slot />
@@ -38,9 +39,8 @@ const { content, description, id, readingTime } = Astro.props;
         <Icon name="simple-icons:buymeacoffee" class="text-2xl mx-auto mb-2" />
         <span>気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
       </Link>
-      { content.tags && (
-        <RelatedPosts class="mt-16" id={id} tags={content.tags} />
-      )}
+      <RelatedPosts class="mt-16" id={id} />
+      <DifferentPerspectivePosts id={id} />
     </Prose>
     <ProfileCard class="mt-10" />
   </MainLayout>

@@ -24,6 +24,12 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm generate:embedding
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - run: pnpm generate:similarity
+
       - run: pnpm run biome:write
 
       - run: pnpm run lint:markdown:fix

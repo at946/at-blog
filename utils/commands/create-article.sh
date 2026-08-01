@@ -8,8 +8,6 @@ cat > $file <<EOL
 ---
 title:
 type: blog | slide | video
-tags:
-  - 
 publicationDate: $(date "+%Y-%m-%d")
 ---
 

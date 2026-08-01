@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
-import LinkTag from '@/components/LinkTag.astro';
 import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
@@ -12,7 +11,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, publicationDate, tags, externalUrl, type } = post.data;
+const { title, publicationDate, externalUrl, type } = post.data;
 const id: string = post.id;
 const plainText: string = normalizeMarkdoc(post.body || '');
 const readingTime: number = estimateReadingTime(plainText.length);
@@ -33,11 +32,6 @@ const readingTime: number = estimateReadingTime(plainText.length);
       { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
     </Link>
   </h2>
-  <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2">
-    { tags && tags.length > 0 && tags.map(tag =>
-      <LinkTag name={tag} href={`/tags/${tag}`} />
-    )}
-  </div>
   { !externalUrl &&
     <p>読了時間: { readingTime }分</p>
   }
