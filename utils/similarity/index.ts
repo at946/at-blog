@@ -2,25 +2,30 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { EMBEDDINGS_FILE_PATH } from './config';
+import filterChangedArticles from './filterChangedArticles';
 import generateEmbedding from './generateEmbedding';
+import loadEmbeddings from './loadEmbeddings';
 import prepareArticles from './prepareArticles';
 import type { EmbeddedArticle, PreparedArticle } from './type';
-
-const OUTPUT_PATH = path.resolve('utils/similarity/embeddings.json');
 
 const main = async () => {
 	const _preparedArticles: PreparedArticle[] = await prepareArticles();
 	const preparedArticles: PreparedArticle[] = [_preparedArticles[0]];
-	const embeddedArticles: EmbeddedArticle[] = [];
+	const embeddedArticles: EmbeddedArticle[] = await loadEmbeddings();
+	const articlesToUpdate: PreparedArticle[] = filterChangedArticles(
+		preparedArticles,
+		embeddedArticles,
+	);
 
-	for (const article of preparedArticles) {
+	for (const article of articlesToUpdate) {
 		const embeddedArticle = await generateEmbedding(article);
 		embeddedArticles.push(embeddedArticle);
 	}
 
-	await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+	await fs.mkdir(path.dirname(EMBEDDINGS_FILE_PATH), { recursive: true });
 	await fs.writeFile(
-		OUTPUT_PATH,
+		EMBEDDINGS_FILE_PATH,
 		JSON.stringify(embeddedArticles, null, 2),
 		'utf-8',
 	);
