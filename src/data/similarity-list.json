@@ -823,6 +823,10 @@
 				"score": 0.7711341976130307
 			},
 			{
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.7711341976130307
+			},
+			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.7685012139110445
 			},
@@ -833,10 +837,6 @@
 			{
 				"slug": "20210926-reflection-with-emotion",
 				"score": 0.7546361205367506
-			},
-			{
-				"slug": "20250704-conference-report-developer-productivity-report",
-				"score": 0.7348545408370323
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2655,6 +2655,10 @@
 		"slug": "20231123-read-the-book-kokoro",
 		"similarArticles": [
 			{
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.9999990750902893
+			},
+			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7768417592910323
 			},
@@ -2669,10 +2673,6 @@
 			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7711341976130307
-			},
-			{
-				"slug": "20260512-what-is-a-good-team-like",
-				"score": 0.7604669396372641
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5621,16 +5621,16 @@
 				"score": 0.6994217745735337
 			},
 			{
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.6994217745735337
+			},
+			{
 				"slug": "20260424-quadrant-of-separation-of-tasks",
 				"score": 0.6956647320511457
 			},
 			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.6950516061500588
-			},
-			{
-				"slug": "20250326-01",
-				"score": 0.6898854990310007
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5676,12 +5676,12 @@
 				"score": 0.7187823073083986
 			},
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.7015906816603329
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.7187823073083986
 			},
 			{
-				"slug": "20230318-just-talk-reflection-is-good",
-				"score": 0.6990513181823071
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7015906816603329
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5719,6 +5719,10 @@
 				"score": 0.7415134481202673
 			},
 			{
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.7415134481202673
+			},
+			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.7289760309567985
 			},
@@ -5729,10 +5733,6 @@
 			{
 				"slug": "20250925-reading-notes",
 				"score": 0.7216320101930124
-			},
-			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7190901796794135
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5774,16 +5774,16 @@
 				"score": 0.7768417592910323
 			},
 			{
+				"slug": "20231123-read-the-book-Kokoro",
+				"score": 0.7768417592910323
+			},
+			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7759598314435041
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7746382918398023
-			},
-			{
-				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
-				"score": 0.7712565621976233
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6728,6 +6728,57 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5050310334514608
+			}
+		]
+	},
+	{
+		"slug": "20231123-read-the-book-Kokoro",
+		"similarArticles": [
+			{
+				"slug": "20231123-read-the-book-kokoro",
+				"score": 0.9999990750902893
+			},
+			{
+				"slug": "20251023-autonomous-teams",
+				"score": 0.7768417592910323
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7766008487008487
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.772849017573683
+			},
+			{
+				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
+				"score": 0.7711341976130307
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5493433240321853
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5449994515889562
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5378952493892494
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5289664637703253
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5265822138263988
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5127603847288554
 			}
 		]
 	}
