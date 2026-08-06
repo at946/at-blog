@@ -1,9 +1,12 @@
 #!/bin/bash
 
-directory=src/content/blog/$(date "+%Y%m%d")-XX
+slug=$1
+date=$(date "+%Y%m%d")
+
+directory=src/content/blog/${date}-${slug}
 file=$directory/index.mdoc
+
 mkdir -p $directory
-touch $file
 cat > $file <<EOL
 ---
 title:
