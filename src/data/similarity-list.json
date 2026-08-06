@@ -1584,6 +1584,10 @@
 		"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 		"similarArticles": [
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.8425741438662325
+			},
+			{
 				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
 				"score": 0.7903775648184103
 			},
@@ -1598,10 +1602,6 @@
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7746382918398023
-			},
-			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.7723410902409872
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1759,16 +1759,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250725-teleology-to-facilitate-others-changes",
-				"score": 0.5090842089049682
-			},
-			{
 				"slug": "20211206-lets-check-out-if-you-do-not-have-enough-time-to-retrospective",
 				"score": 0.5085448414953068
 			},
 			{
 				"slug": "20260511-why-are-small-releases-good",
 				"score": 0.5070926901494355
+			},
+			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.5048559078266565
 			},
 			{
 				"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
@@ -2922,12 +2922,12 @@
 				"score": 0.7902665922123351
 			},
 			{
-				"slug": "20210926-reflection-with-emotion",
-				"score": 0.7515261406123975
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7555030265069405
 			},
 			{
-				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
-				"score": 0.7386951442084791
+				"slug": "20210926-reflection-with-emotion",
+				"score": 0.7515261406123975
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3071,16 +3071,16 @@
 				"score": 0.8086481719195502
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7562045119612513
+			},
+			{
 				"slug": "20250515-re-do-not-create-bug-tickets",
 				"score": 0.7530646215579443
 			},
 			{
 				"slug": "20250313-01",
 				"score": 0.7524570477742378
-			},
-			{
-				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
-				"score": 0.7439561330163311
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3636,12 +3636,12 @@
 				"score": 0.7121049715217446
 			},
 			{
-				"slug": "20241227-01",
-				"score": 0.7066284883132229
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7069065861263469
 			},
 			{
-				"slug": "20250621-a-playground-is-more-necessary-than-just-a-place",
-				"score": 0.704068736050938
+				"slug": "20241227-01",
+				"score": 0.7066284883132229
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4146,12 +4146,12 @@
 				"score": 0.7377279864125049
 			},
 			{
-				"slug": "20241211-01",
-				"score": 0.7302570974137448
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7369120824540945
 			},
 			{
-				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
-				"score": 0.7283862673533797
+				"slug": "20241211-01",
+				"score": 0.7302570974137448
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4291,6 +4291,10 @@
 				"score": 0.7911785272313023
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7712919132347147
+			},
+			{
 				"slug": "20260512-what-is-a-good-team-like",
 				"score": 0.7596036309570988
 			},
@@ -4301,10 +4305,6 @@
 			{
 				"slug": "20260802-when-will-a-team-end",
 				"score": 0.7561145674432781
-			},
-			{
-				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
-				"score": 0.7506914878272777
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4354,8 +4354,8 @@
 				"score": 0.7615838246810099
 			},
 			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.7310854408557164
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7391327208159182
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4397,16 +4397,16 @@
 				"score": 0.745888916665113
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7250070786623531
+			},
+			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.7225827422623725
 			},
 			{
 				"slug": "20250515-re-do-not-create-bug-tickets",
 				"score": 0.7224103522436326
-			},
-			{
-				"slug": "20250219-01",
-				"score": 0.7129726993079873
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5009,16 +5009,16 @@
 				"score": 0.7808689739483472
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7729326782998827
+			},
+			{
 				"slug": "20260425-someones-stories",
 				"score": 0.7695232792538969
 			},
 			{
 				"slug": "20250121-01",
 				"score": 0.7641362338692858
-			},
-			{
-				"slug": "20260512-what-is-a-good-team-like",
-				"score": 0.7628648137949612
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5158,6 +5158,10 @@
 				"score": 0.7757532024928162
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7533001330918186
+			},
+			{
 				"slug": "20250121-01",
 				"score": 0.7507528144077458
 			},
@@ -5168,10 +5172,6 @@
 			{
 				"slug": "20241220-01",
 				"score": 0.7415879146261367
-			},
-			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.7413505178966863
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6233,16 +6233,16 @@
 				"score": 0.7619017280476644
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7565270379919224
+			},
+			{
 				"slug": "20241227-01",
 				"score": 0.7490654410957773
 			},
 			{
 				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
 				"score": 0.7464043845570039
-			},
-			{
-				"slug": "20241211-01",
-				"score": 0.7431115368922747
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6280,6 +6280,10 @@
 				"score": 0.7935717293895533
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7850256576349983
+			},
+			{
 				"slug": "20250121-01",
 				"score": 0.7777348424772685
 			},
@@ -6290,10 +6294,6 @@
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7642767933670107
-			},
-			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.7628648137949612
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6700,8 +6700,8 @@
 				"score": 0.7231239204084211
 			},
 			{
-				"slug": "20260511-why-are-small-releases-good",
-				"score": 0.7107433552511428
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7133352890374844
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6794,16 +6794,16 @@
 				"score": 0.7813076797809165
 			},
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7579507640722193
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7564906329720853
 			},
 			{
 				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
 				"score": 0.7562236446361595
-			},
-			{
-				"slug": "20241227-01",
-				"score": 0.7561145674432781
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6881,6 +6881,57 @@
 			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.5025447355613097
+			}
+		]
+	},
+	{
+		"slug": "20260806-i-like-this-kind-of-sprint-review",
+		"similarArticles": [
+			{
+				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
+				"score": 0.8425741438662325
+			},
+			{
+				"slug": "20260512-what-is-a-good-team-like",
+				"score": 0.7850256576349983
+			},
+			{
+				"slug": "20250121-01",
+				"score": 0.7788278102655875
+			},
+			{
+				"slug": "20250515-re-do-not-create-bug-tickets",
+				"score": 0.7729326782998827
+			},
+			{
+				"slug": "20241227-01",
+				"score": 0.7712919132347147
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"score": 0.536486321949317
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5244259579411966
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.524139037493192
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5131177217506951
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5096382509107998
+			},
+			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5048559078266565
 			}
 		]
 	}
