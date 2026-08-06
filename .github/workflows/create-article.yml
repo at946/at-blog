@@ -22,7 +22,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
 
       - name: Create branch
         id: branch
