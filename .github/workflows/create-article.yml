@@ -48,6 +48,7 @@ jobs:
         run: |
           gh pr create \
             --title "Create article: ${{ inputs.slug }}" \
+            --body "" \
             --head "${{ steps.branch.outputs.branch }}" \
             --base main
         env:
