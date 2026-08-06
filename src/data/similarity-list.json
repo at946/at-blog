@@ -4095,12 +4095,12 @@
 				"score": 0.766559762801898
 			},
 			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.7660853157721268
-			},
-			{
 				"slug": "20241016-01",
 				"score": 0.7632646217213136
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7629025971935812
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4291,10 +4291,6 @@
 				"score": 0.7911785272313023
 			},
 			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.767535403065455
-			},
-			{
 				"slug": "20260512-what-is-a-good-team-like",
 				"score": 0.7596036309570988
 			},
@@ -4305,6 +4301,10 @@
 			{
 				"slug": "20260802-when-will-a-team-end",
 				"score": 0.7561145674432781
+			},
+			{
+				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
+				"score": 0.7506914878272777
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4601,16 +4601,16 @@
 				"score": 0.7562303827345969
 			},
 			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.7534478767976148
-			},
-			{
 				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
 				"score": 0.7495398488479104
 			},
 			{
 				"slug": "20250121-01",
 				"score": 0.7465244170968195
+			},
+			{
+				"slug": "20240816-how-can-we-make-a-decision",
+				"score": 0.7463461950955829
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5380,12 +5380,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
-				"score": 0.5107981888537466
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.511885455302718
 			},
 			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.5102500228944181
+				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
+				"score": 0.5107981888537466
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
@@ -5635,10 +5635,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
-				"score": 0.5217508349031503
-			},
-			{
 				"slug": "20241217-01",
 				"score": 0.5195172079284053
 			},
@@ -5657,6 +5653,10 @@
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5032732381491271
+			},
+			{
+				"slug": "20260804-scrum-stops-us",
+				"score": 0.5025447355613097
 			}
 		]
 	},
@@ -6349,16 +6349,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
+				"score": 0.5077416419641781
+			},
+			{
 				"slug": "20260609-kingman-and-scrum",
 				"score": 0.5069002516443978
 			},
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.506311005516202
-			},
-			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.5059147903550307
 			},
 			{
 				"slug": "20241227-01",
@@ -6400,16 +6400,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210926-reflection-with-emotion",
+				"score": 0.5113935978371873
+			},
+			{
 				"slug": "20240816-how-can-we-make-a-decision",
 				"score": 0.5109167204727406
 			},
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.5090104414906311
-			},
-			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.5063081187672729
 			},
 			{
 				"slug": "20260425-someones-stories",
@@ -6794,16 +6794,16 @@
 				"score": 0.7813076797809165
 			},
 			{
-				"slug": "20260804-scrum-stops-us",
-				"score": 0.7588988124604634
-			},
-			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7564906329720853
 			},
 			{
 				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
 				"score": 0.7562236446361595
+			},
+			{
+				"slug": "20241227-01",
+				"score": 0.7561145674432781
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6837,50 +6837,50 @@
 		"slug": "20260804-scrum-stops-us",
 		"similarArticles": [
 			{
-				"slug": "20241227-01",
-				"score": 0.767535403065455
-			},
-			{
 				"slug": "20241211-01",
-				"score": 0.7660853157721268
-			},
-			{
-				"slug": "20260802-when-will-a-team-end",
-				"score": 0.7588988124604634
+				"score": 0.731986585223723
 			},
 			{
 				"slug": "20250219-01",
-				"score": 0.7534478767976148
+				"score": 0.722525115112655
 			},
 			{
-				"slug": "20250121-01",
-				"score": 0.7532673381241517
+				"slug": "20240816-how-can-we-make-a-decision",
+				"score": 0.7085471402296344
+			},
+			{
+				"slug": "20241227-01",
+				"score": 0.7066448328405579
+			},
+			{
+				"slug": "20250515-re-do-not-create-bug-tickets",
+				"score": 0.6947040758411517
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.5249067753908391
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5354950674744365
 			},
 			{
-				"slug": "20241217-01",
-				"score": 0.5227238061132806
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.5314642259684635
 			},
 			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5195512737568685
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.5313207552161988
 			},
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5102500228944181
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5248700939149942
 			},
 			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5063081187672729
+				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5206740503933737
 			},
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5059147903550307
+				"slug": "20250921-social-interest-and-me",
+				"score": 0.5025447355613097
 			}
 		]
 	}
