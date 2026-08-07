@@ -18,6 +18,7 @@
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
 		"generate:embedding": "tsx utils/similarity/generateEmbeddingJson.ts",
 		"generate:similarity": "tsx utils/similarity/generateSimilarityJson.ts",
+		"generate:article-map": "tsx utils/article-map/generateArticleMap.ts",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
 	"devDependencies": {
@@ -67,6 +68,7 @@
 		"ogp-parser": "^0.8.1",
 		"react": "^19.2.6",
 		"react-dom": "^19.2.6",
-		"sharp": "^0.35.2"
+		"sharp": "^0.35.2",
+		"umap-js": "^1.4.0"
 	}
 }
