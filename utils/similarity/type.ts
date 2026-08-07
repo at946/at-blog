@@ -10,6 +10,7 @@ export type Article = {
 
 export type ArticleEmbedding = {
 	slug: Slug;
+	title: string;
 	articleHash: string;
 	embedding: Embedding;
 };

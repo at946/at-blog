@@ -28,6 +28,7 @@ const calculateEmbedding = async (
 
 	return {
 		slug: article.slug,
+		title: article.title,
 		articleHash: article.articleHash,
 		embedding: embedding,
 	};
