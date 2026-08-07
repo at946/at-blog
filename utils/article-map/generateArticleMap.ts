@@ -2,13 +2,7 @@ import fs from 'node:fs/promises';
 import { UMAP } from 'umap-js';
 import { EMBEDDINGS_JSON_FILE_PATH } from '../similarity/config';
 import type { ArticleEmbedding } from '../similarity/type';
-
-type ArticleMap = {
-	slug: string;
-	title: string;
-	x: number;
-	y: number;
-};
+import type { ArticleMap } from './types';
 
 const mulberry32 = (seed: number): (() => number) => {
 	let state: number = seed;
