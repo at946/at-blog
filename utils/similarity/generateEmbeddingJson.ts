@@ -1,5 +1,3 @@
-// import { generateEmbedding } from './generateEmbedding';
-
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import calculateEmbedding from './calculateEmbedding';
