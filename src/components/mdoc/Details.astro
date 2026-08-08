@@ -6,7 +6,7 @@ interface Props {
 const { title = '詳細を表示' } = Astro.props;
 ---
 
-<details class="cursor-pointer">
+<details class="cursor-pointer py-5">
   <summary>{title}</summary>
   <div>
     <slot />
