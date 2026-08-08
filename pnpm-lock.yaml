@@ -35,6 +35,9 @@ importers:
       '@iconify-json/simple-icons':
         specifier: ^1.2.85
         version: 1.2.93
+      '@pagefind/default-ui':
+        specifier: ^1.5.2
+        version: 1.5.2
       '@tailwindcss/vite':
         specifier: ^4.3.1
         version: 4.3.3(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.23.7)(yaml@2.9.0))
@@ -988,6 +991,9 @@ packages:
     resolution: {integrity: sha512-IojxFWMEJe0RQ7PQ3KXQsPIImNsbpPYpoZ+QUDrL8fAl/O27IX+LVLs74/UzEZy5uA2LD8Nz1AiwKr72vrkZQw==}
     cpu: [x64]
     os: [darwin]
+
+  '@pagefind/default-ui@1.5.2':
+    resolution: {integrity: sha512-pm1LMnQg8N2B3n2TnjKlhaFihpz6zTiA4HiGQ6/slKO/+8K9CAU5kcjdSSPgpuk1PMuuN4hxLipUIifnrkl3Sg==}
 
   '@pagefind/freebsd-x64@1.5.2':
     resolution: {integrity: sha512-7EVzo9+0w+2cbe671BtMj10UlNo83I+HrLVLfRxO731svHRJKUfJ/mo05gU14pe9PCfpKNQT8FS3Xc/oDN6pOA==}
@@ -4560,6 +4566,8 @@ snapshots:
 
   '@pagefind/darwin-x64@1.5.2':
     optional: true
+
+  '@pagefind/default-ui@1.5.2': {}
 
   '@pagefind/freebsd-x64@1.5.2':
     optional: true
