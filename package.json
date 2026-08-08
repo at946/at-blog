@@ -18,6 +18,7 @@
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
 		"generate:embedding": "tsx utils/similarity/generateEmbeddingJson.ts",
 		"generate:similarity": "tsx utils/similarity/generateSimilarityJson.ts",
+		"generate:search-index": "tsx utils/search/createSearchIndex.ts",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
 	"devDependencies": {
@@ -64,6 +65,7 @@
 		"astro-expressive-code": "^0.44.0",
 		"clsx": "^2.1.1",
 		"crypto-js": "^4.2.0",
+		"fuse.js": "^7.5.0",
 		"katex": "^0.18.0",
 		"mermaid": "^11.15.0",
 		"ogp-parser": "^0.8.1",

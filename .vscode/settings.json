@@ -10,7 +10,11 @@
 		"source.fixAll.markdownlint": "explicit"
 	},
 	"[markdown]": {
+		"editor.defaultFormatter": null,
 		"editor.formatOnSave": true,
-		"editor.formatOnPaste": true
+		"editor.formatOnPaste": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.markdownlint": "always"
+		}
 	}
 }
