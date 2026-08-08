@@ -637,12 +637,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260511-why-are-small-releases-good",
-				"score": 0.5115774220174576
-			},
-			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5103078609490778
+			},
+			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.5101123268372377
 			},
 			{
 				"slug": "20260512-what-is-a-good-team-like",
@@ -823,10 +823,6 @@
 				"score": 0.7711341976130307
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7711341976130307
-			},
-			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.7685012139110445
 			},
@@ -837,6 +833,10 @@
 			{
 				"slug": "20210926-reflection-with-emotion",
 				"score": 0.7546361205367506
+			},
+			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7348545408370323
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1351,12 +1351,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260806-i-like-this-kind-of-sprint-review",
-				"score": 0.5096382509107998
+				"slug": "20240824-02",
+				"score": 0.5135439866585585
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5061807712655824
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.5096382509107998
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
@@ -1865,16 +1865,16 @@
 				"score": 0.5197771417714887
 			},
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.5196875838885595
+			},
+			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5188747142762349
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5143763457228797
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5058652953719093
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -1963,6 +1963,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5205719585050668
+			},
+			{
 				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
 				"score": 0.51993877241265
 			},
@@ -1981,10 +1985,6 @@
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5010705644247611
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -2200,6 +2200,10 @@
 				"score": 0.7773461390855054
 			},
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.7514665258898705
+			},
+			{
 				"slug": "20260511-why-are-small-releases-good",
 				"score": 0.7414711154430378
 			},
@@ -2210,10 +2214,6 @@
 			{
 				"slug": "20250121-01",
 				"score": 0.726882572736101
-			},
-			{
-				"slug": "20241220-01",
-				"score": 0.726144720699664
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2473,10 +2473,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
-				"score": 0.5081218490316739
-			},
-			{
 				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
 				"score": 0.5074852222469247
 			},
@@ -2495,6 +2491,10 @@
 			{
 				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
 				"score": 0.5039369304431318
+			},
+			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.5038512239189705
 			}
 		]
 	},
@@ -2648,57 +2648,6 @@
 			{
 				"slug": "20240824-01",
 				"score": 0.5005313232967508
-			}
-		]
-	},
-	{
-		"slug": "20231123-read-the-book-kokoro",
-		"similarArticles": [
-			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.9999990750902893
-			},
-			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7768417592910323
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7766008487008487
-			},
-			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.772849017573683
-			},
-			{
-				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
-				"score": 0.7711341976130307
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5493433240321853
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5449994515889562
-			},
-			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5378952493892494
-			},
-			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5289664637703253
-			},
-			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5265822138263988
-			},
-			{
-				"slug": "20241217-01",
-				"score": 0.5127603847288554
 			}
 		]
 	},
@@ -3442,8 +3391,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5112661089213483
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.5115698331149603
 			},
 			{
 				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
@@ -3577,10 +3526,6 @@
 				"score": 0.9290530776639836
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.8944326714754527
-			},
-			{
 				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
 				"score": 0.7302965620995324
 			},
@@ -3591,6 +3536,10 @@
 			{
 				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
 				"score": 0.6868920091526006
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.6793161296316188
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3883,10 +3832,6 @@
 				"score": 0.9290530776639836
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.9053693490714322
-			},
-			{
 				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
 				"score": 0.73944880356031
 			},
@@ -3897,6 +3842,10 @@
 			{
 				"slug": "20250328-01",
 				"score": 0.6940960630060322
+			},
+			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.6915538127159494
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3981,6 +3930,10 @@
 		"slug": "20241129-01",
 		"similarArticles": [
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.8421074526352917
+			},
+			{
 				"slug": "20240509-prospect-and-target",
 				"score": 0.8012012670292912
 			},
@@ -3995,10 +3948,6 @@
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7866142416923404
-			},
-			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7852388054909663
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4666,16 +4615,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240622-02",
+				"score": 0.5199086882226311
+			},
+			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.5191014564608123
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5155985327332316
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5149842585333032
 			},
 			{
 				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
@@ -4805,16 +4754,16 @@
 				"score": 0.8238213989249422
 			},
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.7919932745579497
+			},
+			{
 				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
 				"score": 0.7793446059065084
 			},
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
 				"score": 0.7773461390855054
-			},
-			{
-				"slug": "20241220-01",
-				"score": 0.7346466603210978
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4921,12 +4870,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-02",
-				"score": 0.5365770861010201
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5368785640116489
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5360339568753191
+				"slug": "20240622-02",
+				"score": 0.5365770861010201
 			},
 			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
@@ -5205,6 +5154,10 @@
 		"slug": "20250704-conference-report-developer-productivity-report",
 		"similarArticles": [
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.7466006280290747
+			},
+			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7348545408370323
 			},
@@ -5219,10 +5172,6 @@
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.7204674837495995
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.7110984681134638
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5329,8 +5278,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
-				"score": 0.5107981888537466
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.5102145801492157
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
@@ -5570,16 +5519,16 @@
 				"score": 0.6994217745735337
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.6994217745735337
-			},
-			{
 				"slug": "20260424-quadrant-of-separation-of-tasks",
 				"score": 0.6956647320511457
 			},
 			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.6950516061500588
+			},
+			{
+				"slug": "20250326-01",
+				"score": 0.6898854990310007
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5625,15 +5574,19 @@
 				"score": 0.7187823073083986
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7187823073083986
-			},
-			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7015906816603329
+			},
+			{
+				"slug": "20230318-just-talk-reflection-is-good",
+				"score": 0.6990513181823071
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5437435910510918
+			},
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5417957168036385
@@ -5651,10 +5604,6 @@
 				"score": 0.5038894733144126
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5011936555287602
-			},
-			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5005734911977282
 			}
@@ -5668,10 +5617,6 @@
 				"score": 0.7415134481202673
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7415134481202673
-			},
-			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.7289760309567985
 			},
@@ -5682,6 +5627,10 @@
 			{
 				"slug": "20250925-reading-notes",
 				"score": 0.7216320101930124
+			},
+			{
+				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
+				"score": 0.7190901796794135
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5723,16 +5672,16 @@
 				"score": 0.7768417592910323
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7768417592910323
-			},
-			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7759598314435041
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7746382918398023
+			},
+			{
+				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
+				"score": 0.7712565621976233
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5788,12 +5737,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260424-quadrant-of-separation-of-tasks",
-				"score": 0.5419089709083962
+				"slug": "20240622-02",
+				"score": 0.5423721401300794
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.5399213900927268
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.5419089709083962
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -6837,60 +6786,56 @@
 		"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 		"similarArticles": [
 			{
-				"slug": "20240824-02",
-				"score": 0.9053693490714322
+				"slug": "20241129-01",
+				"score": 0.8421074526352917
 			},
 			{
-				"slug": "20240622-02",
-				"score": 0.8944326714754527
+				"slug": "20250510-02",
+				"score": 0.7919932745579497
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7175753468174298
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.7514665258898705
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.7131892068405905
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7466006280290747
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.6901723800625233
+				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
+				"score": 0.7355467404855652
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250321-01",
-				"score": 0.5149842585333032
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5112661089213483
-			},
-			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5061807712655824
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5218783124556008
 			},
 			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5058652953719093
+				"score": 0.5196875838885595
 			},
 			{
-				"slug": "20250925-reading-notes",
-				"score": 0.5011936555287602
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5102145801492157
 			},
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5007342624224793
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5101123268372377
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5077103838392184
+			},
+			{
+				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5038512239189705
 			}
 		]
 	},
 	{
-		"slug": "20231123-read-the-book-Kokoro",
+		"slug": "20231123-read-the-book-kokoro",
 		"similarArticles": [
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.9999990750902893
-			},
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7768417592910323
@@ -6906,6 +6851,10 @@
 			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7711341976130307
+			},
+			{
+				"slug": "20260512-what-is-a-good-team-like",
+				"score": 0.7604669396372641
 			}
 		],
 		"differentPerspectiveArticles": [
