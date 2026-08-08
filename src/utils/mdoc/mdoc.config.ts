@@ -1,4 +1,5 @@
 import { amazonLink } from '@/utils/mdoc/schema/amazon-link.mdoc';
+import { details } from '@/utils/mdoc/schema/details';
 import { docswellEmbed } from '@/utils/mdoc/schema/docswell-embed.mdoc';
 import { tableOfContents } from '@/utils/mdoc/schema/table-of-contents.mdoc';
 import { fence } from './schema/fence.mdoc';
@@ -20,6 +21,7 @@ export const config = {
 	},
 	tags: {
 		amazonLink,
+		details,
 		docswell: docswellEmbed,
 		toc: tableOfContents,
 		image,
