@@ -1861,16 +1861,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250328-01",
+				"score": 0.5197771417714887
+			},
+			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5188747142762349
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5143763457228797
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5058652953719093
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -1963,6 +1963,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
+				"score": 0.51993877241265
+			},
+			{
 				"slug": "20260802-when-will-a-team-end",
 				"score": 0.5144136154668658
 			},
@@ -1977,10 +1981,6 @@
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5010705644247611
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5007342624224793
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -2208,12 +2208,12 @@
 				"score": 0.911213266648551
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.9097676216961853
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.9097676216961853
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7238610905863966
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3585,12 +3585,12 @@
 				"score": 0.911213266648551
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.8944326714754527
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.8944326714754527
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7302965620995324
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3891,12 +3891,12 @@
 				"score": 0.9267005311669206
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.9053693490714322
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.9053693490714322
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.73944880356031
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4666,8 +4666,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5149842585333032
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5155985327332316
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -4809,12 +4809,12 @@
 				"score": 0.92104062155266
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.912240647455932
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.912240647455932
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7313283840048282
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4921,8 +4921,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5360339568753191
+				"slug": "20240622-02",
+				"score": 0.5365770861010201
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -5045,57 +5045,6 @@
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
 				"score": 0.5021355148236367
-			}
-		]
-	},
-	{
-		"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-		"similarArticles": [
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 1.0000007181670867
-			},
-			{
-				"slug": "20250510-02",
-				"score": 0.912240647455932
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.9097676216961853
-			},
-			{
-				"slug": "20240824-02",
-				"score": 0.9053693490714322
-			},
-			{
-				"slug": "20240622-02",
-				"score": 0.8944326714754527
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20250321-01",
-				"score": 0.5149842585333032
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5112661089213483
-			},
-			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5061807712655824
-			},
-			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5058652953719093
-			},
-			{
-				"slug": "20250925-reading-notes",
-				"score": 0.5011936555287602
-			},
-			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -5686,6 +5635,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
+				"score": 0.5417957168036385
+			},
+			{
 				"slug": "20240520-i-don't-use-the-word-of-normally",
 				"score": 0.5412726234702975
 			},
@@ -5696,10 +5649,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5038894733144126
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5011936555287602
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -5839,8 +5788,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5399213900927268
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.5419089709083962
 			},
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
@@ -6732,57 +6681,6 @@
 		]
 	},
 	{
-		"slug": "20231123-read-the-book-Kokoro",
-		"similarArticles": [
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.9999990750902893
-			},
-			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7768417592910323
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7766008487008487
-			},
-			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.772849017573683
-			},
-			{
-				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
-				"score": 0.7711341976130307
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5493433240321853
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5449994515889562
-			},
-			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5378952493892494
-			},
-			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5289664637703253
-			},
-			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5265822138263988
-			},
-			{
-				"slug": "20241217-01",
-				"score": 0.5127603847288554
-			}
-		]
-	},
-	{
 		"slug": "20260802-when-will-a-team-end",
 		"similarArticles": [
 			{
@@ -6939,10 +6837,6 @@
 		"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 		"similarArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 1.0000007181670867
-			},
-			{
 				"slug": "20250510-02",
 				"score": 0.912240647455932
 			},
@@ -6957,6 +6851,10 @@
 			{
 				"slug": "20240622-02",
 				"score": 0.8944326714754527
+			},
+			{
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7175753468174298
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6983,6 +6881,57 @@
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5007342624224793
+			}
+		]
+	},
+	{
+		"slug": "20231123-read-the-book-Kokoro",
+		"similarArticles": [
+			{
+				"slug": "20231123-read-the-book-kokoro",
+				"score": 0.9999990750902893
+			},
+			{
+				"slug": "20251023-autonomous-teams",
+				"score": 0.7768417592910323
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7766008487008487
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.772849017573683
+			},
+			{
+				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
+				"score": 0.7711341976130307
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5493433240321853
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5449994515889562
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5378952493892494
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5289664637703253
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5265822138263988
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5127603847288554
 			}
 		]
 	}
