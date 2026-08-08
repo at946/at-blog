@@ -484,10 +484,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.51123860502399
-			},
-			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5103078609490778
 			},
@@ -497,6 +493,10 @@
 			},
 			{
 				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.5078934890412906
+			},
+			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
 				"score": 0.5078934890412906
 			},
 			{
@@ -586,10 +586,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230111-02",
-				"score": 0.5255681734659429
-			},
-			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
 				"score": 0.5211810749178076
 			},
@@ -599,6 +595,10 @@
 			},
 			{
 				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.517985915638112
+			},
+			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
 				"score": 0.517985915638112
 			},
 			{
@@ -2255,16 +2255,16 @@
 				"score": 0.8151769908352253
 			},
 			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.8151769908352253
+			},
+			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
 				"score": 0.8149237206620215
 			},
 			{
 				"slug": "20250510-01",
 				"score": 0.7779318811560858
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.7645932024414758
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2314,8 +2314,8 @@
 				"score": 0.8113175554013722
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.7920933109006951
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.8113175554013722
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3024,12 +3024,12 @@
 				"score": 0.8306034028327806
 			},
 			{
-				"slug": "20241220-01",
-				"score": 0.8086481719195502
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.8306034028327806
 			},
 			{
-				"slug": "20250510-02",
-				"score": 0.7793446059065084
+				"slug": "20241220-01",
+				"score": 0.8086481719195502
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3420,6 +3420,10 @@
 		"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
 		"similarArticles": [
 			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 1.0000004439046353
+			},
+			{
 				"slug": "20240622-02",
 				"score": 0.9151951873028357
 			},
@@ -3434,10 +3438,6 @@
 			{
 				"slug": "20250510-02",
 				"score": 0.8212102551048065
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.8151769908352253
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3526,6 +3526,10 @@
 				"score": 0.9151951873028357
 			},
 			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.9151951873028357
+			},
+			{
 				"slug": "20250510-02",
 				"score": 0.8767805021655538
 			},
@@ -3536,10 +3540,6 @@
 			{
 				"slug": "20250510-01",
 				"score": 0.8092771578314418
-			},
-			{
-				"slug": "20240824-02",
-				"score": 0.8026193380385
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3789,12 +3789,12 @@
 				"score": 0.8126932901459074
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.8117184055773902
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.8126932901459074
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.7854040049814092
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.8117184055773902
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4656,12 +4656,12 @@
 				"score": 0.703035034787265
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.702657613171585
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.703035034787265
 			},
 			{
-				"slug": "20250510-02",
-				"score": 0.6953208919885808
+				"slug": "20250510-01",
+				"score": 0.702657613171585
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4703,16 +4703,16 @@
 				"score": 0.8595661779441351
 			},
 			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.8595661779441351
+			},
+			{
 				"slug": "20250121-01",
 				"score": 0.8242780028600843
 			},
 			{
 				"slug": "20240622-02",
 				"score": 0.8092771578314418
-			},
-			{
-				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
-				"score": 0.8071917234643384
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7187,6 +7187,57 @@
 			{
 				"slug": "20241217-01",
 				"score": 0.5127603847288554
+			}
+		]
+	},
+	{
+		"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+		"similarArticles": [
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 1.0000004439046353
+			},
+			{
+				"slug": "20240622-02",
+				"score": 0.9151951873028357
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.8595661779441351
+			},
+			{
+				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
+				"score": 0.8306034028327806
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.8212102551048065
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5214785359201053
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5196634080131888
+			},
+			{
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.517985915638112
+			},
+			{
+				"slug": "20250218-01",
+				"score": 0.5117607607027256
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5088505978107127
+			},
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5078934890412906
 			}
 		]
 	}
