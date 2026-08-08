@@ -13,6 +13,7 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import { astroExpressiveCode } from 'astro-expressive-code';
 import icon from 'astro-icon';
+import pagefind from 'astro-pagefind';
 
 const markdocMath = () => ({
 	name: 'markdoc-math',
@@ -66,6 +67,7 @@ export default defineConfig(
 			svelte(),
 			icon(),
 			sitemap(),
+			pagefind(),
 			partytown({
 				config: {
 					forward: ['dataLayer.push'],
