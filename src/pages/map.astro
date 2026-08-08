@@ -1,0 +1,8 @@
+---
+import DefaultPageLayout from '@/layouts/default.astro';
+import articles from '../data/article-map.json';
+import ArticleMap from '../utils/article-map';
+---
+<DefaultPageLayout>
+  <ArticleMap articles={articles} client:load />
+</DefaultPageLayout>

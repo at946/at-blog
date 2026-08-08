@@ -6,7 +6,7 @@ interface Props {
 }
 ---
 <nav class={Astro.props.class}>
-  <ul class="flex justify-center gap-8 text-xl" transition:animate="fade">
+  <ul class="flex justify-center gap-4 md:gap-8 text-lg md:text-xl" transition:animate="fade">
     {
       Object.keys(NAV_ITEMS).map(navItemKey =>
         <li class="underline-offset-8 font-bold capitalize">

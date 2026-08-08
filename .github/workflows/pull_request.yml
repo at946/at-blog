@@ -30,6 +30,8 @@ jobs:
 
       - run: pnpm generate:similarity
 
+      - run: pnpm generate:article-map
+
       - run: pnpm run biome:write
 
       - run: pnpm run lint:markdown:fix

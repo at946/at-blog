@@ -1,12 +1,11 @@
 import { GoogleGenAI } from '@google/genai';
-import { env } from '../env';
 import type { Article, ArticleEmbedding } from './type';
 import 'dotenv/config';
 
 const EMBEDDING_MODEL = 'gemini-embedding-2';
 
 const ai = new GoogleGenAI({
-	apiKey: env.geminiApiKey,
+	apiKey: process.env.GEMINI_API_KEY,
 });
 
 const calculateEmbedding = async (
@@ -28,6 +27,7 @@ const calculateEmbedding = async (
 
 	return {
 		slug: article.slug,
+		title: article.title,
 		articleHash: article.articleHash,
 		embedding: embedding,
 	};
