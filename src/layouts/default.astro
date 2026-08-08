@@ -5,10 +5,9 @@ import MainLayout from '@/layouts/MainLayout.astro';
 interface Props {
 	pageTitle?: string;
 	description?: string;
-	showPageHeader?: boolean;
 }
 
-const { pageTitle, description, showPageHeader = true }: Props = Astro.props;
+const { pageTitle, description }: Props = Astro.props;
 ---
 <!doctype html>
 <html lang="ja">
@@ -16,9 +15,6 @@ const { pageTitle, description, showPageHeader = true }: Props = Astro.props;
     <BaseHead pageTitle={pageTitle} description={description} />
   </head>
   <MainLayout>
-    {showPageHeader &&
-      <h1 class="text-4xl font-extrabold mb-8 text-center md:text-left">{pageTitle}</h1>
-    }
     <slot />
   </MainLayout>
 </html>
