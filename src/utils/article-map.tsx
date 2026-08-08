@@ -30,21 +30,6 @@ export default function ArticleMap({ articles }: { articles: TArticleMap[] }) {
 			.domain([Math.min(...ys), Math.max(...ys)])
 			.range([HEIGHT - PADDING, PADDING]);
 
-		// Glow filter
-		svg
-			.selectAll('defs')
-			.data([null])
-			.join('defs')
-			.html(`
-				<filter id="article-glow">
-					<feGaussianBlur stdDeviation="3" result="blur" />
-					<feMerge>
-						<feMergeNode in="blur" />
-						<feMergeNode in="SourceGraphic" />
-					</feMerge>
-				</filter>
-			`);
-
 		// Article group
 		const articlesGroup = svg
 			.selectAll('.articles')
@@ -52,12 +37,28 @@ export default function ArticleMap({ articles }: { articles: TArticleMap[] }) {
 			.join('g')
 			.attr('class', 'articles');
 
+		// Zoom
+		const zoom = d3
+			.zoom<SVGSVGElement, unknown>()
+			.scaleExtent([0.5, 8])
+			.on('zoom', (event) => {
+				articlesGroup.attr('transform', event.transform);
+			});
+		svg.call(zoom);
+
+		// Article links
+		const articleLinks = articlesGroup
+			.selectAll<SVGAElement, TArticleMap>('a.article-link')
+			.data(articles, (article) => article.slug)
+			.join('a')
+			.attr('class', 'article-link cursor-pointer')
+			.attr('href', (article) => `/blog/${article.slug}`)
+			.attr('target', '_blank')
+			.attr('rel', 'noopener noreferrer');
+
 		// Article stars
-		const article = articlesGroup
-			.selectAll('.article')
-			.data(articles)
-			.join('circle')
-			.attr('class', 'article')
+		articleLinks
+			.append('circle')
 			.attr('cx', (article) => xScale(article.x))
 			.attr('cy', (article) => yScale(article.y))
 			.attr('r', 4)
@@ -79,9 +80,6 @@ export default function ArticleMap({ articles }: { articles: TArticleMap[] }) {
 			})
 			.on('mouseleave', () => {
 				setHoverArticle(null);
-			})
-			.on('click', (_, article) => {
-				window.location.href = `/blog/${article.slug}`;
 			});
 	}, [articles]);
 
@@ -103,12 +101,7 @@ export default function ArticleMap({ articles }: { articles: TArticleMap[] }) {
 					}}
 					className='absolute rounded-xl border border-white/15 bg-slate-950/80 px-4 py-3 text-sm text-white shadow-2xl backdrop-blur-md'
 				>
-					<a
-						href={`/blog/${hoverArticle.slug}`}
-						className='font-medium hover:underline'
-					>
-						{hoverArticle.title}
-					</a>
+					{hoverArticle.title}
 				</div>
 			)}
 		</div>

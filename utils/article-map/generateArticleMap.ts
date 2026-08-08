@@ -26,7 +26,7 @@ async function main() {
 
 	const umap = new UMAP({
 		nComponents: 2,
-		nNeighbors: 15,
+		nNeighbors: 10,
 		minDist: 0.1,
 		random: mulberry32(42),
 	});
