@@ -1351,6 +1351,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.5096382509107998
+			},
+			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.5061807712655824
 			},
@@ -1369,10 +1373,6 @@
 			{
 				"slug": "20241227-01",
 				"score": 0.5016294431088679
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.5012839696368678
 			}
 		]
 	},
@@ -2196,50 +2196,50 @@
 		"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
 		"similarArticles": [
 			{
-				"slug": "20240824-02",
-				"score": 0.9267005311669206
+				"slug": "20250510-02",
+				"score": 0.7773461390855054
 			},
 			{
-				"slug": "20240622-02",
-				"score": 0.911213266648551
+				"slug": "20260511-why-are-small-releases-good",
+				"score": 0.7414711154430378
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.9097676216961853
+				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
+				"score": 0.7285106119287039
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7238610905863966
+				"slug": "20250121-01",
+				"score": 0.726882572736101
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.721515434123436
+				"slug": "20241220-01",
+				"score": 0.726144720699664
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241217-01",
-				"score": 0.5282217462148523
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5165735398139307
 			},
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5184882427496382
+				"slug": "20250328-01",
+				"score": 0.516537850315766
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.5152726491655971
+				"slug": "20250218-01",
+				"score": 0.5138517323568684
 			},
 			{
-				"slug": "20250510-02",
-				"score": 0.5028872158267272
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.513764794488574
 			},
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5012839696368678
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5037812662434825
 			},
 			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5004860923794497
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5022550997089045
 			}
 		]
 	},
@@ -2983,6 +2983,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.5150512748155234
+			},
+			{
 				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
 				"score": 0.5146194269258436
 			},
@@ -3001,10 +3005,6 @@
 			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5057724432224865
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.5004860923794497
 			}
 		]
 	},
@@ -3577,10 +3577,6 @@
 				"score": 0.9290530776639836
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.911213266648551
-			},
-			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.8944326714754527
 			},
@@ -3591,6 +3587,10 @@
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.7197106311109611
+			},
+			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.6868920091526006
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3883,10 +3883,6 @@
 				"score": 0.9290530776639836
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.9267005311669206
-			},
-			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.9053693490714322
 			},
@@ -3897,6 +3893,10 @@
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.7313570546705646
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.6940960630060322
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4717,12 +4717,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5197771417714887
-			},
-			{
 				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
 				"score": 0.5191036529039578
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.516537850315766
 			},
 			{
 				"slug": "20240623-scrum-fest-osaka-2024-kanagawa-track-speaker-report",
@@ -4809,15 +4809,19 @@
 				"score": 0.7793446059065084
 			},
 			{
-				"slug": "20241220-01",
-				"score": 0.7346466603210978
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.7773461390855054
 			},
 			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.7339454288162998
+				"slug": "20241220-01",
+				"score": 0.7346466603210978
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5380791758181571
+			},
 			{
 				"slug": "20250328-01",
 				"score": 0.5378776460518886
@@ -4837,10 +4841,6 @@
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5068846299101116
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.5028872158267272
 			}
 		]
 	},
@@ -5221,8 +5221,8 @@
 				"score": 0.7204674837495995
 			},
 			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7072053181585083
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.7110984681134638
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5329,10 +5329,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260802-when-will-a-team-end",
-				"score": 0.511885455302718
-			},
-			{
 				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
 				"score": 0.5107981888537466
 			},
@@ -5347,6 +5343,10 @@
 			{
 				"slug": "20250326-01",
 				"score": 0.5039012226824722
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.5037812662434825
 			},
 			{
 				"slug": "20250313-01",
@@ -6349,10 +6349,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210926-reflection-with-emotion",
-				"score": 0.5113935978371873
-			},
-			{
 				"slug": "20240816-how-can-we-make-a-decision",
 				"score": 0.5109167204727406
 			},
@@ -6363,6 +6359,10 @@
 			{
 				"slug": "20260425-someones-stories",
 				"score": 0.5037693503705823
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.5022550997089045
 			},
 			{
 				"slug": "20250326-01",
@@ -6837,10 +6837,6 @@
 		"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 		"similarArticles": [
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.9097676216961853
-			},
-			{
 				"slug": "20240824-02",
 				"score": 0.9053693490714322
 			},
@@ -6855,6 +6851,10 @@
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.7131892068405905
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.6901723800625233
 			}
 		],
 		"differentPerspectiveArticles": [
