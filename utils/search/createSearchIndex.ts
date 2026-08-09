@@ -10,7 +10,7 @@ type Article = {
 	content: string;
 };
 
-const OUTOUT_FILEPATH: string = 'src/data/search-index.json';
+const OUTOUT_FILEPATH: string = 'public/search-index.json';
 
 async function createSearchIndex() {
 	const filePaths: string[] = (
