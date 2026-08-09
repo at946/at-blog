@@ -1,0 +1,85 @@
+---
+export const prerender = true;
+
+import DefaultPageLayout from '@/layouts/default.astro';
+---
+
+<DefaultPageLayout pageTitle="検索">
+  <div class="mb-8">
+    <input
+      id="search-input"
+      type="search"
+      placeholder="記事を検索"
+      class="w-full rounded border-2 border-gray-500 px-4 py-3"
+      autocomplete="off"
+      autofocus
+    />
+  </div>
+
+  <div id="search-status" class="mb-4 text-sm"></div>
+
+  <div id="search-results"></div>
+</DefaultPageLayout>
+
+<script>
+  import Fuse from 'fuse.js';
+
+  type Article = {
+    slug: string;
+    title: string;
+    content: string;
+  }
+
+  const input = document.querySelector<HTMLInputElement>('#search-input');
+  const status = document.querySelector<HTMLElement>('#search-status');
+  const results = document.querySelector<HTMLElement>('#search-results');
+
+  if (!input || !status || !results) {
+    throw new Error('Search elements not found');
+  }
+
+  const response = await fetch('src/data/search-index.json');
+  const articles: Article[] = await response.json();
+
+  const fuse = new Fuse(articles, {
+    keys: ['title', 'content'],
+    threshold: 0.5,
+    includeScore: true,
+  });
+
+  const renderResults = (query: string) => {
+    if (!query.trim()) {
+      status.textContent = '';
+      results.innerHTML = '';
+      return;
+    }
+
+    const searchResults = fuse.search(query);
+
+    status.textContent = `${searchResults.length}件`;
+
+    results.innerHTML = searchResults
+      .map(({ item }) => {
+        return `
+          <article class="mb-6">
+            <a href="/blog/${item.slug}/" class="text-lg font-bold hover:underline">
+              ${item.title}
+            </a>
+          </article>
+        `;
+      })
+      .join('');
+  };
+
+  input.addEventListener('input', () => {
+    renderResults(input.value);
+  });
+
+  const params = new URLSearchParams(location.search);
+  const query = params.get('q');
+
+  if (query) {
+    input.value = query;
+    renderResults(query);
+  }
+</script>

@@ -4,14 +4,22 @@ import { NAV_ITEMS } from '@/config';
 interface Props {
 	class?: string;
 }
+
+const isActive = (path: string) => {
+	const pathname = Astro.url.pathname;
+	if (path === '/blog') {
+		return pathname === '/blog' || /^\/blog\/\d+\/?$/.test(pathname);
+	}
+	return pathname === path;
+};
 ---
 <nav class={Astro.props.class}>
-  <ul class="flex justify-center gap-8 text-xl" transition:animate="fade">
+  <ul class="flex justify-center gap-8 text-xl">
     {
       Object.keys(NAV_ITEMS).map(navItemKey =>
         <li class="underline-offset-8 font-bold capitalize">
           {
-            Astro.url.pathname === NAV_ITEMS[navItemKey].path
+            isActive(NAV_ITEMS[navItemKey].path)
             ?
               <span class="underline text-primary">
                 {NAV_ITEMS[navItemKey].title}
