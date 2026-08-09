@@ -484,11 +484,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.51123860502399
+				"slug": "20240322-reflect-why-we-can-achieve-it",
+				"score": 0.5120153292881111
 			},
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.51123860502399
 			},
 			{
@@ -739,7 +739,7 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5293926774671556
 			},
 			{
@@ -841,6 +841,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20241217-01",
+				"score": 0.5505429060751832
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.547111176175262
 			},
@@ -854,10 +858,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.523544650217347
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.523544650217347
 			},
 			{
@@ -1300,6 +1300,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5437129689547657
+			},
+			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5424255435828943
 			},
@@ -1313,10 +1317,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5084044732120021
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5084044732120021
 			},
 			{
@@ -1504,6 +1504,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5338543883875582
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5320803955294833
 			},
@@ -1513,10 +1517,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5231291420065974
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5231291420065974
 			},
 			{
@@ -1555,6 +1555,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5264575719694726
+			},
+			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5256996381353793
 			},
@@ -1568,10 +1572,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5134918958024144
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5134918958024144
 			},
 			{
@@ -1606,6 +1606,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5185113806732127
+			},
+			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5183848218769106
 			},
@@ -1623,10 +1627,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.502656486881951
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.502656486881951
 			}
 		]
@@ -1657,11 +1657,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5181078392892258
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5220468328566406
 			},
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5181078392892258
 			},
 			{
@@ -2065,6 +2065,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5227624362016787
+			},
+			{
 				"slug": "20241217-01",
 				"score": 0.5184750327496709
 			},
@@ -2082,10 +2086,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5030610294771634
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5030610294771634
 			}
 		]
@@ -2357,16 +2357,16 @@
 				"score": 0.6451669230420126
 			},
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
-				"score": 0.6451669230420126
-			},
-			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
 				"score": 0.5955511226862507
 			},
 			{
 				"slug": "20250925-reading-notes",
 				"score": 0.5865980266234005
+			},
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.584744308690975
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2422,7 +2422,7 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5128680844865984
 			},
 			{
@@ -2575,6 +2575,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5434052058041308
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5378944418003154
 			},
@@ -2588,10 +2592,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.524514553350274
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.524514553350274
 			},
 			{
@@ -3267,10 +3267,6 @@
 		"slug": "20240520-i-dont-use-the-word-of-normally",
 		"similarArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
-				"score": 0.9999999492203622
-			},
-			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.6473074673500202
 			},
@@ -3285,6 +3281,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.6466781601574036
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.6451669230420126
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3595,6 +3595,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5176209141202449
+			},
+			{
 				"slug": "20241217-01",
 				"score": 0.5158479073414961
 			},
@@ -3612,10 +3616,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.507668657191394
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.507668657191394
 			}
 		]
@@ -4207,15 +4207,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5318234225137451
+			},
+			{
 				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5291289838188054
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5253788477795839
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5253788477795839
 			},
 			{
@@ -4819,6 +4819,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250218-01",
+				"score": 0.5415464323001915
+			},
+			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5380791758181571
 			},
@@ -4832,10 +4836,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5081350818020269
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5081350818020269
 			},
 			{
@@ -4921,6 +4921,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5378721227358757
+			},
+			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5368785640116489
 			},
@@ -4930,10 +4934,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.531894231056999
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.531894231056999
 			},
 			{
@@ -5533,6 +5533,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5339476708000045
+			},
+			{
 				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5273737048354908
 			},
@@ -5546,10 +5550,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5156310913180294
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5156310913180294
 			},
 			{
@@ -5635,15 +5635,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5437435910510918
+			},
+			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5417957168036385
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5412726234702975
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5412726234702975
 			},
 			{
@@ -5737,6 +5737,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5158984542222186
+			},
+			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5152320677992476
 			},
@@ -5746,10 +5750,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5113512472041108
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5113512472041108
 			},
 			{
@@ -5839,6 +5839,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5347061190959965
+			},
+			{
 				"slug": "20241217-01",
 				"score": 0.5298571509990257
 			},
@@ -5856,10 +5860,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5087517613663772
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5087517613663772
 			}
 		]
@@ -6400,6 +6400,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.537986364327664
+			},
+			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5367240112624786
 			},
@@ -6409,10 +6413,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5261983855277824
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5261983855277824
 			},
 			{
@@ -6451,6 +6451,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
+				"score": 0.5234730985161354
+			},
+			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.519681113004782
 			},
@@ -6460,10 +6464,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.512200505282014
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.512200505282014
 			},
 			{
@@ -6502,6 +6502,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5429982293838849
+			},
+			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5352652373113738
 			},
@@ -6515,10 +6519,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5243524757899436
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5243524757899436
 			},
 			{
@@ -6553,6 +6553,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5349377815900946
+			},
+			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5322564481155838
 			},
@@ -6570,10 +6574,6 @@
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5012896906609899
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5012896906609899
 			}
 		]
@@ -6655,15 +6655,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5190541264810354
+			},
+			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.5143763457228797
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5139264595482756
-			},
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
 				"score": 0.5139264595482756
 			},
 			{
@@ -7085,57 +7085,6 @@
 			{
 				"slug": "20241217-01",
 				"score": 0.5077103838392184
-			}
-		]
-	},
-	{
-		"slug": "20240520-i-dont-use-the-word-of-normally-tmp",
-		"similarArticles": [
-			{
-				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.9999999492203622
-			},
-			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.6473074673500202
-			},
-			{
-				"slug": "20230221-make-user-stories-easy-to-write-and-read",
-				"score": 0.6471614416567144
-			},
-			{
-				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
-				"score": 0.6467472930945136
-			},
-			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.6466781601574036
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20221009-i-found-we-do-not-do-scrum",
-				"score": 0.5084044732120021
-			},
-			{
-				"slug": "20250510-02",
-				"score": 0.5081350818020269
-			},
-			{
-				"slug": "20240622-02",
-				"score": 0.507668657191394
-			},
-			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.5030610294771634
-			},
-			{
-				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
-				"score": 0.502656486881951
-			},
-			{
-				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
-				"score": 0.5012896906609899
 			}
 		]
 	}
