@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
 	title: string;
 	publicationDate: Date;
@@ -9,13 +11,18 @@ interface Props {
 const { title, publicationDate, readingTime } = Astro.props;
 ---
 <div class:list={["text-center md:text-left", Astro.props.class]}>
-  <p class="mb-2 font-semibold">
-    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
-  </p>
-  <h1 class="text-3xl leading-snug font-bold mb-4">
-    { title }
-  </h1>
-  <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
+  <hr class="mb-8 border-gray-600 dark:border-white" />
+  <div class="flex justify-between mb-4 font-semibold">
+    <span>
+      { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
+    </span>
+    <span class="flex gap-1 items-center">
+      <Icon name="mdi:clock-outline" size="20" />
+      <span>{ readingTime }min</span>
+    </span>
   </div>
-  <p class="text-base">読了時間の目安: { readingTime }分</p>
+    <h1 class="text-2xl leading-loose font-black mb-10">
+      { title }
+    </h1>
+  <hr class="mb-8 border-gray-600 dark:border-white" />
 </div>

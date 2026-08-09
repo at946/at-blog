@@ -14,10 +14,10 @@ module.exports = {
 			},
 			colors: {
 				primary: colors.teal['500'],
-				text: colors.gray['600'],
+				text: colors.gray['900'],
 				link: colors.teal['500'],
 				dark: {
-					text: colors.gray['300'],
+					text: colors.white,
 				},
 			},
 			typography: (theme) => ({
