@@ -19,7 +19,7 @@
 				"score": 0.6537557896669631
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.6443330444747686
 			}
 		],
@@ -88,7 +88,7 @@
 				"score": 0.522288969013039
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5202320258685763
 			},
 			{
@@ -127,28 +127,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20241217-01",
+				"score": 0.5246147160719778
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5235868691993419
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5211952763664078
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.51993877241265
+			},
+			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5179397556945107
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5165910836477853
-			},
-			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5129843022922773
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5124449298132407
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5093030537979131
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5024929144626865
 			}
 		]
 	},
@@ -178,12 +178,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250321-01",
-				"score": 0.511877161150576
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5148558735932453
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5105980948494209
+				"slug": "20250321-01",
+				"score": 0.511877161150576
 			},
 			{
 				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
@@ -215,7 +215,7 @@
 				"score": 0.7537204365117487
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.6744744798424231
 			},
 			{
@@ -229,8 +229,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5093637395996111
+				"slug": "20240622-02",
+				"score": 0.5092215256094657
 			},
 			{
 				"slug": "20250219-01",
@@ -262,7 +262,7 @@
 				"score": 0.7537204365117487
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.6838702242646632
 			},
 			{
@@ -274,18 +274,18 @@
 				"score": 0.5813005459271954
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5805615741343202
+				"slug": "20251120-lean-coffee-on-notion",
+				"score": 0.5792371463597933
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230318-just-talk-reflection-is-good",
-				"score": 0.5081598858654355
+				"slug": "20250626-open-mind-will-bring-something",
+				"score": 0.5112446865116275
 			},
 			{
-				"slug": "20240622-02",
-				"score": 0.5058818769123244
+				"slug": "20230318-just-talk-reflection-is-good",
+				"score": 0.5081598858654355
 			},
 			{
 				"slug": "20250128-01",
@@ -300,8 +300,8 @@
 				"score": 0.5030528544444184
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5007368910219377
+				"slug": "20230111-01",
+				"score": 0.5008922116375105
 			}
 		]
 	},
@@ -331,11 +331,7 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5431593257115875
-			},
-			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5412757903431332
 			},
 			{
@@ -349,6 +345,10 @@
 			{
 				"slug": "20241217-01",
 				"score": 0.5236968175231215
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5196356768294136
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -382,16 +382,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
-				"score": 0.5193002630603378
-			},
-			{
-				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
-				"score": 0.5168800624961317
-			},
-			{
 				"slug": "20260426-encourage-collaboration-via-stories",
 				"score": 0.5138297420966049
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5119079554961159
 			},
 			{
 				"slug": "20250321-01",
@@ -400,6 +396,10 @@
 			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.506249049917621
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.5058511073692755
 			},
 			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
@@ -433,12 +433,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250218-01",
-				"score": 0.5443827603791714
-			},
-			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5358733023047313
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5342396750224263
 			},
 			{
 				"slug": "20241217-01",
@@ -453,7 +453,7 @@
 				"score": 0.5102117818198249
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5101681681826127
 			}
 		]
@@ -484,19 +484,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
-				"score": 0.5190541264810354
-			},
-			{
-				"slug": "20241227-02",
-				"score": 0.5126287135402596
-			},
-			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.5120153292881111
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.51123860502399
 			},
 			{
@@ -506,6 +498,14 @@
 			{
 				"slug": "20251203-why-did-you-choose-that-retrospective-framework",
 				"score": 0.5096398172760614
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.5078934890412906
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5039114572208218
 			}
 		]
 	},
@@ -586,28 +586,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5180111993952238
+				"slug": "20230111-02",
+				"score": 0.5255681734659429
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5179106747897355
+				"score": 0.5211810749178076
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5181321142868671
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.517985915638112
 			},
 			{
 				"slug": "20250218-01",
 				"score": 0.5173056410331639
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.5143173355713121
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5137019964515476
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5081218490316739
+				"slug": "20250328-01",
+				"score": 0.5018695309091251
 			}
 		]
 	},
@@ -637,24 +637,24 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260511-why-are-small-releases-good",
-				"score": 0.5115774220174576
-			},
-			{
-				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
-				"score": 0.5103078609490778
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.509103192867516
 			},
 			{
 				"slug": "20260512-what-is-a-good-team-like",
 				"score": 0.5075256214009273
 			},
 			{
-				"slug": "20240625-My-Learning-Habits",
+				"slug": "20240625-my-learning-habits",
 				"score": 0.5064580673565008
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5050310334514608
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.5045539231197993
 			},
 			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
@@ -688,8 +688,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260426-encourage-collaboration-via-stories",
-				"score": 0.5170029899646472
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5147992934615518
 			},
 			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
@@ -739,24 +739,24 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
-				"score": 0.5182418532632426
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5293926774671556
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5157351162628334
+				"slug": "20241217-01",
+				"score": 0.5227433224139669
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5207083311591225
+			},
+			{
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.5182418532632426
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5115698331149603
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5086697154080928
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5066446641625262
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -823,10 +823,6 @@
 				"score": 0.7711341976130307
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7711341976130307
-			},
-			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.7685012139110445
 			},
@@ -837,27 +833,31 @@
 			{
 				"slug": "20210926-reflection-with-emotion",
 				"score": 0.7546361205367506
+			},
+			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7348545408370323
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5264190415673217
+				"slug": "20241217-01",
+				"score": 0.5505429060751832
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5259755575824895
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.547111176175262
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5250373970722011
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5375360694563966
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5244675707960222
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.523544650217347
 			},
 			{
@@ -892,12 +892,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5188747142762349
-			},
-			{
 				"slug": "20230221-make-user-stories-easy-to-write-and-read",
 				"score": 0.5175923211190228
+			},
+			{
+				"slug": "20240824-01",
+				"score": 0.5174121748533448
 			},
 			{
 				"slug": "20260426-encourage-collaboration-via-stories",
@@ -943,6 +943,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5265633697633006
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5220131191621382
+			},
+			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5112581730784123
 			},
@@ -955,16 +963,8 @@
 				"score": 0.5084276036171959
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5072401175577501
-			},
-			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5060714157336603
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5001648314376863
 			}
 		]
 	},
@@ -994,16 +994,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5151275996358863
-			},
-			{
 				"slug": "20241129-02",
 				"score": 0.5148783801532499
 			},
 			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.5138921584915239
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5125749394430943
 			},
 			{
 				"slug": "20251120-lean-coffee-on-notion",
@@ -1045,6 +1045,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250218-01",
+				"score": 0.5451524130308036
+			},
+			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5433269918643845
 			},
@@ -1053,20 +1057,16 @@
 				"score": 0.5423852528934915
 			},
 			{
+				"slug": "20250328-01",
+				"score": 0.5281802932812691
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5240510563818292
 			},
 			{
 				"slug": "20241217-01",
 				"score": 0.523854933600595
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5150549215775018
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5099369796039868
 			}
 		]
 	},
@@ -1096,6 +1096,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
+				"score": 0.512523714245119
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5124316820863507
+			},
+			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5120126042889453
 			},
@@ -1110,14 +1118,6 @@
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5058713969724009
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5017611462057311
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5002318064101556
 			}
 		]
 	},
@@ -1147,8 +1147,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240824-01",
-				"score": 0.5311314668310517
+				"slug": "20250218-01",
+				"score": 0.5358538086406153
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5358054707308384
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5300866264412101
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -1161,14 +1169,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5164216122147203
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5109413297026496
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.509162381996738
 			}
 		]
 	},
@@ -1198,28 +1198,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5106852432773713
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5467097871342568
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.5089053760835286
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5439279452441272
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5403818341207625
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5128945308405304
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5128430668825259
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5083504321867942
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5075053366027141
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5067388464979183
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5048684143319844
 			}
 		]
 	},
@@ -1249,28 +1249,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5434791506978033
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.542729282059743
+			},
+			{
+				"slug": "20250218-01",
+				"score": 0.5419045628329053
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5275183763949549
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5256346948274292
+			},
+			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5224586443769083
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5192421291175252
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5186886478477639
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.514267259479122
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5141984473100858
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.506558299792163
 			}
 		]
 	},
@@ -1300,10 +1300,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5443066658373445
-			},
-			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5437129689547657
 			},
@@ -1316,7 +1312,11 @@
 				"score": 0.5352152451440197
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5245574247260355
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5084044732120021
 			},
 			{
@@ -1351,8 +1351,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5061807712655824
+				"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
+				"score": 0.5151749201864343
+			},
+			{
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.5096382509107998
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
@@ -1369,10 +1373,6 @@
 			{
 				"slug": "20241227-01",
 				"score": 0.5016294431088679
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.5012839696368678
 			}
 		]
 	},
@@ -1392,7 +1392,7 @@
 				"score": 0.7147119620644565
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.7115859572996637
 			},
 			{
@@ -1453,20 +1453,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5190851102497487
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5333686406128427
+			},
+			{
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5293530217235612
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.523605000984921
 			},
 			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5175923211190228
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5131101489113549
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5108948624213974
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
@@ -1516,7 +1516,7 @@
 				"score": 0.5253789263833195
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5231291420065974
 			},
 			{
@@ -1555,6 +1555,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5264575719694726
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5256996381353793
+			},
+			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5208833335103196
 			},
@@ -1563,16 +1571,8 @@
 				"score": 0.5186115665058878
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5176245822137963
-			},
-			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5134918958024144
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5098102218964478
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -1626,7 +1626,7 @@
 				"score": 0.5065433074839957
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.502656486881951
 			}
 		]
@@ -1657,12 +1657,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5130734464393945
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5220468328566406
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.5127443715825716
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5181078392892258
+			},
+			{
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5178244752365111
 			},
 			{
 				"slug": "20250218-01",
@@ -1671,10 +1675,6 @@
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5124917732583154
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5054447519895744
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
@@ -1708,24 +1708,24 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5580959895743453
+			},
+			{
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5546474197089523
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5412105880244187
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5256406310151112
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5216572150585891
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5179422871120771
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
 				"score": 0.5176537457303493
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5171828860945824
 			},
 			{
 				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
@@ -1810,10 +1810,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
-				"score": 0.5274781706396465
-			},
-			{
 				"slug": "20260426-encourage-collaboration-via-stories",
 				"score": 0.526840321467322
 			},
@@ -1828,6 +1824,10 @@
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5234764217210403
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5124453776670859
 			},
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
@@ -1861,27 +1861,27 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250328-01",
-				"score": 0.5197771417714887
-			},
-			{
-				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
-				"score": 0.5188747142762349
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.5149970898289065
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5143763457228797
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5058652953719093
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
+				"score": 0.513524393272826
+			},
+			{
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5111786477599176
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5036601053080688
 			},
 			{
-				"slug": "20240625-My-Learning-Habits",
+				"slug": "20240625-my-learning-habits",
 				"score": 0.5023934830879093
 			}
 		]
@@ -1912,24 +1912,24 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240824-01",
-				"score": 0.5253668971385839
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5458729813658868
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5200740747286204
+				"slug": "20250218-01",
+				"score": 0.545739229783031
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.5200056258610516
+				"slug": "20241217-01",
+				"score": 0.5435304852868945
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5178093955176362
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5297697585478663
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5135765580977818
+				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
+				"score": 0.5275631199492729
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
@@ -1963,8 +1963,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.51993877241265
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5157033222798225
+			},
+			{
+				"slug": "20230826-02",
+				"score": 0.5152774714898792
 			},
 			{
 				"slug": "20260802-when-will-a-team-end",
@@ -1981,10 +1985,6 @@
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5010705644247611
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -2014,28 +2014,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5305861546453721
+			},
+			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5268557886947207
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5259697573449414
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
+				"score": 0.5251623032095425
+			},
+			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5164670069823982
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5135311743998907
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.511555303296991
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5079845896643802
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5039369304431318
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5038897883545109
 			}
 		]
 	},
@@ -2065,27 +2065,27 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5168995665920528
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5227624362016787
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5184750327496709
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5183706649382583
 			},
 			{
 				"slug": "20250218-01",
 				"score": 0.5153090547569109
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5094087228767888
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5079700696981048
-			},
-			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
 				"score": 0.5039131498644268
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5030610294771634
 			}
 		]
@@ -2116,10 +2116,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5492518392351002
-			},
-			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5436525236081323
 			},
@@ -2128,12 +2124,16 @@
 				"score": 0.5413497578921733
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5392311896705863
 			},
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5264803439918144
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5170960332998968
 			},
 			{
 				"slug": "20241217-01",
@@ -2144,6 +2144,10 @@
 	{
 		"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 		"similarArticles": [
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.7566457121892377
+			},
 			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.7205075867867562
@@ -2159,20 +2163,16 @@
 			{
 				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
 				"score": 0.6847465433228509
-			},
-			{
-				"slug": "20251203-why-did-you-choose-that-retrospective-framework",
-				"score": 0.6805617459153254
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.5152320677992476
-			},
-			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.5125514939094463
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.5121030055148816
 			},
 			{
 				"slug": "20260617-the-key-to-facilitate-brainstorming-is-to-remove-unconscious-constraints",
@@ -2196,50 +2196,50 @@
 		"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
 		"similarArticles": [
 			{
-				"slug": "20240824-02",
-				"score": 0.9267005311669206
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
+				"score": 0.8435149286155224
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.8102304161321345
+			},
+			{
+				"slug": "20221027-01",
+				"score": 0.7922245093061813
+			},
+			{
+				"slug": "20230111-01",
+				"score": 0.7893023188537972
 			},
 			{
 				"slug": "20250510-02",
-				"score": 0.92104062155266
-			},
-			{
-				"slug": "20240622-02",
-				"score": 0.911213266648551
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.9097676216961853
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7238610905863966
+				"score": 0.7773461390855054
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250321-01",
-				"score": 0.5295638932101573
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5286736064962667
 			},
 			{
 				"slug": "20241217-01",
-				"score": 0.5282217462148523
+				"score": 0.5174810123644258
 			},
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5184882427496382
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5165735398139307
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.5152726491655971
+				"slug": "20250218-01",
+				"score": 0.5138517323568684
 			},
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5012839696368678
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5037812662434825
 			},
 			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5004860923794497
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5022550997089045
 			}
 		]
 	},
@@ -2247,50 +2247,50 @@
 		"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
 		"similarArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8806359660927606
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.8435149286155224
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.8747884080148807
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8151769908352253
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.8718734462958168
+				"score": 0.8149237206620215
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.7779318811560858
 			},
 			{
 				"slug": "20240824-01",
-				"score": 0.864408129615549
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8586960006681112
+				"score": 0.7645932024414758
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5105952095702593
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5174368161429647
 			},
 			{
-				"slug": "20250829-scrum-masters-with-individual-psychology",
-				"score": 0.510592308266805
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.513524393272826
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5075053366027141
+				"slug": "20250218-01",
+				"score": 0.5133530511740769
 			},
 			{
-				"slug": "20211206-lets-check-out-if-you-do-not-have-enough-time-to-retrospective",
-				"score": 0.5072401175577501
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5131123508696591
 			},
 			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.5056016702803257
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5099517698711911
 			},
 			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.5054447519895744
+				"slug": "20241217-01",
+				"score": 0.5095881267269321
 			}
 		]
 	},
@@ -2298,50 +2298,50 @@
 		"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
 		"similarArticles": [
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.8718734462958168
+				"slug": "20230826-02",
+				"score": 0.8877222499568632
 			},
 			{
 				"slug": "20240824-01",
-				"score": 0.8544328563322751
+				"score": 0.8241159884779098
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8487119074700622
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
+				"score": 0.8149237206620215
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8113175554013722
 			},
 			{
 				"slug": "20250510-01",
-				"score": 0.8396696907547057
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8377956518035252
+				"score": 0.7920933109006951
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5057926878638737
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5275588899722613
 			},
 			{
-				"slug": "20240816-how-can-we-make-a-decision",
-				"score": 0.503828141316348
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5224592649120549
 			},
 			{
-				"slug": "20260425-someones-stories",
-				"score": 0.503345341931817
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.5211810749178076
 			},
 			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.5021355148236367
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5198119135258332
 			},
 			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.5011885946920764
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5157033222798225
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.5007368910219377
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5111786477599176
 			}
 		]
 	},
@@ -2353,27 +2353,23 @@
 				"score": 0.6816500064307683
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.6451669230420126
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.6245041476543268
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5955511226862507
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.6143275118254231
+				"slug": "20250925-reading-notes",
+				"score": 0.5865980266234005
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.6037932565418196
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.584744308690975
 			}
 		],
 		"differentPerspectiveArticles": [
-			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5128430668825259
-			},
 			{
 				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
 				"score": 0.510994934940571
@@ -2391,6 +2387,10 @@
 				"score": 0.5074321679406155
 			},
 			{
+				"slug": "20250510-02",
+				"score": 0.5068846299101116
+			},
+			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5018700463443978
 			}
@@ -2404,7 +2404,7 @@
 				"score": 0.810990919533773
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.7778840181028025
 			},
 			{
@@ -2412,17 +2412,17 @@
 				"score": 0.7720231104012503
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.7517001793385152
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.7527034165154161
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.7420451560606054
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.7414731155141122
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5128680844865984
 			},
 			{
@@ -2448,59 +2448,63 @@
 		]
 	},
 	{
-		"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
+		"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 		"similarArticles": [
 			{
-				"slug": "20240824-01",
-				"score": 0.8088199036049695
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.8060530819176918
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8036465863588068
+				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
+				"score": 0.7142745458641291
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8003992757874102
+				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
+				"score": 0.7052777410960581
 			},
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.7990084059715381
+				"score": 0.7033716483665491
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.795189905824979
+				"slug": "20240824-01",
+				"score": 0.7011479895088313
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
-				"score": 0.5081218490316739
+				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
+				"score": 0.5124453776670859
 			},
 			{
-				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
-				"score": 0.5074852222469247
+				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
+				"score": 0.5120270734016071
 			},
 			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5072320808970856
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.5119079554961159
 			},
 			{
-				"slug": "20260527-queueing-theory-and-product-backlog",
-				"score": 0.5061895940101385
+				"slug": "20250921-social-interest-and-me",
+				"score": 0.5048979987055173
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5059846793305944
+				"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
+				"score": 0.504883992868662
 			},
 			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5039369304431318
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5039114572208218
 			}
 		]
 	},
 	{
-		"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+		"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 		"similarArticles": [
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.8060530819176918
+			},
 			{
 				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
 				"score": 0.7778840181028025
@@ -2516,10 +2520,6 @@
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.7115859572996637
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.7031436101953078
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2591,7 +2591,7 @@
 				"score": 0.5312026605866556
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.524514553350274
 			},
 			{
@@ -2630,6 +2630,10 @@
 				"score": 0.5599718867963652
 			},
 			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5548475634579613
+			},
+			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5262736613379537
 			},
@@ -2644,20 +2648,12 @@
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5169520040033335
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5005313232967508
 			}
 		]
 	},
 	{
 		"slug": "20231123-read-the-book-kokoro",
 		"similarArticles": [
-			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.9999990750902893
-			},
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7768417592910323
@@ -2673,13 +2669,13 @@
 			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7711341976130307
+			},
+			{
+				"slug": "20260512-what-is-a-good-team-like",
+				"score": 0.7604669396372641
 			}
 		],
 		"differentPerspectiveArticles": [
-			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5493433240321853
-			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5449994515889562
@@ -2695,6 +2691,10 @@
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5265822138263988
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.522333466640771
 			},
 			{
 				"slug": "20241217-01",
@@ -2728,28 +2728,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250510-01",
-				"score": 0.5355723016386817
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5609683191900512
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5257038316233282
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5488373332692864
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5252453399076519
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5477336966517261
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5446850436092882
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5441569739518357
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5232946847895256
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.511668566343532
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5071752285517666
 			}
 		]
 	},
@@ -2779,12 +2779,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
-				"score": 0.5277074274447063
+				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
+				"score": 0.5295831255123671
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5255000113681687
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5279321686274918
+			},
+			{
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.5277074274447063
 			},
 			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
@@ -2793,10 +2797,6 @@
 			{
 				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
 				"score": 0.5175555850962907
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5156823089129288
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
@@ -2838,8 +2838,8 @@
 				"score": 0.5346979612003282
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.5245807082086884
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5267832734974839
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
@@ -2881,12 +2881,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240824-01",
-				"score": 0.5307174702969187
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5408546012983815
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5249968976630935
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.537096069291505
+			},
+			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5311780707785129
 			},
 			{
 				"slug": "20241217-01",
@@ -2897,11 +2901,7 @@
 				"score": 0.5176657484353687
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5112465885139044
-			},
-			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5111843297495647
 			}
 		]
@@ -2922,21 +2922,29 @@
 				"score": 0.7902665922123351
 			},
 			{
-				"slug": "20260806-i-like-this-kind-of-sprint-review",
-				"score": 0.7555030265069405
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.7733124545511701
 			},
 			{
-				"slug": "20210926-reflection-with-emotion",
-				"score": 0.7515261406123975
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.7555030265069405
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20241217-01",
+				"score": 0.5486638206068758
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5477370314481083
+			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5467912255658175
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5428276884332904
 			},
 			{
@@ -2944,16 +2952,8 @@
 				"score": 0.5148400721327172
 			},
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5121319911970493
-			},
-			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
 				"score": 0.5073906213301201
-			},
-			{
-				"slug": "20250328-01",
-				"score": 0.5038108900251715
 			}
 		]
 	},
@@ -2983,28 +2983,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.520031324015105
+			},
+			{
+				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
+				"score": 0.5163104768743685
+			},
+			{
+				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
+				"score": 0.5152276944523081
+			},
+			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.5150512748155234
+			},
+			{
 				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
 				"score": 0.5146194269258436
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.5085142893103531
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5072320808970856
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5068162339417088
-			},
-			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5057724432224865
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.5004860923794497
 			}
 		]
 	},
@@ -3024,22 +3024,22 @@
 				"score": 0.7187301857241161
 			},
 			{
-				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
-				"score": 0.713597563772431
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.7177115222849154
 			},
 			{
-				"slug": "20250321-01",
-				"score": 0.7131006497297396
+				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
+				"score": 0.713597563772431
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250510-02",
-				"score": 0.521169597170813
+				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
+				"score": 0.5257763675662629
 			},
 			{
-				"slug": "20240622-02",
-				"score": 0.520686834082351
+				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
+				"score": 0.5240611746573275
 			},
 			{
 				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
@@ -3063,33 +3063,37 @@
 		"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
 		"similarArticles": [
 			{
+				"slug": "20240622-02",
+				"score": 0.857522580401229
+			},
+			{
 				"slug": "20250121-01",
 				"score": 0.8477603730929775
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8306034028327806
 			},
 			{
 				"slug": "20241220-01",
 				"score": 0.8086481719195502
 			},
 			{
-				"slug": "20260806-i-like-this-kind-of-sprint-review",
-				"score": 0.7562045119612513
-			},
-			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.7530646215579443
-			},
-			{
-				"slug": "20250313-01",
-				"score": 0.7524570477742378
+				"slug": "20250510-02",
+				"score": 0.7793446059065084
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5228496367600409
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5247283379032804
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20250218-01",
+				"score": 0.5237661553016277
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5215475831263066
 			},
 			{
@@ -3101,17 +3105,13 @@
 				"score": 0.5192205212444121
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.512037462805325
-			},
-			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5107981888537466
 			}
 		]
 	},
 	{
-		"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+		"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 		"similarArticles": [
 			{
 				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
@@ -3130,15 +3130,11 @@
 				"score": 0.6443330444747686
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.6318717069545983
+				"slug": "20250218-01",
+				"score": 0.6217010820083166
 			}
 		],
 		"differentPerspectiveArticles": [
-			{
-				"slug": "20260425-someones-stories",
-				"score": 0.5161803899724272
-			},
 			{
 				"slug": "20240816-how-can-we-make-a-decision",
 				"score": 0.5159935946849447
@@ -3146,6 +3142,10 @@
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5159742814021033
+			},
+			{
+				"slug": "20240622-02",
+				"score": 0.5139028812823085
 			},
 			{
 				"slug": "20240306-learning-pyramid-provides-hints-to-become-cross-functional-team",
@@ -3187,28 +3187,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5225562934179453
+				"slug": "20250218-01",
+				"score": 0.5536469021906928
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5197591179814524
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5514899623261369
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.511137462178799
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5452330716867151
 			},
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5103690317461077
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.541224459481328
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5091949346490713
+				"slug": "20241217-01",
+				"score": 0.5406210582569418
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5011885946920764
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5234526042215382
 			}
 		]
 	},
@@ -3238,11 +3238,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.540429848664993
+				"slug": "20250328-01",
+				"score": 0.5404176110071258
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5378419109800417
 			},
 			{
@@ -3254,7 +3254,7 @@
 				"score": 0.5262189996174311
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5162479450462916
 			},
 			{
@@ -3264,7 +3264,7 @@
 		]
 	},
 	{
-		"slug": "20240520-i-don't-use-the-word-of-normally",
+		"slug": "20240520-i-dont-use-the-word-of-normally",
 		"similarArticles": [
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -3289,20 +3289,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5057926878638737
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.5084044732120021
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5048148748841433
+				"slug": "20250510-02",
+				"score": 0.5081350818020269
+			},
+			{
+				"slug": "20240622-02",
+				"score": 0.507668657191394
 			},
 			{
 				"slug": "20230601-how-to-beat-a-fake-scrum",
 				"score": 0.5030610294771634
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5030093916916553
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
@@ -3318,50 +3318,50 @@
 		"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
 		"similarArticles": [
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.9797618391422214
+				"slug": "20240824-02",
+				"score": 0.8545024967043509
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.7581702304154684
+				"slug": "20240824-01",
+				"score": 0.8117184055773902
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.757644475535577
+				"slug": "20230601-how-to-beat-a-fake-scrum",
+				"score": 0.7630625374492596
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.7533357614736901
+				"slug": "20240622-02",
+				"score": 0.7597363316189228
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.7484155958231483
+				"slug": "20250510-02",
+				"score": 0.7589106548427864
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230305-retrospective-among-a-large-group-of-people-is-difficult",
-				"score": 0.5098102218964478
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5505865647757786
 			},
 			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.5091949346490713
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5457619145130138
 			},
 			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.5079700696981048
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5449294495540458
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5067388464979183
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5393262639928925
 			},
 			{
-				"slug": "20260609-kingman-and-scrum",
-				"score": 0.5018606836471822
+				"slug": "20241217-01",
+				"score": 0.5229897304612489
 			},
 			{
-				"slug": "20220113-memo-for-north-star-metric",
-				"score": 0.5017611462057311
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.509103192867516
 			}
 		]
 	},
@@ -3391,6 +3391,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
+				"score": 0.5514217496378666
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5300195873023417
+			},
+			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5300069147611773
 			},
@@ -3399,20 +3407,12 @@
 				"score": 0.5263431113594839
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5211898739641078
-			},
-			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5197856881202366
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
 				"score": 0.5118116622012318
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5074852222469247
 			}
 		]
 	},
@@ -3442,8 +3442,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5112661089213483
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.5115698331149603
 			},
 			{
 				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
@@ -3468,53 +3468,53 @@
 		]
 	},
 	{
-		"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+		"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
 		"similarArticles": [
 			{
+				"slug": "20240622-02",
+				"score": 0.9151951873028357
+			},
+			{
 				"slug": "20250510-01",
-				"score": 0.8890434912378875
+				"score": 0.8595661779441351
+			},
+			{
+				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
+				"score": 0.8306034028327806
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.8212102551048065
 			},
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.8806359660927606
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.8723902896713486
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8523928191833922
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.8487119074700622
+				"score": 0.8151769908352253
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.5168995665920528
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5214785359201053
 			},
 			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.5130734464393945
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5196634080131888
 			},
 			{
-				"slug": "20250829-scrum-masters-with-individual-psychology",
-				"score": 0.5089788234229785
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.517985915638112
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5048148748841433
+				"slug": "20250218-01",
+				"score": 0.5117607607027256
 			},
 			{
-				"slug": "20240625-My-Learning-Habits",
-				"score": 0.502228236797338
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5088505978107127
 			},
 			{
-				"slug": "20241220-01",
-				"score": 0.5008045685833659
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5078934890412906
 			}
 		]
 	},
@@ -3526,6 +3526,10 @@
 				"score": 0.792632420530606
 			},
 			{
+				"slug": "20240622-02",
+				"score": 0.7717830987974346
+			},
+			{
 				"slug": "20241227-02",
 				"score": 0.7676143163353334
 			},
@@ -3534,15 +3538,19 @@
 				"score": 0.7641647406445854
 			},
 			{
-				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
-				"score": 0.7338376038735062
-			},
-			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.7315594140707947
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.7515858805769592
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.54362136376529
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5344885622638813
+			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5326034213187293
@@ -3558,14 +3566,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5233535401789223
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5164159261098157
-			},
-			{
-				"slug": "20250328-01",
-				"score": 0.5163619557882855
 			}
 		]
 	},
@@ -3573,55 +3573,55 @@
 		"slug": "20240622-02",
 		"similarArticles": [
 			{
-				"slug": "20240824-02",
-				"score": 0.9290530776639836
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.9151951873028357
 			},
 			{
 				"slug": "20250510-02",
-				"score": 0.9227215923295571
+				"score": 0.8767805021655538
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.911213266648551
+				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
+				"score": 0.857522580401229
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.8944326714754527
+				"slug": "20250510-01",
+				"score": 0.8092771578314418
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7302965620995324
+				"slug": "20240824-02",
+				"score": 0.8026193380385
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
-				"score": 0.5290613051239389
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5176209141202449
 			},
 			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5284865734311687
+				"slug": "20241217-01",
+				"score": 0.5158479073414961
 			},
 			{
-				"slug": "20240322-reflect-why-we-can-achieve-it",
-				"score": 0.520686834082351
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5139028812823085
 			},
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5202505847412118
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5102422217884791
 			},
 			{
-				"slug": "20250321-01",
-				"score": 0.5199086882226311
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5092215256094657
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.5058818769123244
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.507668657191394
 			}
 		]
 	},
 	{
-		"slug": "20240625-My-Learning-Habits",
+		"slug": "20240625-my-learning-habits",
 		"similarArticles": [
 			{
 				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
@@ -3646,16 +3646,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5125503389736357
+				"slug": "20250218-01",
+				"score": 0.5227647689272119
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5121783231887163
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5210485912225254
 			},
 			{
-				"slug": "20250510-01",
-				"score": 0.5118521385874434
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5172885112818087
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5148295421858881
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -3664,10 +3668,6 @@
 			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.5023934830879093
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.502228236797338
 			}
 		]
 	},
@@ -3697,11 +3697,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
+				"score": 0.5370006379442677
+			},
+			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
 				"score": 0.5312544812997363
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5302185347248984
 			},
 			{
@@ -3713,10 +3717,6 @@
 				"score": 0.5175675117493426
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5125179403499976
-			},
-			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.507616551663561
 			}
@@ -3726,50 +3726,50 @@
 		"slug": "20240709-rice-cultivation-retrospective",
 		"similarArticles": [
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.9797618391422214
+				"slug": "20240311-my-three-favorite-reflection-frameworks",
+				"score": 0.7733124545511701
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.7654308631307105
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.7566457121892377
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.7620955487464963
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.7548250091169587
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.752587772207103
+				"slug": "20251203-why-did-you-choose-that-retrospective-framework",
+				"score": 0.7373646743085979
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.7488715200018393
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.7215339323253629
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260527-queueing-theory-and-product-backlog",
-				"score": 0.5098990355660036
+				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
+				"score": 0.5211589627350336
 			},
 			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.5094087228767888
+				"slug": "20251023-autonomous-teams",
+				"score": 0.5158984542222186
 			},
 			{
-				"slug": "20240124-how-detailed-should-we-describe-how-of-product-backlog-items",
-				"score": 0.5071752285517666
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.5147992934615518
 			},
 			{
-				"slug": "20260609-kingman-and-scrum",
-				"score": 0.5066312706300234
+				"slug": "20250921-social-interest-and-me",
+				"score": 0.5130196439547892
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5048684143319844
+				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
+				"score": 0.5125749394430943
 			},
 			{
-				"slug": "20220113-memo-for-north-star-metric",
-				"score": 0.5002318064101556
+				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
+				"score": 0.5011656095570427
 			}
 		]
 	},
@@ -3799,6 +3799,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.549063153322898
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5338149447890301
+			},
+			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.527770539368759
 			},
@@ -3807,20 +3815,12 @@
 				"score": 0.5202864193920634
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5159935946849447
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5109167204727406
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5057468282746606
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.503828141316348
 			}
 		]
 	},
@@ -3828,50 +3828,50 @@
 		"slug": "20240824-01",
 		"similarArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8723902896713486
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.8695109231869117
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8680761876959655
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.864408129615549
+				"slug": "20240824-02",
+				"score": 0.8836026028108596
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.8544328563322751
+				"score": 0.8241159884779098
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8126932901459074
+			},
+			{
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.8117184055773902
+			},
+			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.7854040049814092
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.5093030537979131
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5250558987696534
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5089053760835286
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5240394038873859
 			},
 			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5085142893103531
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5211395701154455
 			},
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.5066446641625262
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5174121748533448
 			},
 			{
-				"slug": "20240816-how-can-we-make-a-decision",
-				"score": 0.5057468282746606
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5131195586636772
 			},
 			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.5005313232967508
+				"slug": "20241217-01",
+				"score": 0.503360367622029
 			}
 		]
 	},
@@ -3879,50 +3879,50 @@
 		"slug": "20240824-02",
 		"similarArticles": [
 			{
-				"slug": "20250510-02",
-				"score": 0.9347868182448754
-			},
-			{
-				"slug": "20240622-02",
-				"score": 0.9290530776639836
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.9267005311669206
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.9053693490714322
+				"slug": "20240824-01",
+				"score": 0.8836026028108596
 			},
 			{
 				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.73944880356031
+				"score": 0.8545024967043509
+			},
+			{
+				"slug": "20240622-02",
+				"score": 0.8026193380385
+			},
+			{
+				"slug": "20221027-01",
+				"score": 0.7980336192431843
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7862082867446009
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
-				"score": 0.5302226250206977
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5465374154710871
 			},
 			{
-				"slug": "20230325-readiness-or-courage-to-practice-scrum",
-				"score": 0.5288448964116024
+				"slug": "20241217-01",
+				"score": 0.5377987622078675
 			},
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5256874904793983
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5350569783422562
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.5231153069812474
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5283333458921964
 			},
 			{
-				"slug": "20250321-01",
-				"score": 0.5217597424484038
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5166277330022148
 			},
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5135439866585585
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5125517657747872
 			}
 		]
 	},
@@ -3952,6 +3952,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5282168498433322
+			},
+			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5248415992984662
 			},
@@ -3960,11 +3964,7 @@
 				"score": 0.5215149955242975
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5213029093118762
-			},
-			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.518003079248102
 			},
 			{
@@ -3981,6 +3981,10 @@
 		"slug": "20241129-01",
 		"similarArticles": [
 			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.8421074526352917
+			},
+			{
 				"slug": "20240509-prospect-and-target",
 				"score": 0.8012012670292912
 			},
@@ -3995,20 +3999,12 @@
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7866142416923404
-			},
-			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7852388054909663
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5381734275394454
-			},
-			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
-				"score": 0.5367480071003691
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5362145484866844
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
@@ -4017,6 +4013,10 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5192491065368209
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5136469085720914
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -4054,16 +4054,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250328-01",
+				"score": 0.5291214269034107
+			},
+			{
+				"slug": "20250921-social-interest-and-me",
+				"score": 0.5286185817116431
+			},
+			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
 				"score": 0.519907806640457
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5185183962622423
-			},
-			{
-				"slug": "20250328-01",
-				"score": 0.5153602858617715
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
@@ -4105,20 +4105,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5364315471235567
+			},
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5363444231810492
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5227107461293381
 			},
 			{
 				"slug": "20241217-01",
 				"score": 0.5221883935365143
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.520293294971941
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5164624522863174
 			},
 			{
 				"slug": "20250218-01",
@@ -4156,7 +4156,7 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5319663225538455
 			},
 			{
@@ -4207,11 +4207,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5318234225137451
+			},
+			{
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5291289838188054
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5253788477795839
 			},
 			{
@@ -4225,10 +4229,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5168952188612934
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5008045685833659
 			}
 		]
 	},
@@ -4244,30 +4244,26 @@
 				"score": 0.6459368844196088
 			},
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.6456071527700271
+			},
+			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.6453288948887194
 			},
 			{
 				"slug": "20251120-lean-coffee-on-notion",
 				"score": 0.6208984668067455
-			},
-			{
-				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
-				"score": 0.6199890696178642
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260512-what-is-a-good-team-like",
-				"score": 0.5050653478752857
-			},
-			{
-				"slug": "20260424-quadrant-of-separation-of-tasks",
-				"score": 0.5050187222114167
-			},
-			{
 				"slug": "20251117-reading-notes-of-the-tyranny-of-metrics",
 				"score": 0.5040138230621329
+			},
+			{
+				"slug": "20240824-01",
+				"score": 0.503360367622029
 			},
 			{
 				"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
@@ -4280,6 +4276,10 @@
 			{
 				"slug": "20260617-the-key-to-facilitate-brainstorming-is-to-remove-unconscious-constraints",
 				"score": 0.500757734865201
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.5002714267991297
 			}
 		]
 	},
@@ -4309,19 +4309,19 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5396922051992047
-			},
-			{
 				"slug": "20250218-01",
 				"score": 0.526227670977019
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5168856537508233
 			},
 			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
 				"score": 0.5118965874095349
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5090057949013593
 			},
 			{
@@ -4360,20 +4360,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5434777348832069
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5320275926501206
+			},
+			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.530625351026023
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5272843902149301
-			},
-			{
 				"slug": "20241217-01",
 				"score": 0.5261770173772274
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5188385961729289
 			},
 			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
@@ -4411,16 +4411,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5327567099157489
+			},
+			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5196996074868541
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5187023107913384
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5137554552971917
 			},
 			{
 				"slug": "20241217-01",
@@ -4444,30 +4444,30 @@
 				"score": 0.8477603730929775
 			},
 			{
+				"slug": "20250510-02",
+				"score": 0.8265223126821105
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.8242780028600843
+			},
+			{
 				"slug": "20241220-01",
 				"score": 0.8222174641858387
 			},
 			{
 				"slug": "20240306-learning-pyramid-provides-hints-to-become-cross-functional-team",
 				"score": 0.7994791354278351
-			},
-			{
-				"slug": "20241227-01",
-				"score": 0.7911785272313023
-			},
-			{
-				"slug": "20250313-01",
-				"score": 0.7850452885824485
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5214277171009076
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5283735375887809
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5184080041746691
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5214277171009076
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
@@ -4499,16 +4499,16 @@
 				"score": 0.7041775331489653
 			},
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.6980954449412741
+			},
+			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.697973303145171
 			},
 			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.6780336497048624
-			},
-			{
-				"slug": "20240322-reflect-why-we-can-achieve-it",
-				"score": 0.6772549533303558
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4564,6 +4564,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5218234125515038
+			},
+			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5210316902910249
 			},
@@ -4574,10 +4578,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5118086098784819
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.50615901148797
 			},
 			{
 				"slug": "20241217-01",
@@ -4615,24 +4615,24 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.5513866988717463
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5453344404566252
+			},
+			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5425748566358402
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.5379185242928174
-			},
-			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.534410848221744
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5230892889506972
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5110217981574599
 			},
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
@@ -4656,22 +4656,26 @@
 				"score": 0.7042441185257564
 			},
 			{
-				"slug": "20251120-lean-coffee-on-notion",
-				"score": 0.6937156916003943
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.698529332637246
 			},
 			{
-				"slug": "20230318-just-talk-reflection-is-good",
-				"score": 0.6930730231258594
+				"slug": "20251120-lean-coffee-on-notion",
+				"score": 0.6937156916003943
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.5155985327332316
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5213052394131632
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5149842585333032
+				"slug": "20250921-social-interest-and-me",
+				"score": 0.5191014564608123
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5155985327332316
 			},
 			{
 				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
@@ -4680,10 +4684,6 @@
 			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
 				"score": 0.5117528070664213
-			},
-			{
-				"slug": "20250510-02",
-				"score": 0.508213800051488
 			},
 			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
@@ -4696,49 +4696,49 @@
 		"similarArticles": [
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.7834599119464204
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.7791835937435825
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.77319090593197
+				"score": 0.7187920897930251
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.7686096692515504
+				"score": 0.7144511075577212
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.7655333068919948
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.703035034787265
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.702657613171585
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.6953208919885808
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5197771417714887
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5164779363681894
 			},
 			{
-				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
-				"score": 0.5191036529039578
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5159425732801755
 			},
 			{
-				"slug": "20240623-scrum-fest-osaka-2024-kanagawa-track-speaker-report",
-				"score": 0.5163619557882855
+				"slug": "20260617-the-key-to-facilitate-brainstorming-is-to-remove-unconscious-constraints",
+				"score": 0.512342344448256
 			},
 			{
-				"slug": "20241129-02",
-				"score": 0.5153602858617715
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.5058511073692755
 			},
 			{
-				"slug": "20240702-one-plus-one-does-not-equal-three-or-four",
-				"score": 0.5125179403499976
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.504483855054451
 			},
 			{
-				"slug": "20240311-my-three-favorite-reflection-frameworks",
-				"score": 0.5038108900251715
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.5018695309091251
 			}
 		]
 	},
@@ -4746,50 +4746,50 @@
 		"slug": "20250510-01",
 		"similarArticles": [
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8890434912378875
+				"slug": "20250510-02",
+				"score": 0.8995991495782623
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.8747884080148807
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8595661779441351
 			},
 			{
-				"slug": "20240824-01",
-				"score": 0.8695109231869117
+				"slug": "20250121-01",
+				"score": 0.8242780028600843
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.8664751379104434
+				"slug": "20240622-02",
+				"score": 0.8092771578314418
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.8396696907547057
+				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
+				"score": 0.8071917234643384
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20220725-what-i-value-as-a-product-manager",
-				"score": 0.506558299792163
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5279099781790955
 			},
 			{
-				"slug": "20250313-01",
-				"score": 0.50615901148797
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5238663271533462
 			},
 			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5038897883545109
+				"slug": "20250218-01",
+				"score": 0.5228440540145443
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5030093916916553
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5203189001892983
 			},
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.5024929144626865
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5166808093639266
 			},
 			{
-				"slug": "20251204-what-are-scrum-masters-doing",
-				"score": 0.5002869634612735
+				"slug": "20241217-01",
+				"score": 0.5002714267991297
 			}
 		]
 	},
@@ -4797,50 +4797,50 @@
 		"slug": "20250510-02",
 		"similarArticles": [
 			{
-				"slug": "20240824-02",
-				"score": 0.9347868182448754
+				"slug": "20250510-01",
+				"score": 0.8995991495782623
 			},
 			{
 				"slug": "20240622-02",
-				"score": 0.9227215923295571
+				"score": 0.8767805021655538
 			},
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.92104062155266
+				"slug": "20250121-01",
+				"score": 0.8265223126821105
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.912240647455932
+				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
+				"score": 0.8238213989249422
 			},
 			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7313283840048282
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.8212102551048065
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240322-reflect-why-we-can-achieve-it",
-				"score": 0.521169597170813
+				"slug": "20250218-01",
+				"score": 0.5415464323001915
 			},
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.519563520231449
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5380791758181571
 			},
 			{
-				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
-				"score": 0.5158206934148276
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5370253547218818
 			},
 			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5117358570893553
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5160722587904205
 			},
 			{
-				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
-				"score": 0.509424636076294
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5081350818020269
 			},
 			{
-				"slug": "20250321-01",
-				"score": 0.508213800051488
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5068846299101116
 			}
 		]
 	},
@@ -4870,12 +4870,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230325-readiness-or-courage-to-practice-scrum",
-				"score": 0.5187094703552478
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.526199998746642
 			},
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5157290734793104
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5187094703552478
 			},
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
@@ -4899,6 +4899,10 @@
 		"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
 		"similarArticles": [
 			{
+				"slug": "20250510-02",
+				"score": 0.8238213989249422
+			},
+			{
 				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
 				"score": 0.810990919533773
 			},
@@ -4908,32 +4912,28 @@
 			},
 			{
 				"slug": "20250510-01",
-				"score": 0.7925954040529628
+				"score": 0.8071917234643384
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.788857413774264
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.7698541786565981
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-02",
-				"score": 0.5365770861010201
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5378721227358757
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5360339568753191
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5368785640116489
 			},
 			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
 				"score": 0.5338658929439428
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.531894231056999
 			},
 			{
@@ -4950,50 +4950,50 @@
 		"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
 		"similarArticles": [
 			{
-				"slug": "20240824-01",
-				"score": 0.8680761876959655
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.8664751379104434
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.8586960006681112
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8523928191833922
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.8963611808982587
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.8377956518035252
+				"score": 0.7903132189219437
+			},
+			{
+				"slug": "20250510-01",
+				"score": 0.7856310714518108
+			},
+			{
+				"slug": "20240824-01",
+				"score": 0.7854040049814092
+			},
+			{
+				"slug": "20241129-01",
+				"score": 0.7781047650775229
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240625-My-Learning-Habits",
-				"score": 0.5121783231887163
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5335260206556559
 			},
 			{
-				"slug": "20240306-learning-pyramid-provides-hints-to-become-cross-functional-team",
-				"score": 0.5112465885139044
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5276704442233898
 			},
 			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.5099366480811327
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5182277907113261
 			},
 			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5079845896643802
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5149970898289065
 			},
 			{
-				"slug": "20260425-someones-stories",
-				"score": 0.5004821575461788
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5105031212939157
 			},
 			{
-				"slug": "20211206-lets-check-out-if-you-do-not-have-enough-time-to-retrospective",
-				"score": 0.5001648314376863
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5002827786872037
 			}
 		]
 	},
@@ -5023,79 +5023,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5492538553626631
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.543511979276669
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5433965905540601
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.534263812909158
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5303749082423498
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5240294839324415
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.5203652554289854
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5141661061941055
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5099366480811327
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5056016702803257
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5021355148236367
-			}
-		]
-	},
-	{
-		"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-		"similarArticles": [
-			{
-				"slug": "20250510-02",
-				"score": 0.912240647455932
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
-				"score": 0.9097676216961853
-			},
-			{
-				"slug": "20240824-02",
-				"score": 0.9053693490714322
-			},
-			{
-				"slug": "20240622-02",
-				"score": 0.8944326714754527
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.7175753468174298
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20250321-01",
-				"score": 0.5149842585333032
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5112661089213483
-			},
-			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5061807712655824
-			},
-			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5058652953719093
-			},
-			{
-				"slug": "20250925-reading-notes",
-				"score": 0.5011936555287602
-			},
-			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -5227,16 +5176,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5425409925007686
+			},
+			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.536239767352049
+			},
+			{
 				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
 				"score": 0.5253343656042297
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5224774598048982
-			},
-			{
-				"slug": "20250328-01",
-				"score": 0.5208693070389083
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -5256,27 +5205,31 @@
 		"slug": "20250704-conference-report-developer-productivity-report",
 		"similarArticles": [
 			{
+				"slug": "20230111-01",
+				"score": 0.7484402015131515
+			},
+			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.7466006280290747
+			},
+			{
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7439477841798168
+			},
+			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7348545408370323
 			},
 			{
-				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
-				"score": 0.7297425930643872
-			},
-			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.7204674837495995
-			},
-			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7072053181585083
-			},
-			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.7011576351863541
+				"slug": "20230826-02",
+				"score": 0.7331895109122857
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5331283363357834
+			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5277399269003442
@@ -5292,10 +5245,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5238663426175046
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228721816008642
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
@@ -5329,10 +5278,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5322476210205964
-			},
-			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.5318791068183384
 			},
@@ -5351,6 +5296,10 @@
 			{
 				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
 				"score": 0.508409474016556
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5011656095570427
 			}
 		]
 	},
@@ -5380,12 +5329,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260802-when-will-a-team-end",
-				"score": 0.511885455302718
-			},
-			{
-				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
-				"score": 0.5107981888537466
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
+				"score": 0.5099517698711911
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
@@ -5398,6 +5343,10 @@
 			{
 				"slug": "20250326-01",
 				"score": 0.5039012226824722
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.5037812662434825
 			},
 			{
 				"slug": "20250313-01",
@@ -5482,10 +5431,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
-				"score": 0.5285235476354382
-			},
-			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5195404351378263
 			},
@@ -5496,6 +5441,10 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5116136873437378
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.504883992868662
 			},
 			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
@@ -5533,12 +5482,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5259079430632515
-			},
-			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5226483304229046
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5216487883204539
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
@@ -5584,28 +5533,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5197430841110378
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5339476708000045
+			},
+			{
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
+				"score": 0.5273737048354908
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5236051642825779
 			},
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5185148717304655
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5156310913180294
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5114763319711217
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.510592308266805
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5089788234229785
 			}
 		]
 	},
@@ -5621,34 +5570,34 @@
 				"score": 0.6994217745735337
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.6994217745735337
-			},
-			{
 				"slug": "20260424-quadrant-of-separation-of-tasks",
 				"score": 0.6956647320511457
 			},
 			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.6950516061500588
+			},
+			{
+				"slug": "20250326-01",
+				"score": 0.6898854990310007
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241217-01",
-				"score": 0.5195172079284053
-			},
-			{
-				"slug": "20250321-01",
-				"score": 0.5191014564608123
-			},
-			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.518588239734657
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5130196439547892
 			},
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5125514939094463
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5048979987055173
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -5676,21 +5625,25 @@
 				"score": 0.7187823073083986
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7187823073083986
-			},
-			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7015906816603329
+			},
+			{
+				"slug": "20230318-just-talk-reflection-is-good",
+				"score": 0.6990513181823071
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5437435910510918
+			},
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5417957168036385
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5412726234702975
 			},
 			{
@@ -5700,10 +5653,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5038894733144126
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5011936555287602
 			},
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
@@ -5719,10 +5668,6 @@
 				"score": 0.7415134481202673
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7415134481202673
-			},
-			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.7289760309567985
 			},
@@ -5733,6 +5678,10 @@
 			{
 				"slug": "20250925-reading-notes",
 				"score": 0.7216320101930124
+			},
+			{
+				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
+				"score": 0.7190901796794135
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5774,22 +5723,22 @@
 				"score": 0.7768417592910323
 			},
 			{
-				"slug": "20231123-read-the-book-Kokoro",
-				"score": 0.7768417592910323
-			},
-			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7759598314435041
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7746382918398023
+			},
+			{
+				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
+				"score": 0.7712565621976233
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5297652549657261
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5158984542222186
 			},
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
@@ -5800,7 +5749,7 @@
 				"score": 0.5128548035614936
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5113512472041108
 			},
 			{
@@ -5821,6 +5770,10 @@
 				"score": 0.6990047120738541
 			},
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.6948108485185208
+			},
+			{
 				"slug": "20250321-01",
 				"score": 0.6937156916003943
 			},
@@ -5829,22 +5782,18 @@
 				"score": 0.6863679456814602
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.6710223166570872
-			},
-			{
-				"slug": "20241016-01",
-				"score": 0.6655316532880688
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260424-quadrant-of-separation-of-tasks",
-				"score": 0.5419089709083962
+				"slug": "20260617-the-key-to-facilitate-brainstorming-is-to-remove-unconscious-constraints",
+				"score": 0.5450943196586552
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5399213900927268
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.5419089709083962
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -5884,14 +5833,18 @@
 				"score": 0.7224665358073052
 			},
 			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7149326455790351
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7152038870761043
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.527447769168995
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5347061190959965
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5298571509990257
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -5906,12 +5859,8 @@
 				"score": 0.5091152708083084
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5087517613663772
-			},
-			{
-				"slug": "20250510-01",
-				"score": 0.5002869634612735
 			}
 		]
 	},
@@ -5927,16 +5876,16 @@
 				"score": 0.7847316319692864
 			},
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.7373646743085979
+			},
+			{
 				"slug": "20230318-just-talk-reflection-is-good",
 				"score": 0.7288811005639875
 			},
 			{
 				"slug": "20210926-reflection-with-emotion",
 				"score": 0.7208383983961197
-			},
-			{
-				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
-				"score": 0.7132523406299712
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5945,7 +5894,7 @@
 				"score": 0.5371271341693323
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5347164547715367
 			},
 			{
@@ -5986,8 +5935,8 @@
 				"score": 0.7414731155141122
 			},
 			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.7366093523899659
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.7338900028037175
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6043,10 +5992,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5313351533228912
-			},
-			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5293441225150006
 			},
@@ -6065,6 +6010,10 @@
 			{
 				"slug": "20241217-01",
 				"score": 0.5050187222114167
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.504483855054451
 			}
 		]
 	},
@@ -6094,11 +6043,19 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5482216175317928
+			},
+			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.53774917320178
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20250328-01",
+				"score": 0.5293130909397202
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5161803899724272
 			},
 			{
@@ -6108,20 +6065,16 @@
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.5037693503705823
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.503345341931817
-			},
-			{
-				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
-				"score": 0.5004821575461788
 			}
 		]
 	},
 	{
 		"slug": "20260428-improvement-kata-and-scrum",
 		"similarArticles": [
+			{
+				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
+				"score": 0.7427075331149499
+			},
 			{
 				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
 				"score": 0.728521257487324
@@ -6137,13 +6090,17 @@
 			{
 				"slug": "20240311-my-three-favorite-reflection-frameworks",
 				"score": 0.715212571876699
-			},
-			{
-				"slug": "20250515-re-do-not-create-bug-tickets",
-				"score": 0.7127196163439408
 			}
 		],
 		"differentPerspectiveArticles": [
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5333743168955316
+			},
+			{
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.528698843200893
+			},
 			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
 				"score": 0.5250481951384197
@@ -6151,14 +6108,6 @@
 			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5238214484051876
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228226440646948
-			},
-			{
-				"slug": "20250328-01",
-				"score": 0.5221089097636684
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -6247,8 +6196,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5239108337030737
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5278042910522948
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -6298,10 +6247,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5351463758661874
-			},
-			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.5331357041286479
 			},
@@ -6310,11 +6255,15 @@
 				"score": 0.532221251348656
 			},
 			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5179669690293036
+			},
+			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5075256214009273
 			},
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5074402090793818
 			},
 			{
@@ -6335,23 +6284,19 @@
 				"score": 0.6760962282297717
 			},
 			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.6709046201887892
+			},
+			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.6613445210022822
 			},
 			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.6612396332027152
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.6611050716237302
 			}
 		],
 		"differentPerspectiveArticles": [
-			{
-				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
-				"score": 0.5077416419641781
-			},
 			{
 				"slug": "20260609-kingman-and-scrum",
 				"score": 0.5069002516443978
@@ -6371,6 +6316,10 @@
 			{
 				"slug": "20250621-a-playground-is-more-necessary-than-just-a-place",
 				"score": 0.5027655069140669
+			},
+			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.5002827786872037
 			}
 		]
 	},
@@ -6400,12 +6349,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210926-reflection-with-emotion",
-				"score": 0.5113935978371873
-			},
-			{
-				"slug": "20240816-how-can-we-make-a-decision",
-				"score": 0.5109167204727406
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.5105031212939157
 			},
 			{
 				"slug": "20251023-autonomous-teams",
@@ -6414,6 +6359,10 @@
 			{
 				"slug": "20260425-someones-stories",
 				"score": 0.5037693503705823
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.5022550997089045
 			},
 			{
 				"slug": "20250326-01",
@@ -6451,28 +6400,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5220929243942528
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.537986364327664
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5367240112624786
+			},
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5329863894315825
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5261983855277824
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5249199476964737
 			},
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5207131951474567
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5206500658637593
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5101760130812416
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5098990355660036
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5061895940101385
 			}
 		]
 	},
@@ -6502,19 +6451,19 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.519681113004782
+				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
+				"score": 0.5234730985161354
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5191036529039578
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.519681113004782
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5146194269258436
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.512200505282014
 			},
 			{
@@ -6553,28 +6502,28 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5429982293838849
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5352652373113738
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5293281578342506
+			},
+			{
+				"slug": "20250218-01",
+				"score": 0.5285329189043512
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5243524757899436
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5194943541547729
-			},
-			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5125512542735557
 			},
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
 				"score": 0.5069002516443978
-			},
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5066312706300234
-			},
-			{
-				"slug": "20240522-the-first-thing-a-new-scrum-master-who-jumps-into-a-team-does",
-				"score": 0.5018606836471822
 			}
 		]
 	},
@@ -6604,16 +6553,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5395791191270084
-			},
-			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5349377815900946
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5322564481155838
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5283518549797336
 			},
 			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
@@ -6624,7 +6573,7 @@
 				"score": 0.5174857809568962
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5012896906609899
 			}
 		]
@@ -6655,10 +6604,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
-				"score": 0.5236133617631278
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5231048590149936
 			},
@@ -6669,6 +6614,10 @@
 			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
 				"score": 0.5135532842635676
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.512342344448256
 			},
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
@@ -6706,10 +6655,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5262460811512641
-			},
-			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5190541264810354
 			},
@@ -6718,8 +6663,12 @@
 				"score": 0.5143763457228797
 			},
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
+				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5139264595482756
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5120270734016071
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -6728,57 +6677,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5050310334514608
-			}
-		]
-	},
-	{
-		"slug": "20231123-read-the-book-Kokoro",
-		"similarArticles": [
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.9999990750902893
-			},
-			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7768417592910323
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7766008487008487
-			},
-			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.772849017573683
-			},
-			{
-				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
-				"score": 0.7711341976130307
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
-				"score": 0.5493433240321853
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5449994515889562
-			},
-			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5378952493892494
-			},
-			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.5289664637703253
-			},
-			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5265822138263988
-			},
-			{
-				"slug": "20241217-01",
-				"score": 0.5127603847288554
 			}
 		]
 	},
@@ -6808,7 +6706,7 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
+				"slug": "20231001-made-a-lightning-talk-at-the-xp-matsuri",
 				"score": 0.5225477611644516
 			},
 			{
@@ -6859,12 +6757,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
-				"score": 0.5354950674744365
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.5442197837801813
 			},
 			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.5314642259684635
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.543933536959715
 			},
 			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
@@ -6875,7 +6773,7 @@
 				"score": 0.5248700939149942
 			},
 			{
-				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5206740503933737
 			},
 			{
@@ -6910,8 +6808,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.536486321949317
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.535242055075022
 			},
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
@@ -6932,6 +6830,261 @@
 			{
 				"slug": "20230325-readiness-or-courage-to-practice-scrum",
 				"score": 0.5048559078266565
+			}
+		]
+	},
+	{
+		"slug": "20221027-01",
+		"similarArticles": [
+			{
+				"slug": "20230111-02",
+				"score": 0.8071584958937157
+			},
+			{
+				"slug": "20240824-02",
+				"score": 0.7980336192431843
+			},
+			{
+				"slug": "20230826-02",
+				"score": 0.7979665780639845
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.7922245093061813
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7840220234788718
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5435180635652669
+			},
+			{
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.5389930626408692
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.529566821520646
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5226967986134481
+			},
+			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5182938056142664
+			},
+			{
+				"slug": "20250218-01",
+				"score": 0.5142968502342357
+			}
+		]
+	},
+	{
+		"slug": "20230111-01",
+		"similarArticles": [
+			{
+				"slug": "20230111-02",
+				"score": 0.8701324640061786
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.7893023188537972
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7695690429125556
+			},
+			{
+				"slug": "20221027-01",
+				"score": 0.7642140892658933
+			},
+			{
+				"slug": "20230826-02",
+				"score": 0.7637174448138289
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20241217-01",
+				"score": 0.5423971408412103
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5420814660265799
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5385676484547866
+			},
+			{
+				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
+				"score": 0.5228244790810083
+			},
+			{
+				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
+				"score": 0.5155246453582512
+			},
+			{
+				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
+				"score": 0.5008922116375105
+			}
+		]
+	},
+	{
+		"slug": "20230111-02",
+		"similarArticles": [
+			{
+				"slug": "20230111-01",
+				"score": 0.8701324640061786
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.8102304161321345
+			},
+			{
+				"slug": "20221027-01",
+				"score": 0.8071584958937157
+			},
+			{
+				"slug": "20230826-02",
+				"score": 0.800905113326565
+			},
+			{
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.7689153539563174
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5304936648477963
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5298310600327968
+			},
+			{
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.5255681734659429
+			},
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5184536577551524
+			},
+			{
+				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
+				"score": 0.5121030055148816
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5045539231197993
+			}
+		]
+	},
+	{
+		"slug": "20230826-02",
+		"similarArticles": [
+			{
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.8877222499568632
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.800905113326565
+			},
+			{
+				"slug": "20221027-01",
+				"score": 0.7979665780639845
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7885432250787072
+			},
+			{
+				"slug": "20240622-02",
+				"score": 0.7866730423203432
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5434501252363628
+			},
+			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5259125344158512
+			},
+			{
+				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
+				"score": 0.5256355141782211
+			},
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5237813140458546
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5215439479531976
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5152774714898792
+			}
+		]
+	},
+	{
+		"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+		"similarArticles": [
+			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.8963611808982587
+			},
+			{
+				"slug": "20241129-01",
+				"score": 0.8421074526352917
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7919932745579497
+			},
+			{
+				"slug": "20240824-02",
+				"score": 0.7782070393286462
+			},
+			{
+				"slug": "20230826-02",
+				"score": 0.773848854259286
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230325-readiness-or-courage-to-practice-scrum",
+				"score": 0.5240675295195201
+			},
+			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5218783124556008
+			},
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5196875838885595
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5102145801492157
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5101123268372377
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5077103838392184
 			}
 		]
 	}
