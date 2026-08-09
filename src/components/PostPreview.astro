@@ -15,24 +15,44 @@ const { title, publicationDate, externalUrl, type } = post.data;
 const id: string = post.id;
 const plainText: string = normalizeMarkdoc(post.body || '');
 const readingTime: number = estimateReadingTime(plainText.length);
+
+const icons = {
+	blog: 'mdi:document-sign',
+	slide: 'mdi:presetation',
+	video: 'mdi:video-youtube',
+};
+const getIcon = (type: keyof typeof icons): string => {
+	return icons[type];
+};
 ---
 
-<div class:list={["text-center md:text-left", Astro.props.class]}>
-  <p class="mb-2 font-semibold">
-    { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
-  </p>
-  <h2 class="text-2xl font-bold mb-4">
-    <Link class="hover:text-primary" href={externalUrl ?? `/blog/${id}`}>
-      { type === 'blog' && <Icon name="mdi:document-sign" class="inline align-middle" />} 
-      { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />} 
-      { type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
+<Link
+  href={externalUrl ?? `/blog/${id}`}
+  class:list={[
+    "text-left border-2 border-gray-500 rounded shadow p-3 transition duration-300",
+    "hover:text-primary hover:shadow-xl hover:border-primary",
+    "focus-visible:text-primary focus-visible:shadow-xl focus-visible:border-primary",
+    "dark:border-white",
+    "dark:hover:border-primary",
+    Astro.props.class
+  ]}
+>
+  <div class="mb-2 font-medium text-sm flex justify-between">
+    <span>
+      { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
+    </span>
+  { !externalUrl &&
+    <span class="text-sm flex items-center gap-1">
+      <Icon name="mdi:clock-outline" class="size-4" />
+      <span>{ readingTime }min</span>
+    </span>
+  }
+  </div>
+  <h2 class="text-xl font-bold mb-4">
+      <Icon name={getIcon(type)} class="inline align-middle mr-1" />
       <span class="align-middle">
         {title}
       </span>
       { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
-    </Link>
   </h2>
-  { !externalUrl &&
-    <p>読了時間: { readingTime }分</p>
-  }
-</div>
+</Link>
