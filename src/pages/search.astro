@@ -38,7 +38,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
     throw new Error('Search elements not found');
   }
 
-  const response = await fetch('src/data/search-index.json');
+  const response = await fetch('public/search-index.json');
   const articles: Article[] = await response.json();
 
   const fuse = new Fuse(articles, {
