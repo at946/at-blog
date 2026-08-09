@@ -28,7 +28,7 @@ const { content, description, id, readingTime } = Astro.props;
   </head>
   <PostMainLayout>
     <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" data-pagefind-body />
-    <hr class="mb-16 border-gray-300" />
+    <hr class="mb-8 border-gray-300" />
     <Prose>
       <slot />
       <ShareButtons class="mt-16 not-prose mb-12" blogTitle={content.title} />

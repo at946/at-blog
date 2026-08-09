@@ -11,18 +11,16 @@ interface Props {
 const { title, publicationDate, readingTime } = Astro.props;
 ---
 <div class:list={["text-center md:text-left", Astro.props.class]}>
-  <div class="flex justify-between mb-5">
-    <span class="font-medium">
+  <div class="flex justify-between mb-4 font-semibold">
+    <span>
       { new Intl.DateTimeFormat('ja-JP', { dateStyle: 'long' }).format(publicationDate)}
     </span>
-    <span class="flex gap-1 items-center font-medium">
+    <span class="flex gap-1 items-center">
       <Icon name="mdi:clock-outline" size="20" />
       <span>{ readingTime }min</span>
     </span>
   </div>
-  <h1 class="text-3xl leading-snug font-bold mb-4">
-    { title }
-  </h1>
-  <div class="flex gap-2 flex-wrap justify-center md:justify-start mb-2 text-base">
-  </div>
+    <h1 class="text-2xl leading-loose font-black mb-10">
+      { title }
+    </h1>
 </div>
