@@ -1351,12 +1351,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260806-i-like-this-kind-of-sprint-review",
-				"score": 0.5096382509107998
+				"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
+				"score": 0.5151749201864343
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5061807712655824
+				"slug": "20260806-i-like-this-kind-of-sprint-review",
+				"score": 0.5096382509107998
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
@@ -1861,6 +1861,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.5149970898289065
+			},
+			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5143763457228797
 			},
@@ -1871,10 +1875,6 @@
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
 				"score": 0.5111786477599176
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5058652953719093
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -1963,6 +1963,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5157033222798225
+			},
+			{
 				"slug": "20230826-02",
 				"score": 0.5152774714898792
 			},
@@ -1981,10 +1985,6 @@
 			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5010705644247611
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -3442,8 +3442,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5112661089213483
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.5115698331149603
 			},
 			{
 				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
@@ -4666,16 +4666,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5213052394131632
+			},
+			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.5191014564608123
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5155985327332316
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5149842585333032
 			},
 			{
 				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
@@ -4921,12 +4921,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
-				"score": 0.5368785640116489
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5378721227358757
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5360339568753191
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5368785640116489
 			},
 			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
@@ -5045,57 +5045,6 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5240294839324415
-			}
-		]
-	},
-	{
-		"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-		"similarArticles": [
-			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.6068061075716891
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5908891258059844
-			},
-			{
-				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
-				"score": 0.5754556623964154
-			},
-			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5617910113232982
-			},
-			{
-				"slug": "20250218-01",
-				"score": 0.5596602966726121
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20250321-01",
-				"score": 0.5149842585333032
-			},
-			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5112661089213483
-			},
-			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5061807712655824
-			},
-			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5058652953719093
-			},
-			{
-				"slug": "20250925-reading-notes",
-				"score": 0.5011936555287602
-			},
-			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5007342624224793
 			}
 		]
 	},
@@ -5686,6 +5635,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5437435910510918
+			},
+			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.5417957168036385
 			},
@@ -5700,10 +5653,6 @@
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
 				"score": 0.5038894733144126
-			},
-			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5011936555287602
 			},
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
@@ -5839,12 +5788,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260424-quadrant-of-separation-of-tasks",
-				"score": 0.5419089709083962
+				"slug": "20260617-the-key-to-facilitate-brainstorming-is-to-remove-unconscious-constraints",
+				"score": 0.5450943196586552
 			},
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025 copy",
-				"score": 0.5399213900927268
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.5419089709083962
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
