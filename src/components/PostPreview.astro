@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
+import { getIcon } from '@/utils/getIcon';
 import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
 import estimateReadingTime from '../utils/estimateReadingTime';
 import Link from './mdoc/Link.astro';
@@ -15,15 +16,6 @@ const { title, publicationDate, externalUrl, type } = post.data;
 const id: string = post.id;
 const plainText: string = normalizeMarkdoc(post.body || '');
 const readingTime: number = estimateReadingTime(plainText.length);
-
-const icons = {
-	blog: 'mdi:document-sign',
-	slide: 'mdi:presetation',
-	video: 'mdi:video-youtube',
-};
-const getIcon = (type: keyof typeof icons): string => {
-	return icons[type];
-};
 ---
 
 <Link
