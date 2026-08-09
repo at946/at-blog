@@ -38,14 +38,64 @@ import DefaultPageLayout from '@/layouts/default.astro';
     throw new Error('Search elements not found');
   }
 
-  const response = await fetch('public/search-index.json');
+  const response = await fetch('/search-index.json');
   const articles: Article[] = await response.json();
 
   const fuse = new Fuse(articles, {
     keys: ['title', 'content'],
     threshold: 0.5,
-    includeScore: true,
+    includeMatches: true,
+    ignoreLocation: true,
+    minMatchCharLength: 2
   });
+
+  const escapeHtml = (text: string) => {
+    return text
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#039;');
+  };
+
+  const highlight = (text: string, indices: readonly [number, number][]) => {
+    let result = "";
+    let lastIndex = 0;
+
+    for (const [start, end] of indices) {
+      result += text.slice(lastIndex, start);
+      result += `<mark class="rounded px-1 py-0.5 mx-1">${escapeHtml(text.slice(start, end + 1))}</mark>`;
+      lastIndex = end + 1;
+    }
+
+    result += text.slice(lastIndex);
+
+    return result;
+  }
+
+  const createExcerpt = (text: string, indices: readonly [number, number][]) => {
+    if (indices.length === 0) {
+      return '';
+    }
+    
+    const radius: number = 100;
+    const [start, end] = indices[0];
+    const excerptStart: number = Math.max(0, start - radius);
+    const excerptEnd: number = Math.min(text.length, end + radius);
+    const prefix: string = excerptStart > 0 ? "..." : "";
+    const suffix: string = excerptEnd < text.length ? "..." : "";
+    const excerpt: string = text.slice(excerptStart, excerptEnd);
+
+    const adjustedIndices = indices.filter(([matchStart, matchEnd]) => {
+      return matchEnd >= excerptStart && matchStart < excerptEnd;
+    })
+    .map(([matchStart, matchEnd]) => [
+      Math.max(matchStart, excerptStart) - excerptStart,
+      Math.min(matchEnd, excerptEnd - 1) - excerptStart,
+    ] as [number, number]);
+
+    return `${prefix}${highlight(excerpt, adjustedIndices)}${suffix}`;
+  }
 
   const renderResults = (query: string) => {
     if (!query.trim()) {
@@ -59,13 +109,24 @@ import DefaultPageLayout from '@/layouts/default.astro';
     status.textContent = `${searchResults.length}件`;
 
     results.innerHTML = searchResults
-      .map(({ item }) => {
+      .map(({ item, matches }) => {
+        const titleMatch = matches?.find((match) => match.key === "title");
+        const contentMatch = matches?.find((match) => match.key === "content");
+
+        const title = titleMatch ? highlight(item.title, titleMatch.indices) : item.title;
+        const excerpt = contentMatch ? createExcerpt(item.content, contentMatch.indices) : "";
+        
         return `
-          <article class="mb-6">
-            <a href="/blog/${item.slug}/" class="text-lg font-bold hover:underline">
-              ${item.title}
-            </a>
-          </article>
+          <a
+            href="/blog/${item.slug}/"
+            class="mb-4 border-2 border-gray-400 p-3 rounded shadow inline-block transition duration-300 hover:shadow-xl hover:border-primary hover:scale-105 hover:border-3"
+          >
+            <p class="font-bold text-lg">${title}</p>
+            ${
+              excerpt
+              && `<p class="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400 leading-loose">${excerpt}</p>`
+            }
+          </a>
         `;
       })
       .join('');
