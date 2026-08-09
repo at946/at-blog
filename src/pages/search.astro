@@ -44,8 +44,23 @@ import DefaultPageLayout from '@/layouts/default.astro';
   const fuse = new Fuse(articles, {
     keys: ['title', 'content'],
     threshold: 0.5,
-    includeScore: true,
+    includeMatches: true,
   });
+
+  const highlight = (text: string, indices: readonly [number, number][]) => {
+    let result = "";
+    let lastIndex = 0;
+
+    for (const [start, end] of indices) {
+      result += text.slice(lastIndex, start);
+      result += `<mark class="rounded bg-yellow-300 p-1 mx-1">${text.slice(start, end + 1)}</mark>`;
+      lastIndex = end + 1;
+    }
+
+    result += text.slice(lastIndex);
+
+    return result;
+  }
 
   const renderResults = (query: string) => {
     if (!query.trim()) {
@@ -59,11 +74,14 @@ import DefaultPageLayout from '@/layouts/default.astro';
     status.textContent = `${searchResults.length}件`;
 
     results.innerHTML = searchResults
-      .map(({ item }) => {
+      .map(({ item, matches }) => {
+        const titleMatch = matches?.find((match) => match.key === "title");
+        const title = titleMatch ? highlight(item.title, titleMatch.indices) : item.title;
+        
         return `
           <article class="mb-6">
             <a href="/blog/${item.slug}/" class="text-lg font-bold hover:underline">
-              ${item.title}
+              ${title}
             </a>
           </article>
         `;
