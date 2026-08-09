@@ -39,4 +39,4 @@ export const PROFILE_PAGE_URLS = {
 	bmc: 'https://www.buymeacoffee.com/at946',
 };
 
-export const PAGE_SIZE = 10;
+export const PAGE_SIZE = 100;
