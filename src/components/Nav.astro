@@ -6,11 +6,19 @@ interface Props {
 }
 
 const isActive = (path: string) => {
-	const pathname = Astro.url.pathname;
-	if (path === '/blog') {
-		return pathname === '/blog' || /^\/blog\/\d+\/?$/.test(pathname);
+	const normalizedPath: string = path === '/' ? path : path.replace(/\/$/, '');
+	const pathname: string = Astro.url.pathname;
+	const normalizedPathname: string =
+		pathname === '/' ? pathname : pathname.replace(/\/$/, '');
+
+	if (normalizedPath === '/blog') {
+		return (
+			normalizedPathname === '/blog' ||
+			/^\/blog\/\d+\/?$/.test(normalizedPathname)
+		);
 	}
-	return pathname === path;
+
+	return normalizedPathname === normalizedPath;
 };
 ---
 <nav class={Astro.props.class}>
