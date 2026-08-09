@@ -1,6 +1,6 @@
 const icons = {
 	blog: 'mdi:document-sign',
-	slide: 'mdi:presetation',
+	slide: 'mdi:presentation',
 	video: 'mdi:video-youtube',
 };
 
