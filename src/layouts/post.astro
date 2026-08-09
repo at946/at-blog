@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
-import DifferentPerspectivePosts from '@/components/DifferentPerspectivePosts.astro';
 import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
-import ProfileCard from '@/components/ProfileCard.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
 import { PROFILE_PAGE_URLS } from '@/config';
+import similarityListJson from '@/data/similarity-list.json';
 import PostMainLayout from '@/layouts/PostMainLayout.astro';
 
 interface Props {
@@ -20,7 +20,24 @@ interface Props {
 }
 
 const { content, description, id, readingTime } = Astro.props;
+
+const similarityList = similarityListJson.find((item) => item.slug === id);
+const similarArticles: CollectionEntry<'blog'>[] = (
+	await Promise.all(
+		similarityList?.similarArticles.map((article) =>
+			getEntry('blog', article.slug),
+		) ?? [],
+	)
+).filter((post): post is CollectionEntry<'blog'> => post !== undefined);
+const differentPerspectives: CollectionEntry<'blog'>[] = (
+	await Promise.all(
+		similarityList?.differentPerspectiveArticles.map((article) =>
+			getEntry('blog', article.slug),
+		) ?? [],
+	)
+).filter((post): post is CollectionEntry<'blog'> => post !== undefined);
 ---
+
 <!doctype html>
 <html lang="ja">
   <head>
@@ -28,20 +45,23 @@ const { content, description, id, readingTime } = Astro.props;
   </head>
   <PostMainLayout>
     <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" data-pagefind-body />
-    <hr class="mb-8 border-gray-300" />
-    <Prose>
+
+    <Prose class="mb-20">
       <slot />
-      <ShareButtons class="mt-16 not-prose mb-12" blogTitle={content.title} />
-      <Link
-      href={PROFILE_PAGE_URLS.bmc}
-      class='flex justify-center flex-col text-center'
-      >
-        <Icon name="simple-icons:buymeacoffee" class="text-2xl mx-auto mb-2" />
-        <span>気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
-      </Link>
-      <RelatedPosts class="mt-16" id={id} />
-      <DifferentPerspectivePosts id={id} />
     </Prose>
-    <ProfileCard class="mt-10" />
+
+    <ShareButtons class="mb-20" blogTitle={content.title} />
+
+    <Link
+      href={PROFILE_PAGE_URLS.bmc}
+      class='flex justify-center flex-col text-center mb-20'
+    >
+      <Icon name="simple-icons:buymeacoffee" class="text-2xl mx-auto mb-2" />
+      <span class="text-primary font-bold underline underline-offset-8">気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
+    </Link>
+
+    <RelatedPosts headingText='Related Posts' posts={similarArticles} class="mb-10" />
+
+    <RelatedPosts headingText="Different Perspectives" posts={differentPerspectives} />
   </PostMainLayout>
 </html>

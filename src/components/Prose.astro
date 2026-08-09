@@ -1,3 +1,9 @@
+---
+interface Props {
+	class?: string;
+}
+---
+
 <article
   class:list={[
     'prose dark:prose-invert dark:prose-dark md:prose-md',
@@ -8,6 +14,7 @@
     'prose-li:font-medium',
     'prose-td:font-medium',
     'prose-th:font-medium',
+    Astro.props.class,
   ]}
 >
   <slot />
