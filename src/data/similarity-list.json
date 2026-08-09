@@ -586,6 +586,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble-tmp",
+				"score": 0.5180111993952238
+			},
+			{
+				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
+				"score": 0.5179106747897355
+			},
+			{
 				"slug": "20250218-01",
 				"score": 0.5173056410331639
 			},
@@ -599,14 +607,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5081218490316739
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5081218490316739
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5081218490316739
 			}
 		]
@@ -2014,6 +2014,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5164670069823982
+			},
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5135311743998907
+			},
+			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
 				"score": 0.511555303296991
 			},
@@ -2023,14 +2031,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5039369304431318
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5039369304431318
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5039369304431318
 			},
 			{
@@ -2451,14 +2451,6 @@
 		"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 		"similarArticles": [
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 1.0000002536141013
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
-				"score": 1.0000002536141013
-			},
-			{
 				"slug": "20240824-01",
 				"score": 0.8088199036049695
 			},
@@ -2469,6 +2461,14 @@
 			{
 				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
 				"score": 0.8036465863588068
+			},
+			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble-tmp",
+				"score": 0.8036465863588068
+			},
+			{
+				"slug": "20250614-slides-for-scrum-fest-kanazawa-2025",
+				"score": 0.8003992757874102
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2779,6 +2779,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.5277074274447063
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.5255000113681687
+			},
+			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
 				"score": 0.5193002630603378
 			},
@@ -2788,14 +2796,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5156823089129288
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5156823089129288
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5156823089129288
 			},
 			{
@@ -2932,19 +2932,19 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5428276884332904
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright-tmp",
+				"score": 0.5428276884332904
+			},
+			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5148400721327172
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5121319911970493
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5121319911970493
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5121319911970493
 			},
 			{
@@ -2983,15 +2983,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20260529-queuing-systems-and-the-pros-and-cons-of-concurrent-project-execution",
+				"score": 0.5146194269258436
+			},
+			{
+				"slug": "20240824-01",
+				"score": 0.5085142893103531
+			},
+			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5072320808970856
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5072320808970856
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5072320808970856
 			},
 			{
@@ -3391,6 +3391,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250328-01",
+				"score": 0.5211898739641078
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5197856881202366
+			},
+			{
 				"slug": "20240418-Detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5197856881202366
 			},
@@ -3404,14 +3412,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5074852222469247
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5074852222469247
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5074852222469247
 			}
 		]
@@ -3544,6 +3544,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
+				"score": 0.5326034213187293
+			},
+			{
+				"slug": "20241217-01",
+				"score": 0.5284034419829127
+			},
+			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5252113668091136
 			},
@@ -3553,14 +3561,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5164159261098157
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5164159261098157
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5164159261098157
 			},
 			{
@@ -4054,11 +4054,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5185183962622423
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.519907806640457
 			},
 			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5185183962622423
 			},
 			{
@@ -4360,19 +4360,19 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.530625351026023
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.5272843902149301
+			},
+			{
 				"slug": "20241217-01",
 				"score": 0.5261770173772274
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5188385961729289
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5188385961729289
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5188385961729289
 			},
 			{
@@ -5227,11 +5227,11 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5224774598048982
+				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
+				"score": 0.5253343656042297
 			},
 			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5224774598048982
 			},
 			{
@@ -5278,6 +5278,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5277399269003442
+			},
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5269569200448714
+			},
+			{
 				"slug": "20241217-01",
 				"score": 0.525827237612747
 			},
@@ -5287,14 +5295,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228721816008642
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228721816008642
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5228721816008642
 			},
 			{
@@ -6145,15 +6145,15 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
+				"score": 0.5250481951384197
+			},
+			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5238214484051876
+			},
+			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228226440646948
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5228226440646948
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5228226440646948
 			},
 			{
@@ -6451,6 +6451,14 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
+				"score": 0.5206500658637593
+			},
+			{
+				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
+				"score": 0.5206500658637593
+			},
+			{
 				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble-tmp",
 				"score": 0.5206500658637593
 			},
@@ -6464,14 +6472,6 @@
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5061895940101385
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 0.5061895940101385
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
 				"score": 0.5061895940101385
 			}
 		]
@@ -6885,57 +6885,6 @@
 		]
 	},
 	{
-		"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-		"similarArticles": [
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 1.0000002536141013
-			},
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
-				"score": 1.0000002536141013
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.8088199036049695
-			},
-			{
-				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
-				"score": 0.8036465863588068
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8036465863588068
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
-				"score": 0.5081218490316739
-			},
-			{
-				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
-				"score": 0.5074852222469247
-			},
-			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5072320808970856
-			},
-			{
-				"slug": "20260527-queueing-theory-and-product-backlog",
-				"score": 0.5061895940101385
-			},
-			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5059846793305944
-			},
-			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5039369304431318
-			}
-		]
-	},
-	{
 		"slug": "20231001-made-a-lightning-talk-at-the-XP-Matsuri",
 		"similarArticles": [
 			{
@@ -7187,57 +7136,6 @@
 			{
 				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble-tmp",
 				"score": 0.502228236797338
-			}
-		]
-	},
-	{
-		"slug": "20230930-our-time-melt-when-we-do-mobing-anyway-tmp",
-		"similarArticles": [
-			{
-				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
-				"score": 1.0000002536141013
-			},
-			{
-				"slug": "20230930-Our-time-melt-when-we-do-mobing-anyway",
-				"score": 1.0000002536141013
-			},
-			{
-				"slug": "20240824-01",
-				"score": 0.8088199036049695
-			},
-			{
-				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
-				"score": 0.8036465863588068
-			},
-			{
-				"slug": "20240622-Watching-the-wall-between-engineers-and-QAs-crumble",
-				"score": 0.8036465863588068
-			}
-		],
-		"differentPerspectiveArticles": [
-			{
-				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
-				"score": 0.5081218490316739
-			},
-			{
-				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
-				"score": 0.5074852222469247
-			},
-			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.5072320808970856
-			},
-			{
-				"slug": "20260527-queueing-theory-and-product-backlog",
-				"score": 0.5061895940101385
-			},
-			{
-				"slug": "20240520-i-don't-use-the-word-of-normally",
-				"score": 0.5059846793305944
-			},
-			{
-				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
-				"score": 0.5039369304431318
 			}
 		]
 	},
