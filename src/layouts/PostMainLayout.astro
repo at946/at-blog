@@ -1,0 +1,16 @@
+---
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import Nav from '@/components/Nav.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+<BaseLayout>
+    <div class="flex flex-col min-h-screen">
+    <Header className='mt-8 mb-6'/>
+    <Nav class="mb-6" />
+    <div class="flex-1 max-w-2xl mx-auto">
+        <slot />
+    </div>
+    <Footer/>
+    </div>
+</BaseLayout>

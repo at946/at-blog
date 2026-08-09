@@ -10,7 +10,7 @@ import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
 import { PROFILE_PAGE_URLS } from '@/config';
-import MainLayout from '@/layouts/MainLayout.astro';
+import PostMainLayout from '@/layouts/PostMainLayout.astro';
 
 interface Props {
 	content: CollectionEntry<'blog'>['data'];
@@ -26,7 +26,7 @@ const { content, description, id, readingTime } = Astro.props;
   <head>
     <BaseHead pageTitle={content.title} description={description} />
   </head>
-  <MainLayout>
+  <PostMainLayout>
     <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" data-pagefind-body />
     <hr class="mb-16 border-gray-300" />
     <Prose>
@@ -43,5 +43,5 @@ const { content, description, id, readingTime } = Astro.props;
       <DifferentPerspectivePosts id={id} />
     </Prose>
     <ProfileCard class="mt-10" />
-  </MainLayout>
+  </PostMainLayout>
 </html>
