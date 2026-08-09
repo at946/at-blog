@@ -16,7 +16,7 @@ const { headingText, posts } = Astro.props;
 { posts.length > 0 &&
 	<div class={Astro.props.class}>
 		<h2 class="text-2xl font-semibold mb-2">{headingText}</h2>
-		<ul class="list-disc ml-5">
+		<ul class="list-disc pl-5">
 			{ posts.map((post) => (
 				<li class="py-1.5">
 					<Link href={post.data.externalUrl ?? `${post.id}`} class="font-medium underline underline-offset-4 hover:font-bold hover:text-primary">
