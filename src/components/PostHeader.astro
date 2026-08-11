@@ -5,10 +5,11 @@ interface Props {
 	title: string;
 	publicationDate: Date;
 	readingTime: number;
+	tags?: string[];
 	class?: string;
 }
 
-const { title, publicationDate, readingTime } = Astro.props;
+const { title, publicationDate, readingTime, tags } = Astro.props;
 ---
 <div class:list={["text-center md:text-left", Astro.props.class]}>
   <hr class="mb-8 border-gray-600 dark:border-white" />
@@ -21,8 +22,24 @@ const { title, publicationDate, readingTime } = Astro.props;
       <span>{ readingTime }min</span>
     </span>
   </div>
-    <h1 class="text-2xl leading-loose font-black mb-10">
+    <h1 class="text-2xl leading-loose font-black mb-6">
       { title }
     </h1>
+    { !!tags && (
+      <div class="flex flex-wrap gap-3 mb-8 justify-center md:justify-start">
+      {
+        tags.map((tag) => (
+          <a
+            href={`/search?q=${tag}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="underline underline-offset-4 font-medium hover:text-primary hover:scale-110"
+          >
+            #{tag}
+          </a>
+        ))
+      }
+      </div>
+    )}
   <hr class="mb-8 border-gray-600 dark:border-white" />
 </div>

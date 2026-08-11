@@ -44,7 +44,7 @@ const differentPerspectives: CollectionEntry<'blog'>[] = (
     <BaseHead pageTitle={content.title} description={description} />
   </head>
   <PostMainLayout>
-    <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" data-pagefind-body />
+    <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} tags={content.tags} class="mb-4" data-pagefind-body />
 
     <Prose class="mb-20">
       <slot />

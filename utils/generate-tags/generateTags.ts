@@ -6,7 +6,7 @@ type ResponseText = {
 };
 
 const MODEL: string = 'gemini-3.6-flash';
-const MAX_TAGS: number = 5;
+const MAX_TAGS: number = 6;
 
 const ai = new GoogleGenAI({
 	apiKey: process.env.GEMINI_API_KEY,

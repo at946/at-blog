@@ -10,6 +10,7 @@ const blogCollection = defineCollection({
 			.max(100, 'The title length must be less than or equal to 100 chars'),
 		type: z.enum(['blog', 'slide', 'video']),
 		publicationDate: z.date(),
+		tags: z.array(z.string()).optional(),
 		externalUrl: z.url().optional(),
 		youtubeEmbeddedUrl: z.url().optional(),
 		docswellId: z.string().optional(),
