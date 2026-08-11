@@ -43,7 +43,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
 
   const fuse = new Fuse(articles, {
     keys: ['title', 'content'],
-    threshold: 0.5,
+    threshold: 0.3,
     includeMatches: true,
     ignoreLocation: true,
     minMatchCharLength: 2
