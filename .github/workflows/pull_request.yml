@@ -24,6 +24,8 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm run lint:markdown:fix
+
       - run: pnpm generate:search-index
 
       - run: pnpm generate:embedding
@@ -33,8 +35,6 @@ jobs:
       - run: pnpm generate:similarity
 
       - run: pnpm run biome:write
-
-      - run: pnpm run lint:markdown:fix
 
       - name: commit fixes
         run: |
