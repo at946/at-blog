@@ -2,14 +2,17 @@
 title: Google SpreadsheetとGoogle Slidesでお手軽動的OGP with Nuxt
 type: blog
 publicationDate: 2021-10-14T00:00:00.000Z
+summary:
+  - Google Spreadsheetのランキングデータをもとに、Google SlidesのテンプレートからGASでOGP画像を毎日自動生成する仕組みを作った。
+  - 生成した画像をGoogle Driveに保存し、そのファイルIDをSpreadsheetに記録。Nuxt側でデータを取得し、asyncDataとheadを使ってページごとに動的なOGPを設定した。
+  - Spreadsheet・Slides・Drive・GASを組み合わせることで、専用の画像生成基盤を用意せずに動的OGPを実現できた。
 tags:
   - OGP
-  - 動的OGP
-  - Google Apps Script
+  - GAS
+  - Nuxt
   - Google Slides
   - Google Spreadsheet
-  - Nuxt.js
-contentHash: 78023aed6b3cc48c49ae61b7dcee842a856d93c49cba744040c4643b7061ed8d
+contentHash: e2497acc828c641da9782ff61fa918e0e3a3d5c389d913d89cfa7bb2bb7eee63
 ---
 
 いま話題のスペースに出会えるspaces.bz（クローズ済み）では、デイリーランキングで動的OGPを実装しています。

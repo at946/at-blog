@@ -18,6 +18,7 @@
 		"add:amazonLink": "python3 utils/python/addAmazonItem.py",
 		"generate:embedding": "tsx utils/similarity/generateEmbeddingJson.ts",
 		"generate:similarity": "tsx utils/similarity/generateSimilarityJson.ts",
+		"generate:summary-and-tags": "tsx utils/summary-and-tags",
 		"generate:search-index": "tsx utils/search/createSearchIndex.ts",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
