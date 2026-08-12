@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
 import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
+import Codoc from '@/components/Codoc.astro';
 import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import Prose from '@/components/Prose.astro';
@@ -52,16 +53,11 @@ const differentPerspectives: CollectionEntry<'blog'>[] = (
 
     <ShareButtons class="mb-20" blogTitle={content.title} />
 
-    <Link
-      href={PROFILE_PAGE_URLS.bmc}
-      class='flex justify-center flex-col text-center mb-20'
-    >
-      <Icon name="simple-icons:buymeacoffee" class="text-2xl mx-auto mb-2" />
-      <span class="text-primary font-bold underline underline-offset-8">気に入っていただけたら、<br class="sm:hidden" />サポートもお待ちしております！</span>
-    </Link>
+    <Codoc />
 
-    <RelatedPosts headingText='Related Posts' posts={similarArticles} class="mb-10" />
+    <RelatedPosts headingText='Related Posts' posts={similarArticles} class="mt-15 mb-10" />
 
     <RelatedPosts headingText="Different Perspectives" posts={differentPerspectives} />
   </PostMainLayout>
 </html>
+
