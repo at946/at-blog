@@ -4,7 +4,9 @@ import fg from 'fast-glob';
 import matter from 'gray-matter';
 import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
 import generateHash from '../common/generateHash';
-import generateTags from './generateTags';
+import generateSummaryAndTags, {
+	type ResponseText,
+} from './generateSummaryAndTags';
 
 const BLOG_DIR = 'src/content/blog';
 
@@ -26,11 +28,16 @@ const BLOG_DIR = 'src/content/blog';
 
 		console.log(title);
 
-		const tags: string[] = await generateTags(title, content);
+		const { tags, summary }: ResponseText = await generateSummaryAndTags(
+			title,
+			content,
+		);
 
+		console.log(summary);
 		console.log(tags);
 
 		parsed.data.tags = tags;
+		parsed.data.summary = summary;
 		parsed.data.contentHash = contentHash;
 
 		await writeFile(

@@ -11,6 +11,7 @@ const blogCollection = defineCollection({
 		type: z.enum(['blog', 'slide', 'video']),
 		publicationDate: z.date(),
 		tags: z.array(z.string()).optional(),
+		summary: z.array(z.string()).optional(),
 		externalUrl: z.url().optional(),
 		youtubeEmbeddedUrl: z.url().optional(),
 		docswellId: z.string().optional(),
