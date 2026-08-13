@@ -140,7 +140,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
             ${
               !!tags
               ? `<div class="flex gap-3 flex-wrap">
-                  ${tags.map((tag) => `<span class="text-sm font-medium">${tag}</span>`).join("")}
+                  ${tags.map((tag) => `<span class="text-sm font-medium">#${tag}</span>`).join("")}
                 </div>`
               : ""
             }
