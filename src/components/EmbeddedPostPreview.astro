@@ -41,7 +41,8 @@ const {
     </Link>
   </h2>
 
-  {
+  <div class="flex justify-center gap-2 mb-6">
+      {
     tags && tags.map((tag) => (
       <a
         href={`/search?q=${tag}`}
@@ -53,6 +54,7 @@ const {
       </a>
     ))
   }
+  </div>
 
   <div class="mb-4">
     { type === 'slide' && docswellId && <DocswellEmbed id={docswellId} /> }

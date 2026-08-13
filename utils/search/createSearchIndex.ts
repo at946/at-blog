@@ -23,6 +23,7 @@ async function createSearchIndex() {
 				const file = await fs.readFile(filePath, 'utf-8');
 				const { data, content } = matter(file);
 				const title: string = data.title;
+				const tags: string = data.tags;
 				const normalizedContent: string = normalizeMarkdoc(content).trim();
 
 				if (!normalizedContent) {
@@ -33,6 +34,7 @@ async function createSearchIndex() {
 					{
 						slug: path.basename(path.dirname(filePath)),
 						title: title,
+						tags: tags,
 						content: normalizedContent,
 					},
 				];

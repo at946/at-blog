@@ -1,15 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
-import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
 import Codoc from '@/components/Codoc.astro';
-import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
-import { PROFILE_PAGE_URLS } from '@/config';
 import similarityListJson from '@/data/similarity-list.json';
 import PostMainLayout from '@/layouts/PostMainLayout.astro';
 
