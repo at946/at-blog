@@ -116,15 +116,20 @@ import DefaultPageLayout from '@/layouts/default.astro';
     results.innerHTML = searchResults
       .map(({ item, matches }) => {
         const titleMatch = matches?.find((match) => match.key === "title");
-        const tagsMatch = matches?.filter((match) => match.key === "tags");
-        const contentMatch = matches?.find((match) => match.key === "content");
+        const title: string = titleMatch
+          ? highlight(item.title, titleMatch.indices)
+          : item.title;
 
-        const title: string = titleMatch ? highlight(item.title, titleMatch.indices) : item.title;
+        const tagsMatch = matches?.filter((match) => match.key === "tags");
         const tags: string[] = item.tags?.map((tag, index) => {
           const match = tagsMatch?.find((match) => match.refIndex === index);
           return match ? highlight(tag, match.indices) : escapeHtml(tag);
         });
-        const excerpt: string = contentMatch ? createExcerpt(item.content, contentMatch.indices) : "";
+
+        const contentMatch = matches?.find((match) => match.key === "content");
+        const excerpt: string = contentMatch
+          ? createExcerpt(item.content, contentMatch.indices)
+          : escapeHtml(item.content.slice(0, 200)) + "...";
 
         return `
           <a
