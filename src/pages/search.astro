@@ -23,13 +23,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
 
 <script>
   import Fuse from 'fuse.js';
-
-  type Article = {
-    slug: string;
-    tags: string[];
-    title: string;
-    content: string;
-  }
+  import type { SearchedArticle } from '../../utils/search/createSearchIndex';
 
   const input = document.querySelector<HTMLInputElement>('#search-input');
   const status = document.querySelector<HTMLElement>('#search-status');
@@ -40,7 +34,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
   }
 
   const response = await fetch('/search-index.json');
-  const articles: Article[] = await response.json();
+  const articles: SearchedArticle[] = await response.json();
 
   const fuse = new Fuse(articles, {
     keys: [
@@ -133,10 +127,11 @@ import DefaultPageLayout from '@/layouts/default.astro';
 
         return `
           <a
-            href="/blog/${item.slug}/"
+            href="${ item.externalUrl || `/blog/${item.slug}/` }"
             class="mb-4 border-2 border-gray-400 p-3 rounded shadow inline-block transition duration-300 hover:shadow-xl hover:border-primary hover:scale-105 hover:border-3"
+            ${ item.externalUrl ? 'target="_blank" rel="noopener noreferrer"' : "" }
           >
-            <p class="font-bold text-lg mb-4">${title}</p>
+            <h2 class="font-bold text-lg mb-4">${title}</h2>
             ${
               !!tags
               ? `<div class="flex gap-3 flex-wrap">
@@ -147,6 +142,10 @@ import DefaultPageLayout from '@/layouts/default.astro';
             ${
               excerpt
               ? `<p class="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400 leading-loose">${excerpt}</p>`
+              : ""
+            }
+            ${ item.externalUrl
+              ? `<p class="mt-2 text-right text-sm font-medium underline underline-offset-2">Link to ${item.externalUrl}</p>`
               : ""
             }
           </a>
