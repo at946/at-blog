@@ -26,6 +26,10 @@ jobs:
 
       - run: pnpm run lint:markdown:fix
 
+      - run: pnpm generate:summary-and-tags
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - run: pnpm generate:search-index
 
       - run: pnpm generate:embedding
@@ -33,10 +37,6 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - run: pnpm generate:similarity
-
-      - run: pnpm generate:summary-and-tags
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - run: pnpm run biome:write
 
