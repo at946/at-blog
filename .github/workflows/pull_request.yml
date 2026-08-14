@@ -34,9 +34,14 @@ jobs:
 
       - run: pnpm generate:similarity
 
+      - run: pnpm generate:summary-and-tags
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - run: pnpm run biome:write
 
       - name: commit fixes
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config --global user.name "github-actions[bot]"
