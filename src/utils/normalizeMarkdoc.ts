@@ -5,13 +5,22 @@ const normalizeMarkdoc = (body: string): string => {
 			.replace(/```[\s\S]*?```/g, '')
 
 			// インラインコード
-			.replace(/`/g, '')
+			.replace(/`[^`]*`/g, '')
 
 			// Markdocタグ
 			.replace(/{%\s*\/?.*?%}/g, '')
 
 			// HTMLコメント
 			.replace(/<!--[\s\S]*?-->/g, '')
+
+			// HTMLタグ
+			.replace(/<[^>]*>/g, '')
+
+			// Markdown画像
+			.replace(/!\[(.*?)\]\(.*?\)/g, '$1')
+
+			// Markdownリンク
+			.replace(/\[(.*?)\]\(.*?\)/g, '$1')
 
 			// Markdown記法
 			.replace(/^#{1,6}\s+/gm, '') // 見出し

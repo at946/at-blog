@@ -12,7 +12,7 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, publicationDate, externalUrl, type } = post.data;
+const { title, publicationDate, externalUrl, type, tags } = post.data;
 const id: string = post.id;
 const plainText: string = normalizeMarkdoc(post.body || '');
 const readingTime: number = estimateReadingTime(plainText.length);
@@ -47,4 +47,11 @@ const readingTime: number = estimateReadingTime(plainText.length);
       </span>
       { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
   </h2>
+      {
+        !!tags && (
+          <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+            {tags.map((tag) => (<span class="text-sm font-medium">#{tag}</span>))}
+          </div>
+        )
+      }
 </Link>

@@ -1,14 +1,10 @@
-import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import fg from 'fast-glob';
 import matter from 'gray-matter';
 import normalizeMarkdoc from '@/utils/normalizeMarkdoc';
+import generateHash from '../common/generateHash';
 import type { Article } from './type';
-
-const generateHash = (value: string): string => {
-	return createHash('sha256').update(value).digest('hex');
-};
 
 const prepareArticles = async (): Promise<Article[]> => {
 	const filePaths: string[] = await fg(`src/content/blog/**/[^_]*.mdoc`);

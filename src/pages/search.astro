@@ -23,12 +23,7 @@ import DefaultPageLayout from '@/layouts/default.astro';
 
 <script>
   import Fuse from 'fuse.js';
-
-  type Article = {
-    slug: string;
-    title: string;
-    content: string;
-  }
+  import type { SearchedArticle } from '../../utils/search/createSearchIndex';
 
   const input = document.querySelector<HTMLInputElement>('#search-input');
   const status = document.querySelector<HTMLElement>('#search-status');
@@ -39,11 +34,15 @@ import DefaultPageLayout from '@/layouts/default.astro';
   }
 
   const response = await fetch('/search-index.json');
-  const articles: Article[] = await response.json();
+  const articles: SearchedArticle[] = await response.json();
 
   const fuse = new Fuse(articles, {
-    keys: ['title', 'content'],
-    threshold: 0.5,
+    keys: [
+      { name: 'title', weight: 0.4 },
+      { name: "tags", weight: 0.4 },
+      { name: 'content', weight: 0.2 }
+    ],
+    threshold: 0.3,
     includeMatches: true,
     ignoreLocation: true,
     minMatchCharLength: 2
@@ -111,20 +110,43 @@ import DefaultPageLayout from '@/layouts/default.astro';
     results.innerHTML = searchResults
       .map(({ item, matches }) => {
         const titleMatch = matches?.find((match) => match.key === "title");
-        const contentMatch = matches?.find((match) => match.key === "content");
+        const title: string = titleMatch
+          ? highlight(item.title, titleMatch.indices)
+          : item.title;
 
-        const title = titleMatch ? highlight(item.title, titleMatch.indices) : item.title;
-        const excerpt = contentMatch ? createExcerpt(item.content, contentMatch.indices) : "";
-        
+        const tagsMatch = matches?.filter((match) => match.key === "tags");
+        const tags: string[] = item.tags?.map((tag, index) => {
+          const match = tagsMatch?.find((match) => match.refIndex === index);
+          return match ? highlight(tag, match.indices) : escapeHtml(tag);
+        });
+
+        const contentMatch = matches?.find((match) => match.key === "content");
+        const excerpt: string = contentMatch
+          ? createExcerpt(item.content, contentMatch.indices)
+          : escapeHtml(item.content.slice(0, 200)) + "...";
+
         return `
           <a
-            href="/blog/${item.slug}/"
+            href="${ item.externalUrl || `/blog/${item.slug}/` }"
             class="mb-4 border-2 border-gray-400 p-3 rounded shadow inline-block transition duration-300 hover:shadow-xl hover:border-primary hover:scale-105 hover:border-3"
+            ${ item.externalUrl ? 'target="_blank" rel="noopener noreferrer"' : "" }
           >
-            <p class="font-bold text-lg">${title}</p>
+            <h2 class="font-bold text-lg mb-4">${title}</h2>
+            ${
+              !!tags
+              ? `<div class="flex gap-3 flex-wrap">
+                  ${tags.map((tag) => `<span class="text-sm font-medium">#${tag}</span>`).join("")}
+                </div>`
+              : ""
+            }
             ${
               excerpt
-              && `<p class="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400 leading-loose">${excerpt}</p>`
+              ? `<p class="mt-2 text-sm font-medium text-gray-500 dark:text-gray-400 leading-loose">${excerpt}</p>`
+              : ""
+            }
+            ${ item.externalUrl
+              ? `<p class="mt-2 text-right text-sm font-medium underline underline-offset-2">Link to ${item.externalUrl}</p>`
+              : ""
             }
           </a>
         `;

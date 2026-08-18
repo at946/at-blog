@@ -24,6 +24,12 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - run: pnpm run lint:markdown:fix
+
+      - run: pnpm generate:summary-and-tags
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
       - run: pnpm generate:search-index
 
       - run: pnpm generate:embedding
@@ -34,9 +40,8 @@ jobs:
 
       - run: pnpm run biome:write
 
-      - run: pnpm run lint:markdown:fix
-
       - name: commit fixes
+        if: always()
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config --global user.name "github-actions[bot]"

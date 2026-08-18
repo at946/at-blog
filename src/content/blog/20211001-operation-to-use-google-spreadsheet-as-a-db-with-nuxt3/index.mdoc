@@ -1,7 +1,19 @@
 ---
-title: "NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！"
+title: NuxtでスプレッドシートをDB代わりに使うぞ大作戦 Part3 - asyncDataでだって使いたい！
 type: blog
-publicationDate: 2021-10-01
+publicationDate: 2021-10-01T00:00:00.000Z
+summary:
+  - asyncDataではaxios-jsonpが使えず、SSR時にwindowやdocumentが存在しない問題が発生した。
+  - NuxtのserverMiddlewareをBFFとして挟み、サーバー側からGAS APIを呼び出すことで、JSONPやCORSの問題を解決した。
+  - 最終的に「Nuxt → serverMiddleware → GAS → Spreadsheet」という構成で、SSR・モバイル対応しつつSpreadsheetをDB代わりに利用できた。
+tags:
+  - Nuxt.js
+  - Google Apps Script
+  - Googleスプレッドシート
+  - serverMiddleware
+  - asyncData
+  - BFF
+contentHash: 6ba7687d99cb4274c0070ead620e717b34b26f0ec08a83540ea39fff9aadd3fb
 ---
 
 シリーズ最終章です。

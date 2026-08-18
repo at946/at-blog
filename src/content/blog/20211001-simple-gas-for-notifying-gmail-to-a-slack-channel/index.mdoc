@@ -1,7 +1,17 @@
 ---
-title: "GmailをSlackのチャンネルに通知する超シンプルなGAS"
+title: GmailをSlackのチャンネルに通知する超シンプルなGAS
 type: blog
-publicationDate: 2021-10-01
+publicationDate: 2021-10-01T00:00:00.000Z
+summary:
+  - 共有GoogleアカウントのGmailをSlackに通知するため、GASでGmailの未読メールを取得してSlackへ送信する仕組みを作った。
+  - GmailApp.search()で未読メールを取得し、送信者・件名・本文などを整形してSlack Incoming Webhookへ投稿、最後に既読化するシンプルな構成。
+  - GASのトリガーを設定すれば定期実行でき、公式ドキュメントを眺めながら意外と簡単に実用的な自動化が作れることを紹介している。
+tags:
+  - GAS
+  - Gmail
+  - Slack
+  - 自動化
+contentHash: 8d6f3acc42f5343c2d61d52bba11d5ccb7a7e059c08d92133e80f8a1919a0638
 ---
 
 友人と個人開発してまして、各種サービスは共有のGoogleアカウントを使っています。

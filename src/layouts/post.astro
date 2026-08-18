@@ -1,15 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
-import { Icon } from 'astro-icon/components';
 import BaseHead from '@/components/BaseHead.astro';
 import Codoc from '@/components/Codoc.astro';
-import Link from '@/components/mdoc/Link.astro';
 import PostHeader from '@/components/PostHeader.astro';
 import Prose from '@/components/Prose.astro';
 import RelatedPosts from '@/components/RelatedPosts.astro';
 import ShareButtons from '@/components/ShareButtons.astro';
-import { PROFILE_PAGE_URLS } from '@/config';
 import similarityListJson from '@/data/similarity-list.json';
 import PostMainLayout from '@/layouts/PostMainLayout.astro';
 
@@ -45,9 +42,14 @@ const differentPerspectives: CollectionEntry<'blog'>[] = (
     <BaseHead pageTitle={content.title} description={description} />
   </head>
   <PostMainLayout>
-    <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} class="mb-4" data-pagefind-body />
+    <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} tags={content.tags} class="mb-4" data-pagefind-body />
 
     <Prose class="mb-20">
+			{!!content.summary && (
+				<h2 class="mt-10! mb-1!">３行まとめ</h2>
+				<ul>{content.summary.map((summary) => (<li>{summary}</li>))}</ul>
+				<hr class="border-gray-300" />
+			)}
       <slot />
     </Prose>
 

@@ -4,6 +4,7 @@ import { Icon } from 'astro-icon/components';
 import DocswellEmbed from '@/components/mdoc/DocswellEmbed.astro';
 import SpeakerDeckEmbed from '@/components/mdoc/SpeakerDeckEmbed.astro';
 import YouTubeEmbed from '@/components/mdoc/YouTubeEmbed.astro';
+import { getIcon } from '@/utils/getIcon';
 import Link from './mdoc/Link.astro';
 
 interface Props {
@@ -20,6 +21,7 @@ const {
 	youtubeEmbeddedUrl,
 	docswellId,
 	speakerDeckId,
+	tags,
 } = post.data;
 ---
 
@@ -31,14 +33,28 @@ const {
 
   <h2 class="text-2xl font-bold mb-4">
     <Link class="hover:text-primary" href=`${externalUrl}`>
-      { type === 'slide' && <Icon name="mdi:presentation" class="inline align-middle" />}
-      { type === 'video' && <Icon name="mdi:video-youtube" class="inline align-middle" />} 
+      <Icon name={getIcon(type)} class="inline align-middle" />
       <span class="align-middle">
         {title}
       </span>
       <Icon name="mdi:external-link" class="inline align-middle" />
     </Link>
   </h2>
+
+  <div class="flex justify-center gap-2 mb-6">
+      {
+    tags && tags.map((tag) => (
+      <a
+        href={`/search?q=${tag}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline underline-offset-4 font-medium hover:text-primary hover:scale-110"
+      >
+        #{tag}
+      </a>
+    ))
+  }
+  </div>
 
   <div class="mb-4">
     { type === 'slide' && docswellId && <DocswellEmbed id={docswellId} /> }
