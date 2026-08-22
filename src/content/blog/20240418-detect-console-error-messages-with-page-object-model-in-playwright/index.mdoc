@@ -7,12 +7,6 @@ tags:
   - E2Eテスト
   - Page Object Model
   - console.error
-summary:
-  - Tenkirの多言語化で大事な音機能が壊れたけど、音声出力テストの代わりにconsole.errorを検知する突破口を見つけた話だよ。
-  - >-
-    PlaywrightのPage object
-    modelsに`page.on('console')`を仕込んで、テスト終了時にエラーが出てないか共通で検証するようにしたんだ。
-  - 直接音を確かめられなくても、consoleエラーの検知は汎用的なセーフティネットになるし実装も簡単だからもっと早くやればよかった…！
 contentHash: ab64cabca35f42c610fc18866fdc1b19e6a381a1481ca8cbd56d88210f4cbd10
 ---
 
