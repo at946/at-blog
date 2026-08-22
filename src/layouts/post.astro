@@ -45,11 +45,6 @@ const differentPerspectives: CollectionEntry<'blog'>[] = (
     <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} tags={content.tags} class="mb-4" data-pagefind-body />
 
     <Prose class="mb-20">
-			{!!content.summary && (
-				<h2 class="mt-10! mb-1!">３行まとめ</h2>
-				<ul>{content.summary.map((summary) => (<li>{summary}</li>))}</ul>
-				<hr class="border-gray-300" />
-			)}
       <slot />
     </Prose>
 
