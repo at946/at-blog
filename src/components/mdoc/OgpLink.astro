@@ -19,12 +19,6 @@ const parsedOgp: OgpParserResult = await ogpParser(url)
 		throw error;
 	});
 
-console.log('[ogpLink]', {
-	url,
-	type,
-	oembed: parsedOgp.oembed,
-});
-
 const ogp: Record<string, string[]> = parsedOgp.ogp;
 const oembed: OembedData | undefined = parsedOgp.oembed;
 
@@ -41,8 +35,6 @@ const ogImageAlt: string =
 	typeof ogp['og:image:alt'] === 'string' ? ogp['og:image:alt'] : '';
 const html: string | undefined =
 	oembed?.type === 'rich' ? oembed.html : undefined;
-
-if (type === 'oembed' && !html) throw `No oembed html from ${url}`;
 ---
 
 { type === 'link' &&
@@ -52,5 +44,9 @@ if (type === 'oembed' && !html) throw `No oembed html from ${url}`;
   <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />
 }
 { type === 'oembed' &&
-  <div set:html={html} class="flex justify-center" />
+  html
+  ?
+    <div set:html={html} class="flex justify-center" />
+  :
+    <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />    
 }
