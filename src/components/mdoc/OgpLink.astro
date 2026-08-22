@@ -18,6 +18,14 @@ const parsedOgp: OgpParserResult = await ogpParser(url)
 	.catch((error) => {
 		throw error;
 	});
+const parsedOgp: OgpParserResult = await ogpParser(url);
+
+console.log('[ogpLink]', {
+  url,
+  type,
+  oembed: parsedOgp.oembed,
+});
+
 const ogp: Record<string, string[]> = parsedOgp.ogp;
 const oembed: OembedData | undefined = parsedOgp.oembed;
 
