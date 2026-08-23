@@ -1,0 +1,32 @@
+---
+interface Props {
+	url: string;
+}
+
+interface OembedData {
+	html?: string;
+}
+
+const { url } = Astro.props;
+
+let html: string | undefined;
+
+try {
+	const response = await fetch(url, {
+		headers: {
+			Accept: 'application/json',
+		},
+	});
+
+	if (!response.ok) {
+		throw new Error(`oEmbed request failed: ${response.status}`);
+	}
+
+	const data = (await response.json()) as OembedData;
+	html = data.html;
+} catch (error) {
+	throw new Error(`Failed to fetch oEmbed: ${url}\n${error}`);
+}
+---
+
+<div set:html={html} class="flex justify-center" />

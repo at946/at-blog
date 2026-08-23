@@ -8,6 +8,7 @@ import { inlineMath } from './schema/inline-math.mdoc';
 import { link } from './schema/link.mdoc';
 import { linkCard } from './schema/link-card.mdoc';
 import { math } from './schema/math.mdoc';
+import { oembed } from './schema/oembed';
 import { ogpLink } from './schema/ogp-link.mdoc';
 import { quote } from './schema/quote.mdoc';
 import { slideshareEmbed } from './schema/slideshare-embed.mdoc';
@@ -28,6 +29,7 @@ export const config = {
 		inlineMath,
 		linkCard,
 		math,
+		oembed,
 		ogpLink,
 		quote,
 		slideshare: slideshareEmbed,
