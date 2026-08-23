@@ -44,9 +44,5 @@ const html: string | undefined =
   <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />
 }
 { type === 'oembed' &&
-  html
-  ?
     <div set:html={html} class="flex justify-center" />
-  :
-    <LinkCard name={ogTitle} href={String(ogUrl)} imageSrc={ogImage} imageAlt={ogImageAlt} />    
 }
