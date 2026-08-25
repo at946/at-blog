@@ -38,6 +38,8 @@ jobs:
 
       - run: pnpm generate:similarity
 
+      - run: pnpm generate:ogp
+
       - run: pnpm run biome:write
 
       - name: commit fixes

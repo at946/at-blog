@@ -15,6 +15,8 @@ const blogCollection = defineCollection({
 		youtubeEmbeddedUrl: z.url().optional(),
 		docswellId: z.string().optional(),
 		speakerDeckId: z.string().optional(),
+		contentHash: z.hash('sha256').optional(),
+		ogpHash: z.hash('sha256').optional(),
 	}),
 });
 

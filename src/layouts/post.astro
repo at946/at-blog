@@ -39,7 +39,7 @@ const differentPerspectives: CollectionEntry<'blog'>[] = (
 <!doctype html>
 <html lang="ja">
   <head>
-    <BaseHead pageTitle={content.title} description={description} />
+    <BaseHead pageTitle={content.title} description={description} imagePath={`/og-images/${id}.png`} twitterCard='summary_large_image' />
   </head>
   <PostMainLayout>
     <PostHeader title={content.title} publicationDate={content.publicationDate} readingTime={readingTime} tags={content.tags} class="mb-4" data-pagefind-body />
