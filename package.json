@@ -20,6 +20,7 @@
 		"generate:similarity": "tsx utils/similarity/generateSimilarityJson.ts",
 		"generate:tags": "tsx utils/generate-tags",
 		"generate:search-index": "tsx utils/search/createSearchIndex.ts",
+		"generate:ogp": "tsx utils/generate-ogp",
 		"reinstall": "pnpm clean --lockfile && pnpm i"
 	},
 	"devDependencies": {
@@ -61,6 +62,7 @@
 		"@types/react": "^19.2.15",
 		"@types/react-dom": "^19.2.3",
 		"astro-expressive-code": "^0.44.0",
+		"budoux": "^0.9.0",
 		"clsx": "^2.1.1",
 		"fuse.js": "^7.5.0",
 		"katex": "^0.18.0",
@@ -68,6 +70,7 @@
 		"ogp-parser": "^0.8.1",
 		"react": "^19.2.6",
 		"react-dom": "^19.2.6",
-		"sharp": "^0.35.2"
+		"satori": "^0.33.3",
+		"sharp": "^0.35.3"
 	}
 }

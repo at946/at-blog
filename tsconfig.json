@@ -30,7 +30,7 @@
 		"src/**/*.tsx",
 		"src/**/*.astro",
 		"src/pages/rss.xml.js",
-		"utils/**/*.ts"
+		"utils/**/*.[ts|tsx]"
 	],
 	"exclude": ["src/components/GoogleAnalytics.astro", "dist"]
 }
