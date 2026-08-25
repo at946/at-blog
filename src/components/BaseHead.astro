@@ -6,13 +6,20 @@ import '../styles/global.css';
 export type Props = {
 	pageTitle?: string;
 	description?: string;
+	imagePath?: string;
+	twitterCard?: 'summary' | 'summary_large_image';
 };
 
-const { pageTitle, description = SITE.description } = Astro.props;
+const {
+	pageTitle,
+	description = SITE.description,
+	imagePath = SITE.image,
+	twitterCard = 'summary',
+} = Astro.props;
 
 const title: string = pageTitle ? `${pageTitle} | ${SITE.title}` : SITE.title;
 const url: string = SITE.url;
-const image: string = `${SITE.url}${SITE.image}`;
+const image: string = `${SITE.url}${imagePath}`;
 ---
 
 <meta charset="UTF-8" />
@@ -40,7 +47,7 @@ const image: string = `${SITE.url}${SITE.image}`;
 <meta property="og:image" content={image} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary" />
+<meta property="twitter:card" content={twitterCard} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:url" content={url} />
 <meta property="twitter:description" content={description} />
