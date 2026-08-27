@@ -2371,16 +2371,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.5128430668825259
-			},
-			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5076000959965626
 			},
 			{
 				"slug": "20250510-02",
 				"score": 0.5051908497996945
+			},
+			{
+				"slug": "20260827-letting-someone-understand-me-is-hard",
+				"score": 0.5048295411185035
 			},
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
@@ -5074,10 +5074,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
-				"score": 0.5284348906372814
-			},
-			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.5261041180594868
 			},
@@ -5096,6 +5092,10 @@
 			{
 				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
 				"score": 0.5030420701476355
+			},
+			{
+				"slug": "20260827-letting-someone-understand-me-is-hard",
+				"score": 0.5004271439365457
 			}
 		]
 	},
@@ -5272,8 +5272,8 @@
 				"score": 0.7249000257786371
 			},
 			{
-				"slug": "20260511-why-are-small-releases-good",
-				"score": 0.7194390329291782
+				"slug": "20260827-letting-someone-understand-me-is-hard",
+				"score": 0.7214475858010887
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7085,6 +7085,57 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5056043473821602
+			}
+		]
+	},
+	{
+		"slug": "20260827-letting-someone-understand-me-is-hard",
+		"similarArticles": [
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7311848950522961
+			},
+			{
+				"slug": "20250725-teleology-to-facilitate-others-changes",
+				"score": 0.7268425112306726
+			},
+			{
+				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
+				"score": 0.7214475858010887
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7186717502229562
+			},
+			{
+				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
+				"score": 0.7120202674279493
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20250321-01",
+				"score": 0.5428459408221754
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.528983475045362
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5108896560835452
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5060801635752316
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5048295411185035
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5004271439365457
 			}
 		]
 	}
