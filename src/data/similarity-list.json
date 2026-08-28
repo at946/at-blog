@@ -105,6 +105,10 @@
 		"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7987888539831468
+			},
+			{
 				"slug": "20221009-i-found-we-do-not-do-scrum",
 				"score": 0.785522366832228
 			},
@@ -119,10 +123,6 @@
 			{
 				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
 				"score": 0.7734580506281161
-			},
-			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.7715136688681903
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -321,12 +321,12 @@
 				"score": 0.7840041176492636
 			},
 			{
-				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
-				"score": 0.775168600401985
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.783355688296772
 			},
 			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7669018547014601
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.775168600401985
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -721,6 +721,10 @@
 				"score": 0.8118585061644971
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8087565217209665
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.8060343076688132
 			},
@@ -731,10 +735,6 @@
 			{
 				"slug": "20260512-what-is-a-good-team-like",
 				"score": 0.7897659869115946
-			},
-			{
-				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
-				"score": 0.7897304067252652
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -780,12 +780,12 @@
 				"score": 0.8181458012458429
 			},
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.8060343076688132
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8061218208844158
 			},
 			{
-				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
-				"score": 0.8004881381364343
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.8060343076688132
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -831,12 +831,12 @@
 				"score": 0.794312556361909
 			},
 			{
-				"slug": "20250704-conference-report-developer-productivity-report",
-				"score": 0.7904122461188783
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7911132498302648
 			},
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.7803664578909856
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7904122461188783
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1078,6 +1078,10 @@
 				"score": 0.7815311463730037
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7709730497661226
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.767477096695922
 			},
@@ -1088,10 +1092,6 @@
 			{
 				"slug": "20241129-01",
 				"score": 0.7584465840344395
-			},
-			{
-				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
-				"score": 0.7551552833291206
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1192,8 +1192,8 @@
 				"score": 0.7392577039809662
 			},
 			{
-				"slug": "20260609-kingman-and-scrum",
-				"score": 0.7303721543246912
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7324079361995589
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1235,16 +1235,16 @@
 				"score": 0.7516482788775922
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.744683005432881
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7433525959159126
 			},
 			{
 				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
 				"score": 0.7319478228292743
-			},
-			{
-				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
-				"score": 0.727708186691143
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1278,6 +1278,10 @@
 		"slug": "20221009-i-found-we-do-not-do-scrum",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8319671251263785
+			},
+			{
 				"slug": "20230601-how-to-beat-a-fake-scrum",
 				"score": 0.8246537245843435
 			},
@@ -1292,10 +1296,6 @@
 			{
 				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
 				"score": 0.8109379776596437
-			},
-			{
-				"slug": "20230614-sprint-goal-and-sprint-scope",
-				"score": 0.7993443651570377
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1447,8 +1447,8 @@
 				"score": 0.679493372188301
 			},
 			{
-				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
-				"score": 0.675861015609984
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.6761499338253099
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1494,12 +1494,12 @@
 				"score": 0.8086140970124682
 			},
 			{
-				"slug": "20250121-01",
-				"score": 0.8048850221962649
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.806144073301108
 			},
 			{
-				"slug": "20241129-01",
-				"score": 0.801678755622307
+				"slug": "20250121-01",
+				"score": 0.8048850221962649
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1643,16 +1643,16 @@
 				"score": 0.8109379776596437
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8039761625042424
+			},
+			{
 				"slug": "20241129-01",
 				"score": 0.7929733799992917
 			},
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7836564455479945
-			},
-			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.7835601581782726
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2047,6 +2047,10 @@
 				"score": 0.8246537245843435
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8150527629352665
+			},
+			{
 				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
 				"score": 0.8132520085844129
 			},
@@ -2057,10 +2061,6 @@
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7901266024050555
-			},
-			{
-				"slug": "20241211-01",
-				"score": 0.7884389504535951
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2106,12 +2106,12 @@
 				"score": 0.7865652598756984
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.7801758416272859
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7856140447194978
 			},
 			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7742955703437202
+				"slug": "20220503-output-velocity-vs-outcome-velocity",
+				"score": 0.7801758416272859
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2565,12 +2565,12 @@
 				"score": 0.7867618050839333
 			},
 			{
-				"slug": "20240625-my-learning-habits",
-				"score": 0.7789013534138299
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7801179477279703
 			},
 			{
-				"slug": "20250121-01",
-				"score": 0.7785492658859273
+				"slug": "20240625-my-learning-habits",
+				"score": 0.7789013534138299
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2608,6 +2608,10 @@
 				"score": 0.8325590117886679
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8013019204341493
+			},
+			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7975687833696987
 			},
@@ -2618,10 +2622,6 @@
 			{
 				"slug": "20240816-how-can-we-make-a-decision",
 				"score": 0.7839978960077292
-			},
-			{
-				"slug": "20221009-i-found-we-do-not-do-scrum",
-				"score": 0.7796290664666632
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2663,16 +2663,16 @@
 				"score": 0.7851179317566718
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7841989385065935
+			},
+			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.7768417592910323
 			},
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7766008487008487
-			},
-			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.772849017573683
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2812,6 +2812,10 @@
 				"score": 0.8201867761456745
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8022679687407601
+			},
+			{
 				"slug": "20241211-01",
 				"score": 0.7949737956636719
 			},
@@ -2822,10 +2826,6 @@
 			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.7864329786530488
-			},
-			{
-				"slug": "20221009-i-found-we-do-not-do-scrum",
-				"score": 0.7807216141730098
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3289,12 +3289,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.5113512472041108
-			},
-			{
 				"slug": "20250510-02",
 				"score": 0.506957450300828
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.5051772078888584
 			},
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
@@ -3326,16 +3326,16 @@
 				"score": 0.8117184055773902
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7833553457644786
+			},
+			{
 				"slug": "20250704-conference-report-developer-productivity-report",
 				"score": 0.7762416976606775
 			},
 			{
 				"slug": "20240622-02",
 				"score": 0.7700790455499597
-			},
-			{
-				"slug": "20250510-02",
-				"score": 0.7638739648847533
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3997,8 +3997,8 @@
 				"score": 0.8012012670292912
 			},
 			{
-				"slug": "20230614-sprint-goal-and-sprint-scope",
-				"score": 0.7944794978165666
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8006318127214641
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5205,6 +5205,10 @@
 		"slug": "20250704-conference-report-developer-productivity-report",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7914305105190522
+			},
+			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7904122461188783
 			},
@@ -5219,10 +5223,6 @@
 			{
 				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
 				"score": 0.7746929055640225
-			},
-			{
-				"slug": "20230111-02",
-				"score": 0.7722242632726205
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5362,6 +5362,10 @@
 				"score": 0.7906961202009234
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7753674229889409
+			},
+			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.7652279484497303
 			},
@@ -5372,10 +5376,6 @@
 			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.7561704588671162
-			},
-			{
-				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
-				"score": 0.7520583619025052
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5409,6 +5409,10 @@
 		"slug": "20250805-we-cannot-make-a-horse-drink-but-we-can-do-many-thing-to-support-it",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7930399533494797
+			},
+			{
 				"slug": "20250725-teleology-to-facilitate-others-changes",
 				"score": 0.7906961202009234
 			},
@@ -5423,10 +5427,6 @@
 			{
 				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
 				"score": 0.7680277893914217
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7672565707069419
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5464,6 +5464,10 @@
 				"score": 0.7377628348415917
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7377028567469217
+			},
+			{
 				"slug": "20230614-sprint-goal-and-sprint-scope",
 				"score": 0.7345771493070553
 			},
@@ -5474,10 +5478,6 @@
 			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.7259805021881754
-			},
-			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7242816196840033
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5511,6 +5511,10 @@
 		"slug": "20250829-scrum-masters-with-individual-psychology",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8118680293479674
+			},
+			{
 				"slug": "20241211-01",
 				"score": 0.8069885632107419
 			},
@@ -5525,10 +5529,6 @@
 			{
 				"slug": "20231202-scrum-masters-also-need-leadership-other-than-servant-leadership",
 				"score": 0.7864329786530488
-			},
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.7851179317566718
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5570,16 +5570,16 @@
 				"score": 0.7418612485762417
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7395305834051494
+			},
+			{
 				"slug": "20231123-read-the-book-kokoro",
 				"score": 0.7389701658755148
 			},
 			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7310674960928256
-			},
-			{
-				"slug": "20260424-quadrant-of-separation-of-tasks",
-				"score": 0.724654647764693
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5723,16 +5723,16 @@
 				"score": 0.7918425533536575
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.787028579147061
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7861090715527641
 			},
 			{
 				"slug": "20241211-01",
 				"score": 0.7793156511428203
-			},
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.7768417592910323
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5766,6 +5766,10 @@
 		"slug": "20251120-lean-coffee-on-notion",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7807463989132319
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7745736196080266
 			},
@@ -5780,10 +5784,6 @@
 			{
 				"slug": "20230601-how-to-beat-a-fake-scrum",
 				"score": 0.7639043655599779
-			},
-			{
-				"slug": "20250704-conference-report-developer-productivity-report",
-				"score": 0.7555078140109992
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5817,6 +5817,10 @@
 		"slug": "20251204-what-are-scrum-masters-doing",
 		"similarArticles": [
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8308185546085456
+			},
+			{
 				"slug": "20231202-scrum-masters-also-need-leadership-other-than-servant-leadership",
 				"score": 0.8201867761456745
 			},
@@ -5831,10 +5835,6 @@
 			{
 				"slug": "20230601-how-to-beat-a-fake-scrum",
 				"score": 0.7730245137573272
-			},
-			{
-				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
-				"score": 0.7559699116595586
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6488,16 +6488,16 @@
 				"score": 0.7927265129017479
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7822909510672783
+			},
+			{
 				"slug": "20241129-01",
 				"score": 0.7760198032685615
 			},
 			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.7635614984741648
-			},
-			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.7540442953490237
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6535,6 +6535,10 @@
 				"score": 0.8086647897796444
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.796524289939917
+			},
+			{
 				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
 				"score": 0.7915228920265215
 			},
@@ -6545,10 +6549,6 @@
 			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7903775648184103
-			},
-			{
-				"slug": "20240311-my-three-favorite-reflection-frameworks",
-				"score": 0.7858070893769562
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7100,16 +7100,16 @@
 				"score": 0.7268425112306726
 			},
 			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7238651014065282
+			},
+			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
 				"score": 0.7214475858010887
 			},
 			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7186717502229562
-			},
-			{
-				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
-				"score": 0.7120202674279493
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7136,6 +7136,57 @@
 			{
 				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
 				"score": 0.5004271439365457
+			}
+		]
+	},
+	{
+		"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+		"similarArticles": [
+			{
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.8319671251263785
+			},
+			{
+				"slug": "20251204-what-are-scrum-masters-doing",
+				"score": 0.8308185546085456
+			},
+			{
+				"slug": "20230601-how-to-beat-a-fake-scrum",
+				"score": 0.8150527629352665
+			},
+			{
+				"slug": "20250829-scrum-masters-with-individual-psychology",
+				"score": 0.8118680293479674
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.8087565217209665
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5656093848311912
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5391150168176608
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5288545496309408
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5281852667342526
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5068859574484196
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5051772078888584
 			}
 		]
 	}
