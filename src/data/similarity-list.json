@@ -1125,6 +1125,10 @@
 		"slug": "20220614-i-have-what-i-want-to-tell-you-before-starting-the-retrospective",
 		"similarArticles": [
 			{
+				"slug": "20260901-how-to-see-and-use-the-retrospective-prime-directive-by-norman-kerth",
+				"score": 0.7739251941540718
+			},
+			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.7645027081961608
 			},
@@ -1139,10 +1143,6 @@
 			{
 				"slug": "20230318-just-talk-reflection-is-good",
 				"score": 0.7444138707680986
-			},
-			{
-				"slug": "20210926-reflection-with-emotion",
-				"score": 0.7366847833213541
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7187,6 +7187,57 @@
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5051772078888584
+			}
+		]
+	},
+	{
+		"slug": "20260901-how-to-see-and-use-the-retrospective-prime-directive-by-norman-kerth",
+		"similarArticles": [
+			{
+				"slug": "20220614-i-have-what-i-want-to-tell-you-before-starting-the-retrospective",
+				"score": 0.7739251941540718
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.7671104422617633
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.7510273300221256
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7498049461268198
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7457513045601873
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5656406856933088
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5615528708724588
+			},
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5583081375164063
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5281703465261955
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5214196163962916
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5116418861468528
 			}
 		]
 	}
