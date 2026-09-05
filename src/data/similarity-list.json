@@ -7194,6 +7194,10 @@
 		"slug": "20260901-how-to-see-and-use-the-retrospective-prime-directive-by-norman-kerth",
 		"similarArticles": [
 			{
+				"slug": "20260905-slides-titled-how-to-use-the-retrospective-prime-directive-by-norman-kerth",
+				"score": 0.8960216978799544
+			},
+			{
 				"slug": "20220614-i-have-what-i-want-to-tell-you-before-starting-the-retrospective",
 				"score": 0.7822616100304273
 			},
@@ -7208,10 +7212,6 @@
 			{
 				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
 				"score": 0.7479779807360923
-			},
-			{
-				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
-				"score": 0.7470875078342437
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7238,6 +7238,57 @@
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5097769154036638
+			}
+		]
+	},
+	{
+		"slug": "20260905-slides-titled-how-to-use-the-retrospective-prime-directive-by-norman-kerth",
+		"similarArticles": [
+			{
+				"slug": "20260901-how-to-see-and-use-the-retrospective-prime-directive-by-norman-kerth",
+				"score": 0.8960216978799544
+			},
+			{
+				"slug": "20220614-i-have-what-i-want-to-tell-you-before-starting-the-retrospective",
+				"score": 0.7385685351050894
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.7156915347465507
+			},
+			{
+				"slug": "20250510-02",
+				"score": 0.7009319034535136
+			},
+			{
+				"slug": "20230426-i-do-not-create-bug-tickets",
+				"score": 0.6983803014328888
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
+				"score": 0.5789013039170351
+			},
+			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5788506462269376
+			},
+			{
+				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
+				"score": 0.5779043462716247
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5663237358303956
+			},
+			{
+				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
+				"score": 0.5549963565154521
+			},
+			{
+				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
+				"score": 0.5402839438874675
 			}
 		]
 	}
