@@ -41,11 +41,11 @@ const readingTime: number = estimateReadingTime(plainText.length);
   }
   </div>
   <h2 class="text-xl font-bold mb-4">
-      <Icon name={getIcon(type)} class="inline align-middle mr-1" />
+      <Icon name={getIcon(type)} class="inline align-middle mr-2" />
       <span class="align-middle">
         {title}
       </span>
-      { externalUrl && <Icon name="mdi:external-link" class="inline align-middle" /> }
+      { externalUrl && <Icon name="mdi:external-link" class="inline align-middle ml-2" /> }
   </h2>
       {
         !!tags && (
