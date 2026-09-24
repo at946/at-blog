@@ -280,14 +280,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5380884291858263
-			},
-			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5368659521473841
-			},
-			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.535010087888771
 			},
@@ -298,6 +290,14 @@
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5292010941304905
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5253669240775032
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5253669240775032
 			},
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
@@ -1453,16 +1453,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
-				"score": 0.5555485175815116
-			},
-			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.542297529867142
-			},
-			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5405038730004881
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5356720816275986
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5356720816275986
 			},
 			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
@@ -1759,12 +1759,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
-				"score": 0.5650398487312762
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5430736954876536
 			},
 			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.5526203544115431
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5430736954876536
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -1861,8 +1861,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
-				"score": 0.51556918753942
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5148743623855491
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
@@ -2473,8 +2473,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240311-my-three-favorite-reflection-frameworks",
-				"score": 0.5044200595002922
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5039218872283918
 			},
 			{
 				"slug": "20250911-empiricism-of-wise-people",
@@ -2779,14 +2779,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250328-01",
-				"score": 0.5302831549636278
-			},
-			{
-				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
-				"score": 0.5279321686274918
-			},
-			{
 				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
 				"score": 0.5265866832347489
 			},
@@ -2797,6 +2789,14 @@
 			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
 				"score": 0.5183134507653782
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.513448517967614
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.513448517967614
 			},
 			{
 				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
@@ -4513,12 +4513,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
-				"score": 0.570946033143651
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5555300024408909
 			},
 			{
-				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
-				"score": 0.5639366071148292
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5555300024408909
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
@@ -5074,20 +5074,20 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.5261041180594868
-			},
-			{
-				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
-				"score": 0.5138921584915239
-			},
-			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
 				"score": 0.5133622902655552
 			},
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.5128548035614936
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5076271347739967
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5076271347739967
 			},
 			{
 				"slug": "20211001-simple-gas-for-notifying-gmail-to-a-slack-channel",
@@ -5176,16 +5176,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
-				"score": 0.5552121115568641
-			},
-			{
-				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
-				"score": 0.5485874339428253
-			},
-			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5456408440462829
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5429228684499311
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5429228684499311
 			},
 			{
 				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
@@ -5278,8 +5278,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241129-02",
-				"score": 0.5577293471961701
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5540101462414074
 			},
 			{
 				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
@@ -6298,14 +6298,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250510-01",
-				"score": 0.5231335724426484
-			},
-			{
-				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
-				"score": 0.5204612464790608
-			},
-			{
 				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
 				"score": 0.5190794581434972
 			},
@@ -6320,6 +6312,14 @@
 			{
 				"slug": "20250921-social-interest-and-me",
 				"score": 0.5082073055987749
+			},
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5059499727217178
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5059499727217178
 			}
 		]
 	},
@@ -7267,14 +7267,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.5789013039170351
-			},
-			{
-				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
-				"score": 0.5788506462269376
-			},
-			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
 				"score": 0.5779043462716247
 			},
@@ -7287,8 +7279,118 @@
 				"score": 0.5549963565154521
 			},
 			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.5502186151742481
+			},
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.5502186151742481
+			},
+			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5402839438874675
+			}
+		]
+	},
+	{
+		"slug": "20260924-kaonavi-alumni-article",
+		"similarArticles": [
+			{
+				"slug": "20260917-kaonavi-alumni-article",
+				"score": 0.9999997433344588
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.7194204419236803
+			},
+			{
+				"slug": "20230111-01",
+				"score": 0.7127748534398628
+			},
+			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7117763977345076
+			},
+			{
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.7007066765206957
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5148743623855491
+			},
+			{
+				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
+				"score": 0.513448517967614
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5076271347739967
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5059499727217178
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5043504587285152
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5039218872283918
+			}
+		]
+	},
+	{
+		"slug": "20260917-kaonavi-alumni-article",
+		"similarArticles": [
+			{
+				"slug": "20260924-kaonavi-alumni-article",
+				"score": 0.9999997433344588
+			},
+			{
+				"slug": "20230111-02",
+				"score": 0.7194204419236803
+			},
+			{
+				"slug": "20230111-01",
+				"score": 0.7127748534398628
+			},
+			{
+				"slug": "20250704-conference-report-developer-productivity-report",
+				"score": 0.7117763977345076
+			},
+			{
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.7007066765206957
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5148743623855491
+			},
+			{
+				"slug": "20240212-daily-scrum-tips-to-help-members-focus-on-their-sprint-commitment",
+				"score": 0.513448517967614
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5076271347739967
+			},
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5059499727217178
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5043504587285152
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5039218872283918
 			}
 		]
 	}
