@@ -1147,16 +1147,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5559144519575052
-			},
-			{
 				"slug": "20250328-01",
 				"score": 0.5512175952084548
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.5503191274985666
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5338149763718879
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -1198,10 +1198,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240622-watching-the-wall-between-engineers-and-qas-crumble",
-				"score": 0.5672878402098471
-			},
-			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5668850514566698
 			},
@@ -1212,6 +1208,10 @@
 			{
 				"slug": "20250328-01",
 				"score": 0.547095094987577
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.531222717427481
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
@@ -1555,8 +1555,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5457499462742911
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5442612998219624
 			},
 			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
@@ -1708,10 +1708,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250328-01",
-				"score": 0.5990153883621749
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5953100594044825
 			},
@@ -1726,6 +1722,10 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5558606801968077
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.545779426531586
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
@@ -1912,10 +1912,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5914225786318503
-			},
-			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5841168117959102
 			},
@@ -1934,6 +1930,10 @@
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.5321209065552147
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5163509875138436
 			}
 		]
 	},
@@ -2014,10 +2014,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
-				"score": 0.5354813808951555
-			},
-			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
 				"score": 0.5322476210205964
 			},
@@ -2032,6 +2028,10 @@
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
 				"score": 0.5229345230703638
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5168922737108218
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -2218,10 +2218,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5445980588820669
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5433010090879511
 			},
@@ -2240,6 +2236,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5034585823515652
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5019126601836035
 			}
 		]
 	},
@@ -2361,12 +2361,12 @@
 				"score": 0.6204227867284721
 			},
 			{
-				"slug": "20250925-reading-notes",
-				"score": 0.5865980266234005
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5916759753571643
 			},
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5760684557778425
+				"slug": "20250925-reading-notes",
+				"score": 0.5865980266234005
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2422,10 +2422,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5487246806986498
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5300700301896876
 			},
@@ -2444,6 +2440,10 @@
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5195169337704817
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5048809335081746
 			}
 		]
 	},
@@ -2524,10 +2524,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5595785309244057
-			},
-			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.558262458026646
 			},
@@ -2546,6 +2542,10 @@
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5119569310431724
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5085976872801989
 			}
 		]
 	},
@@ -2626,10 +2626,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5785176804901994
-			},
-			{
 				"slug": "20250328-01",
 				"score": 0.5676000965958989
 			},
@@ -2648,6 +2644,10 @@
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5262736613379537
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.507837656834725
 			}
 		]
 	},
@@ -2677,10 +2677,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5703276271218657
-			},
-			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5654460775500523
 			},
@@ -2699,6 +2695,10 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5378952493892494
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.507908087086229
 			}
 		]
 	},
@@ -2728,10 +2728,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250328-01",
-				"score": 0.5694761310521652
-			},
-			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5663597877040276
 			},
@@ -2746,6 +2742,10 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5377144427203546
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5327604758597035
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -2881,10 +2881,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
-				"score": 0.5539960179945216
-			},
-			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5531564333670058
 			},
@@ -2903,6 +2899,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.537096069291505
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5121746373864722
 			}
 		]
 	},
@@ -3187,10 +3187,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.588910645598221
-			},
-			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5768962614901296
 			},
@@ -3209,6 +3205,10 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5565706240347287
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5211449400851634
 			}
 		]
 	},
@@ -3340,10 +3340,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5747610601182589
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.567665220169678
 			},
@@ -3358,6 +3354,10 @@
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5310392381023699
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.527100321483373
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -3391,8 +3391,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5611710393098311
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5441884209337936
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -3493,10 +3493,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.5431813883727367
-			},
-			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
 				"score": 0.5374632697302985
 			},
@@ -3515,6 +3511,10 @@
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.51964601252275
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5097946183783331
 			}
 		]
 	},
@@ -3544,10 +3544,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250725-teleology-to-facilitate-others-changes",
-				"score": 0.5557898161989412
-			},
-			{
 				"slug": "20210926-operation-to-use-google-spreadsheet-as-a-db-with-nuxt",
 				"score": 0.5515321564613911
 			},
@@ -3566,6 +3562,10 @@
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5344885622638813
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5302912356179207
 			}
 		]
 	},
@@ -3595,10 +3595,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
-				"score": 0.5420388195250143
-			},
-			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5393132130969578
 			},
@@ -3617,6 +3613,10 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5082536648083129
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5077572881547209
 			}
 		]
 	},
@@ -3799,8 +3799,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5761365337892589
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5551260248608155
 			},
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
@@ -4258,10 +4258,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5640384584907623
-			},
-			{
 				"slug": "20230401-automated-e2e-testing-trial-experience-playwright",
 				"score": 0.556908896346193
 			},
@@ -4272,6 +4268,10 @@
 			{
 				"slug": "20250328-01",
 				"score": 0.543772057117337
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5230381434959532
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -4411,10 +4411,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250328-01",
-				"score": 0.5618166777084852
-			},
-			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5530672227765847
 			},
@@ -4433,6 +4429,10 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5340980761911945
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.505030493632803
 			}
 		]
 	},
@@ -4615,10 +4615,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5697767776381372
-			},
-			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5665169058512904
 			},
@@ -4637,6 +4633,10 @@
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5440237155543953
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5386928873444559
 			}
 		]
 	},
@@ -4921,10 +4921,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5645477142729872
-			},
-			{
 				"slug": "20241129-02",
 				"score": 0.5602318988327611
 			},
@@ -4943,6 +4939,10 @@
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5375036105911288
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5282884565401919
 			}
 		]
 	},
@@ -4972,8 +4972,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5524590662845595
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5420751350837499
 			},
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
@@ -5023,10 +5023,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.5522242341624857
-			},
-			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.5444429195815015
 			},
@@ -5041,6 +5037,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5240294839324415
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5222604937604776
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
@@ -5788,10 +5788,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240606-focus-on-done-over-doing",
-				"score": 0.5728256990670452
-			},
-			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5722804363474014
 			},
@@ -5806,6 +5802,10 @@
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5371936882180718
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5333967146541994
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
@@ -5931,12 +5931,12 @@
 				"score": 0.7379991126164186
 			},
 			{
-				"slug": "20241227-02",
-				"score": 0.6610625378264722
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.6671302849549318
 			},
 			{
-				"slug": "20250511-01-reflection-on-scrum-fest-niigata-2025",
-				"score": 0.6605804018907274
+				"slug": "20241227-02",
+				"score": 0.6610625378264722
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6043,8 +6043,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5533905367510642
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5396640275803228
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -6094,10 +6094,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5382420758909713
-			},
-			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.5335164576874658
 			},
@@ -6116,6 +6112,10 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5122918921607275
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.509519452047206
 			}
 		]
 	},
@@ -6400,10 +6400,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5681600050199028
-			},
-			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
 				"score": 0.5612146979244381
 			},
@@ -6422,6 +6418,10 @@
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5261983855277824
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5098485347153123
 			}
 		]
 	},
@@ -6706,10 +6706,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5219053659773255
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5169241571083814
 			},
@@ -6724,6 +6720,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.511885455302718
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5020890126110343
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
@@ -6859,10 +6859,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241129-02",
-				"score": 0.5687942989625424
-			},
-			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.5627485683455853
 			},
@@ -6873,6 +6869,10 @@
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5435180635652669
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5308597334139232
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -6910,10 +6910,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5459729623276464
-			},
-			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5368268361530207
 			},
@@ -6932,6 +6928,10 @@
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5134203561615732
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5027764626532862
 			}
 		]
 	},
@@ -7391,6 +7391,57 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5039218872283918
+			}
+		]
+	},
+	{
+		"slug": "20261002-what-is-good-teams-at-katariba",
+		"similarArticles": [
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.6671302849549318
+			},
+			{
+				"slug": "20240322-reflect-why-we-can-achieve-it",
+				"score": 0.6651977444864423
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.660377923009546
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.6535557272188866
+			},
+			{
+				"slug": "20260512-what-is-a-good-team-like",
+				"score": 0.6461567782366804
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20240622-02",
+				"score": 0.5077572881547209
+			},
+			{
+				"slug": "20250128-01",
+				"score": 0.505030493632803
+			},
+			{
+				"slug": "20230827-reflection-on-participating-in-scrum-fest-sendai-2023",
+				"score": 0.5048809335081746
+			},
+			{
+				"slug": "20230111-01",
+				"score": 0.5027764626532862
+			},
+			{
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.5020890126110343
+			},
+			{
+				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
+				"score": 0.5019126601836035
 			}
 		]
 	}
