@@ -309,6 +309,10 @@
 		"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
 		"similarArticles": [
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.8013685745439771
+			},
+			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.7991721158082978
 			},
@@ -323,10 +327,6 @@
 			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.783355688296772
-			},
-			{
-				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
-				"score": 0.775168600401985
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -725,16 +725,16 @@
 				"score": 0.8087565217209665
 			},
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.8064288982712327
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.8060343076688132
 			},
 			{
 				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
 				"score": 0.7991721158082978
-			},
-			{
-				"slug": "20260512-what-is-a-good-team-like",
-				"score": 0.7897659869115946
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -780,12 +780,12 @@
 				"score": 0.8181458012458429
 			},
 			{
-				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
-				"score": 0.8061218208844158
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.8106927416283702
 			},
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.8060343076688132
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8061218208844158
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1192,8 +1192,8 @@
 				"score": 0.7392577039809662
 			},
 			{
-				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
-				"score": 0.7324079361995589
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.7344932581209928
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1439,16 +1439,16 @@
 				"score": 0.711256281924295
 			},
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.6905416157709036
+			},
+			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.6872038116257257
 			},
 			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.679493372188301
-			},
-			{
-				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
-				"score": 0.6761499338253099
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1839,6 +1839,10 @@
 		"slug": "20230415-codenames-is-good-for-the-team-building",
 		"similarArticles": [
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.7525420575413679
+			},
+			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.6948731308470845
 			},
@@ -1853,10 +1857,6 @@
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.6642797362603049
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.6628744357896318
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2371,8 +2371,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
-				"score": 0.5076000959965626
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.5074982287740498
 			},
 			{
 				"slug": "20250510-02",
@@ -2608,6 +2608,10 @@
 				"score": 0.8325590117886679
 			},
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.8087445306971491
+			},
+			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.8013019204341493
 			},
@@ -2618,10 +2622,6 @@
 			{
 				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
 				"score": 0.7840041176492636
-			},
-			{
-				"slug": "20240816-how-can-we-make-a-decision",
-				"score": 0.7839978960077292
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3369,6 +3369,10 @@
 		"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
 		"similarArticles": [
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.8682070894551817
+			},
+			{
 				"slug": "20260512-what-is-a-good-team-like",
 				"score": 0.8170071596822299
 			},
@@ -3383,10 +3387,6 @@
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.8004881381364343
-			},
-			{
-				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
-				"score": 0.7983839513384824
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4240,6 +4240,10 @@
 				"score": 0.7252759633522443
 			},
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.6987555145273106
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.6925015831379211
 			},
@@ -4250,10 +4254,6 @@
 			{
 				"slug": "20250219-01",
 				"score": 0.6767023940652571
-			},
-			{
-				"slug": "20220725-what-i-value-as-a-product-manager",
-				"score": 0.674271093535496
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5613,6 +5613,10 @@
 		"slug": "20250925-reading-notes",
 		"similarArticles": [
 			{
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.7530064035560149
+			},
+			{
 				"slug": "20251117-reading-notes-of-the-tyranny-of-metrics",
 				"score": 0.7216320101930124
 			},
@@ -5627,10 +5631,6 @@
 			{
 				"slug": "20230318-just-talk-reflection-is-good",
 				"score": 0.6990513181823071
-			},
-			{
-				"slug": "20250704-conference-report-developer-productivity-report",
-				"score": 0.6990165927536715
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6441,12 +6441,12 @@
 				"score": 0.7359696482755118
 			},
 			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.7111672927176842
+				"slug": "20261003-thinking-about-the-team-building",
+				"score": 0.7149148235610303
 			},
 			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7078068178831367
+				"slug": "20220503-output-velocity-vs-outcome-velocity",
+				"score": 0.7111672927176842
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7442,6 +7442,57 @@
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023-2",
 				"score": 0.5019126601836035
+			}
+		]
+	},
+	{
+		"slug": "20261003-thinking-about-the-team-building",
+		"similarArticles": [
+			{
+				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
+				"score": 0.8682070894551817
+			},
+			{
+				"slug": "20211029-discuss-discussion",
+				"score": 0.8106927416283702
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.8087445306971491
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.8064288982712327
+			},
+			{
+				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
+				"score": 0.8013685745439771
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5769525825384917
+			},
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5620070276595533
+			},
+			{
+				"slug": "20261002-what-is-good-teams-at-katariba",
+				"score": 0.5434128951490468
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5423230809496566
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5173651998986113
+			},
+			{
+				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
+				"score": 0.5074982287740498
 			}
 		]
 	}
