@@ -177,7 +177,7 @@ importers:
         version: 5.3.0
       '@google/genai':
         specifier: ^2.15.0
-        version: 2.26.0
+        version: 2.27.0
       '@iconify-json/cib':
         specifier: ^1.2.3
         version: 1.2.3
@@ -827,8 +827,8 @@ packages:
   '@fontsource/zen-kaku-gothic-new@5.3.0':
     resolution: {integrity: sha512-2t88gAaUkqIAFARfO8GkT1x57QBRx8A0pWeB0CIrIahnzdanWjcV4thPCSv9BJmpeRndq6qbFx1KYglHykiPhw==}
 
-  '@google/genai@2.26.0':
-    resolution: {integrity: sha512-jWDSHEcO7+khDmE5K+RzxFfnrIe6BdMbND1CWfLl7yPPD2v2SmTbHnKJ8sNFVN9e/M8BRaIp0M4DWKgnbpJmtQ==}
+  '@google/genai@2.27.0':
+    resolution: {integrity: sha512-W6F9Y9d4h7cVQNa85IPCOVVP9PiUzve/ZQPBvQnBmnBJcLvxstEw+R2X/RyCH0SOe0HVDQzeKDpDUf6ZRtbmdQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@modelcontextprotocol/sdk': ^1.25.2
@@ -4222,7 +4222,7 @@ snapshots:
 
   '@fontsource/zen-kaku-gothic-new@5.3.0': {}
 
-  '@google/genai@2.26.0':
+  '@google/genai@2.27.0':
     dependencies:
       google-auth-library: 10.9.1
       p-retry: 4.6.2
