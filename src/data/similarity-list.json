@@ -972,6 +972,10 @@
 		"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 		"similarArticles": [
 			{
+				"slug": "20261015-smart-goals-and-relative-evaluation",
+				"score": 0.7514136261443215
+			},
+			{
 				"slug": "20230301-how-to-get-more-effective-feedback-in-sprint-review",
 				"score": 0.7506080738644699
 			},
@@ -986,10 +990,6 @@
 			{
 				"slug": "20251117-reading-notes-of-the-tyranny-of-metrics",
 				"score": 0.7289760309567985
-			},
-			{
-				"slug": "20211029-discuss-discussion",
-				"score": 0.7220936565219833
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3748,12 +3748,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.5247104469611302
-			},
-			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5205674547292239
+			},
+			{
+				"slug": "20261015-smart-goals-and-relative-evaluation",
+				"score": 0.5189061884230807
 			},
 			{
 				"slug": "20251023-autonomous-teams",
@@ -5672,16 +5672,16 @@
 				"score": 0.7415134481202673
 			},
 			{
+				"slug": "20261015-smart-goals-and-relative-evaluation",
+				"score": 0.7414053380319112
+			},
+			{
 				"slug": "20250704-conference-report-developer-productivity-report",
 				"score": 0.7370274969901371
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.7289760309567985
-			},
-			{
-				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
-				"score": 0.7262031959283735
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7493,6 +7493,57 @@
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
 				"score": 0.5074982287740498
+			}
+		]
+	},
+	{
+		"slug": "20261015-smart-goals-and-relative-evaluation",
+		"similarArticles": [
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7687782004348722
+			},
+			{
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.7563177967817607
+			},
+			{
+				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
+				"score": 0.7514136261443215
+			},
+			{
+				"slug": "20251023-autonomous-teams",
+				"score": 0.747099767857037
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7463322287939452
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20250321-01",
+				"score": 0.5288520445697178
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5264959805005421
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.524337544129315
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5193995117612407
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5189061884230807
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.5062039994045991
 			}
 		]
 	}
