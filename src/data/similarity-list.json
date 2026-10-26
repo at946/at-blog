@@ -321,12 +321,12 @@
 				"score": 0.7944605968402582
 			},
 			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.7840041176492636
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.7910407356664829
 			},
 			{
-				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
-				"score": 0.783355688296772
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.7840041176492636
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3442,10 +3442,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231202-scrum-masters-also-need-leadership-other-than-servant-leadership",
-				"score": 0.5101876521124881
-			},
-			{
 				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
 				"score": 0.5099691592707117
 			},
@@ -3456,6 +3452,10 @@
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5070367700225534
+			},
+			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.5051393180394713
 			},
 			{
 				"slug": "20211206-lets-check-out-if-you-do-not-have-enough-time-to-retrospective",
@@ -3748,10 +3748,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
-				"score": 0.5205674547292239
-			},
-			{
 				"slug": "20261015-smart-goals-and-relative-evaluation",
 				"score": 0.5189061884230807
 			},
@@ -3762,6 +3758,10 @@
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.5125749394430943
+			},
+			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.5085799680083284
 			},
 			{
 				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
@@ -4054,8 +4054,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.5281910197441598
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.5253351565002724
 			},
 			{
 				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
@@ -4848,6 +4848,10 @@
 		"slug": "20250326-01",
 		"similarArticles": [
 			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.7408038674681832
+			},
+			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.7381653049934386
 			},
@@ -4862,10 +4866,6 @@
 			{
 				"slug": "20240426-why-i-do-personal-development",
 				"score": 0.7079216467620448
-			},
-			{
-				"slug": "20231123-read-the-book-kokoro",
-				"score": 0.7047010228842937
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5074,12 +5074,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210218-set-up-the-e2e-testing-environment-with-jest-and-puppeteer-on-nuxt-on-docker",
-				"score": 0.5133622902655552
-			},
-			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.5128548035614936
+			},
+			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.5091303463868894
 			},
 			{
 				"slug": "20260924-kaonavi-alumni-article",
@@ -5370,12 +5370,12 @@
 				"score": 0.7652279484497303
 			},
 			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7582295957166431
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.759495054852725
 			},
 			{
-				"slug": "20250921-social-interest-and-me",
-				"score": 0.7561704588671162
+				"slug": "20251023-autonomous-teams",
+				"score": 0.7582295957166431
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5566,6 +5566,10 @@
 				"score": 0.7561704588671162
 			},
 			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.7539586477980105
+			},
+			{
 				"slug": "20250829-scrum-masters-with-individual-psychology",
 				"score": 0.7418612485762417
 			},
@@ -5576,10 +5580,6 @@
 			{
 				"slug": "20231123-read-the-book-kokoro",
 				"score": 0.7389701658755148
-			},
-			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.7310674960928256
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5731,8 +5731,8 @@
 				"score": 0.7861090715527641
 			},
 			{
-				"slug": "20241211-01",
-				"score": 0.7793156511428203
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.784553979429851
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7092,6 +7092,10 @@
 		"slug": "20260827-letting-someone-understand-me-is-hard",
 		"similarArticles": [
 			{
+				"slug": "20261026-psychological-safety-comes-from-yourself",
+				"score": 0.7333557676793397
+			},
+			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7311848950522961
 			},
@@ -7106,10 +7110,6 @@
 			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
 				"score": 0.7214475858010887
-			},
-			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.7186717502229562
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7544,6 +7544,57 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5062039994045991
+			}
+		]
+	},
+	{
+		"slug": "20261026-psychological-safety-comes-from-yourself",
+		"similarArticles": [
+			{
+				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
+				"score": 0.7910407356664829
+			},
+			{
+				"slug": "20251023-autonomous-teams",
+				"score": 0.784553979429851
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7759022461092554
+			},
+			{
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.7716758960017774
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7635890653993642
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20241129-02",
+				"score": 0.5253351565002724
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5160588850801322
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5091303463868894
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5087235701628713
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5085799680083284
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5051393180394713
 			}
 		]
 	}
