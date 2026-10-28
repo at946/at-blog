@@ -1,4 +1,4 @@
-name: 'code analyses'
+name: "code analyses"
 
 on:
   pull_request:
@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
 
       - uses: pnpm/action-setup@v6
 

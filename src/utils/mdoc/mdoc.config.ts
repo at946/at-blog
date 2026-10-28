@@ -1,7 +1,6 @@
-import { amazonLink } from '@/utils/mdoc/schema/amazon-link.mdoc';
-import { details } from '@/utils/mdoc/schema/details.mdoc';
-import { docswellEmbed } from '@/utils/mdoc/schema/docswell-embed.mdoc';
-import { tableOfContents } from '@/utils/mdoc/schema/table-of-contents.mdoc';
+import { amazonLink } from './schema/amazon-link.mdoc';
+import { details } from './schema/details.mdoc';
+import { docswellEmbed } from './schema/docswell-embed.mdoc';
 import { fence } from './schema/fence.mdoc';
 import { image } from './schema/image.mdoc';
 import { inlineMath } from './schema/inline-math.mdoc';
@@ -12,6 +11,7 @@ import { ogpLink } from './schema/ogp-link.mdoc';
 import { quote } from './schema/quote.mdoc';
 import { slideshareEmbed } from './schema/slideshare-embed.mdoc';
 import { speakerdeckEmbed } from './schema/speakerdeck-embed.mdoc';
+import { tableOfContents } from './schema/table-of-contents.mdoc';
 import { youtubeEmbed } from './schema/youtube-embed.mdoc';
 
 export const config = {
