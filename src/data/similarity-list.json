@@ -984,12 +984,12 @@
 				"score": 0.7476762091365352
 			},
 			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.7305114068770796
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.7362557134961127
 			},
 			{
-				"slug": "20251117-reading-notes-of-the-tyranny-of-metrics",
-				"score": 0.7289760309567985
+				"slug": "20251023-autonomous-teams",
+				"score": 0.7305114068770796
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1402,12 +1402,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241016-01",
-				"score": 0.5126505865976887
-			},
-			{
 				"slug": "20210529-the-nasa-game-made-me-realize-the-significance-of-working-as-a-team",
 				"score": 0.5102049465510285
+			},
+			{
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.5098613021223198
 			},
 			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
@@ -3442,16 +3442,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
-				"score": 0.5099691592707117
-			},
-			{
 				"slug": "20250714-annoying-is-a-chance-to-know-myself-more",
 				"score": 0.5093806376127128
 			},
 			{
 				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
 				"score": 0.5070367700225534
+			},
+			{
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.5063093172686804
 			},
 			{
 				"slug": "20261026-psychological-safety-comes-from-yourself",
@@ -3748,16 +3748,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261015-smart-goals-and-relative-evaluation",
-				"score": 0.5189061884230807
-			},
-			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.5158984542222186
 			},
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.5125749394430943
+			},
+			{
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.5094523609283558
 			},
 			{
 				"slug": "20261026-psychological-safety-comes-from-yourself",
@@ -4666,8 +4666,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211001-operation-to-use-google-spreadsheet-as-a-db-with-nuxt3",
-				"score": 0.5229909035554052
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.5217630428196723
 			},
 			{
 				"slug": "20230920-what-is-normal-for-you-is-amazing-for-someone-else",
@@ -6298,8 +6298,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.5190794581434972
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.5189284555642624
 			},
 			{
 				"slug": "20250328-01",
@@ -7504,6 +7504,10 @@
 				"score": 0.7687782004348722
 			},
 			{
+				"slug": "20261028-even-a-part-of-ork-looks-great",
+				"score": 0.7677596296200292
+			},
+			{
 				"slug": "20221009-i-found-we-do-not-do-scrum",
 				"score": 0.7563177967817607
 			},
@@ -7514,10 +7518,6 @@
 			{
 				"slug": "20251023-autonomous-teams",
 				"score": 0.747099767857037
-			},
-			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.7463322287939452
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7595,6 +7595,57 @@
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5051393180394713
+			}
+		]
+	},
+	{
+		"slug": "20261028-even-a-part-of-ork-looks-great",
+		"similarArticles": [
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.7842002262304884
+			},
+			{
+				"slug": "20261015-smart-goals-and-relative-evaluation",
+				"score": 0.7677596296200292
+			},
+			{
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.7629209219737265
+			},
+			{
+				"slug": "20211124-listening-to-agile-japan-day-one-keynote-speech",
+				"score": 0.7612525584958405
+			},
+			{
+				"slug": "20260614-lets-break-free-from-the-curse-of-retrospectives",
+				"score": 0.7611402005276864
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
+				"score": 0.5189284555642624
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5098613021223198
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5094523609283558
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5076297678365056
+			},
+			{
+				"slug": "20250718-i-want-to-aim-for-non-producibility",
+				"score": 0.5064872696292324
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5063093172686804
 			}
 		]
 	}
