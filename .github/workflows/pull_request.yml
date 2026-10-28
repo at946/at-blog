@@ -1,4 +1,4 @@
-name: 'code analyses'
+name: "code analyses"
 
 on:
   pull_request:
