@@ -207,7 +207,7 @@ importers:
         version: 0.44.3(astro@7.4.4(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(tsx@4.23.15)(yaml@2.9.1))
       budoux:
         specifier: ^0.10.0
-        version: 0.10.1
+        version: 0.10.2
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -1723,8 +1723,9 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  budoux@0.10.1:
-    resolution: {integrity: sha512-nSq29N1dluXnyPX5crFfBVeiQkF8WzFqvr9veCdfMDRXNqGfGdfhO9bW0jjVb3RKZ+8pgXyHYE9wfHiSMgm5nQ==}
+  budoux@0.10.2:
+    resolution: {integrity: sha512-b9xs9NrUGC7rB4io0yC7OtRjU7oj/2OEAIAhLZm2KETupgDfPU2bOO6E3Mp0OheJkZ99HrZSxuFfmn8AIN3Mow==}
+    engines: {node: '>=22'}
     hasBin: true
 
   buffer-equal-constant-time@1.0.1:
@@ -5080,7 +5081,7 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  budoux@0.10.1:
+  budoux@0.10.2:
     dependencies:
       commander: 15.0.0
       linkedom: 0.18.14
