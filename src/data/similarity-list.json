@@ -76,6 +76,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5388019775400993
+			},
+			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5267980694658895
 			},
@@ -90,10 +94,6 @@
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5102049465510285
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5065484461638867
 			},
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
@@ -178,6 +178,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20241129-02",
+				"score": 0.5342438455862176
+			},
+			{
 				"slug": "20250626-open-mind-will-bring-something",
 				"score": 0.5295526161902623
 			},
@@ -196,10 +200,6 @@
 			{
 				"slug": "20250321-01",
 				"score": 0.5100075412288814
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5024669380856334
 			}
 		]
 	},
@@ -331,8 +331,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
-				"score": 0.5431593257115875
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5409324843124267
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -586,8 +586,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
-				"score": 0.5371713591883317
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5365686153688799
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -688,6 +688,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20250328-01",
+				"score": 0.5502248800502181
+			},
+			{
 				"slug": "20250218-01",
 				"score": 0.5493404126427098
 			},
@@ -706,10 +710,6 @@
 			{
 				"slug": "20240322-reflect-why-we-can-achieve-it",
 				"score": 0.5088459767743165
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5020603340558857
 			}
 		]
 	},
@@ -1249,8 +1249,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5489514177328999
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5449721751541404
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -1504,8 +1504,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5467169772329222
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5431845784111309
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -1810,8 +1810,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
-				"score": 0.5284348906372814
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5222997383945049
 			},
 			{
 				"slug": "20260523-do-not-take-perception-metrics-at-face-value",
@@ -1851,12 +1851,12 @@
 				"score": 0.6923365259158002
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.6779692157377784
-			},
-			{
 				"slug": "20231122-preparation-for-facilitation",
 				"score": 0.6700040261745349
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.6694380791517819
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2218,8 +2218,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5433010090879511
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.536216558901422
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -2269,12 +2269,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.523358565558237
-			},
-			{
 				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
 				"score": 0.5229345230703638
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5146446903658175
 			},
 			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
@@ -2365,8 +2365,8 @@
 				"score": 0.5916759753571643
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5890047161738038
+				"slug": "20250925-reading-notes",
+				"score": 0.5865980266234005
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2524,16 +2524,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5435871775491624
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5399033572876838
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.53746421821923
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.53496602500758
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -2575,12 +2575,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.5378944418003154
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5312026605866556
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5301581499718293
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
@@ -2677,8 +2677,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5654460775500523
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5578725921896445
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
@@ -2830,16 +2830,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.544868277237498
-			},
-			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.5401569025654629
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5393665994762601
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5359674781648046
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
@@ -3085,6 +3085,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5434232769460648
+			},
+			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.5379744382322118
 			},
@@ -3099,10 +3103,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5188730189047422
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5104176754969555
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -3195,16 +3195,16 @@
 				"score": 0.5710319385517132
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5663249314508854
-			},
-			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5628855296554327
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5565706240347287
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5538377521549545
 			},
 			{
 				"slug": "20261002-what-is-good-teams-at-katariba",
@@ -3340,12 +3340,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.567665220169678
-			},
-			{
 				"slug": "20210918-how-to-take-a-screenshot-when-a-test-failed-on-testcafe",
 				"score": 0.5675838478251715
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5653803258296928
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -3552,12 +3552,12 @@
 				"score": 0.5467409208059132
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5414815055927217
-			},
-			{
 				"slug": "20211203-the-strategy-for-personal-development-that-are-easy-on-the-wallet",
 				"score": 0.5393696871061489
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5347279551222324
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -3595,6 +3595,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5393132130969578
+			},
+			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.5262253561658558
 			},
@@ -3613,10 +3617,6 @@
 			{
 				"slug": "20261002-what-is-good-teams-at-katariba",
 				"score": 0.5077572881547209
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5006792097491989
 			}
 		]
 	},
@@ -3743,7 +3743,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.7054108017414417
+				"score": 0.706728840250273
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3850,6 +3850,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20210928-operation-to-use-google-spreadsheet-as-a-db-with-nuxt2",
+				"score": 0.5431897168589718
+			},
+			{
 				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
 				"score": 0.540918116568801
 			},
@@ -3868,10 +3872,6 @@
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5089249893978876
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5067173137716722
 			}
 		]
 	},
@@ -3909,12 +3909,12 @@
 				"score": 0.5424052052496241
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5336229043253585
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5270573967210661
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5252503243358184
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -3953,7 +3953,7 @@
 		"differentPerspectiveArticles": [
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5396566111590687
+				"score": 0.5266575382201844
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -4003,8 +4003,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.541644543728691
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5406425209277224
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -4105,12 +4105,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5367008236737888
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5348927867249954
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5256574179651139
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
@@ -4207,12 +4207,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230113-participation-report-for-rsgt2023",
-				"score": 0.5326299605213765
-			},
-			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5273633175645223
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5263609852195718
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
@@ -4322,7 +4322,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5313397812018988
+				"score": 0.5231093257478349
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -4470,10 +4470,6 @@
 				"score": 0.5268745229803867
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5256940317762873
-			},
-			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5214277171009076
 			},
@@ -4484,6 +4480,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5128541399334777
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5110313041173591
 			}
 		]
 	},
@@ -4564,12 +4564,12 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5486278206966382
-			},
-			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5462687734279725
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.538255082314593
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -4717,6 +4717,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.507863549767292
+			},
+			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5069814497596743
 			},
@@ -4727,10 +4731,6 @@
 			{
 				"slug": "20241129-02",
 				"score": 0.5010236144541584
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5009489715332658
 			},
 			{
 				"slug": "20230221-make-user-stories-easy-to-write-and-read",
@@ -4827,12 +4827,12 @@
 				"score": 0.535301149858387
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.529719147223594
-			},
-			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5270671937776593
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5200761014379699
 			},
 			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
@@ -4870,6 +4870,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5441738373348565
+			},
+			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.5337116108532768
 			},
@@ -4884,10 +4888,6 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5110428110388348
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5096546477723289
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -4921,8 +4921,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20241129-02",
-				"score": 0.5602318988327611
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5580467910115259
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -4993,7 +4993,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5219537511545503
+				"score": 0.5145114100738275
 			}
 		]
 	},
@@ -5125,6 +5125,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5368079010970934
+			},
+			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5308339475113604
 			},
@@ -5143,10 +5147,6 @@
 			{
 				"slug": "20240324-introduce-mermaid-to-astros-markdoc",
 				"score": 0.5104880275411886
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5068764906339482
 			}
 		]
 	},
@@ -5235,16 +5235,16 @@
 				"score": 0.5511036948192537
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5430738791232459
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5374678303651902
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.534883509806953
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5317248308274835
 			},
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
@@ -5324,7 +5324,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.6634773143286359
+				"score": 0.6613739528689577
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5431,16 +5431,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5306744471935461
-			},
-			{
 				"slug": "20230113-participation-report-for-rsgt2023",
 				"score": 0.526158018000909
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5195404351378263
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5191506612492429
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -5533,10 +5533,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5286616423341092
-			},
-			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.5246455631781417
 			},
@@ -5547,6 +5543,10 @@
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5178738691978858
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5170164384487874
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -5686,8 +5686,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.5565052382856968
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.553476794064706
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
@@ -5847,12 +5847,12 @@
 				"score": 0.5372509138246067
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5350406546186752
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5337458806088227
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5259881673956796
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -6004,16 +6004,16 @@
 				"score": 0.5207407675748084
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5150938513160798
-			},
-			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5066919180344492
 			},
 			{
 				"slug": "20250328-01",
 				"score": 0.5064215353561407
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5054829035756215
 			}
 		]
 	},
@@ -6196,6 +6196,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.5464692862657846
+			},
+			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.544661069908507
 			},
@@ -6206,10 +6210,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5092253787143651
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5052072445515703
 			},
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
@@ -6247,8 +6247,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
-				"score": 0.5361539205528776
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5292102761241315
 			},
 			{
 				"slug": "20230113-participation-report-for-rsgt2023",
@@ -6349,8 +6349,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
-				"score": 0.5552808276041912
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5550166021214146
 			},
 			{
 				"slug": "20230826-a-team-which-continue-to-deliver-values-to-users-is-supported-by-agile-mindset",
@@ -6400,8 +6400,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.5612146979244381
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.555555771639649
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
@@ -6464,7 +6464,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5387347604882163
+				"score": 0.5305338706150816
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
@@ -6506,12 +6506,12 @@
 				"score": 0.5469920582564283
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.544167620866022
-			},
-			{
 				"slug": "20240606-focus-on-done-over-doing",
 				"score": 0.5426978923797706
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5365473335286204
 			},
 			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
@@ -6604,16 +6604,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
-				"score": 0.5464036182341672
-			},
-			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.5433121772950271
 			},
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.5389849484639367
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5356792867805487
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -6706,10 +6706,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
-				"score": 0.5169241571083814
-			},
-			{
 				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
 				"score": 0.5166079275918714
 			},
@@ -6720,6 +6716,10 @@
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
 				"score": 0.511885455302718
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5097143546217338
 			},
 			{
 				"slug": "20261002-what-is-good-teams-at-katariba",
@@ -6757,8 +6757,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240520-i-dont-use-the-word-of-normally",
-				"score": 0.5380867026044107
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.537920364630229
 			},
 			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
@@ -6808,16 +6808,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5377929763372419
-			},
-			{
 				"slug": "20240520-i-dont-use-the-word-of-normally",
 				"score": 0.536486321949317
 			},
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5260462768696329
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5258391607371682
 			},
 			{
 				"slug": "20251231-inputs-and-outputs-in-2025",
@@ -6880,7 +6880,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5199665358353825
+				"score": 0.5076879229183202
 			}
 		]
 	},
@@ -6915,7 +6915,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5355235908305837
+				"score": 0.5269445464293291
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -6961,6 +6961,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5481371144880491
+			},
+			{
 				"slug": "20241129-02",
 				"score": 0.546703824286568
 			},
@@ -6979,10 +6983,6 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.5045539231197993
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5007037686445532
 			}
 		]
 	},
@@ -7028,12 +7028,12 @@
 				"score": 0.5253615990805942
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.513742610277036
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5113729796955556
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5018660434415725
 			}
 		]
 	},
@@ -7071,12 +7071,12 @@
 				"score": 0.5206699389015242
 			},
 			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5184668003754226
-			},
-			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
 				"score": 0.51556918753942
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5113748483740589
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -7119,7 +7119,7 @@
 			},
 			{
 				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5254244750367216
+				"score": 0.512964239468492
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -7165,8 +7165,8 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20251231-inputs-and-outputs-in-2025",
-				"score": 0.5656093848311912
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5573296286224727
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
@@ -7573,6 +7573,10 @@
 		],
 		"differentPerspectiveArticles": [
 			{
+				"slug": "20241129-02",
+				"score": 0.5253351565002724
+			},
+			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5160588850801322
 			},
@@ -7587,10 +7591,6 @@
 			{
 				"slug": "20240709-rice-cultivation-retrospective",
 				"score": 0.5085799680083284
-			},
-			{
-				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
-				"score": 0.5065190653960224
 			},
 			{
 				"slug": "20240606-focus-on-done-over-doing",
@@ -7653,50 +7653,50 @@
 		"slug": "20261101-running-okr-with-grow-model-and-double-loop",
 		"similarArticles": [
 			{
-				"slug": "20240322-reflect-why-we-can-achieve-it",
-				"score": 0.7120649341231663
-			},
-			{
 				"slug": "20240709-rice-cultivation-retrospective",
-				"score": 0.7054108017414417
+				"score": 0.706728840250273
 			},
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.6779692157377784
+				"slug": "20240322-reflect-why-we-can-achieve-it",
+				"score": 0.7038690891585547
 			},
 			{
 				"slug": "20250321-01",
-				"score": 0.6747306430190714
+				"score": 0.6714641676267102
+			},
+			{
+				"slug": "20230415-codenames-is-good-for-the-team-building",
+				"score": 0.6694380791517819
 			},
 			{
 				"slug": "20250718-i-want-to-aim-for-non-producibility",
-				"score": 0.6634773143286359
+				"score": 0.6613739528689577
 			}
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20260511-why-are-small-releases-good",
-				"score": 0.5052072445515703
+				"slug": "20250614-video-for-scrum-fest-kanazawa-2025",
+				"score": 0.5113748483740589
 			},
 			{
-				"slug": "20210228-code-snippets-for-e2e-testing-with-jest-and-puppeteer",
-				"score": 0.5024669380856334
+				"slug": "20250121-01",
+				"score": 0.5110313041173591
 			},
 			{
-				"slug": "20211014-easy-dynamic-ogp-with-google-spreadsheet-and-slides",
-				"score": 0.5020603340558857
+				"slug": "20260802-when-will-a-team-end",
+				"score": 0.5097143546217338
 			},
 			{
-				"slug": "20250328-01",
-				"score": 0.5009489715332658
+				"slug": "20221027-01",
+				"score": 0.5076879229183202
 			},
 			{
-				"slug": "20230111-02",
-				"score": 0.5007037686445532
+				"slug": "20260424-quadrant-of-separation-of-tasks",
+				"score": 0.5054829035756215
 			},
 			{
-				"slug": "20240622-02",
-				"score": 0.5006792097491989
+				"slug": "20230826-02",
+				"score": 0.5018660434415725
 			}
 		]
 	}
