@@ -637,10 +637,6 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
-				"score": 0.5051086638473834
-			},
-			{
 				"slug": "20260616-metrics-to-understand-the-effectiveness-and-healthness-of-the-value-stream",
 				"score": 0.5050310334514608
 			},
@@ -655,6 +651,10 @@
 			{
 				"slug": "20230701-i-made-a-sponsored-talk-about-feature-toggles-and-abailable-increments-at-scrum-fest-osaka-2023",
 				"score": 0.502989413435805
+			},
+			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.502904321370679
 			},
 			{
 				"slug": "20241227-02",
@@ -1541,16 +1541,16 @@
 				"score": 0.7325552327595929
 			},
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7146542906800657
+			},
+			{
 				"slug": "20230318-just-talk-reflection-is-good",
 				"score": 0.7121559275659785
 			},
 			{
 				"slug": "20230607-wrap-the-team-in-a-happy-aura-with-monthly-positive-reflection",
 				"score": 0.7056216190913582
-			},
-			{
-				"slug": "20231122-preparation-for-facilitation",
-				"score": 0.6957864083861809
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3675,6 +3675,10 @@
 		"slug": "20240702-one-plus-one-does-not-equal-three-or-four",
 		"similarArticles": [
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7128020150072901
+			},
+			{
 				"slug": "20250219-01",
 				"score": 0.7110153784693589
 			},
@@ -3689,10 +3693,6 @@
 			{
 				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
 				"score": 0.6937723015688058
-			},
-			{
-				"slug": "20240426-why-i-do-personal-development",
-				"score": 0.6914766600269056
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -4248,12 +4248,12 @@
 				"score": 0.6925015831379211
 			},
 			{
-				"slug": "20230318-just-talk-reflection-is-good",
-				"score": 0.6781947453312793
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.6795092388397634
 			},
 			{
-				"slug": "20250219-01",
-				"score": 0.6767023940652571
+				"slug": "20230318-just-talk-reflection-is-good",
+				"score": 0.6781947453312793
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5719,6 +5719,10 @@
 				"score": 0.8118585061644971
 			},
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7953982335824655
+			},
+			{
 				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
 				"score": 0.7918425533536575
 			},
@@ -5729,10 +5733,6 @@
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7861090715527641
-			},
-			{
-				"slug": "20261026-psychological-safety-comes-from-yourself",
-				"score": 0.784553979429851
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5766,6 +5766,10 @@
 		"slug": "20251120-lean-coffee-on-notion",
 		"similarArticles": [
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7837295214149566
+			},
+			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.7807463989132319
 			},
@@ -5780,10 +5784,6 @@
 			{
 				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
 				"score": 0.7654516750402409
-			},
-			{
-				"slug": "20230601-how-to-beat-a-fake-scrum",
-				"score": 0.7639043655599779
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5941,16 +5941,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20240816-how-can-we-make-a-decision",
-				"score": 0.5101358930762345
-			},
-			{
 				"slug": "20241129-01",
 				"score": 0.5072072055692077
 			},
 			{
 				"slug": "20211206-lets-check-out-if-you-do-not-have-enough-time-to-retrospective",
 				"score": 0.5053899424227603
+			},
+			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.5047666974042965
 			},
 			{
 				"slug": "20210604-something-to-go-back-to-when-i-wonder-what-agile-is-all-about",
@@ -6174,6 +6174,10 @@
 		"slug": "20260511-why-are-small-releases-good",
 		"similarArticles": [
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7790393262027508
+			},
+			{
 				"slug": "20211220-estimate-the-value-of-product-backlog-items-by-whole-team",
 				"score": 0.7752118182503754
 			},
@@ -6188,10 +6192,6 @@
 			{
 				"slug": "20250121-01",
 				"score": 0.7721989854361037
-			},
-			{
-				"slug": "20240328-until-a-wall-between-engineers-and-qaes-are-broken-down",
-				"score": 0.7673617527751919
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6437,16 +6437,16 @@
 				"score": 0.7927265129017479
 			},
 			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7426773300511341
+			},
+			{
 				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
 				"score": 0.7359696482755118
 			},
 			{
 				"slug": "20261003-thinking-about-the-team-building",
 				"score": 0.7149148235610303
-			},
-			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.7111672927176842
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -6496,8 +6496,8 @@
 				"score": 0.7760198032685615
 			},
 			{
-				"slug": "20260524-the-sum-of-the-median-time-in-status-does-not-equal-the-median-cycle-time",
-				"score": 0.7635614984741648
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.7695743471286233
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7697,6 +7697,57 @@
 			{
 				"slug": "20230826-02",
 				"score": 0.5018660434415725
+			}
+		]
+	},
+	{
+		"slug": "20261113-appropriate-team-size-in-ai-era",
+		"similarArticles": [
+			{
+				"slug": "20251023-autonomous-teams",
+				"score": 0.7953982335824655
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7929618015453511
+			},
+			{
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.7918859365851745
+			},
+			{
+				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
+				"score": 0.787126787399875
+			},
+			{
+				"slug": "20251120-lean-coffee-on-notion",
+				"score": 0.7837295214149566
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5302508940033719
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5232090977226059
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5221057140964134
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5190849184016224
+			},
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5047666974042965
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.502904321370679
 			}
 		]
 	}
