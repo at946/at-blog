@@ -330,5 +330,13 @@
 		"imageUrl": "https://m.media-amazon.com/images/I/51TieCcIqHL._SL500_.jpg",
 		"publisher": "日本経済新聞出版",
 		"contributors": "ジョン ドーア(著), 土方 奈美(翻訳)"
-	}
+	},
+	{
+		"asin": "1628258292",
+		"url": "https://www.amazon.co.jp/dp/1628258292?tag=at946-22&linkCode=ogi&th=1&psc=1",
+		"title": "Project Management Body of Knowledge® (Pmbok®) Guide (Pmbok® Guide) Eighth Edition",
+		"imageUrl": "https://m.media-amazon.com/images/I/71-rOGkDNCL._SL500_.jpg",
+		"publisher": "Project Management Inst",
+		"contributors": "Project Management Institute(著)"
+	},
 ]
