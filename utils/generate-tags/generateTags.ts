@@ -5,7 +5,7 @@ export type ResponseText = {
 	tags: string[];
 };
 
-const MODEL: string = 'gemini-3.8-flash';
+const MODEL: string = 'gemini-3.6-flash';
 const MAX_TAGS: number = 6;
 
 const ai = new GoogleGenAI({
