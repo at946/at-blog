@@ -26,75 +26,6 @@ export default async function generateOgp({
 
 	const parser = loadDefaultJapaneseParser();
 
-	const element = {
-		type: 'div',
-		props: {
-			style: {
-				width: '1200px',
-				height: '630px',
-				display: 'flex',
-				flexDirection: 'column',
-				justifyContent: 'center',
-				alignItems: 'center',
-				backgroundColor: '#1e293b',
-				color: '#4ade80',
-				padding: '2rem',
-			},
-			children: [
-				{
-					type: 'div',
-					props: {
-						style: {
-							fontSize: '1.5rem',
-							fontWeight: 500,
-							marginBottom: '2rem',
-							color: 'white',
-						},
-						children: '- at-blog -',
-					},
-				},
-				{
-					type: 'div',
-					props: {
-						style: {
-							display: 'flex',
-							flexWrap: 'wrap',
-							justifyContent: 'center',
-							fontSize: '3rem',
-							fontWeight: 700,
-							lineHeight: 1.4,
-						},
-						children: parser.parse(title).map((phrase) => ({
-							type: 'span',
-							props: {
-								children: phrase,
-							},
-						})),
-					},
-				},
-				{
-					type: 'div',
-					props: {
-						style: {
-							display: 'flex',
-							flexWrap: 'wrap',
-							gap: '1rem',
-							fontSize: '1.25rem',
-							fontWeight: 500,
-							marginTop: '2rem',
-							color: 'white',
-						},
-						children: tags.map((tag) => ({
-							type: 'span',
-							props: {
-								children: `#${tag}`,
-							},
-						})),
-					},
-				},
-			],
-		},
-	};
 	const svg = await satori(
 		<div
 			style={{
@@ -106,7 +37,6 @@ export default async function generateOgp({
 				alignItems: 'center',
 				backgroundColor: '#1e293b',
 				color: '#4ade80',
-				padding: '2rem',
 			}}
 		>
 			<div
