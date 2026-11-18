@@ -1078,6 +1078,10 @@
 				"score": 0.7815311463730037
 			},
 			{
+				"slug": "20261117-whats-the-project-management",
+				"score": 0.7770918132662177
+			},
+			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.7709730497661226
 			},
@@ -1088,10 +1092,6 @@
 			{
 				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
 				"score": 0.761155017787858
-			},
-			{
-				"slug": "20241129-01",
-				"score": 0.7584465840344395
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -1231,6 +1231,10 @@
 				"score": 0.7667527887043342
 			},
 			{
+				"slug": "20261117-whats-the-project-management",
+				"score": 0.7589621972007239
+			},
+			{
 				"slug": "20221009-i-found-we-do-not-do-scrum",
 				"score": 0.7516482788775922
 			},
@@ -1241,10 +1245,6 @@
 			{
 				"slug": "20211029-discuss-discussion",
 				"score": 0.7433525959159126
-			},
-			{
-				"slug": "20210925-self-introduction-as-the-first-step-of-the-psychological-safety",
-				"score": 0.7319478228292743
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -3224,16 +3224,16 @@
 				"score": 0.7865652598756984
 			},
 			{
+				"slug": "20261117-whats-the-project-management",
+				"score": 0.7534847114883826
+			},
+			{
 				"slug": "20240621-team-buildinng-is-to-continue-to-build-an-environment-and-a-relationship-to-work-together-for-shared-goals",
 				"score": 0.7525347630001189
 			},
 			{
 				"slug": "20250128-01",
 				"score": 0.7491294163737259
-			},
-			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.7417744758781379
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7500,6 +7500,10 @@
 		"slug": "20261015-smart-goals-and-relative-evaluation",
 		"similarArticles": [
 			{
+				"slug": "20261117-whats-the-project-management",
+				"score": 0.781962651100758
+			},
+			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.7687782004348722
 			},
@@ -7514,10 +7518,6 @@
 			{
 				"slug": "20211213-a4-guideline-for-feedback-at-netflix-seems-good",
 				"score": 0.7514136261443215
-			},
-			{
-				"slug": "20251023-autonomous-teams",
-				"score": 0.747099767857037
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7748,6 +7748,57 @@
 			{
 				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
 				"score": 0.502904321370679
+			}
+		]
+	},
+	{
+		"slug": "20261117-whats-the-project-management",
+		"similarArticles": [
+			{
+				"slug": "20241129-01",
+				"score": 0.7929076320979752
+			},
+			{
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.7911722789021803
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.7899238328360455
+			},
+			{
+				"slug": "20261015-smart-goals-and-relative-evaluation",
+				"score": 0.781962651100758
+			},
+			{
+				"slug": "20220113-memo-for-north-star-metric",
+				"score": 0.7770918132662177
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5416377782417879
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5325702178075438
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.529455544541283
+			},
+			{
+				"slug": "20240709-rice-cultivation-retrospective",
+				"score": 0.5266384390286349
+			},
+			{
+				"slug": "20261101-running-okr-with-grow-model-and-double-loop",
+				"score": 0.5253061539606322
+			},
+			{
+				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
+				"score": 0.5190619881685323
 			}
 		]
 	}
