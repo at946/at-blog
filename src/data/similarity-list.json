@@ -1180,6 +1180,10 @@
 				"score": 0.7801758416272859
 			},
 			{
+				"slug": "20261120-two-loops-in-scrum",
+				"score": 0.7669698232171519
+			},
+			{
 				"slug": "20240509-prospect-and-target",
 				"score": 0.7417744758781379
 			},
@@ -1190,10 +1194,6 @@
 			{
 				"slug": "20241129-01",
 				"score": 0.7392577039809662
-			},
-			{
-				"slug": "20261003-thinking-about-the-team-building",
-				"score": 0.7344932581209928
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -2094,6 +2094,10 @@
 		"slug": "20230614-sprint-goal-and-sprint-scope",
 		"similarArticles": [
 			{
+				"slug": "20261120-two-loops-in-scrum",
+				"score": 0.8212514623953463
+			},
+			{
 				"slug": "20221009-i-found-we-do-not-do-scrum",
 				"score": 0.7993443651570377
 			},
@@ -2108,10 +2112,6 @@
 			{
 				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
 				"score": 0.7856140447194978
-			},
-			{
-				"slug": "20220503-output-velocity-vs-outcome-velocity",
-				"score": 0.7801758416272859
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -5629,8 +5629,8 @@
 				"score": 0.717791590059535
 			},
 			{
-				"slug": "20230318-just-talk-reflection-is-good",
-				"score": 0.6990513181823071
+				"slug": "20261120-two-loops-in-scrum",
+				"score": 0.7167935191792477
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7159,8 +7159,8 @@
 				"score": 0.8118680293479674
 			},
 			{
-				"slug": "20211021-fact-of-teams-to-want-a-team-to-know",
-				"score": 0.8087565217209665
+				"slug": "20261120-two-loops-in-scrum",
+				"score": 0.8107224749399607
 			}
 		],
 		"differentPerspectiveArticles": [
@@ -7799,6 +7799,57 @@
 			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5190619881685323
+			}
+		]
+	},
+	{
+		"slug": "20261120-two-loops-in-scrum",
+		"similarArticles": [
+			{
+				"slug": "20230614-sprint-goal-and-sprint-scope",
+				"score": 0.8212514623953463
+			},
+			{
+				"slug": "20260828-what-does-a-scrum-master-bring-to-a-team",
+				"score": 0.8107224749399607
+			},
+			{
+				"slug": "20230307-five-books-to-get-you-out-of-doing-scrum-in-the-atmosphere",
+				"score": 0.7787162795068165
+			},
+			{
+				"slug": "20221009-i-found-we-do-not-do-scrum",
+				"score": 0.7756711087792277
+			},
+			{
+				"slug": "20231123-read-the-book-kokoro",
+				"score": 0.7728257057726916
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20251231-inputs-and-outputs-in-2025",
+				"score": 0.5636945109371937
+			},
+			{
+				"slug": "20211012-the-project-progressed-when-we-stop-the-meeting-to-share-the-progress-of-the-project",
+				"score": 0.557598163393767
+			},
+			{
+				"slug": "20240606-focus-on-done-over-doing",
+				"score": 0.5504460860409578
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5147453731376378
+			},
+			{
+				"slug": "20230930-our-time-melt-when-we-do-mobing-anyway",
+				"score": 0.5130305192853413
+			},
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5108140998970832
 			}
 		]
 	}
