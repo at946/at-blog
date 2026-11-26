@@ -4717,16 +4717,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20230415-codenames-is-good-for-the-team-building",
-				"score": 0.507863549767292
-			},
-			{
 				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
 				"score": 0.5069814497596743
 			},
 			{
 				"slug": "20260424-quadrant-of-separation-of-tasks",
 				"score": 0.5064215353561407
+			},
+			{
+				"slug": "20261126-vibe-handover",
+				"score": 0.50315561248074
 			},
 			{
 				"slug": "20241129-02",
@@ -4768,16 +4768,16 @@
 		],
 		"differentPerspectiveArticles": [
 			{
-				"slug": "20210916-introduce-testcafe-to-nuxt-on-docker",
-				"score": 0.5463249817344328
-			},
-			{
 				"slug": "20230507-you-should-be-prudent-to-introduce-facilitation-shift-system",
 				"score": 0.5402591811637955
 			},
 			{
 				"slug": "20230527-what-do-you-want-to-ensure-by-the-performance-test",
 				"score": 0.5383915021453535
+			},
+			{
+				"slug": "20261126-vibe-handover",
+				"score": 0.5365206958363283
 			},
 			{
 				"slug": "20230415-codenames-is-good-for-the-team-building",
@@ -7850,6 +7850,57 @@
 			{
 				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
 				"score": 0.5108140998970832
+			}
+		]
+	},
+	{
+		"slug": "20261126-vibe-handover",
+		"similarArticles": [
+			{
+				"slug": "20251120-lean-coffee-on-notion",
+				"score": 0.6935064326852504
+			},
+			{
+				"slug": "20231002-a-talk-of-our-morning-study-session-which-has-been-continued-for-more-than-half-a-year",
+				"score": 0.6758339811652182
+			},
+			{
+				"slug": "20230129-a-place-for-chit-chat-rather-than-time-for-chit-chat",
+				"score": 0.6744038237915178
+			},
+			{
+				"slug": "20231122-preparation-for-facilitation",
+				"score": 0.6736002993637216
+			},
+			{
+				"slug": "20261113-appropriate-team-size-in-ai-era",
+				"score": 0.6687314715416429
+			}
+		],
+		"differentPerspectiveArticles": [
+			{
+				"slug": "20240418-detect-console-error-messages-with-page-object-model-in-playwright",
+				"score": 0.5268513335593739
+			},
+			{
+				"slug": "20250617-retrospective-for-scrum-fest-kanazawa-2025",
+				"score": 0.5264312551126579
+			},
+			{
+				"slug": "20230113-participation-report-for-rsgt2023",
+				"score": 0.5253917454207476
+			},
+			{
+				"slug": "20221110-a-target-for-release-and-a-prospective-for-release",
+				"score": 0.5219380033572126
+			},
+			{
+				"slug": "20240520-i-dont-use-the-word-of-normally",
+				"score": 0.5107843318988304
+			},
+			{
+				"slug": "20250328-01",
+				"score": 0.50315561248074
 			}
 		]
 	}
